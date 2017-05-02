@@ -47,6 +47,18 @@ data:extend(
 		result= "paint-safety",
 		result_count = 10
 	},
+	{	-- Concrete paint - Radiation Hazard
+		type = "recipe",
+		name = "paint-radiation",
+		energy_required = 10,
+		enabled = false,
+		category = "crafting",
+		ingredients = {
+			{"concrete", 10},
+		},
+		result= "paint-radiation",
+		result_count = 10
+	},
 	{	-- Wooden floorboards
 		type = "recipe",
 		name = "wood-floor",

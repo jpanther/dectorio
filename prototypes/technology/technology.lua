@@ -27,6 +27,10 @@ data:extend(
 			},
 			{
 				type = "unlock-recipe",
+				recipe = "paint-radiation"
+			},
+			{
+				type = "unlock-recipe",
 				recipe = "paint-safety"
 			}
 		},

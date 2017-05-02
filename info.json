@@ -1,11 +1,11 @@
 {
     "name": "Dectorio",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "title": "Dectorio",
     "author": "PantherX",
     "contact": "",
     "homepage": "",
     "factorio_version": "0.15",
     "dependencies": ["base >= 0.15"],
-    "description": "This mod adds decorative elements to beautify your factory."
+    "description": "Adds decorative elements to beautify your factory. Currently includes wooden floorboards and painted concrete styles."
 }

@@ -42,10 +42,24 @@ data:extend(
 		icon = "__Dectorio__/graphics/icons/paint-safety.png",
 	    flags = {"goes-to-main-inventory"},
 	    subgroup = "concrete-paint",
-	    order = "a[paint-hazard]-b[paint-emergency]-c[paint-safety]",
+	    order = "a[paint-hazard]-b[paint-emergency]-c[paint-radiation]-d[paint-safety]",
 	    stack_size = 100,
 	    place_as_tile = {
 			result = "paint-safety-left",
+			condition_size = 4,
+			condition = { "water-tile" }
+		}
+	},
+	{
+		type = "item",
+		name = "paint-radiation",
+		icon = "__Dectorio__/graphics/icons/paint-radiation.png",
+	    flags = {"goes-to-main-inventory"},
+	    subgroup = "concrete-paint",
+	    order = "a[paint-hazard]-b[paint-emergency]-c[paint-radiation]",
+	    stack_size = 100,
+	    place_as_tile = {
+			result = "paint-radiation-left",
 			condition_size = 4,
 			condition = { "water-tile" }
 		}
