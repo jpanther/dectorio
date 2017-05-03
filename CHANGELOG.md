@@ -2,6 +2,12 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.3.0 - 2017-05-03
+
+### Added
+* Landscaping research that allows placement of dirt, sand and grass tiles
+* Landfill now requires Landscaping to be researched as a pre-requisite
+
 ## v0.2.0 - 2017-05-02
 
 ### Added

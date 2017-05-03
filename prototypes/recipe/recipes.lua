@@ -8,6 +8,47 @@ data.raw["recipe"]["concrete"].ingredients = {
 			{type="fluid", name="water", amount=100}
 		}
 
+-- Add recipes for base assets
+data:extend(
+{
+	{
+		type = "recipe",
+		name = "base-dirt",
+		energy_required = 5,
+		enabled = false,
+		category = "crafting",
+		ingredients = {
+			{"stone", 1}
+		},
+		result = "base-dirt",
+		result_count = 10
+	},
+	{
+		type = "recipe",
+		name = "base-sand",
+		energy_required = 5,
+		enabled = false,
+		category = "crafting",
+		ingredients = {
+			{"stone", 2}
+		},
+		result = "base-sand",
+		result_count = 10
+	},
+	{
+		type = "recipe",
+		name = "base-grass",
+		energy_required = 5,
+		enabled = false,
+		category = "crafting",
+		ingredients = {
+			{"raw-wood", 2}
+		},
+		result = "base-grass",
+		result_count = 10
+	}
+})
+
 -- Add new recipes
 data:extend(
 {

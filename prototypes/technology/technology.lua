@@ -1,7 +1,58 @@
 --technology.lua
 
+-- Move base landfill tech underneath landscaping
+data.raw["technology"]["landfill"].prerequisites = {"landscaping"}
+
 data:extend(
 {
+	{
+		type = "technology",
+		name = "landscaping",
+		icon = "__Dectorio__/graphics/technology/landscaping.png",
+		icon_size = 128,
+		unit = {
+			count = 15,
+			ingredients = {
+				{"science-pack-1", 1},
+			},
+			time = 10
+		},
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "base-dirt"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "base-sand"
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "base-grass"
+			}
+		},
+		order = "a"
+	},
+	{
+		type = "technology",
+		name = "wood-floor",
+		icon = "__Dectorio__/graphics/technology/wood-floor.png",
+		icon_size = 128,
+		unit = {
+			count = 10,
+			ingredients = {
+				{"science-pack-1", 1},
+			},
+			time = 10
+		},
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "wood-floor"
+			}
+		},
+		order = "a-j-z"
+	},
 	{
 		type = "technology",
 		name = "concrete-paint",
@@ -35,26 +86,5 @@ data:extend(
 			}
 		},
 		order = "e-p-b-a"
-	},
-	{
-		type = "technology",
-		name = "wood-floor",
-		icon = "__Dectorio__/graphics/technology/wood-floor.png",
-		icon_size = 128,
-		unit = {
-			count = 10,
-			ingredients = {
-				{"science-pack-1", 1},
-			},
-			time = 10
-		},
-		effects = {
-			{
-				type = "unlock-recipe",
-				recipe = "wood-floor"
-			}
-		},
-		order = "a-j-z"
 	}
-
 })

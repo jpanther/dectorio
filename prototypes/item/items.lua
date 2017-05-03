@@ -1,5 +1,59 @@
 --items.lua
 
+-- Add items for base assets
+data:extend(
+{
+	{
+		type = "item-subgroup",
+		name = "landscaping",
+		group = "logistics",
+		order = "g"
+	},
+	{
+		type = "item",
+		name = "base-dirt",
+		icon = "__Dectorio__/graphics/icons/base-dirt.png",
+	    flags = {"goes-to-main-inventory"},
+	    subgroup = "landscaping",
+	    order = "a[base-dirt]",
+	    stack_size = 100,
+	    place_as_tile = {
+			result = "dirt",
+			condition_size = 4,
+			condition = { "water-tile" }
+		}
+	},
+	{
+		type = "item",
+		name = "base-sand",
+		icon = "__Dectorio__/graphics/icons/base-sand.png",
+	    flags = {"goes-to-main-inventory"},
+	    subgroup = "landscaping",
+	    order = "a[base-dirt]-b[base-sand]",
+	    stack_size = 100,
+	    place_as_tile = {
+			result = "sand",
+			condition_size = 4,
+			condition = { "water-tile" }
+		}
+	},
+	{
+		type = "item",
+		name = "base-grass",
+		icon = "__Dectorio__/graphics/icons/base-grass.png",
+	    flags = {"goes-to-main-inventory"},
+	    subgroup = "landscaping",
+	    order = "a[base-dirt]-b[base-sand]-c[base-grass]",
+	    stack_size = 100,
+	    place_as_tile = {
+			result = "grass",
+			condition_size = 4,
+			condition = { "water-tile" }
+		}
+	}
+})
+
+-- Add new items
 data:extend(
 {
 	{
