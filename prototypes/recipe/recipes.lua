@@ -1,13 +1,5 @@
 --recipes.lua
 
-
--- Modify base concrete recipe to replace iron ore with iron sticks
-data.raw["recipe"]["concrete"].ingredients = {
-			{"stone-brick", 5},
-			{"iron-stick", 2},
-			{type="fluid", name="water", amount=100}
-		}
-
 -- Add recipes for base assets
 data:extend(
 {
@@ -111,5 +103,19 @@ data:extend(
 		},
 		result= "wood-floor",
 		result_count = 10
-	}
+	},
+	{
+		type = "recipe",
+		name = "stone-brick-wall",
+		enabled = false,
+		ingredients = {{"stone-brick", 5}},
+		result = "stone-brick-wall"
+	},
+	{
+		type = "recipe",
+		name = "concrete-wall",
+		enabled = false,
+		ingredients = {{"concrete", 5}},
+		result = "concrete-wall"
+	},
 })

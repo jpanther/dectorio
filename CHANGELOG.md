@@ -2,10 +2,13 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.3.1 - unreleased
+## v0.4.0 - 2017-05-04
+
+### Added
+* Stone and Concrete wall variants
 
 ### Changed
-* Removes decorations from base concrete and stone paths
+* Removes decorations when placing base concrete and stone paths
 
 ## v0.3.0 - 2017-05-03
 

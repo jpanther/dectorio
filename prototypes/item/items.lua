@@ -131,5 +131,25 @@ data:extend(
 			condition_size = 4,
 			condition = { "water-tile" }
 		}
+	},
+	{
+		type = "item",
+		name = "stone-brick-wall",
+		icon = "__Dectorio__/graphics/icons/stone-brick-wall.png",
+	    flags = {"goes-to-quickbar"},
+	    subgroup = "defensive-structure",
+	    order = "a[stone-brick-wall]",
+	    stack_size = 100,
+    	place_result = "stone-brick-wall"
+	},
+	{
+		type = "item",
+		name = "concrete-wall",
+		icon = "__Dectorio__/graphics/icons/concrete-wall.png",
+	    flags = {"goes-to-quickbar"},
+	    subgroup = "defensive-structure",
+	    order = "a[stone-brick-wall]-b[concrete-wall]",
+	    stack_size = 100,
+    	place_result = "concrete-wall"
 	}
 })

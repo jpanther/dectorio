@@ -5,6 +5,7 @@ A simple Factorio mod for adding new elements that let you beautify your factory
 ## Current Features
 
 * Adds wooden floorboard tiles
+* Adds items for stone and concrete walls
 * Adds items for placing dirt, sand and grass tiles
 * Adds painted concrete tiles - Hazard (black/yellow), Emergency (white/red), Radiation hazard (yellow/pink) and Safety (white/green)
 * Painted Hazard concrete replaces default Hazard concrete

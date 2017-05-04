@@ -1,11 +1,11 @@
 {
     "name": "Dectorio",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "title": "Dectorio",
     "author": "PantherX",
     "contact": "",
     "homepage": "",
     "factorio_version": "0.15",
     "dependencies": ["base >= 0.15"],
-    "description": "Adds decorative elements to beautify your factory. Currently includes wooden floorboards and painted concrete styles."
+    "description": "Adds decorative elements to beautify your factory. Currently includes stone walls, wooden floorboards and painted concrete styles."
 }

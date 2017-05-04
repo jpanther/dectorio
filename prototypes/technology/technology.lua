@@ -1,8 +1,5 @@
 --technology.lua
 
--- Move base landfill tech underneath landscaping
-data.raw["technology"]["landfill"].prerequisites = {"landscaping"}
-
 data:extend(
 {
 	{
@@ -86,5 +83,28 @@ data:extend(
 			}
 		},
 		order = "e-p-b-a"
+	},
+	{
+		type = "technology",
+		name = "concrete-walls",
+		icon = "__Dectorio__/graphics/technology/concrete-walls.png",
+		icon_size = 128,
+		prerequisites = {"concrete", "stone-walls"},
+		unit = {
+			count = 150,
+			ingredients = {
+				{"science-pack-1", 1},
+				{"science-pack-2", 1}
+			},
+			time = 20
+		},
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "concrete-wall"
+			}
+		},
+		order = "e-p-b-a"
 	}
+
 })
