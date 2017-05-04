@@ -2,6 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.3.1 - unreleased
+
+### Changed
+* Removes decorations from base concrete and stone paths
+
 ## v0.3.0 - 2017-05-03
 
 ### Added

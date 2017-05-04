@@ -1,5 +1,9 @@
 --tiles.lua
 
+-- Remove decorations from base tiles
+data.raw["tile"]["stone-path"].decorative_removal_probability = 1
+data.raw["tile"]["concrete"].decorative_removal_probability = 1
+
 data:extend(
 {
 	{
