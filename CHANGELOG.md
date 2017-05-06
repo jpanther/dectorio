@@ -6,7 +6,8 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 
 ### Bugfixes
 * Correctly disables base stone wall recipe in existing saves
-* Added migration script to convert existing base stone wall to new stone wall
+* Migrates existing base stone wall to new stone wall
+* Migrates existing hazard concrete to painted hazard concrete
 
 ## v0.4.0 - 2017-05-04
 

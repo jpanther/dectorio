@@ -6,5 +6,11 @@
 	"item":
 	[
 		["stone-wall", "stone-brick-wall"],
+		["hazard-concrete", "paint-hazard"]
+	],
+	"tile":
+	[
+		["hazard-concrete-left","paint-hazard-left"],
+		["hazard-concrete-right","paint-hazard-right"]
 	]
 }
