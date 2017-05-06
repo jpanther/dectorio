@@ -2,6 +2,12 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.4.1 - 2017-05-06
+
+### Bugfixes
+* Correctly disables base stone wall recipe in existing saves
+* Added migration script to convert existing base stone wall to new stone wall
+
 ## v0.4.0 - 2017-05-04
 
 ### Added
