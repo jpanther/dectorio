@@ -5,6 +5,7 @@ require("prototypes.item.items")
 require("prototypes.recipe.recipes")
 require("prototypes.tile.tiles")
 require("prototypes.technology.technology")
+require("prototypes.signal.signal")
 
 
 --------------------------

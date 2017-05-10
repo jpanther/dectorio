@@ -2,7 +2,12 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.4.2 - Unreleased
+## v0.5.0 - Unreleased
+
+### Added
+* Signal colours for raw resources, smelted items and fluids
+* New signal colours - purple, orange, tangerine and aqua
+* New signal icons for base game signal colours that better represent the actual signal colour
 
 ### Bugfixes
 * Balancing - increased concrete wall health to better represent raw ingredient cost
