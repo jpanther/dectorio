@@ -19,24 +19,32 @@ When you launch the game, the new mod will be enabled by default.
 ### Flooring styles
 
 * Adds wooden floorboard tiles with sound effects
+
   ![Wooden floorboards](https://cl.ly/1C3v32423043/woodenfloorboards.png)
+
 * Adds items for placing dirt, sand and grass tiles
 * Adds painted concrete tiles - Hazard (black/yellow), Emergency (white/red), Radiation hazard (yellow/pink) and Safety (white/green)
+
   ![Painted concrete](https://cl.ly/322O0k052k1M/paintedconcrete.png)
+
 * Painted Hazard concrete replaces default Hazard concrete
 * Default concrete recipe no longer uses iron ore and instead requires iron sticks
 
 ### Walls
 
 * Adds items for stone and concrete walls
+
   ![Walls](https://cl.ly/082i1q1v2C19/walls.png)
 
 ### Signals & Lamp colours
 
 * Adds new signal colours - purple, orange, tangerine and aqua
 * Adds signal colours for raw resources, smelted items and fluids
+
   ![New signal colours](https://cl.ly/3d322G2b2D3V/signalcolours.png)
+
 * New signal icons for base game signal colours that better represent the actual signal colour
+
   ![Signal selection](https://cl.ly/0l3J0y1M3C21/signalselection.png)
 
 ## Changelog
