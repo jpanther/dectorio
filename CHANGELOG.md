@@ -2,6 +2,13 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.4.2 - Unreleased
+
+### Bugfixes
+* Balancing - increased concrete wall health to better represent raw ingredient cost
+* Changed stone walls to repurpose base "stone-wall" named prototypes to ensure compatibility with other mods
+* Technology descriptions are now provided
+
 ## v0.4.1 - 2017-05-06
 
 ### Bugfixes

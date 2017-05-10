@@ -1,11 +1,6 @@
 {
-	"entity":
-	[
-		["stone-wall", "stone-brick-wall"],
-	],
 	"item":
 	[
-		["stone-wall", "stone-brick-wall"],
 		["hazard-concrete", "paint-hazard"]
 	],
 	"tile":

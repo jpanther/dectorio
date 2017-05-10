@@ -31,15 +31,11 @@ data.raw["item"]["hazard-concrete"] = nil
 -- Move base landfill tech underneath landscaping
 data.raw["technology"]["landfill"].prerequisites = {"landscaping"}
 
--- Remove base Stone wall (as it's replaced by Stone brick wall)
-data.raw["technology"]["stone-walls"].effects = {{
-        type = "unlock-recipe",
-        recipe = "stone-brick-wall"
-    }}
+-- Change stone wall tech
 data.raw["technology"]["stone-walls"].icon = "__Dectorio__/graphics/technology/stone-brick-walls.png"
 data.raw["technology"]["stone-walls"].icon_size = 128
+data.raw["item"]["stone-wall"].icon = "__Dectorio__/graphics/icons/stone-brick-wall.png"
+
+-- Change gates to use concrete-wall
 data.raw["technology"]["gates"].prerequisites = {"concrete-walls", "military-2"}
 data.raw["recipe"]["gate"].ingredients = {{"concrete-wall", 1}, {"steel-plate", 2}, {"electronic-circuit", 2}}
-data.raw["recipe"]["stone-wall"] = nil
-data.raw["wall"]["stone-wall"] = nil
-data.raw["item"]["stone-wall"] = nil

@@ -106,13 +106,6 @@ data:extend(
 	},
 	{
 		type = "recipe",
-		name = "stone-brick-wall",
-		enabled = false,
-		ingredients = {{"stone-brick", 5}},
-		result = "stone-brick-wall"
-	},
-	{
-		type = "recipe",
 		name = "concrete-wall",
 		enabled = false,
 		ingredients = {{"concrete", 5}},

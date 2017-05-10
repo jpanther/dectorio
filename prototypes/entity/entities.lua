@@ -1,18 +1,20 @@
 -- entities.lua
 
+data.raw["wall"]["stone-wall"] = nil
+
 data:extend({  
     {
         type = "wall",
-        name = "stone-brick-wall",
+        name = "stone-wall",
         icon = "__base__/graphics/icons/stone-wall.png",
         flags = {"placeable-neutral", "player-creation"},
         collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
         selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-        minable = {mining_time = 0.5, result = "stone-brick-wall"},
+        minable = {mining_time = 0.5, result = "stone-wall"},
         fast_replaceable_group = "wall",
         max_health = 250,
         repair_speed_modifier = 2,
-        corpse = "stone-brick-wall-remnants",
+        corpse = "wall-remnants",
         repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
         mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
         vehicle_impact_sound =  { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
@@ -323,77 +325,6 @@ data:extend({
         default_output_signal = {type = "virtual", name = "signal-green"} or {type = "virtual", name = "signal-G"}
     },
     {
-        type = "corpse",
-        name = "stone-brick-wall-remnants",
-        icon = "__base__/graphics/icons/wall-remnants.png",
-        flags = {"placeable-neutral", "not-on-map"},
-        subgroup="remnants",
-        order="d[remnants]-c[wall]",
-        collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
-        selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-        selectable_in_game = false,
-        time_before_removed = 60 * 60 * 15, -- 15 minutes
-        final_render_layer = "remnants",
-        animation = {
-            {
-                width = 36,
-                height = 36,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/stone-brick-wall/remains/wall-remain-01.png"
-            },
-            {
-                width = 38,
-                height = 35,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/stone-brick-wall/remains/wall-remain-02.png"
-            },
-            {
-                width = 35,
-                height = 36,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/stone-brick-wall/remains/wall-remain-03.png"
-            },
-            {
-                width = 41,
-                height = 36,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/stone-brick-wall/remains/wall-remain-04.png"
-            },
-            {
-                width = 35,
-                height = 35,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/stone-brick-wall/remains/wall-remain-05.png"
-            },
-            {
-                width = 50,
-                height = 37,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/stone-brick-wall/remains/wall-remain-06.png"
-            },
-            {
-                width = 54,
-                height = 40,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/stone-brick-wall/remains/wall-remain-07.png"
-            },
-            {
-                width = 43,
-                height = 45,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/stone-brick-wall/remains/wall-remain-08.png"
-            }
-        }
-    },
-    {
         type = "wall",
         name = "concrete-wall",
         icon = "__base__/graphics/icons/stone-wall.png",
@@ -402,9 +333,9 @@ data:extend({
         selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
         minable = {mining_time = 0.5, result = "concrete-wall"},
         fast_replaceable_group = "wall",
-        max_health = 400,
+        max_health = 450,
         repair_speed_modifier = 2,
-        corpse = "concrete-wall-remnants",
+        corpse = "wall-remnants",
         repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
         mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
         vehicle_impact_sound =  { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
@@ -713,76 +644,5 @@ data:extend({
         circuit_wire_max_distance = 7.5,
         circuit_connector_sprites = get_circuit_connector_sprites({0, -0.59375}, nil, 6),
         default_output_signal = {type = "virtual", name = "signal-green"} or {type = "virtual", name = "signal-G"}
-    },
-    {
-        type = "corpse",
-        name = "concrete-wall-remnants",
-        icon = "__base__/graphics/icons/wall-remnants.png",
-        flags = {"placeable-neutral", "not-on-map"},
-        subgroup="remnants",
-        order="d[remnants]-c[wall]",
-        collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
-        selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-        selectable_in_game = false,
-        time_before_removed = 60 * 60 * 15, -- 15 minutes
-        final_render_layer = "remnants",
-        animation = {
-            {
-                width = 36,
-                height = 36,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/concrete-wall/remains/wall-remain-01.png"
-            },
-            {
-                width = 38,
-                height = 35,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/concrete-wall/remains/wall-remain-02.png"
-            },
-            {
-                width = 35,
-                height = 36,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/concrete-wall/remains/wall-remain-03.png"
-            },
-            {
-                width = 41,
-                height = 36,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/concrete-wall/remains/wall-remain-04.png"
-            },
-            {
-                width = 35,
-                height = 35,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/concrete-wall/remains/wall-remain-05.png"
-            },
-            {
-                width = 50,
-                height = 37,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/concrete-wall/remains/wall-remain-06.png"
-            },
-            {
-                width = 54,
-                height = 40,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/concrete-wall/remains/wall-remain-07.png"
-            },
-            {
-                width = 43,
-                height = 45,
-                frame_count = 1,
-                direction_count = 1,
-                filename = "__Dectorio__/graphics/entity/concrete-wall/remains/wall-remain-08.png"
-            }
-        }
     }
 })
