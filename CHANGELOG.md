@@ -2,7 +2,7 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.5.0 - Unreleased
+## v0.5.0 - 2017-05-10
 
 ### Added
 * Signal colours for raw resources, smelted items and fluids
