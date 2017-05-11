@@ -2,6 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.5.2 - 2017-05-11
+
+### Added
+* New settings for enabling or disabling various parts of the mod (Options > Mods > Startup)
+
 ## v0.5.1 - 2017-05-11
 
 ### Changed

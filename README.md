@@ -6,7 +6,7 @@ Requires Factorio version 0.15 or later.
 
 ## How to install
 
-Download the latest stable release at <https://github.com/jpanther/Dectorio/releases/latest> and copy the entire zip file to your Factorio mods directory:
+Download the latest stable release from the [Factorio mod portal](https://mods.factorio.com/mods/PantherX/Dectorio) or at <https://github.com/jpanther/Dectorio/releases/latest> and copy the entire zip file to your Factorio mods directory:
 
 * Windows: `%appdata%\Factorio\mods`
 * Mac: `~/Library/Application Support/factorio/mods/`

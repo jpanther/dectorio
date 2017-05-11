@@ -41,24 +41,36 @@ data.raw["recipe"]["concrete"].ingredients = {
 			{type="fluid", name="water", amount=100}
 		}
 
--- Remove base Hazard concrete (as it's replaced by painted concrete)
-data.raw["technology"]["concrete"].effects = {{
-        type = "unlock-recipe",
-        recipe = "concrete"
-      }}
-data.raw["tile"]["hazard-concrete-left"] = nil
-data.raw["tile"]["hazard-concrete-right"] = nil
-data.raw["recipe"]["hazard-concrete"] = nil
-data.raw["item"]["hazard-concrete"] = nil
+if settings.startup["dectorio-painted-concrete"].value then
 
--- Move base landfill tech underneath landscaping
-data.raw["technology"]["landfill"].prerequisites = {"landscaping"}
+	-- Remove base Hazard concrete (as it's replaced by painted concrete)
+	data.raw["technology"]["concrete"].effects = {{
+	        type = "unlock-recipe",
+	        recipe = "concrete"
+	      }}
+	data.raw["tile"]["hazard-concrete-left"] = nil
+	data.raw["tile"]["hazard-concrete-right"] = nil
+	data.raw["recipe"]["hazard-concrete"] = nil
+	data.raw["item"]["hazard-concrete"] = nil
 
--- Change stone wall tech
-data.raw["technology"]["stone-walls"].icon = "__Dectorio__/graphics/technology/stone-brick-walls.png"
-data.raw["technology"]["stone-walls"].icon_size = 128
-data.raw["item"]["stone-wall"].icon = "__Dectorio__/graphics/icons/stone-brick-wall.png"
+end
 
--- Change gates to use concrete-wall
-data.raw["technology"]["gates"].prerequisites = {"concrete-walls", "military-2"}
-data.raw["recipe"]["gate"].ingredients = {{"concrete-wall", 1}, {"steel-plate", 2}, {"electronic-circuit", 2}}
+if settings.startup["dectorio-landscaping"].value then
+
+	-- Move base landfill tech underneath landscaping
+	data.raw["technology"]["landfill"].prerequisites = {"landscaping"}
+
+end
+
+if settings.startup["dectorio-walls"].value then
+
+	-- Change stone wall tech
+	data.raw["technology"]["stone-walls"].icon = "__Dectorio__/graphics/technology/stone-brick-walls.png"
+	data.raw["technology"]["stone-walls"].icon_size = 128
+	data.raw["item"]["stone-wall"].icon = "__Dectorio__/graphics/icons/stone-brick-wall.png"
+
+	-- Change gates to use concrete-wall
+	data.raw["technology"]["gates"].prerequisites = {"concrete-walls", "military-2"}
+	data.raw["recipe"]["gate"].ingredients = {{"concrete-wall", 1}, {"steel-plate", 2}, {"electronic-circuit", 2}}
+
+end
