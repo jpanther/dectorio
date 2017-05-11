@@ -2,6 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.5.1 - Unreleased
+
+### Changed
+* Adjusted white/grey/black signal icons to follow same pattern as the other colours
+
 ## v0.5.0 - 2017-05-10
 
 ### Added

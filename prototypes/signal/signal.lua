@@ -14,7 +14,7 @@ local colors = {
     {type="virtual", name="signal-pink", color={r=255,g=64,b=255}},         -- Magenta
     {type="virtual", name="signal-white", color={r=255,g=255,b=255}},       -- Snow
     {type="virtual", name="signal-grey", color={r=192,g=192,b=192}},        -- Magnesium
-    {type="virtual", name="signal-black", color={r=41,g=0,b=126}},          -- Black light
+    {type="virtual", name="signal-black", color={r=41,g=0,b=126}},          -- UV black light
 
     {type="item", name="raw-wood", color={r=128,g=71,b=0,a=220}},           -- Mocha (dark)
     {type="item", name="coal", color={r=33,g=33,b=33,a=220}},               -- Lead
@@ -39,38 +39,35 @@ local function char(num)
     return string.char(string.byte("a")+num-1)
 end
 
+-- Clear out any existing signals
+for name, signal in pairs(data.raw["virtual-signal"]) do
+    if signal.order:find("colors") then
+        data.raw["virtual-signal"][name] = nil
+    end
+end
+
 -- Create new virtual color items if they don't already exist
 for i, color in pairs(colors) do
     if color.type=="virtual" then
         local tint = {r=color.color.r, g=color.color.g, b=color.color.b, a=180}
-        if not data.raw["virtual-signal"][color.name] then 
-            data:extend({
-                {
-                    type = "virtual-signal",
-                    name = color.name,
-                    icons = {
-                        {
-                            icon = "__base__/graphics/icons/signal/signal_grey.png",
-                            tint = tint
-                        }
-                    },
-                    subgroup = "virtual-signal-color",
-                    order = "d[colors]-0[" .. char(i) .. "-" .. color.name .."]"
-                }
-            })
-        else
-            if not (color.name=="signal-black" or color.name=="signal-grey" or color.name=="signal-white") then
-                data.raw["virtual-signal"][color.name].icons = {
-                    {
-                        icon = "__base__/graphics/icons/signal/signal_grey.png",
-                        tint = tint
-                    }
-                }
-                data.raw["virtual-signal"][color.name].order = "d[colors]-0[" .. char(i) .. "-" .. color.name .."]"
-           end
-        end
+        data:extend({
+            {
+                type = "virtual-signal",
+                name = color.name,
+                icons = {
+                    { icon = "__base__/graphics/icons/signal/signal_grey.png", tint = tint }
+                },
+                subgroup = "virtual-signal-color",
+                order = "d[colors]-0["..char(i).."-"..color.name.."]"
+            }
+        })
     end
 end
 
+-- Reset black signal to correct icon
+local black = data.raw["virtual-signal"]["signal-black"]
+black.icons[1].tint = {r=44,g=44,b=44,a=180}
+
 -- Update the lamps
-data.raw["lamp"]["small-lamp"].signal_to_color_mapping = colors
+local lamp = data.raw.lamp["small-lamp"]
+lamp.signal_to_color_mapping = colors
