@@ -6,34 +6,34 @@ local DECT = {}
 -- These options are configured through the in-game options (Options > Mods > Startup)
 -- Don't change them here!
 DECT.ENABLED = {
-	["signals"] = settings.startup["dectorio-signals"].value,
-	["walls"] = settings.startup["dectorio-walls"].value,
-	["landscaping"] = settings.startup["dectorio-landscaping"].value,
-	["wood-floor"] = settings.startup["dectorio-wood-floor"].value,
-	["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
+    ["signals"] = settings.startup["dectorio-signals"].value,
+    ["walls"] = settings.startup["dectorio-walls"].value,
+    ["landscaping"] = settings.startup["dectorio-landscaping"].value,
+    ["wood-floor"] = settings.startup["dectorio-wood-floor"].value,
+    ["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
 }
 
 -- CONFIGURABLE OPTIONS
 -- These options can be changed to suit individual play-style
 DECT.CONFIG = {
-	-- How likely it is that decorations are removed when placing flooring
-	-- (0 = keep all decorations, 0.5 = remove 50% of decorations, 1 = remove all decorations)
-	["decorative_removal_probability"] = 1,
+    -- How likely it is that decorations are removed when placing flooring
+    -- (0 = keep all decorations, 0.5 = remove 50% of decorations, 1 = remove all decorations)
+    ["decorative_removal_probability"] = 1,
 
-	-- Whether the base concrete recipe should be modified to use iron sticks in place of iron ore
-	-- (true = recipe uses iron sticks, false = recipe uses iron ore)
-	["modified_concrete_recipe"] = true,
+    -- Whether the base concrete recipe should be modified to use iron sticks in place of iron ore
+    -- (true = recipe uses iron sticks, false = recipe uses iron ore)
+    ["modified_concrete_recipe"] = true,
 
-	-- Whether painted concrete (when enabled) disables the base game hazard concrete
-	-- (true = only painted concrete is used, false = both painted and original hazard concrete variants are available)
-	["disable_hazard_concrete"] = true,
+    -- Whether painted concrete (when enabled) disables the base game hazard concrete
+    -- (true = only painted concrete is used, false = both painted and original hazard concrete variants are available)
+    ["disable_hazard_concrete"] = true,
 }
 
 DECT.CONFIG.SIGNALS = {
-	-- All the signal colors to be changed/added
-	-- RGB values from 0 to 255, alpha is optional
-	-- The order of the signals is the order they will appear in-game
-	-- NOTE: New virtual signals will need localised names to be provided in '/locale/[language]/signals.cfg'
+    -- All the signal colors to be changed/added
+    -- RGB values from 0 to 255, alpha is optional
+    -- The order of the signals is the order they will appear in-game
+    -- NOTE: New virtual signals will need localised names to be provided in '/locale/[language]/signals.cfg'
     {type="virtual", name="signal-red", color={r=255,g=38,b=0}},            -- Maraschino
     {type="virtual", name="signal-orange", color={r=253,g=89,b=35}},        -- Orange
     {type="virtual", name="signal-tangerine", color={r=255,g=147,b=0}},     -- Tangerine
