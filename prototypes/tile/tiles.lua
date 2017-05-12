@@ -1,14 +1,10 @@
 --tiles.lua
 
-if settings.startup["dectorio-landscaping"].value then
+-- Modify decorations on base tiles
+data.raw["tile"]["stone-path"].decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"]
+data.raw["tile"]["concrete"].decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"]
 
-	-- Remove decorations from base tiles
-	data.raw["tile"]["stone-path"].decorative_removal_probability = 1
-	data.raw["tile"]["concrete"].decorative_removal_probability = 1
-
-end
-
-if settings.startup["dectorio-wood-floor"].value then
+if DECT.ENABLED["wood-floor"] then
 
 	data:extend({
 		{
@@ -20,7 +16,7 @@ if settings.startup["dectorio-wood-floor"].value then
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.2,
 			layer = 61,
-			decorative_removal_probability = 1,
+			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
 				main = {
@@ -89,7 +85,7 @@ if settings.startup["dectorio-wood-floor"].value then
 
 end
 
-if settings.startup["dectorio-painted-concrete"].value then
+if DECT.ENABLED["painted-concrete"] then
 
 	data:extend({
 		{
@@ -102,7 +98,7 @@ if settings.startup["dectorio-painted-concrete"].value then
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
 			layer = 61,
-			decorative_removal_probability = 1,
+			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
 				main = {
@@ -160,7 +156,7 @@ if settings.startup["dectorio-painted-concrete"].value then
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
 			layer = 61,
-			decorative_removal_probability = 1,
+			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
 				main = {
@@ -218,7 +214,7 @@ if settings.startup["dectorio-painted-concrete"].value then
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
 			layer = 61,
-			decorative_removal_probability = 1,
+			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
 				main = {
@@ -276,7 +272,7 @@ if settings.startup["dectorio-painted-concrete"].value then
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
 			layer = 61,
-			decorative_removal_probability = 1,
+			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
 				main = {
@@ -334,7 +330,7 @@ if settings.startup["dectorio-painted-concrete"].value then
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
 			layer = 61,
-			decorative_removal_probability = 1,
+			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
 				main = {
@@ -392,7 +388,7 @@ if settings.startup["dectorio-painted-concrete"].value then
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
 			layer = 61,
-			decorative_removal_probability = 1,
+			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
 				main = {
@@ -450,7 +446,7 @@ if settings.startup["dectorio-painted-concrete"].value then
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
 			layer = 61,
-			decorative_removal_probability = 1,
+			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
 				main = {
@@ -508,7 +504,7 @@ if settings.startup["dectorio-painted-concrete"].value then
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
 			layer = 61,
-			decorative_removal_probability = 1,
+			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
 				main = {

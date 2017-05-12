@@ -1,6 +1,6 @@
 --technology.lua
 
-if settings.startup["dectorio-landscaping"].value then
+if DECT.ENABLED["landscaping"] then
 
 	data:extend({
 		{
@@ -35,7 +35,7 @@ if settings.startup["dectorio-landscaping"].value then
 
 end
 
-if settings.startup["dectorio-wood-floor"].value then
+if DECT.ENABLED["wood-floor"] then
 
 	data:extend({
 		{
@@ -62,7 +62,7 @@ if settings.startup["dectorio-wood-floor"].value then
 
 end
 
-if settings.startup["dectorio-painted-concrete"].value then
+if DECT.ENABLED["painted-concrete"] then
 
 	data:extend({
 		{
@@ -103,7 +103,7 @@ if settings.startup["dectorio-painted-concrete"].value then
 
 end
 
-if settings.startup["dectorio-walls"].value then
+if DECT.ENABLED["walls"] then
 
 	data:extend({
 		{

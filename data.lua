@@ -22,6 +22,7 @@
 
 --data.lua
 
+DECT = require("config")
 require("prototypes.entity.entities")
 require("prototypes.item.items")
 require("prototypes.recipe.recipes")
@@ -34,14 +35,18 @@ require("prototypes.signal.signal")
 -- Changes to base game --
 --------------------------
 
--- Modify base concrete recipe to replace iron ore with iron sticks
-data.raw["recipe"]["concrete"].ingredients = {
-			{"stone-brick", 5},
-			{"iron-stick", 2},
-			{type="fluid", name="water", amount=100}
-		}
+if DECT.CONFIG["modified_concrete_recipe"] then
+	
+	-- Modify base concrete recipe to replace iron ore with iron sticks
+	data.raw["recipe"]["concrete"].ingredients = {
+				{"stone-brick", 5},
+				{"iron-stick", 2},
+				{type="fluid", name="water", amount=100}
+			}
 
-if settings.startup["dectorio-painted-concrete"].value then
+end
+
+if DECT.ENABLED["painted-concrete"] and DECT.CONFIG["disable_hazard_concrete"] then
 
 	-- Remove base Hazard concrete (as it's replaced by painted concrete)
 	data.raw["technology"]["concrete"].effects = {{
@@ -55,14 +60,14 @@ if settings.startup["dectorio-painted-concrete"].value then
 
 end
 
-if settings.startup["dectorio-landscaping"].value then
+if DECT.ENABLED["landscaping"] then
 
 	-- Move base landfill tech underneath landscaping
 	data.raw["technology"]["landfill"].prerequisites = {"landscaping"}
 
 end
 
-if settings.startup["dectorio-walls"].value then
+if DECT.ENABLED["walls"] then
 
 	-- Change stone wall tech
 	data.raw["technology"]["stone-walls"].icon = "__Dectorio__/graphics/technology/stone-brick-walls.png"

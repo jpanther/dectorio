@@ -1,6 +1,6 @@
 -- entities.lua
 
-if settings.startup["dectorio-walls"].value then
+if DECT.ENABLED["walls"] then
 
     data.raw["wall"]["stone-wall"] = nil
 
