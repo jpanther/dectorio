@@ -2,6 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.5.3 - Unreleased
+
+### Added
+* New config.lua file that allows more customisation over how the mod behaves
+
 ## v0.5.2 - 2017-05-11
 
 ### Added

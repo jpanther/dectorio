@@ -1,6 +1,8 @@
 # Dectorio
 
-A simple Factorio mod for adding new elements that let you beautify your factory. New technology research is required to unlock the various items before they can be crafted.
+A simple mod that adds decorative elements to beautify your factory. New technology research is required to unlock the various items before they can be crafted and some default recipes are adjusted to better reflect how these items should be made.
+
+Inspiration for the mod came from a lot of other mods on the Factorio mod portal, although all the assets in Dectorio have been custom made for this mod and are either modified versions of base game assets or created from scratch. If you'd like to use any of these in your own mod, please observe the GNU GPLv3 license.
 
 Requires Factorio version 0.15 or later.
 
@@ -46,6 +48,20 @@ When you launch the game, the new mod will be enabled by default.
 * New signal icons for base game signal colours that better represent the actual signal colour
 
   ![Signal selection](https://cl.ly/0l3J0y1M3C21/signalselection.png)
+
+### General
+
+* Includes settings for enabling or disabling each of the above features (Options > Mods > Startup). Ideally these should only be changed before starting a new game. Changes on existing games will require content to be migrated and some items may be lost if you disable components you've already used on an existing save. Always make a backup first!
+
+  ![Mod options](https://cl.ly/363i1h1A4110/settings.png)
+
+## Bugs & Suggestions
+
+Feel free to get in touch with any issues or suggestions for new features you'd like to see. You can get in contact via the 'Discussion' tab above, the [Factorio Forums](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=28042) or you can also view and log issues directly to the GitHub repo.
+
+## Mod Compatibility
+
+Limited testing has been completed with other mods. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
 
 ## Changelog
 

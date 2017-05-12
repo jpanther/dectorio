@@ -2,7 +2,7 @@
 
 local DECT = {}
 
--- ENABLED COMPONENTS
+-- IN-GAME OPTIONS
 -- These options are configured through the in-game options (Options > Mods > Startup)
 -- Don't change them here!
 DECT.ENABLED = {
