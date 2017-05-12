@@ -57,7 +57,7 @@ When you launch the game, the new mod will be enabled by default.
 
 ## Bugs & Suggestions
 
-Feel free to get in touch with any issues or suggestions for new features you'd like to see. You can get in contact via the 'Discussion' tab above, the [Factorio Forums](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=28042) or you can also view and log issues directly to the GitHub repo.
+Feel free to get in touch with any issues or suggestions for new features you'd like to see. You can get in contact via the 'Discussion' tab on the [Factorio mod portal](https://mods.factorio.com/mods/PantherX/Dectorio/discussion), the [Factorio Forums](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=28042) or you can also view and log issues directly to the GitHub repo.
 
 ## Mod Compatibility
 
