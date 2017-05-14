@@ -163,7 +163,8 @@ if DECT.ENABLED["walls"] then
 		}
 	})
 
-	-- Change stone wall icon
-	data.raw["item"]["stone-wall"].icon = "__Dectorio__/graphics/icons/stone-brick-wall.png"
+	-- Change base stone wall
+	local base_stone_wall = data.raw["item"]["stone-wall"]
+	base_stone_wall.icon = "__Dectorio__/graphics/icons/stone-brick-wall.png"
 
 end
