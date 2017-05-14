@@ -22,7 +22,11 @@ for index, force in pairs(game.forces) do
 	if tech["dect-landscaping"].researched then
 		rec["dect-base-dirt"].enabled = true
 		rec["dect-base-sand"].enabled = true
+		rec["dect-base-sand-dark"].enabled = true
 		rec["dect-base-grass"].enabled = true
+		rec["dect-base-grass-dry"].enabled = true
+		rec["dect-base-red-desert"].enabled = true
+		rec["dect-base-red-desert-dark"].enabled = true
 	end
 	if tech["dect-wood-floor"].researched then
 		rec["dect-wood-floor"].enabled = true

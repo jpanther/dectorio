@@ -24,13 +24,16 @@ When you launch the game, the new mod will be enabled by default.
 
   ![Wooden floorboards](https://cl.ly/1C3v32423043/woodenfloorboards.png)
 
-* Adds items for placing dirt, sand and grass tiles
 * Adds painted concrete tiles - Hazard (black/yellow), Emergency (white/red), Radiation hazard (yellow/pink) and Safety (white/green)
 
   ![Painted concrete](https://cl.ly/322O0k052k1M/paintedconcrete.png)
 
 * Painted Hazard concrete replaces default Hazard concrete
 * Default concrete recipe no longer uses iron ore and instead requires iron sticks
+
+### Landscaping
+
+* Adds items for placing dirt, sand, dark sand, grass, dry grass, red desert and dark red desert tiles
 
 ### Walls
 
@@ -55,14 +58,22 @@ When you launch the game, the new mod will be enabled by default.
 
   ![Mod options](https://cl.ly/363i1h1A4110/settings.png)
 
-## Bugs & Suggestions
+* Config.lua file that allows additional customisation
+
+## Development
+
+### Bugs & Suggestions
 
 Feel free to get in touch with any issues or suggestions for new features you'd like to see. You can get in contact via the 'Discussion' tab on the [Factorio mod portal](https://mods.factorio.com/mods/PantherX/Dectorio/discussion), the [Factorio Forums](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=28042) or you can also view and log issues directly to the GitHub repo.
 
-## Mod Compatibility
+### Language Support
+
+Currently the mod is only available in English. If you are able to translate the mod into an additional language, please let me know and I'll package it into the bundle for distribution (with credit to you).
+
+### Mod Compatibility
 
 Limited testing has been completed with other mods. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
 
-## Changelog
+### Changelog
 
 Refer to the [CHANGELOG](CHANGELOG.md) for a detailed list of changes in each version.

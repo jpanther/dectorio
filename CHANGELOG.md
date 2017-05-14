@@ -2,10 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.5.3 - Unreleased
+## v0.5.3 - 2017-05-14
 
 ### Added
-* New config.lua file that allows more customisation over how the mod behaves
+* Landscaping now allows placement of dark sand, dry grass, red desert and dark red desert tiles
+* New config.lua file that allows even more customisation over how the mod behaves
 * Item descriptions for painted concrete
 
 ### Changed

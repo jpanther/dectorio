@@ -41,6 +41,18 @@ if DECT.ENABLED["landscaping"] then
 		},
 		{
 			type = "recipe",
+			name = "dect-base-sand-dark",
+			energy_required = 5,
+			enabled = false,
+			category = "crafting",
+			ingredients = {
+				{"stone", 2}
+			},
+			result = "dect-base-sand-dark",
+			result_count = 10
+		},
+		{
+			type = "recipe",
 			name = "dect-base-grass",
 			energy_required = 5,
 			enabled = false,
@@ -49,6 +61,42 @@ if DECT.ENABLED["landscaping"] then
 				{"raw-wood", 2}
 			},
 			result = "dect-base-grass",
+			result_count = 10
+		},
+		{
+			type = "recipe",
+			name = "dect-base-grass-dry",
+			energy_required = 5,
+			enabled = false,
+			category = "crafting",
+			ingredients = {
+				{"raw-wood", 2}
+			},
+			result = "dect-base-grass-dry",
+			result_count = 10
+		},
+		{
+			type = "recipe",
+			name = "dect-base-red-desert",
+			energy_required = 5,
+			enabled = false,
+			category = "crafting",
+			ingredients = {
+				{"stone", 2}
+			},
+			result = "dect-base-red-desert",
+			result_count = 10
+		},
+		{
+			type = "recipe",
+			name = "dect-base-red-desert-dark",
+			energy_required = 5,
+			enabled = false,
+			category = "crafting",
+			ingredients = {
+				{"stone", 2}
+			},
+			result = "dect-base-red-desert-dark",
 			result_count = 10
 		}
 	})

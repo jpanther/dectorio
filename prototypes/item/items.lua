@@ -40,14 +40,70 @@ if DECT.ENABLED["landscaping"] then
 		},
 		{
 			type = "item",
+			name = "dect-base-sand-dark",
+			icon = "__Dectorio__/graphics/icons/base-sand-dark.png",
+		    flags = {"goes-to-main-inventory"},
+		    subgroup = "landscaping",
+		    order = "a[base-dirt]-b[base-sand]-c[base-sand-dark]",
+		    stack_size = 100,
+		    place_as_tile = {
+				result = "sand-dark",
+				condition_size = 4,
+				condition = { "water-tile" }
+			}
+		},
+		{
+			type = "item",
 			name = "dect-base-grass",
 			icon = "__Dectorio__/graphics/icons/base-grass.png",
 		    flags = {"goes-to-main-inventory"},
 		    subgroup = "landscaping",
-		    order = "a[base-dirt]-b[base-sand]-c[base-grass]",
+		    order = "a[base-dirt]-b[base-sand]-c[base-sand-dark]-d[base-grass]",
 		    stack_size = 100,
 		    place_as_tile = {
 				result = "grass",
+				condition_size = 4,
+				condition = { "water-tile" }
+			}
+		},
+		{
+			type = "item",
+			name = "dect-base-grass-dry",
+			icon = "__Dectorio__/graphics/icons/base-grass-dry.png",
+		    flags = {"goes-to-main-inventory"},
+		    subgroup = "landscaping",
+		    order = "a[base-dirt]-b[base-sand]-c[base-sand-dark]-d[base-grass]-e[base-grass-dry]",
+		    stack_size = 100,
+		    place_as_tile = {
+				result = "grass-dry",
+				condition_size = 4,
+				condition = { "water-tile" }
+			}
+		},
+		{
+			type = "item",
+			name = "dect-base-red-desert",
+			icon = "__Dectorio__/graphics/icons/base-red-desert.png",
+		    flags = {"goes-to-main-inventory"},
+		    subgroup = "landscaping",
+		    order = "a[base-dirt]-b[base-sand]-c[base-sand-dark]-d[base-grass]-e[base-grass-dry]-f[red-desert]",
+		    stack_size = 100,
+		    place_as_tile = {
+				result = "red-desert",
+				condition_size = 4,
+				condition = { "water-tile" }
+			}
+		},
+		{
+			type = "item",
+			name = "dect-base-red-desert-dark",
+			icon = "__Dectorio__/graphics/icons/base-red-desert-dark.png",
+		    flags = {"goes-to-main-inventory"},
+		    subgroup = "landscaping",
+		    order = "a[base-dirt]-b[base-sand]-c[base-sand-dark]-d[base-grass]-e[base-grass-dry]-f[red-desert]-g[red-desert-dark]",
+		    stack_size = 100,
+		    place_as_tile = {
+				result = "red-desert-dark",
 				condition_size = 4,
 				condition = { "water-tile" }
 			}
