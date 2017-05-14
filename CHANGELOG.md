@@ -6,6 +6,11 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 
 ### Added
 * New config.lua file that allows more customisation over how the mod behaves
+* Item descriptions for painted concrete
+
+### Changed
+* Gave all modded items prefixed prototype names to avoid potential clashes with other mods
+* Better handling of migration for base Hazard concrete on existing saves when mod is added
 
 ## v0.5.2 - 2017-05-11
 

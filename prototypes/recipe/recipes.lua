@@ -1,43 +1,54 @@
 --recipes.lua
 
+if DECT.CONFIG["modified_concrete_recipe"] then
+	
+	-- Modify base concrete recipe to replace iron ore with iron sticks
+	data.raw["recipe"]["concrete"].ingredients = {
+				{"stone-brick", 5},
+				{"iron-stick", 2},
+				{type="fluid", name="water", amount=100}
+			}
+
+end
+
 if DECT.ENABLED["landscaping"] then
 
 	-- Add recipes for base assets
 	data:extend({
 		{
 			type = "recipe",
-			name = "base-dirt",
+			name = "dect-base-dirt",
 			energy_required = 5,
 			enabled = false,
 			category = "crafting",
 			ingredients = {
 				{"stone", 1}
 			},
-			result = "base-dirt",
+			result = "dect-base-dirt",
 			result_count = 10
 		},
 		{
 			type = "recipe",
-			name = "base-sand",
+			name = "dect-base-sand",
 			energy_required = 5,
 			enabled = false,
 			category = "crafting",
 			ingredients = {
 				{"stone", 2}
 			},
-			result = "base-sand",
+			result = "dect-base-sand",
 			result_count = 10
 		},
 		{
 			type = "recipe",
-			name = "base-grass",
+			name = "dect-base-grass",
 			energy_required = 5,
 			enabled = false,
 			category = "crafting",
 			ingredients = {
 				{"raw-wood", 2}
 			},
-			result = "base-grass",
+			result = "dect-base-grass",
 			result_count = 10
 		}
 	})
@@ -50,50 +61,50 @@ if DECT.ENABLED["painted-concrete"] then
 	data:extend({
 		{	-- Concrete paint - Hazard
 			type = "recipe",
-			name = "paint-hazard",
+			name = "dect-paint-hazard",
 			energy_required = 10,
 			enabled = false,
 			category = "crafting",
 			ingredients = {
 				{"concrete", 10},
 			},
-			result= "paint-hazard",
+			result= "dect-paint-hazard",
 			result_count = 10
 		},
 		{	-- Concrete paint - Emergency
 			type = "recipe",
-			name = "paint-emergency",
+			name = "dect-paint-emergency",
 			energy_required = 10,
 			enabled = false,
 			category = "crafting",
 			ingredients = {
 				{"concrete", 10},
 			},
-			result= "paint-emergency",
+			result= "dect-paint-emergency",
 			result_count = 10
 		},
 		{	-- Concrete paint - Safety
 			type = "recipe",
-			name = "paint-safety",
+			name = "dect-paint-safety",
 			energy_required = 10,
 			enabled = false,
 			category = "crafting",
 			ingredients = {
 				{"concrete", 10},
 			},
-			result= "paint-safety",
+			result= "dect-paint-safety",
 			result_count = 10
 		},
 		{	-- Concrete paint - Radiation Hazard
 			type = "recipe",
-			name = "paint-radiation",
+			name = "dect-paint-radiation",
 			energy_required = 10,
 			enabled = false,
 			category = "crafting",
 			ingredients = {
 				{"concrete", 10},
 			},
-			result= "paint-radiation",
+			result= "dect-paint-radiation",
 			result_count = 10
 		}
 	})
@@ -106,14 +117,14 @@ if DECT.ENABLED["wood-floor"] then
 	data:extend({
 		{	-- Wooden floorboards
 			type = "recipe",
-			name = "wood-floor",
+			name = "dect-wood-floor",
 			energy_required = 5,
 			enabled = false,
 			category = "crafting",
 			ingredients = {
 				{"wood", 5},
 			},
-			result= "wood-floor",
+			result= "dect-wood-floor",
 			result_count = 10
 		}
 	})
@@ -126,11 +137,14 @@ if DECT.ENABLED["walls"] then
 	data:extend({
 		{
 			type = "recipe",
-			name = "concrete-wall",
+			name = "dect-concrete-wall",
 			enabled = false,
 			ingredients = {{"concrete", 5}},
-			result = "concrete-wall"
+			result = "dect-concrete-wall"
 		}
 	})
+
+	-- Change gates to use concrete-wall
+	data.raw["recipe"]["gate"].ingredients = {{"dect-concrete-wall", 1}, {"steel-plate", 2}, {"electronic-circuit", 2}}
 
 end

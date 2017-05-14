@@ -5,7 +5,7 @@ if DECT.ENABLED["landscaping"] then
 	data:extend({
 		{
 			type = "technology",
-			name = "landscaping",
+			name = "dect-landscaping",
 			icon = "__Dectorio__/graphics/technology/landscaping.png",
 			icon_size = 128,
 			unit = {
@@ -18,20 +18,23 @@ if DECT.ENABLED["landscaping"] then
 			effects = {
 				{
 					type = "unlock-recipe",
-					recipe = "base-dirt"
+					recipe = "dect-base-dirt"
 				},
 				{
 					type = "unlock-recipe",
-					recipe = "base-sand"
+					recipe = "dect-base-sand"
 				},
 				{
 					type = "unlock-recipe",
-					recipe = "base-grass"
+					recipe = "dect-base-grass"
 				}
 			},
 			order = "a"
 		}
 	})
+
+	-- Move base landfill tech underneath landscaping
+	data.raw["technology"]["landfill"].prerequisites = {"dect-landscaping"}
 
 end
 
@@ -40,7 +43,7 @@ if DECT.ENABLED["wood-floor"] then
 	data:extend({
 		{
 			type = "technology",
-			name = "wood-floor",
+			name = "dect-wood-floor",
 			icon = "__Dectorio__/graphics/technology/wood-floor.png",
 			icon_size = 128,
 			unit = {
@@ -53,7 +56,7 @@ if DECT.ENABLED["wood-floor"] then
 			effects = {
 				{
 					type = "unlock-recipe",
-					recipe = "wood-floor"
+					recipe = "dect-wood-floor"
 				}
 			},
 			order = "a-j-z"
@@ -67,7 +70,7 @@ if DECT.ENABLED["painted-concrete"] then
 	data:extend({
 		{
 			type = "technology",
-			name = "concrete-paint",
+			name = "dect-concrete-paint",
 			icon = "__Dectorio__/graphics/technology/concrete-paint.png",
 			icon_size = 128,
 			prerequisites = {"concrete"},
@@ -82,24 +85,34 @@ if DECT.ENABLED["painted-concrete"] then
 			effects = {
 				{
 					type = "unlock-recipe",
-					recipe = "paint-hazard"
+					recipe = "dect-paint-hazard"
 				},
 				{
 					type = "unlock-recipe",
-					recipe = "paint-emergency"
+					recipe = "dect-paint-emergency"
 				},
 				{
 					type = "unlock-recipe",
-					recipe = "paint-radiation"
+					recipe = "dect-paint-radiation"
 				},
 				{
 					type = "unlock-recipe",
-					recipe = "paint-safety"
+					recipe = "dect-paint-safety"
 				}
 			},
 			order = "e-p-b-a"
 		}
 	})
+
+	if DECT.CONFIG["disable_hazard_concrete"] then
+
+		-- Remove base Hazard concrete (as it's replaced by painted concrete)
+		data.raw["technology"]["concrete"].effects = {{
+		        type = "unlock-recipe",
+		        recipe = "concrete"
+		      }}
+		      
+	end
 
 end
 
@@ -108,7 +121,7 @@ if DECT.ENABLED["walls"] then
 	data:extend({
 		{
 			type = "technology",
-			name = "concrete-walls",
+			name = "dect-concrete-walls",
 			icon = "__Dectorio__/graphics/technology/concrete-walls.png",
 			icon_size = 128,
 			prerequisites = {"concrete", "stone-walls"},
@@ -123,12 +136,19 @@ if DECT.ENABLED["walls"] then
 			effects = {
 				{
 					type = "unlock-recipe",
-					recipe = "concrete-wall"
+					recipe = "dect-concrete-wall"
 				}
 			},
 			order = "e-p-b-a"
 		}
 
 	})
+
+	-- Change stone wall tech
+	data.raw["technology"]["stone-walls"].icon = "__Dectorio__/graphics/technology/stone-brick-walls.png"
+	data.raw["technology"]["stone-walls"].icon_size = 128
+
+	-- Change gates to require concrete-walls
+	data.raw["technology"]["gates"].prerequisites = {"dect-concrete-walls", "military-2"}
 
 end

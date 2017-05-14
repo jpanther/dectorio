@@ -9,9 +9,9 @@ if DECT.ENABLED["wood-floor"] then
 	data:extend({
 		{
 			type = "tile",
-			name = "wood-floor",
+			name = "dect-wood-floor",
 			needs_correction = false,
-			minable = {hardness = 0.2, mining_time = 0.5, result = "wood-floor"},
+			minable = {hardness = 0.2, mining_time = 0.5, result = "dect-wood-floor"},
 			mined_sound = { filename = "__Dectorio__/sound/deconstruct-wood.ogg" },
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.2,
@@ -90,10 +90,10 @@ if DECT.ENABLED["painted-concrete"] then
 	data:extend({
 		{
 			type = "tile",
-			name = "paint-hazard-left",
+			name = "dect-paint-hazard-left",
 			needs_correction = false,
-			next_direction = "paint-hazard-right",
-			minable = {hardness = 0.2, mining_time = 0.5, result = "paint-hazard"},
+			next_direction = "dect-paint-hazard-right",
+			minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-hazard"},
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
@@ -148,10 +148,10 @@ if DECT.ENABLED["painted-concrete"] then
 		},
 		{
 			type = "tile",
-			name = "paint-hazard-right",
+			name = "dect-paint-hazard-right",
 			needs_correction = false,
-			next_direction = "paint-hazard-left",
-			minable = {hardness = 0.2, mining_time = 0.5, result = "paint-hazard"},
+			next_direction = "dect-paint-hazard-left",
+			minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-hazard"},
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
@@ -206,10 +206,10 @@ if DECT.ENABLED["painted-concrete"] then
 		},
 		{
 			type = "tile",
-			name = "paint-emergency-left",
+			name = "dect-paint-emergency-left",
 			needs_correction = false,
-			next_direction = "paint-emergency-right",
-			minable = {hardness = 0.2, mining_time = 0.5, result = "paint-emergency"},
+			next_direction = "dect-paint-emergency-right",
+			minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-emergency"},
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
@@ -264,10 +264,10 @@ if DECT.ENABLED["painted-concrete"] then
 		},
 		{
 			type = "tile",
-			name = "paint-emergency-right",
+			name = "dect-paint-emergency-right",
 			needs_correction = false,
-			next_direction = "paint-emergency-left",
-			minable = {hardness = 0.2, mining_time = 0.5, result = "paint-emergency"},
+			next_direction = "dect-paint-emergency-left",
+			minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-emergency"},
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
@@ -322,10 +322,10 @@ if DECT.ENABLED["painted-concrete"] then
 		},
 		{
 			type = "tile",
-			name = "paint-safety-left",
+			name = "dect-paint-safety-left",
 			needs_correction = false,
-			next_direction = "paint-safety-right",
-			minable = {hardness = 0.2, mining_time = 0.5, result = "paint-safety"},
+			next_direction = "dect-paint-safety-right",
+			minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-safety"},
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
@@ -380,10 +380,10 @@ if DECT.ENABLED["painted-concrete"] then
 		},
 		{
 			type = "tile",
-			name = "paint-safety-right",
+			name = "dect-paint-safety-right",
 			needs_correction = false,
-			next_direction = "paint-safety-left",
-			minable = {hardness = 0.2, mining_time = 0.5, result = "paint-safety"},
+			next_direction = "dect-paint-safety-left",
+			minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-safety"},
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
@@ -438,10 +438,10 @@ if DECT.ENABLED["painted-concrete"] then
 		},
 		{
 			type = "tile",
-			name = "paint-radiation-left",
+			name = "dect-paint-radiation-left",
 			needs_correction = false,
-			next_direction = "paint-radiation-right",
-			minable = {hardness = 0.2, mining_time = 0.5, result = "paint-radiation"},
+			next_direction = "dect-paint-radiation-right",
+			minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-radiation"},
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
@@ -496,10 +496,10 @@ if DECT.ENABLED["painted-concrete"] then
 		},
 		{
 			type = "tile",
-			name = "paint-radiation-right",
+			name = "dect-paint-radiation-right",
 			needs_correction = false,
-			next_direction = "paint-radiation-left",
-			minable = {hardness = 0.2, mining_time = 0.5, result = "paint-radiation"},
+			next_direction = "dect-paint-radiation-left",
+			minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-radiation"},
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
@@ -553,5 +553,25 @@ if DECT.ENABLED["painted-concrete"] then
 			vehicle_friction_modifier = concrete_vehicle_speed_modifier
 		}
 	})
+
+	if DECT.CONFIG["disable_hazard_concrete"] then
+
+		-- Migrate any base hazard tiles to painted concrete and remove remaining items
+		local base_tile_hazard_left = data.raw["tile"]["hazard-concrete-left"]
+		local dect_tile_hazard_left = data.raw["tile"]["dect-paint-hazard-left"]
+		local base_tile_hazard_right = data.raw["tile"]["hazard-concrete-right"]
+		local dect_tile_hazard_right = data.raw["tile"]["dect-paint-hazard-right"]
+		
+		base_tile_hazard_left.next_direction = dect_tile_hazard_left.next_direction
+		base_tile_hazard_left.minable.result = dect_tile_hazard_left.minable.result
+		base_tile_hazard_left.variants = dect_tile_hazard_left.variants
+		base_tile_hazard_right.next_direction = dect_tile_hazard_right.next_direction
+		base_tile_hazard_right.minable.result = dect_tile_hazard_right.minable.result
+		base_tile_hazard_right.variants = dect_tile_hazard_right.variants
+
+		data.raw["recipe"]["hazard-concrete"] = nil
+		data.raw["item"]["hazard-concrete"] = nil
+
+	end
 
 end

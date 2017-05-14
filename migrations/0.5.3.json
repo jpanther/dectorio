@@ -1,0 +1,37 @@
+{
+	"technology":
+	[
+		["landscaping", "dect-landscaping"],
+		["wood-floor", "dect-wood-floor"],
+		["concrete-paint", "dect-concrete-paint"],
+		["concrete-walls", "dect-concrete-walls"]
+	],
+	"entity":
+	[
+		["concrete-wall", "dect-concrete-wall"]
+	],
+	"item":
+	[
+		["base-dirt", "dect-base-dirt"],
+		["base-sand", "dect-base-sand"],
+		["base-grass", "dect-base-grass"],
+		["paint-hazard", "dect-paint-hazard"],
+		["paint-emergency", "dect-paint-emergency"],
+		["paint-safety", "dect-paint-safety"],
+		["paint-radiation", "dect-paint-radiation"],
+		["wood-floor", "dect-wood-floor"],
+		["concrete-wall", "dect-concrete-wall"]
+	],
+	"tile":
+	[
+		["wood-floor", "dect-wood-floor"],
+		["paint-hazard-left", "dect-paint-hazard-left"],
+		["paint-hazard-right", "dect-paint-hazard-right"],
+		["paint-emergency-left", "dect-paint-emergency-left"],
+		["paint-emergency-right", "dect-paint-emergency-right"],
+		["paint-safety-left", "dect-paint-safety-left"],
+		["paint-safety-right", "dect-paint-safety-right"],
+		["paint-radiation-left", "dect-paint-radiation-left"],
+		["paint-radiation-right", "dect-paint-radiation-right"]
+	]
+}
