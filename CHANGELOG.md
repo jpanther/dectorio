@@ -2,6 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.5.5 - 2017-05-15
+
+### Bugfixes
+* Fixed migration error
+
 ## v0.5.4 - 2017-05-15
 
 ### Added

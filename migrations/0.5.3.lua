@@ -22,7 +22,7 @@ for index, force in pairs(game.forces) do
 			rec["dect-wood-floor"].enabled = true
 		end
 	end
-	if settings.startup["dectorio-painted-concrete"] then
+	if settings.startup["dectorio-painted-concrete"].value then
 		if tech["dect-concrete-paint"].researched then
 			rec["dect-paint-hazard"].enabled = true
 			rec["dect-paint-emergency"].enabled = true
