@@ -2,7 +2,7 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.5.4 - Unreleased (coming soon)
+## v0.5.4 - 2017-05-15
 
 ### Added
 * New wall type - Chain-link fence (currently no shadow gfx, these will be added in a future release)
