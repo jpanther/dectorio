@@ -13,7 +13,7 @@ for index, force in pairs(game.forces) do
 		tech["dect-wood-floor"].researched = true
 	end
 	if rec["dect-paint-hazard"].enabled then
-		tech["dect-painted-concrete"].researched = true
+		tech["dect-concrete-paint"].researched = true
 	end
 	if rec["dect-concrete-wall"].enabled then
 		tech["dect-concrete-walls"].researched = true

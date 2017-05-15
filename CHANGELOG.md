@@ -2,6 +2,14 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.5.4 - Unreleased (coming soon)
+
+### Added
+* More robust migration logic
+
+### Bugfixes
+* Fixed typo in migrated tech unlock that caused saves to not load in some rare instances
+
 ## v0.5.3 - 2017-05-14
 
 ### Added
