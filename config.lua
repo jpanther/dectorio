@@ -27,6 +27,13 @@ DECT.CONFIG = {
     -- Whether painted concrete (when enabled) disables the base game hazard concrete
     -- (true = only painted concrete is used, false = both painted and original hazard concrete variants are available)
     ["disable_hazard_concrete"] = true,
+
+    -- How many items are stackable in a single inventory slot
+    -- (integer, default flooring = 500, walls = 200)
+    ["flooring_stack_size"] = 500,
+    ["landscaping_stack_size"] = 500,
+    ["walls_stack_size"] = 200,
+
 }
 
 DECT.CONFIG.SIGNALS = {

@@ -189,6 +189,16 @@ if DECT.ENABLED["walls"] then
 			enabled = false,
 			ingredients = {{"concrete", 5}},
 			result = "dect-concrete-wall"
+		},
+		{
+			type = "recipe",
+			name = "dect-chain-wall",
+			enabled = false,
+			ingredients = {
+				{"iron-stick", 2},
+				{"steel-plate", 2},
+			},
+			result = "dect-chain-wall"
 		}
 	})
 

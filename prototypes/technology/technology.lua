@@ -134,10 +134,15 @@ end
 
 if DECT.ENABLED["walls"] then
 
+	-- Change stone wall tech
+	local base_stone_walls = data.raw["technology"]["stone-walls"]
+	base_stone_walls.icon = "__Dectorio__/graphics/technology/stone-brick-walls.png"
+	base_stone_walls.icon_size = 128
+
 	data:extend({
 		{
 			type = "technology",
-			name = "dect-concrete-walls",
+			name = "dect-advanced-walls",
 			icon = "__Dectorio__/graphics/technology/concrete-walls.png",
 			icon_size = 128,
 			prerequisites = {"concrete", "stone-walls"},
@@ -152,6 +157,10 @@ if DECT.ENABLED["walls"] then
 			effects = {
 				{
 					type = "unlock-recipe",
+					recipe = "dect-chain-wall"
+				},
+				{
+					type = "unlock-recipe",
 					recipe = "dect-concrete-wall"
 				}
 			},
@@ -160,11 +169,8 @@ if DECT.ENABLED["walls"] then
 
 	})
 
-	-- Change stone wall tech
-	data.raw["technology"]["stone-walls"].icon = "__Dectorio__/graphics/technology/stone-brick-walls.png"
-	data.raw["technology"]["stone-walls"].icon_size = 128
-
 	-- Change gates to require concrete-walls
-	data.raw["technology"]["gates"].prerequisites = {"dect-concrete-walls", "military-2"}
+	local base_gates = data.raw["technology"]["gates"]
+	base_gates.prerequisites = {"dect-advanced-walls", "military-2"}
 
 end

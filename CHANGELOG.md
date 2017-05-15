@@ -5,9 +5,14 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 ## v0.5.4 - Unreleased (coming soon)
 
 ### Added
-* More robust migration logic
+* New wall type - Chain-link fence (currently no shadow gfx, these will be added in a future release)
+
+### Changed
+* New Advanced walls technology that unlocks both concrete wall and chain-link fence
+* Increased stack sizes of landscaping, flooring and walls (configurable in config.lua)
 
 ### Bugfixes
+* More robust migration logic
 * Fixed typo in migrated tech unlock that caused saves to not load in some rare instances
 
 ## v0.5.3 - 2017-05-14
