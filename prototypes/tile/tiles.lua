@@ -15,7 +15,7 @@ if DECT.ENABLED["wood-floor"] then
 			mined_sound = { filename = "__Dectorio__/sound/deconstruct-wood.ogg" },
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.2,
-			layer = 61,
+			layer = 62,
 			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{

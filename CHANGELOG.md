@@ -2,6 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.5.6 - Unreleased (coming soon)
+
+### Bugfixes
+* Moved wooden floorboards to own layer
+
 ## v0.5.5 - 2017-05-15
 
 ### Bugfixes
