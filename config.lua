@@ -38,40 +38,60 @@ DECT.CONFIG = {
 
 DECT.CONFIG.SIGNALS = {
     -- All the signal colors to be changed/added
-    -- RGB values from 0 to 255, alpha is optional
-    -- The order of the signals is the order they will appear in-game
+    -- RGBA values from 0 to 1, alpha is optional
+    -- The order of the virtual signals is the order they will appear in-game
     -- NOTE: New virtual signals will need localised names to be provided in '/locale/[language]/signals.cfg'
-    {type="virtual", name="signal-red", color={r=255,g=38,b=0}},            -- Maraschino
-    {type="virtual", name="signal-orange", color={r=253,g=89,b=35}},        -- Orange
-    {type="virtual", name="signal-tangerine", color={r=255,g=147,b=0}},     -- Tangerine
-    {type="virtual", name="signal-yellow", color={r=255,g=251,b=0}},        -- Lemon
-    {type="virtual", name="signal-green", color={r=0,g=249,b=0}},           -- Spring
-    {type="virtual", name="signal-cyan", color={r=0,g=253,b=255}},          -- Turquoise
-    {type="virtual", name="signal-aqua", color={r=0,g=150,b=255}},          -- Aqua
-    {type="virtual", name="signal-blue", color={r=4,g=51,b=255}},           -- Blueberry
-    {type="virtual", name="signal-purple", color={r=148,g=55,b=255}},       -- Grape
-    {type="virtual", name="signal-pink", color={r=255,g=64,b=255}},         -- Magenta
-    {type="virtual", name="signal-white", color={r=255,g=255,b=255}},       -- Snow
-    {type="virtual", name="signal-grey", color={r=192,g=192,b=192}},        -- Magnesium
-    {type="virtual", name="signal-black", color={r=41,g=0,b=126}},          -- UV black light
+    -- Color names are from Name That Color (http://chir.ag/projects/name-that-color/)
+    {type="virtual", name="signal-red", color={r=1.00,g=0.16,b=0.10,a=1.00}},           -- Scarlet
+    {type="virtual", name="signal-orange", color={r=0.99,g=0.44,b=0.22,a=1.00}},        -- Orange
+    {type="virtual", name="signal-tangerine", color={r=1.00,g=0.58,b=0.14,a=1.00}},     -- Tree Poppy
+    {type="virtual", name="signal-yellow", color={r=1.00,g=0.96,b=0.27,a=1.00}},        -- Lemon Yellow
+    {type="virtual", name="signal-green", color={r=0.00,g=0.95,b=0.17,a=1.00}},         -- Free Speech Green
+    {type="virtual", name="signal-cyan", color={r=0.01,g=0.98,b=1.00,a=1.00}},          -- Aqua
+    {type="virtual", name="signal-aqua", color={r=0.05,g=0.67,b=0.99,a=1.00}},          -- Spiro Disco Ball
+    {type="virtual", name="signal-blue", color={r=0.07,g=0.35,b=0.98,a=1.00}},          -- Crayon Blue
+    {type="virtual", name="signal-purple", color={r=0.65,g=0.38,b=0.99,a=1.00}},        -- Lavender Indigo
+    {type="virtual", name="signal-pink", color={r=1.00,g=0.42,b=0.99,a=1.00}},          -- Ultra Pink
+    {type="virtual", name="signal-white", color={r=1.00,g=1.00,b=1.00,a=1.00}},         -- White
+    {type="virtual", name="signal-grey", color={r=0.80,g=0.80,b=0.80,a=1.00}},          -- Iron
+    {type="virtual", name="signal-black", color={r=0.22,g=0.13,b=0.56,a=1.00}},         -- Blue Gem
 
-    {type="item", name="raw-wood", color={r=128,g=71,b=0,a=220}},           -- Mocha (dark)
-    {type="item", name="coal", color={r=33,g=33,b=33,a=220}},               -- Lead
-    {type="item", name="stone", color={r=146,g=104,b=0,a=220}},             -- Asparagus (light)
-    {type="item", name="iron-ore", color={r=46,g=193,b=255,a=220}},         -- Aqua (light)
-    {type="item", name="iron-plate", color={r=145,g=145,b=145,a=220}},      -- Tin
-    {type="item", name="steel-plate", color={r=192,g=192,b=192,a=220}},     -- Magnesium
-    {type="item", name="copper-ore", color={r=227,g=131,b=0,a=220}},        -- Tangerine (dark)
-    {type="item", name="copper-plate", color={r=255,g=126,b=121,a=220}},    -- Salmon
-    {type="item", name="uranium-ore", color={r=163,g=250,b=0,a=220}},       -- Lime (light)
+    {type="item", name="raw-wood", color={r=0.57,g=0.36,b=0.12,a=0.86}},                -- Afghan Tan
+    {type="item", name="coal", color={r=0.17,g=0.17,b=0.17,a=0.86}},                    -- Bunker
+    {type="item", name="stone", color={r=0.64,g=0.50,b=0.30,a=0.86}},                   -- Muesli
+    {type="item", name="iron-ore", color={r=0.24,g=0.80,b=0.99,a=0.86}},                -- Picton Blue
+    {type="item", name="iron-plate", color={r=0.63,g=0.64,b=0.64,a=0.86}},              -- Grey Chateau
+    {type="item", name="steel-plate", color={r=0.80,g=0.80,b=0.80,a=0.86}},             -- Iron
+    {type="item", name="copper-ore", color={r=0.91,g=0.58,b=0.13,a=0.86}},              -- Carrot Orange
+    {type="item", name="copper-plate", color={r=0.92,g=0.59,b=0.46,a=0.86}},            -- Dark Salmon
+    {type="item", name="uranium-ore", color={r=0.69,g=0.96,b=0.18,a=0.86}},             -- Green Yellow
+    {type="item", name="science-pack-1", color={r=0.71,g=0.05,b=0.09,a=1.00}},          -- Cornell Red
+    {type="item", name="science-pack-2", color={r=0.18,g=0.60,b=0.11,a=1.00}},          -- Forest Green
+    {type="item", name="science-pack-3", color={r=0.15,g=0.65,b=0.75,a=1.00}},          -- Blue Green
+    {type="item", name="military-science-pack", color={r=0.23,g=0.27,b=0.31,a=1.00}},   -- Limed Spruce
+    {type="item", name="production-science-pack", color={r=0.58,g=0.11,b=0.76,a=1.00}}, -- Dark Orchid
+    {type="item", name="high-tech-science-pack", color={r=0.81,g=0.69,b=0.08,a=1.00}},  -- Galliano
+    {type="item", name="space-science-pack", color={r=0.96,g=0.96,b=0.96,a=1.00}},      -- White Smoke
+    {type="item", name="transport-belt", color={r=0.90,g=0.75,b=0.10,a=1.00}},          -- Sunflower
+    {type="item", name="underground-belt", color={r=0.90,g=0.75,b=0.10,a=1.00}},        -- Sunflower
+    {type="item", name="splitter", color={r=0.90,g=0.75,b=0.10,a=1.00}},                -- Sunflower
+    {type="item", name="fast-transport-belt", color={r=0.84,g=0.08,b=0.02,a=1.00}},     -- Rosso Corsa
+    {type="item", name="fast-underground-belt", color={r=0.84,g=0.08,b=0.02,a=1.00}},   -- Rosso Corsa
+    {type="item", name="fast-splitter", color={r=0.84,g=0.08,b=0.02,a=1.00}},           -- Rosso Corsa
+    {type="item", name="express-transport-belt", color={r=0.02,g=0.60,b=0.83,a=1.00}},  -- Rich Electric Blue
+    {type="item", name="express-underground-belt", color={r=0.02,g=0.60,b=0.83,a=1.00}},-- Rich Electric Blue
+    {type="item", name="express-splitter", color={r=0.02,g=0.60,b=0.83,a=1.00}},        -- Rich Electric Blue
+    {type="item", name="electronic-circuit", color={r=0.18,g=0.60,b=0.00,a=1.00}},      -- Napier Green
+    {type="item", name="advanced-circuit", color={r=0.72,g=0.00,b=0.00,a=1.00}},        -- Guardsman Red
+    {type="item", name="processing-unit", color={r=0.27,g=0.26,b=1.00,a=1.00}},         -- Neon Blue
 
-    {type="fluid", name="water", color={r=0,g=110,b=192,a=175}},            -- Aqua (light)
-    {type="fluid", name="crude-oil", color={r=26,g=26,b=26,a=175}},         -- Lead (dark)
-    {type="fluid", name="heavy-oil", color={r=160,g=12,b=0,a=175}},         -- Orange (dark)
-    {type="fluid", name="light-oil", color={r=182,g=106,b=0,a=175}},        -- Tangerine (light)
-    {type="fluid", name="petroleum-gas", color={r=96,g=32,b=96,a=175}},     -- Grape (light)
-    {type="fluid", name="sulfuric-acid", color={r=240,g=208,b=32,a=175}},   -- Lemon
-    {type="fluid", name="lubricant", color={r=48,g=134,b=96,a=175}},        -- Fern
+    {type="fluid", name="water", color={r=0.00,g=0.43,b=0.75,a=0.68}},                  -- French Blue
+    {type="fluid", name="crude-oil", color={r=0.10,g=0.10,b=0.10,a=0.68}},              -- Rangoon Green
+    {type="fluid", name="heavy-oil", color={r=0.63,g=0.05,b=0.00,a=0.68}},              -- Dark Candy Apple Red
+    {type="fluid", name="light-oil", color={r=0.71,g=0.42,b=0.00,a=0.68}},              -- Ginger
+    {type="fluid", name="petroleum-gas", color={r=0.38,g=0.13,b=0.38,a=0.68}},          -- Palatinate Purple
+    {type="fluid", name="sulfuric-acid", color={r=0.94,g=0.82,b=0.13,a=0.68}},          -- Broom
+    {type="fluid", name="lubricant", color={r=0.00,g=0.75,b=0.30,a=0.68}},              -- Dark Pastel Green
 }
 
 return DECT

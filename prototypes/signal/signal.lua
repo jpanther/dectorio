@@ -19,7 +19,7 @@ if DECT.ENABLED["signals"] then
     -- Create new virtual color items if they don't already exist
     for i, color in pairs(colors) do
         if color.type=="virtual" then
-            local tint = {r=color.color.r, g=color.color.g, b=color.color.b, a=180}
+            local tint = {r=color.color.r, g=color.color.g, b=color.color.b, a=0.70}
             data:extend({
                 {
                     type = "virtual-signal",
@@ -36,7 +36,7 @@ if DECT.ENABLED["signals"] then
 
     -- Reset black signal to correct icon
     local black = data.raw["virtual-signal"]["signal-black"]
-    black.icons[1].tint = {r=44,g=44,b=44,a=180}
+    black.icons[1].tint = {r=0.16,g=0.16,b=0.16,a=0.70}
 
     -- Update the lamps
     local lamp = data.raw.lamp["small-lamp"]

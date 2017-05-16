@@ -4,8 +4,14 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 
 ## v0.5.6 - Unreleased (coming soon)
 
+### Added
+* New signal colours for additional items - science packs, transport/underground belts, splitters and red/green/blue circuits
+
+### Changed
+* Tweaked some existing signal colours to better match their item colour
+
 ### Bugfixes
-* Moved wooden floorboards to own layer
+* Moved wooden floorboards to own layer so they don't join to concrete
 
 ## v0.5.5 - 2017-05-15
 
