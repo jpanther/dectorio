@@ -22,11 +22,11 @@ When you launch the game, the new mod will be enabled by default.
 
 * Adds wooden floorboard tiles with sound effects
 
-  ![Wooden floorboards](https://cl.ly/1C3v32423043/woodenfloorboards.png)
+  ![Wooden floorboards](https://cl.ly/0m0g2843251i/woodenfloor.png)
 
 * Adds painted concrete tiles - Hazard (black/yellow), Emergency (white/red), Radiation hazard (yellow/pink) and Safety (white/green)
 
-  ![Painted concrete](https://cl.ly/322O0k052k1M/paintedconcrete.png)
+  ![Painted concrete](https://cl.ly/0R3i000I0g3g/paintconcrete.png)
 
 * Painted Hazard concrete replaces default Hazard concrete
 * Default concrete recipe no longer uses iron ore and instead requires iron sticks
@@ -36,18 +36,20 @@ When you launch the game, the new mod will be enabled by default.
 
 * Adds items for placing dirt, sand, dark sand, grass, dry grass, red desert and dark red desert tiles
 
+  ![Landscaping items](https://cl.ly/2N0B1N2f1k30/landscaping.png)
+
 ### Walls
 
 * Adds items for chain-link fence, stone and concrete walls
 
-  ![Walls](https://cl.ly/082i1q1v2C19/walls.png)
+  ![Walls](https://cl.ly/212h3z3v2M3O/wall.png)
 
 ### Signals & Lamp colours
 
 * Adds new signal colours - purple, orange, tangerine and aqua
-* Adds signal colours for raw resources, smelted items and fluids
+* Adds signal colours for raw resources, smelted items, fluids, science packs, inserters, belts, splitters and circuits
 
-  ![New signal colours](https://cl.ly/3d322G2b2D3V/signalcolours.png)
+  ![New signal colours](https://cl.ly/2R04150O0P0m/signals.png)
 
 * New signal icons for base game signal colours that better represent the actual signal colour
 
