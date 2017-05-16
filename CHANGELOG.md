@@ -2,7 +2,7 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.5.6 - Unreleased (coming soon)
+## v0.5.6 - 2017-05-16
 
 ### Added
 * New signal colours for additional items - science packs, transport/underground belts, splitters, inserters and red/green/blue circuits
