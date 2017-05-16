@@ -72,18 +72,25 @@ DECT.CONFIG.SIGNALS = {
     {type="item", name="production-science-pack", color={r=0.58,g=0.11,b=0.76,a=1.00}}, -- Dark Orchid
     {type="item", name="high-tech-science-pack", color={r=0.81,g=0.69,b=0.08,a=1.00}},  -- Galliano
     {type="item", name="space-science-pack", color={r=0.96,g=0.96,b=0.96,a=1.00}},      -- White Smoke
-    {type="item", name="transport-belt", color={r=0.90,g=0.75,b=0.10,a=1.00}},          -- Sunflower
-    {type="item", name="underground-belt", color={r=0.90,g=0.75,b=0.10,a=1.00}},        -- Sunflower
-    {type="item", name="splitter", color={r=0.90,g=0.75,b=0.10,a=1.00}},                -- Sunflower
-    {type="item", name="fast-transport-belt", color={r=0.84,g=0.08,b=0.02,a=1.00}},     -- Rosso Corsa
-    {type="item", name="fast-underground-belt", color={r=0.84,g=0.08,b=0.02,a=1.00}},   -- Rosso Corsa
-    {type="item", name="fast-splitter", color={r=0.84,g=0.08,b=0.02,a=1.00}},           -- Rosso Corsa
-    {type="item", name="express-transport-belt", color={r=0.02,g=0.60,b=0.83,a=1.00}},  -- Rich Electric Blue
-    {type="item", name="express-underground-belt", color={r=0.02,g=0.60,b=0.83,a=1.00}},-- Rich Electric Blue
-    {type="item", name="express-splitter", color={r=0.02,g=0.60,b=0.83,a=1.00}},        -- Rich Electric Blue
-    {type="item", name="electronic-circuit", color={r=0.18,g=0.60,b=0.00,a=1.00}},      -- Napier Green
-    {type="item", name="advanced-circuit", color={r=0.72,g=0.00,b=0.00,a=1.00}},        -- Guardsman Red
-    {type="item", name="processing-unit", color={r=0.27,g=0.26,b=1.00,a=1.00}},         -- Neon Blue
+    {type="item", name="transport-belt", color={r=0.90,g=0.75,b=0.10,a=0.92}},          -- Sunflower
+    {type="item", name="underground-belt", color={r=0.90,g=0.75,b=0.10,a=0.92}},        -- Sunflower
+    {type="item", name="splitter", color={r=0.90,g=0.75,b=0.10,a=0.92}},                -- Sunflower
+    {type="item", name="fast-transport-belt", color={r=0.84,g=0.08,b=0.02,a=0.92}},     -- Rosso Corsa
+    {type="item", name="fast-underground-belt", color={r=0.84,g=0.08,b=0.02,a=0.92}},   -- Rosso Corsa
+    {type="item", name="fast-splitter", color={r=0.84,g=0.08,b=0.02,a=0.92}},           -- Rosso Corsa
+    {type="item", name="express-transport-belt", color={r=0.02,g=0.60,b=0.83,a=0.92}},  -- Rich Electric Blue
+    {type="item", name="express-underground-belt", color={r=0.02,g=0.60,b=0.83,a=0.92}},-- Rich Electric Blue
+    {type="item", name="express-splitter", color={r=0.02,g=0.60,b=0.83,a=0.92}},        -- Rich Electric Blue
+    {type="item", name="electronic-circuit", color={r=0.18,g=0.60,b=0.00,a=0.92}},      -- Napier Green
+    {type="item", name="advanced-circuit", color={r=0.72,g=0.00,b=0.00,a=0.92}},        -- Guardsman Red
+    {type="item", name="processing-unit", color={r=0.27,g=0.26,b=1.00,a=0.92}},         -- Neon Blue
+    {type="item", name="burner-inserter", color={r=0.38,g=0.31,b=0.26,a=0.92}},         -- Saddle
+    {type="item", name="inserter", color={r=0.78,g=0.51,b=0.20,a=0.92}},                -- Golden Bell
+    {type="item", name="long-handed-inserter", color={r=0.76,g=0.20,b=0.13,a=0.92}},    -- Dark Pastel Red
+    {type="item", name="fast-inserter", color={r=0.27,g=0.45,b=0.58,a=0.92}},           -- Jelly Bean
+    {type="item", name="filter-inserter", color={r=0.45,g=0.27,b=0.54,a=0.92}},         -- Affair
+    {type="item", name="stack-inserter", color={r=0.56,g=0.63,b=0.16,a=0.92}},          -- Citron
+    {type="item", name="stack-filter-inserter", color={r=0.70,g=0.70,b=0.69,a=0.92}},   -- Magnesium
 
     {type="fluid", name="water", color={r=0.00,g=0.43,b=0.75,a=0.68}},                  -- French Blue
     {type="fluid", name="crude-oil", color={r=0.10,g=0.10,b=0.10,a=0.68}},              -- Rangoon Green
