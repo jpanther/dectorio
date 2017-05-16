@@ -9,6 +9,7 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 
 ### Changed
 * Tweaked some existing signal colours to better match their item colour
+* Widened wooden floorboard sprites so there is no gap when placed next to a wall
 
 ### Bugfixes
 * Moved wooden floorboards to own layer so they don't join to concrete
