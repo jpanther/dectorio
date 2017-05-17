@@ -30,7 +30,7 @@ When you launch the game, the new mod will be enabled by default.
 
 * Painted Hazard concrete replaces default Hazard concrete
 * Default concrete recipe no longer uses iron ore and instead requires iron sticks
-* Increased item stack sizes
+* Increased flooring item stack sizes
 
 ### Landscaping
 
@@ -40,9 +40,11 @@ When you launch the game, the new mod will be enabled by default.
 
 ### Walls
 
-* Adds items for chain-link fence, stone and concrete walls
+* Adds items for wooden barricade, stone wall, chain-link fence and concrete walls
 
-  ![Walls](https://cl.ly/212h3z3v2M3O/wall.png)
+  ![Walls](https://cl.ly/0N0p3y0D3m2k/4walls.png)
+
+* Increased wall item stack sizes
 
 ### Signals & Lamp colours
 
