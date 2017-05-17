@@ -703,14 +703,14 @@ if DECT.ENABLED["walls"] then
                             width = 22,
                             height = 42,
                             shift = {0, -0.15625}
-                        -- },
-                        -- {
-                        --     filename = "__Dectorio__/graphics/entity/chain-wall/wall-single-shadow.png",
-                        --     priority = "extra-high",
-                        --     width = 47,
-                        --     height = 32,
-                        --     shift = {0.359375, 0.5},
-                        --     draw_as_shadow = true
+                        },
+                        {
+                            filename = "__Dectorio__/graphics/entity/chain-wall/wall-single-shadow.png",
+                            priority = "extra-high",
+                            width = 47,
+                            height = 32,
+                            shift = {0.359375, 0.5},
+                            draw_as_shadow = true
                         }
                     }
                 },
@@ -723,14 +723,14 @@ if DECT.ENABLED["walls"] then
                                 width = 22,
                                 height = 42,
                                 shift = {0, -0.15625}
-                            -- },
-                            -- {
-                            --     filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical-shadow.png",
-                            --     priority = "extra-high",
-                            --     width = 47,
-                            --     height = 60,
-                            --     shift = {0.390625, 0.625},
-                            --     draw_as_shadow = true
+                            },
+                            {
+                                filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical-shadow.png",
+                                priority = "extra-high",
+                                width = 47,
+                                height = 60,
+                                shift = {0.390625, 1.16},
+                                draw_as_shadow = true
                             }
                         }
                     }
@@ -744,14 +744,14 @@ if DECT.ENABLED["walls"] then
                                 width = 32,
                                 height = 42,
                                 shift = {0, -0.15625}
-                            -- },
-                            -- {
-                            --     filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal-shadow.png",
-                            --     priority = "extra-high",
-                            --     width = 59,
-                            --     height = 32,
-                            --     shift = {0.421875, 0.5},
-                            --     draw_as_shadow = true
+                            },
+                            {
+                                filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal-shadow.png",
+                                priority = "extra-high",
+                                width = 59,
+                                height = 32,
+                                shift = {0.421875, 0.5},
+                                draw_as_shadow = true
                             }
                         }
                     }
@@ -764,14 +764,14 @@ if DECT.ENABLED["walls"] then
                             width = 27,
                             height = 42,
                             shift = {0.078125, -0.15625}
-                        -- },
-                        -- {
-                        --     filename = "__Dectorio__/graphics/entity/chain-wall/wall-corner-right-down-shadow.png",
-                        --     priority = "extra-high",
-                        --     width = 53,
-                        --     height = 61,
-                        --     shift = {0.484375, 0.640625},
-                        --     draw_as_shadow = true
+                        },
+                        {
+                            filename = "__Dectorio__/graphics/entity/chain-wall/wall-corner-right-down-shadow.png",
+                            priority = "extra-high",
+                            width = 53,
+                            height = 61,
+                            shift = {0.535, 1.17},
+                            draw_as_shadow = true
                         }
                     }
                 },
@@ -783,14 +783,14 @@ if DECT.ENABLED["walls"] then
                             width = 27,
                             height = 42,
                             shift = {-0.078125, -0.15625}
-                        -- },
-                        -- {
-                        --     filename = "__Dectorio__/graphics/entity/chain-wall/wall-corner-left-down-shadow.png",
-                        --     priority = "extra-high",
-                        --     width = 53,
-                        --     height = 60,
-                        --     shift = {0.328125, 0.640625},
-                        --     draw_as_shadow = true
+                        },
+                        {
+                            filename = "__Dectorio__/graphics/entity/chain-wall/wall-corner-left-down-shadow.png",
+                            priority = "extra-high",
+                            width = 53,
+                            height = 60,
+                            shift = {0.26, 1.05},
+                            draw_as_shadow = true
                         }
                     }
                 },
@@ -802,14 +802,14 @@ if DECT.ENABLED["walls"] then
                             width = 32,
                             height = 42,
                             shift = {0, -0.15625}
-                        -- },
-                        -- {
-                        --     filename = "__Dectorio__/graphics/entity/chain-wall/wall-t-down-shadow.png",
-                        --     priority = "extra-high",
-                        --     width = 71,
-                        --     height = 61,
-                        --     shift = {0.546875, 0.640625},
-                        --     draw_as_shadow = true
+                        },
+                        {
+                            filename = "__Dectorio__/graphics/entity/chain-wall/wall-t-down-shadow.png",
+                            priority = "extra-high",
+                            width = 71,
+                            height = 61,
+                            shift = {0.5, 1},
+                            draw_as_shadow = true
                         }
                     }
                 },
@@ -821,14 +821,14 @@ if DECT.ENABLED["walls"] then
                             width = 27,
                             height = 42,
                             shift = {0.078125, -0.15625}
-                        -- },
-                        -- {
-                        --     filename = "__Dectorio__/graphics/entity/chain-wall/wall-ending-right-shadow.png",
-                        --     priority = "extra-high",
-                        --     width = 53,
-                        --     height = 32,
-                        --     shift = {0.484375, 0.5},
-                        --     draw_as_shadow = true
+                        },
+                        {
+                            filename = "__Dectorio__/graphics/entity/chain-wall/wall-ending-right-shadow.png",
+                            priority = "extra-high",
+                            width = 53,
+                            height = 32,
+                            shift = {0.484375, 0.5},
+                            draw_as_shadow = true
                         }
                     }
                 },
@@ -840,14 +840,14 @@ if DECT.ENABLED["walls"] then
                             width = 27,
                             height = 42,
                             shift = {-0.078125, -0.15625}
-                        -- },
-                        -- {
-                        --     filename = "__Dectorio__/graphics/entity/chain-wall/wall-ending-left-shadow.png",
-                        --     priority = "extra-high",
-                        --     width = 53,
-                        --     height = 32,
-                        --     shift = {0.328125, 0.5},
-                        --     draw_as_shadow = true
+                        },
+                        {
+                            filename = "__Dectorio__/graphics/entity/chain-wall/wall-ending-left-shadow.png",
+                            priority = "extra-high",
+                            width = 53,
+                            height = 32,
+                            shift = {0.328125, 0.5},
+                            draw_as_shadow = true
                         }
                     }
                 }

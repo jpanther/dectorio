@@ -6,6 +6,7 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 
 ### Added
 * New wall type - Wooden barricade (unlocked via _Basic walls_ technology)
+* Shadow gfx for Chain-link fence
 
 ### Changed
 * Balancing - reduced max health of chain-link fence to make it less effective than concrete wall
