@@ -219,7 +219,7 @@ if DECT.ENABLED["walls"] then
 			icon = "__Dectorio__/graphics/icons/concrete-wall.png",
 		    flags = {"goes-to-quickbar"},
 		    subgroup = "defensive-structure",
-		    order = "a[stone-wall]-b[chain-wall]-c[concrete-wall]",
+		    order = "a[d-concrete-wall]",
 		    stack_size = DECT.CONFIG["walls_stack_size"],
 	    	place_result = "dect-concrete-wall"
 		},
@@ -229,9 +229,19 @@ if DECT.ENABLED["walls"] then
 			icon = "__Dectorio__/graphics/icons/chain-wall.png",
 		    flags = {"goes-to-quickbar"},
 		    subgroup = "defensive-structure",
-		    order = "a[stone-wall]-b[chain-wall]",
+		    order = "a[c-chain-wall]",
 		    stack_size = DECT.CONFIG["walls_stack_size"],
 	    	place_result = "dect-chain-wall"
+		},
+		{
+			type = "item",
+			name = "dect-wood-wall",
+			icon = "__Dectorio__/graphics/icons/wood-wall.png",
+		    flags = {"goes-to-quickbar"},
+		    subgroup = "defensive-structure",
+		    order = "a[a-wood-wall]",
+		    stack_size = DECT.CONFIG["walls_stack_size"],
+	    	place_result = "dect-wood-wall"
 		}
 	})
 
@@ -239,5 +249,6 @@ if DECT.ENABLED["walls"] then
 	local base_stone_wall = data.raw["item"]["stone-wall"]
 	base_stone_wall.icon = "__Dectorio__/graphics/icons/stone-brick-wall.png"
 	base_stone_wall.stack_size = DECT.CONFIG["walls_stack_size"]
+	base_stone_wall.order = "a[b-stone-wall]"
 
 end

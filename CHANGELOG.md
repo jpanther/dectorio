@@ -2,6 +2,14 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.5.7 - Unreleased (coming soon)
+
+### Added
+* New wall type - Wooden barricade (unlocked via _Basic walls_ technology)
+
+### Changed
+* Balancing - reduced max health of chain-link fence to make it less effective than concrete wall
+
 ## v0.5.6 - 2017-05-16
 
 ### Added

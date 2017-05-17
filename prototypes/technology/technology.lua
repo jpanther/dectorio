@@ -134,16 +134,26 @@ end
 
 if DECT.ENABLED["walls"] then
 
-	-- Change stone wall tech
+	-- Change stone wall tech to basic walls
 	local base_stone_walls = data.raw["technology"]["stone-walls"]
-	base_stone_walls.icon = "__Dectorio__/graphics/technology/stone-brick-walls.png"
+	base_stone_walls.icon = "__Dectorio__/graphics/technology/basic-walls.png"
 	base_stone_walls.icon_size = 128
+	base_stone_walls.effects = {
+		{
+			type = "unlock-recipe",
+			recipe = "dect-wood-wall"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "stone-wall"
+		}
+	}
 
 	data:extend({
 		{
 			type = "technology",
 			name = "dect-advanced-walls",
-			icon = "__Dectorio__/graphics/technology/concrete-walls.png",
+			icon = "__Dectorio__/graphics/technology/advanced-walls.png",
 			icon_size = 128,
 			prerequisites = {"concrete", "stone-walls"},
 			unit = {

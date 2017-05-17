@@ -47,6 +47,7 @@ local function unlockTechAndRecipes()
 				tech["dect-advanced-walls"].researched = true
 			end
 			if tech["stone-walls"].researched then
+				rec["dect-wood-wall"].enabled = true
 				rec["stone-wall"].enabled = true
 			end
 			if tech["dect-advanced-walls"].researched then
