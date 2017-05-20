@@ -35,8 +35,10 @@ if DECT.ENABLED["signals"] then
     end
 
     -- Reset black signal to correct icon
-    local black = data.raw["virtual-signal"]["signal-black"]
-    black.icons[1].tint = {r=0.16,g=0.16,b=0.16,a=0.70}
+    if data.raw["virtual-signal"]["signal-black"] then
+        local black = data.raw["virtual-signal"]["signal-black"]
+        black.icons[1].tint = {r=0.16,g=0.16,b=0.16,a=0.70}
+    end
 
     -- Update the lamps
     local lamp = data.raw.lamp["small-lamp"]

@@ -1,6 +1,37 @@
+--------------------------
+-- COPYRIGHT & LICENSE  --
+--------------------------
+
+-- Dectorio, a Factorio mod
+-- Copyright (c) 2017 James "PantherX" Panther
+
+-- This program is free software: you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation, either version 3 of the License, or
+-- (at your option) any later version.
+
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+
+-- A copy of the GNU General Public License is packaged along with
+-- this program.  You can also see <http://www.gnu.org/licenses/>.
+
+--------------------------
+
+--control.lua
+
 DECT = require("config")
 
-local function unlockTechAndRecipes() 
+-- Initialise global vars
+local function init_global()
+    global = global or {}
+    global.mod_incompatibility = nil
+end
+
+-- Check if any technologies or recipes need to be enabled
+local function unlock_tech_and_recipes() 
 	for _,force in pairs(game.forces) do
 
 		local tech = force.technologies
@@ -58,5 +89,75 @@ local function unlockTechAndRecipes()
 	end
 end
 
-script.on_init(unlockTechAndRecipes)
-script.on_configuration_changed(unlockTechAndRecipes)
+-- Send chat notification to all players or force
+local function notification(txt, force)
+    if force ~= nil then
+        force.print(txt)
+    else
+        for k, p in pairs (game.players) do
+            game.players[k].print(txt)
+        end
+    end
+end
+
+-- Check game for known incompatibile mods
+local function check_incompatible_mods()
+    for mod, version in pairs(game.active_mods) do
+        if DECT.INCOMPATIBLE.MODS[mod] then 
+            return true
+        end
+    end
+    return false
+end
+
+-- Notify player of incompatible mods
+local function incompability_detected()
+    for mod, version in pairs(game.active_mods) do
+        if DECT.INCOMPATIBLE.MODS[mod] then 
+            notification({"dect-notify-incompatible", {"dect-notify-dectorio"}})
+            notification({DECT.INCOMPATIBLE.MODS[mod], {"dect-notify-dectorio"}, mod})
+            notification({"dect-notify-modportal", {"dect-notify-dectorio"}})      
+        end
+    end
+end
+
+local function on_init(data)
+	init_global()
+
+	if global.mod_incompatibility == true then
+        incompability_detected()
+    end
+
+	unlock_tech_and_recipes()
+end
+
+local function on_configuration_changed(data)
+	init_global()
+
+	-- Notify version and updates
+    if data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version == nil then
+        notification({"dect-notify-version", {"dect-notify-dectorio"}, data.mod_changes["Dectorio"].new_version})
+    elseif data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version ~= nil then
+    	unlock_tech_and_recipes()
+        local oldver = data.mod_changes["Dectorio"].old_version
+        local newver = data.mod_changes["Dectorio"].new_version
+        notification({"dect-notify-newversion", {"dect-notify-dectorio"}, oldver, newver})
+    end
+    
+    -- Check for incompatible mods and notify
+    if data.mod_changes ~= nil then
+        global.mod_incompatibility = check_incompatible_mods()
+        if global.mod_incompatibility == true then
+            incompability_detected()
+        end
+    end
+end
+
+-- Fire events!
+script.on_init(function(data)
+    on_init(data)
+end)
+
+script.on_configuration_changed(function(data)
+    on_configuration_changed(data)
+end)

@@ -101,4 +101,18 @@ DECT.CONFIG.SIGNALS = {
     {type="fluid", name="lubricant", color={r=0.00,g=0.75,b=0.30,a=0.68}},              -- Dark Pastel Green
 }
 
+-- INTERNAL CONFIGURATION
+-- DO NOT CHANGE BELOW THIS LINE
+-- ---------------------------------
+
+DECT.INCOMPATIBLE = {}
+DECT.INCOMPATIBLE.REASONS = {
+    ["signals"] = "dect-notify-reason-signals",
+}
+DECT.INCOMPATIBLE.MODS = {
+    ["Expanded_Color_Lamps"] = DECT.INCOMPATIBLE.REASONS["signals"],
+    ["more-colours"] = DECT.INCOMPATIBLE.REASONS["signals"],
+    ["More signal color"] = DECT.INCOMPATIBLE.REASONS["signals"],
+}
+
 return DECT

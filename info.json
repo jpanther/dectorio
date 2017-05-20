@@ -1,6 +1,6 @@
 {
     "name": "Dectorio",
-    "version": "0.5.7",
+    "version": "0.5.8",
     "title": "Dectorio",
     "author": "PantherX",
     "contact": "",
@@ -8,5 +8,5 @@
     "factorio_version": "0.15",
     "dependencies": ["base >= 0.15"],
     "license": "GNU GPLv3",
-    "description": "Adds decorative elements to beautify your factory. Currently includes coloured signals, chain-link, stone and concrete walls, wooden floorboards and painted concrete styles."
+    "description": "Adds decorative elements to beautify your factory. Currently includes coloured signals, wooden, chain-link, stone and concrete walls, wooden floorboards and painted concrete styles."
 }
