@@ -50,7 +50,22 @@ if DECT.ENABLED["landscaping"] then
 	})
 
 	-- Move base landfill tech underneath landscaping
-	data.raw["technology"]["landfill"].prerequisites = {"dect-landscaping"}
+	local base_landfill = data.raw["technology"]["landfill"]
+	base_landfill.prerequisites = {"dect-landscaping"}
+	base_landfill.effects = {
+				{
+					type = "unlock-recipe",
+					recipe = "landfill"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-base-water"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-base-water-green"
+				}
+	}
 
 end
 

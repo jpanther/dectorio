@@ -50,6 +50,10 @@ local function unlock_tech_and_recipes()
 				rec["dect-base-red-desert"].enabled = true
 				rec["dect-base-red-desert-dark"].enabled = true
 			end		
+			if tech["landfill"].researched then
+				rec["dect-base-water"].enabled = true
+				rec["dect-base-water-green"].enabled = true
+			end	
 		end
 		if DECT.ENABLED["wood-floor"] then
 			if rec["dect-wood-floor"].enabled then

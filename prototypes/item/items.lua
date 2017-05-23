@@ -30,7 +30,7 @@ if DECT.ENABLED["landscaping"] then
 			icon = "__Dectorio__/graphics/icons/base-sand.png",
 		    flags = {"goes-to-main-inventory"},
 		    subgroup = "landscaping",
-		    order = "a[base-dirt]-b[base-sand]",
+		    order = "b[base-sand]",
 		    stack_size = DECT.CONFIG["landscaping_stack_size"],
 		    place_as_tile = {
 				result = "sand",
@@ -44,7 +44,7 @@ if DECT.ENABLED["landscaping"] then
 			icon = "__Dectorio__/graphics/icons/base-sand-dark.png",
 		    flags = {"goes-to-main-inventory"},
 		    subgroup = "landscaping",
-		    order = "a[base-dirt]-b[base-sand]-c[base-sand-dark]",
+		    order = "c[base-sand-dark]",
 		    stack_size = DECT.CONFIG["landscaping_stack_size"],
 		    place_as_tile = {
 				result = "sand-dark",
@@ -58,7 +58,7 @@ if DECT.ENABLED["landscaping"] then
 			icon = "__Dectorio__/graphics/icons/base-grass.png",
 		    flags = {"goes-to-main-inventory"},
 		    subgroup = "landscaping",
-		    order = "a[base-dirt]-b[base-sand]-c[base-sand-dark]-d[base-grass]",
+		    order = "d[base-grass]",
 		    stack_size = DECT.CONFIG["landscaping_stack_size"],
 		    place_as_tile = {
 				result = "grass",
@@ -72,7 +72,7 @@ if DECT.ENABLED["landscaping"] then
 			icon = "__Dectorio__/graphics/icons/base-grass-dry.png",
 		    flags = {"goes-to-main-inventory"},
 		    subgroup = "landscaping",
-		    order = "a[base-dirt]-b[base-sand]-c[base-sand-dark]-d[base-grass]-e[base-grass-dry]",
+		    order = "e[base-grass-dry]",
 		    stack_size = DECT.CONFIG["landscaping_stack_size"],
 		    place_as_tile = {
 				result = "grass-dry",
@@ -86,7 +86,7 @@ if DECT.ENABLED["landscaping"] then
 			icon = "__Dectorio__/graphics/icons/base-red-desert.png",
 		    flags = {"goes-to-main-inventory"},
 		    subgroup = "landscaping",
-		    order = "a[base-dirt]-b[base-sand]-c[base-sand-dark]-d[base-grass]-e[base-grass-dry]-f[red-desert]",
+		    order = "f[red-desert]",
 		    stack_size = DECT.CONFIG["landscaping_stack_size"],
 		    place_as_tile = {
 				result = "red-desert",
@@ -100,15 +100,49 @@ if DECT.ENABLED["landscaping"] then
 			icon = "__Dectorio__/graphics/icons/base-red-desert-dark.png",
 		    flags = {"goes-to-main-inventory"},
 		    subgroup = "landscaping",
-		    order = "a[base-dirt]-b[base-sand]-c[base-sand-dark]-d[base-grass]-e[base-grass-dry]-f[red-desert]-g[red-desert-dark]",
+		    order = "g[red-desert-dark]",
 		    stack_size = DECT.CONFIG["landscaping_stack_size"],
 		    place_as_tile = {
 				result = "red-desert-dark",
 				condition_size = 4,
 				condition = { "water-tile" }
 			}
+		},
+		{
+			type = "item",
+			name = "dect-base-water",
+			icon = "__Dectorio__/graphics/icons/base-water.png",
+		    flags = {"goes-to-main-inventory"},
+		    subgroup = "landscaping",
+		    order = "i[dect-base-water]",
+		    stack_size = DECT.CONFIG["landscaping_stack_size"],
+		    place_as_tile = {
+				result = "water",
+				condition_size = 1,
+				condition = { "water-tile" }
+			}
+		},
+		{
+			type = "item",
+			name = "dect-base-water-green",
+			icon = "__Dectorio__/graphics/icons/base-water-green.png",
+		    flags = {"goes-to-main-inventory"},
+		    subgroup = "landscaping",
+		    order = "j[dect-base-water-green]",
+		    stack_size = DECT.CONFIG["landscaping_stack_size"],
+		    place_as_tile = {
+				result = "water-green",
+				condition_size = 1,
+				condition = { "water-tile" }
+			}
 		}
 	})
+
+	-- Modify base landfill stack size
+	local base_landfill = data.raw["item"]["landfill"]
+	base_landfill.subgroup = "landscaping"
+	base_landfill.order = "h[landfill]"
+	base_landfill.stack_size = DECT.CONFIG["landscaping_stack_size"]
 
 end
 

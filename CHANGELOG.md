@@ -5,6 +5,8 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 ## v0.5.8 - Unreleased (coming soon)
 
 ### Added
+* Landscaping items to place water and green water tiles (requires _Earthworks_ technology)
+* Tweaked Landfill recipe to take longer to craft
 * Notifications for incompatible mods and when the mod is updated
 
 ## v0.5.7 - 2017-05-17

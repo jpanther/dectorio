@@ -98,8 +98,40 @@ if DECT.ENABLED["landscaping"] then
 			},
 			result = "dect-base-red-desert-dark",
 			result_count = 10
+		},
+		{
+			type = "recipe",
+			name = "dect-base-water",
+			energy_required = 10,
+			enabled = false,
+			category = "crafting-with-fluid",
+			ingredients = {
+				{"iron-axe", 2},
+				{"explosives", 5},
+				{type="fluid", name="water", amount=100}
+			},
+			result = "dect-base-water",
+			result_count = 1
+		},
+		{
+			type = "recipe",
+			name = "dect-base-water-green",
+			energy_required = 10,
+			enabled = false,
+			category = "crafting-with-fluid",
+			ingredients = {
+				{"iron-axe", 2},
+				{"explosives", 5},
+				{type="fluid", name="water", amount=100}
+			},
+			result = "dect-base-water-green",
+			result_count = 1
 		}
 	})
+
+	-- Adjust base landfill recipe
+	local base_landfill = data.raw["recipe"]["landfill"]
+	base_landfill.energy_required = 10
 
 end
 
