@@ -1246,8 +1246,8 @@ if DECT.ENABLED["walls"] then
     })
 
     -- Adjust base gate health and resistances to match concrete wall
-    local base_gate = data.raw["entity"]["gate"]
-    local dect_concrete_wall = data.raw["entity"]["dect-concrete-wall"]
+    local base_gate = data.raw["gate"]["gate"]
+    local dect_concrete_wall = data.raw["wall"]["dect-concrete-wall"]
     base_gate.max_health = dect_concrete_wall.max_health
     base_gate.resistances = dect_concrete_wall.resistances
 
