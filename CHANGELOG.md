@@ -9,6 +9,11 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 * Tweaked Landfill recipe to take longer to craft
 * Notifications for incompatible mods and when the mod is updated
 
+### Changed
+* Stone and concrete wall are now acid resistant
+* Balancing - increased max health and physical resistance of concrete wall
+* Balancing - adjusted gates to match health and resistances of concrete wall
+
 ## v0.5.7 - 2017-05-17
 
 ### Added

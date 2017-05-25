@@ -44,6 +44,10 @@ if DECT.ENABLED["walls"] then
                     percent = 15
                 },
                 {
+                    type = "acid",
+                    percent = 10
+                },
+                {
                     type = "fire",
                     percent = 100
                 },
@@ -335,7 +339,7 @@ if DECT.ENABLED["walls"] then
             selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
             minable = {mining_time = 0.5, result = "dect-concrete-wall"},
             fast_replaceable_group = "wall",
-            max_health = 450,
+            max_health = 500,
             repair_speed_modifier = 2,
             corpse = "wall-remnants",
             repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
@@ -352,7 +356,7 @@ if DECT.ENABLED["walls"] then
                 {
                     type = "physical",
                     decrease = 3,
-                    percent = 30
+                    percent = 40
                 },
                 {
                     type = "impact",
@@ -367,6 +371,11 @@ if DECT.ENABLED["walls"] then
                 {
                     type = "fire",
                     percent = 100
+                },
+                {
+                	type = "acid",
+                	decrease = 5,
+                	percent = 60
                 },
                 {
                     type = "laser",
@@ -1235,5 +1244,11 @@ if DECT.ENABLED["walls"] then
 
 
     })
+
+    -- Adjust base gate health and resistances to match concrete wall
+    local base_gate = data.raw["entity"]["gate"]
+    local dect_concrete_wall = data.raw["entity"]["dect-concrete-wall"]
+    base_gate.max_health = dect_concrete_wall.max_health
+    base_gate.resistances = dect_concrete_wall.resistances
 
 end
