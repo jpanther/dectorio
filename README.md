@@ -38,6 +38,8 @@ When you launch the game, the new mod will be enabled by default.
 
   ![Landscaping items](https://cl.ly/2N0B1N2f1k30/landscaping.png)
 
+* Ability to place water and green water tiles (aka. 'waterfill')
+
 ### Walls
 
 * Adds items for wooden barricade, stone wall, chain-link fence and concrete walls
@@ -77,7 +79,9 @@ Currently the mod is only available in English. If you are able to translate the
 
 ### Mod Compatibility
 
-Limited testing has been completed with other mods. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
+Limited testing has been completed with other mods. Warnings will be shown in-game to highlight any known issues. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
+
+It is not recommended to use other coloured signal mods at the same time as Dectorio. This can cause coloured signals to be overwritten multiple times and lead to game-breaking compatibility issues with other mods. If you would like more colours, you can add these in the Dectorio config.lua file (instructions are in the file).
 
 ### Changelog
 

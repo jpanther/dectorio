@@ -2,7 +2,7 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.5.8 - Unreleased (coming soon)
+## v0.5.8 - 2017-05-25
 
 ### Added
 * Landscaping items to place water and green water tiles (requires _Earthworks_ technology)
