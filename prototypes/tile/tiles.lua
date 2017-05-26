@@ -569,9 +569,6 @@ if DECT.ENABLED["painted-concrete"] then
 		base_tile_hazard_right.minable.result = dect_tile_hazard_right.minable.result
 		base_tile_hazard_right.variants = dect_tile_hazard_right.variants
 
-		data.raw["recipe"]["hazard-concrete"] = nil
-		data.raw["item"]["hazard-concrete"] = nil
-
 	end
 
 end

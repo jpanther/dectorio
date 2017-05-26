@@ -189,6 +189,11 @@ if DECT.ENABLED["painted-concrete"] then
 		}
 	})
 
+	if DECT.CONFIG["disable_hazard_concrete"] then
+		-- Disable base hazard concrete recipe
+		data.raw["recipe"]["hazard-concrete"].enabled = false
+	end
+
 end
 
 if DECT.ENABLED["wood-floor"] then

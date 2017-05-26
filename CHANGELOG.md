@@ -2,6 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.5.9 - 2017-05-26
+
+### Bugfixes
+* Fixed compatibility issues with other mods that rely on base Hazard concrete items or recipes
+
 ## v0.5.8 - 2017-05-25
 
 ### Added

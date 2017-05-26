@@ -30,13 +30,24 @@ local function init_global()
     global.mod_incompatibility = nil
 end
 
+-- Send chat notification to all players or force
+local function notification(txt, force)
+    if force ~= nil then
+        force.print(txt)
+    else
+        for k, p in pairs (game.players) do
+            game.players[k].print(txt)
+        end
+    end
+end
+
 -- Check if any technologies or recipes need to be enabled
 local function unlock_tech_and_recipes() 
 	for _,force in pairs(game.forces) do
 
 		local tech = force.technologies
 		local rec = force.recipes
-	
+
 		if DECT.ENABLED["landscaping"] then
 			if rec["dect-base-dirt"].enabled then
 				tech["dect-landscaping"].researched = true
@@ -73,6 +84,11 @@ local function unlock_tech_and_recipes()
 				rec["dect-paint-radiation"].enabled = true
 				rec["dect-paint-safety"].enabled = true
 			end
+			if DECT.CONFIG["disable_hazard_concrete"] then
+				rec["hazard-concrete"].enabled = false
+			elseif tech["concrete"].researched then
+				rec["hazard-concrete"].enabled = true
+			end
 		end
 		if DECT.ENABLED["walls"] then
 			if rec["stone-wall"].enabled then
@@ -91,17 +107,6 @@ local function unlock_tech_and_recipes()
 			end
 		end
 	end
-end
-
--- Send chat notification to all players or force
-local function notification(txt, force)
-    if force ~= nil then
-        force.print(txt)
-    else
-        for k, p in pairs (game.players) do
-            game.players[k].print(txt)
-        end
-    end
 end
 
 -- Check game for known incompatibile mods

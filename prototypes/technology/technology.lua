@@ -141,7 +141,7 @@ if DECT.ENABLED["painted-concrete"] then
 		data.raw["technology"]["concrete"].effects = {{
 		        type = "unlock-recipe",
 		        recipe = "concrete"
-		      }}
+		    }}
 		      
 	end
 
