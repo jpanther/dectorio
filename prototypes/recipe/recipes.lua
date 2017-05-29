@@ -207,7 +207,7 @@ if DECT.ENABLED["wood-floor"] then
 			enabled = false,
 			category = "crafting",
 			ingredients = {
-				{"wood", 5},
+				{"wood", 10},
 			},
 			result= "dect-wood-floor",
 			result_count = 10

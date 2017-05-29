@@ -2,6 +2,12 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.5.10 - Unreleased (coming soon)
+
+### Changed
+* Doubled wood requirement for Wooden floorboards
+* Wooden floorboards can now be used as fuel
+
 ## v0.5.9 - 2017-05-26
 
 ### Bugfixes
