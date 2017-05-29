@@ -1251,4 +1251,16 @@ if DECT.ENABLED["walls"] then
     base_gate.max_health = dect_concrete_wall.max_health
     base_gate.resistances = dect_concrete_wall.resistances
 
+    -- Add Hazard gate variant
+    local dect_hazard_gate = table.deepcopy(data.raw["gate"]["gate"])
+    dect_hazard_gate.name = "dect-hazard-gate"
+    dect_hazard_gate.minable.result = "dect-hazard-gate"
+    dect_hazard_gate.vertical_animation.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-vertical.png"
+    dect_hazard_gate.horizontal_animation.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-horizontal.png"
+    dect_hazard_gate.vertical_rail_animation_left.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-rail-vertical-left.png"
+    dect_hazard_gate.vertical_rail_animation_right.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-rail-vertical-right.png"
+    dect_hazard_gate.horizontal_rail_animation_left.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-rail-horizontal-left.png"
+    dect_hazard_gate.horizontal_rail_animation_right.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-rail-horizontal-right.png"
+    data:extend({dect_hazard_gate})
+
 end

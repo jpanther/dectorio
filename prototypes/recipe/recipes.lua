@@ -243,10 +243,21 @@ if DECT.ENABLED["walls"] then
 			enabled = false,
 			ingredients = {{"raw-wood", 3}},
 			result = "dect-wood-wall"
+		},
+		{
+			type = "recipe",
+			name = "dect-hazard-gate",
+			enabled = false,
+			ingredients = {
+				{"dect-concrete-wall", 1},
+				{"steel-plate", 2},
+				{"electronic-circuit", 2}
+			},
+			result = "dect-hazard-gate"
 		}
 	})
 
 	-- Change gates to use concrete-wall
-	data.raw["recipe"]["gate"].ingredients = {{"dect-concrete-wall", 1}, {"steel-plate", 2}, {"electronic-circuit", 2}}
+	data.raw["recipe"]["gate"].ingredients = data.raw["recipe"]["dect-hazard-gate"].ingredients
 
 end

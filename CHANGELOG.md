@@ -4,6 +4,9 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 
 ## v0.5.10 - Unreleased (coming soon)
 
+### Added
+* New gate type - Hazard gate (black/yellow striped gates)
+
 ### Changed
 * Doubled wood requirement for Wooden floorboards
 * Wooden floorboards can now be used as fuel

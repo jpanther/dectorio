@@ -194,8 +194,9 @@ if DECT.ENABLED["walls"] then
 
 	})
 
-	-- Change gates to require concrete-walls
+	-- Change gates to require concrete-walls and unlock Hazard gate
 	local base_gates = data.raw["technology"]["gates"]
 	base_gates.prerequisites = {"dect-advanced-walls", "military-2"}
+	table.insert(base_gates.effects,{type="unlock-recipe",recipe="dect-hazard-gate"})
 
 end

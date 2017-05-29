@@ -278,6 +278,16 @@ if DECT.ENABLED["walls"] then
 		    order = "a[a-wood-wall]",
 		    stack_size = DECT.CONFIG["walls_stack_size"],
 	    	place_result = "dect-wood-wall"
+		},
+		{
+			type = "item",
+			name = "dect-hazard-gate",
+			icon = "__Dectorio__/graphics/icons/hazard-gate.png",
+		    flags = {"goes-to-quickbar"},
+		    subgroup = "defensive-structure",
+		    order = "a[wall]-b[hazard-gate]",
+		    stack_size = 50,
+	    	place_result = "dect-hazard-gate"
 		}
 	})
 
