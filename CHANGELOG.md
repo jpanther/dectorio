@@ -2,7 +2,7 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.5.10 - Unreleased (coming soon)
+## v0.5.10 - 2017-05-29
 
 ### Added
 * New gate type - Hazard gate (black/yellow striped gates)

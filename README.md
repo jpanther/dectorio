@@ -35,18 +35,21 @@ When you launch the game, the new mod will be enabled by default.
 ### Landscaping
 
 * Adds items for placing dirt, sand, dark sand, grass, dry grass, red desert and dark red desert tiles
-
-  ![Landscaping items](https://cl.ly/2N0B1N2f1k30/landscaping.png)
-
 * Ability to place water and green water tiles (aka. 'waterfill')
 
-### Walls
+  ![Landscaping items](https://cl.ly/171X1J1s1D24/landscapeitems.png)
+
+### Walls and Gates
 
 * Adds items for wooden barricade, stone wall, chain-link fence and concrete walls
+* Walls have varied resistances and strengths to allow for better progression
+* Increased wall item stack sizes
 
   ![Walls](https://cl.ly/0N0p3y0D3m2k/4walls.png)
 
-* Increased wall item stack sizes
+* Adds items for hazard gates
+
+  ![Gates](https://cl.ly/042x3E3P0A0o/hazgate.png)
 
 ### Signals & Lamp colours
 
@@ -63,7 +66,7 @@ When you launch the game, the new mod will be enabled by default.
 
 * Includes settings for enabling or disabling each of the above features (Options > Mods > Startup). Ideally these should only be changed before starting a new game. Changes on existing games will require content to be migrated and some items may be lost if you disable components you've already used on an existing save. Always make a backup first!
 
-  ![Mod options](https://cl.ly/363i1h1A4110/settings.png)
+  ![Mod settings](https://cl.ly/24172D1S2O2T/modsetting.png)
 
 * Config.lua file that allows additional customisation
 
