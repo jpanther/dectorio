@@ -15,7 +15,7 @@ if DECT.ENABLED["wood-floor"] then
 			mined_sound = { filename = "__Dectorio__/sound/deconstruct-wood.ogg" },
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.2,
-			layer = 62,
+			layer = 63,
 			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
@@ -62,22 +62,87 @@ if DECT.ENABLED["wood-floor"] then
 			walking_sound = {
 				{
 					filename = "__Dectorio__/sound/walking/wood-01.ogg",
-					volume = 1.1
+					volume = 0.95
 				},
 				{
 					filename = "__Dectorio__/sound/walking/wood-02.ogg",
-					volume = 1.1
+					volume = 0.95
 				},
 				{
 					filename = "__Dectorio__/sound/walking/wood-03.ogg",
-					volume = 1.1
+					volume = 0.95
 				},
 				{
 					filename = "__Dectorio__/sound/walking/wood-04.ogg",
-					volume = 1.1
+					volume = 0.95
 				}
 			},
-			map_color={r=0.5, g=0.5, b=0},
+			map_color={r=139, g=69, b=19},
+			ageing=0,
+			vehicle_friction_modifier = dirt_vehicle_speed_modifier
+		}
+	})
+
+end
+
+if DECT.ENABLED["gravel"] then
+
+	data:extend({
+
+		{
+			type = "tile",
+			name = "dect-gravel",
+			needs_correction = false,
+			minable = {hardness = 0.2, mining_time = 0.5, result = "stone"},
+			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
+			collision_mask = {"ground-tile"},
+			walking_speed_modifier = 1.1,
+			layer = 62,
+			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
+			variants =
+			{
+				main = {
+					{
+						picture = "__Dectorio__/graphics/terrain/gravel/gravel1.png",
+						count = 16,
+						size = 1
+					},
+					{
+						picture = "__Dectorio__/graphics/terrain/gravel/gravel2.png",
+						count = 4,
+						size = 2,
+						probability = 0.39,
+					},
+					{
+						picture = "__Dectorio__/graphics/terrain/gravel/gravel4.png",
+						count = 4,
+						size = 4,
+						probability = 1,
+					},
+				},
+				inner_corner = {
+					picture = "__Dectorio__/graphics/terrain/gravel/gravel-inner-corner.png",
+					count = 8
+				},
+				outer_corner = {
+					picture = "__Dectorio__/graphics/terrain/gravel/gravel-outer-corner.png",
+					count = 1
+				},
+				side = {
+					picture = "__Dectorio__/graphics/terrain/gravel/gravel-side.png",
+					count = 8
+				},
+				u_transition = {
+					picture = "__Dectorio__/graphics/terrain/gravel/gravel-u.png",
+					count = 8
+				},
+				o_transition = {
+					picture = "__Dectorio__/graphics/terrain/gravel/gravel-o.png",
+					count = 1
+				}
+			},
+			walking_sound = data.raw["tile"]["dirt"].walking_sound,
+			map_color={r=169, g=169, b=169},
 			ageing=0,
 			vehicle_friction_modifier = dirt_vehicle_speed_modifier
 		}
@@ -142,7 +207,7 @@ if DECT.ENABLED["painted-concrete"] then
 				}
 			},
 			walking_sound = data.raw["tile"]["concrete"].walking_sound,
-			map_color={r=0.5, g=0.5, b=0},
+			map_color={r=105, g=105, b=105},
 			ageing=0,
 			vehicle_friction_modifier = concrete_vehicle_speed_modifier
 		},
@@ -200,7 +265,7 @@ if DECT.ENABLED["painted-concrete"] then
 				}
 			},
 			walking_sound = data.raw["tile"]["concrete"].walking_sound,
-			map_color={r=0.5, g=0.5, b=0},
+			map_color={r=105, g=105, b=105},
 			ageing=0,
 			vehicle_friction_modifier = concrete_vehicle_speed_modifier
 		},
@@ -258,7 +323,7 @@ if DECT.ENABLED["painted-concrete"] then
 				}
 			},
 			walking_sound = data.raw["tile"]["concrete"].walking_sound,
-			map_color={r=0.5, g=0.5, b=0},
+			map_color={r=105, g=105, b=105},
 			ageing=0,
 			vehicle_friction_modifier = concrete_vehicle_speed_modifier
 		},
@@ -316,7 +381,7 @@ if DECT.ENABLED["painted-concrete"] then
 				}
 			},
 			walking_sound = data.raw["tile"]["concrete"].walking_sound,
-			map_color={r=0.5, g=0.5, b=0},
+			map_color={r=105, g=105, b=105},
 			ageing=0,
 			vehicle_friction_modifier = concrete_vehicle_speed_modifier
 		},
@@ -374,7 +439,7 @@ if DECT.ENABLED["painted-concrete"] then
 				}
 			},
 			walking_sound = data.raw["tile"]["concrete"].walking_sound,
-			map_color={r=0.5, g=0.5, b=0},
+			map_color={r=105, g=105, b=105},
 			ageing=0,
 			vehicle_friction_modifier = concrete_vehicle_speed_modifier
 		},
@@ -432,7 +497,7 @@ if DECT.ENABLED["painted-concrete"] then
 				}
 			},
 			walking_sound = data.raw["tile"]["concrete"].walking_sound,
-			map_color={r=0.5, g=0.5, b=0},
+			map_color={r=105, g=105, b=105},
 			ageing=0,
 			vehicle_friction_modifier = concrete_vehicle_speed_modifier
 		},
@@ -490,7 +555,7 @@ if DECT.ENABLED["painted-concrete"] then
 				}
 			},
 			walking_sound = data.raw["tile"]["concrete"].walking_sound,
-			map_color={r=0.5, g=0.5, b=0},
+			map_color={r=105, g=105, b=105},
 			ageing=0,
 			vehicle_friction_modifier = concrete_vehicle_speed_modifier
 		},
@@ -548,7 +613,7 @@ if DECT.ENABLED["painted-concrete"] then
 				}
 			},
 			walking_sound = data.raw["tile"]["concrete"].walking_sound,
-			map_color={r=0.5, g=0.5, b=0},
+			map_color={r=105, g=105, b=105},
 			ageing=0,
 			vehicle_friction_modifier = concrete_vehicle_speed_modifier
 		}

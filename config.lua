@@ -9,7 +9,8 @@ DECT.ENABLED = {
     ["signals"] = settings.startup["dectorio-signals"].value,
     ["walls"] = settings.startup["dectorio-walls"].value,
     ["landscaping"] = settings.startup["dectorio-landscaping"].value,
-    ["wood-floor"] = settings.startup["dectorio-wood-floor"].value,
+    ["wood-floor"] = settings.startup["dectorio-flooring"].value,
+    ["gravel"] = settings.startup["dectorio-flooring"].value,
     ["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
 }
 
