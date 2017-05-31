@@ -10,6 +10,7 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 ### Changed
 * Adjusted map colours for flooring types to better distinguish the floors
 * Landscaping items will no longer appear in blueprints (configurable in config.lua)
+* Wooden walls can now be used as fuel
 
 ## v0.5.10 - 2017-05-29
 
