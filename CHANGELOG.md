@@ -2,6 +2,14 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.5.11 - Unreleased (coming soon)
+
+### Added
+* New flooring - Gravel (placed using raw stone)
+
+### Changed
+* Adjusted map colours for flooring types to better distinguish the floors
+
 ## v0.5.10 - 2017-05-29
 
 ### Added

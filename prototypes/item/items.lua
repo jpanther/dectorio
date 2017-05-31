@@ -241,8 +241,20 @@ if DECT.ENABLED["wood-floor"] then
 				condition_size = 4,
 				condition = { "water-tile" }
 			}
-		},
+		}
 	})
+
+end
+
+if DECT.ENABLED["gravel"] then
+
+	-- Allow stone to be placed as gravel
+	local base_stone = data.raw["item"]["stone"]
+	base_stone.place_as_tile = {
+		result = "dect-gravel",
+		condition_size = 4,
+		condition = { "water-tile" }
+	}
 
 end
 

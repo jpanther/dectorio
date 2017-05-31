@@ -24,7 +24,7 @@ data:extend({
     },
     {
         type = "bool-setting",
-        name = "dectorio-wood-floor",
+        name = "dectorio-flooring",
         setting_type = "startup",
         default_value = true,
         order = "d"
