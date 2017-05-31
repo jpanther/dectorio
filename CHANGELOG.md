@@ -6,6 +6,7 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 
 ### Added
 * New flooring - Gravel (placed using raw stone)
+* Stone wall can now be upgraded to concrete wall
 
 ### Changed
 * Adjusted map colours for flooring types to better distinguish the floors

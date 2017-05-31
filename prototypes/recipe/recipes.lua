@@ -229,11 +229,24 @@ if DECT.ENABLED["walls"] then
 		},
 		{
 			type = "recipe",
+			name = "dect-concrete-wall-from-stone-wall",
+			localised_name = {"recipe-name.dect-concrete-wall-from-stone-wall"},
+			icon = "__Dectorio__/graphics/icons/concrete-wall-from-stone-wall.png",
+			energy_required = 1,
+			enabled = false,
+			ingredients = {
+				{"stone-wall", 1},
+				{"concrete", 2}
+			},
+			result = "dect-concrete-wall"
+		},
+		{
+			type = "recipe",
 			name = "dect-chain-wall",
 			enabled = false,
 			ingredients = {
 				{"iron-stick", 2},
-				{"steel-plate", 2},
+				{"steel-plate", 2}
 			},
 			result = "dect-chain-wall"
 		},

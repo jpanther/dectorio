@@ -187,6 +187,10 @@ if DECT.ENABLED["walls"] then
 				{
 					type = "unlock-recipe",
 					recipe = "dect-concrete-wall"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-concrete-wall-from-stone-wall"
 				}
 			},
 			order = "e-p-b-a"

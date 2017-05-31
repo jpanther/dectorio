@@ -104,6 +104,7 @@ local function unlock_tech_and_recipes()
 			if tech["dect-advanced-walls"].researched then
 				rec["dect-chain-wall"].enabled = true
 				rec["dect-concrete-wall"].enabled = true
+				rec["dect-concrete-wall-from-stone-wall"].enabled = true
 			end
 			if tech["gates"].researched then
 				rec["dect-hazard-gate"].enabled = true

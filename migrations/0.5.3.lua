@@ -17,7 +17,7 @@ for index, force in pairs(game.forces) do
 			rec["dect-base-red-desert-dark"].enabled = true
 		end		
 	end
-	if settings.startup["dectorio-wood-floor"].value then
+	if settings.startup["dectorio-flooring"].value then
 		if tech["dect-wood-floor"].researched then
 			rec["dect-wood-floor"].enabled = true
 		end
