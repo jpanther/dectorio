@@ -20,9 +20,10 @@ When you launch the game, the new mod will be enabled by default.
 
 ### Flooring styles
 
+* Adds basic gravel path (placed using raw stone)
 * Adds wooden floorboard tiles with sound effects
 
-  ![Wooden floorboards](https://cl.ly/0m0g2843251i/woodenfloor.png)
+  ![Gravel and Wooden floorboards](https://cl.ly/253y1V0W362e/gravelwood.png)
 
 * Adds painted concrete tiles - Hazard (black/yellow), Emergency (white/red), Radiation hazard (yellow/pink) and Safety (white/green)
 
