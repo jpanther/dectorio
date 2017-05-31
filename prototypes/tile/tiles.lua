@@ -4,6 +4,21 @@
 data.raw["tile"]["stone-path"].decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"]
 data.raw["tile"]["concrete"].decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"]
 
+if DECT.ENABLED["landscaping"] then
+
+	-- Make tiles unblueprintable
+	data.raw["tile"]["dirt"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
+	data.raw["tile"]["sand"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
+	data.raw["tile"]["sand-dark"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
+	data.raw["tile"]["grass"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
+	data.raw["tile"]["grass-dry"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
+	data.raw["tile"]["red-desert"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
+	data.raw["tile"]["red-desert-dark"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
+	data.raw["tile"]["water"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
+	data.raw["tile"]["water-green"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
+
+end
+
 if DECT.ENABLED["wood-floor"] then
 
 	data:extend({
@@ -97,7 +112,7 @@ if DECT.ENABLED["gravel"] then
 			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.1,
-			layer = 62,
+			layer = 61,
 			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
@@ -162,7 +177,7 @@ if DECT.ENABLED["painted-concrete"] then
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
-			layer = 61,
+			layer = 62,
 			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
@@ -220,7 +235,7 @@ if DECT.ENABLED["painted-concrete"] then
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
-			layer = 61,
+			layer = 62,
 			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
@@ -278,7 +293,7 @@ if DECT.ENABLED["painted-concrete"] then
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
-			layer = 61,
+			layer = 62,
 			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
@@ -336,7 +351,7 @@ if DECT.ENABLED["painted-concrete"] then
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
-			layer = 61,
+			layer = 62,
 			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
@@ -394,7 +409,7 @@ if DECT.ENABLED["painted-concrete"] then
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
-			layer = 61,
+			layer = 62,
 			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
@@ -452,7 +467,7 @@ if DECT.ENABLED["painted-concrete"] then
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
-			layer = 61,
+			layer = 62,
 			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
@@ -510,7 +525,7 @@ if DECT.ENABLED["painted-concrete"] then
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
-			layer = 61,
+			layer = 62,
 			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{
@@ -568,7 +583,7 @@ if DECT.ENABLED["painted-concrete"] then
 			mined_sound = data.raw["tile"]["concrete"].mined_sound,
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.4,
-			layer = 61,
+			layer = 62,
 			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
 			variants =
 			{

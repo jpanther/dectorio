@@ -17,20 +17,24 @@ DECT.ENABLED = {
 -- CONFIGURABLE OPTIONS
 -- These options can be changed to suit individual play-style
 DECT.CONFIG = {
-    -- How likely it is that decorations are removed when placing flooring
+    -- How likely it is that decorations are removed when placing flooring (default: 1)
     -- (0 = keep all decorations, 0.5 = remove 50% of decorations, 1 = remove all decorations)
     ["decorative_removal_probability"] = 1,
 
-    -- Whether the base concrete recipe should be modified to use iron sticks in place of iron ore
+    -- Whether the base concrete recipe should be modified to use iron sticks in place of iron ore (default: true)
     -- (true = recipe uses iron sticks, false = recipe uses iron ore)
     ["modified_concrete_recipe"] = true,
 
-    -- Whether painted concrete (when enabled) disables the base game hazard concrete
+    -- Whether painted concrete (when enabled) disables the base game hazard concrete (default: true)
     -- (true = only painted concrete is used, false = both painted and original hazard concrete variants are available)
     ["disable_hazard_concrete"] = true,
 
-    -- How many items are stackable in a single inventory slot
-    -- (integer, default flooring = 500, walls = 200)
+    -- Whether landscaping items are blueprintable (default: false)
+    -- (true = landscaping items appear in blueprints, false = landscaping items do not appear in blueprints)
+    ["landscaping_blueprintable"] = false,
+
+    -- How many items are stackable in a single inventory slot (defaults: flooring = 500, walls = 200)
+    -- (any positive integer value)
     ["flooring_stack_size"] = 500,
     ["landscaping_stack_size"] = 500,
     ["walls_stack_size"] = 200,
