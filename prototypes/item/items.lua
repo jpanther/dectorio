@@ -2,146 +2,45 @@
 
 if DECT.ENABLED["landscaping"] then
 
-	-- Add items for base assets
+	-- Add subgroup for base assets
 	data:extend({
 		{
 			type = "item-subgroup",
 			name = "landscaping",
 			group = "logistics",
 			order = "g"
-		},
-		{
-			type = "item",
-			name = "dect-base-dirt",
-			icon = "__Dectorio__/graphics/icons/base-dirt.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "landscaping",
-		    order = "a[base-dirt]",
-		    stack_size = DECT.CONFIG["landscaping_stack_size"],
-		    place_as_tile = {
-				result = "dirt",
-				condition_size = 4,
-				condition = { "water-tile" }
-			}
-		},
-		{
-			type = "item",
-			name = "dect-base-sand",
-			icon = "__Dectorio__/graphics/icons/base-sand.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "landscaping",
-		    order = "b[base-sand]",
-		    stack_size = DECT.CONFIG["landscaping_stack_size"],
-		    place_as_tile = {
-				result = "sand",
-				condition_size = 4,
-				condition = { "water-tile" }
-			}
-		},
-		{
-			type = "item",
-			name = "dect-base-sand-dark",
-			icon = "__Dectorio__/graphics/icons/base-sand-dark.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "landscaping",
-		    order = "c[base-sand-dark]",
-		    stack_size = DECT.CONFIG["landscaping_stack_size"],
-		    place_as_tile = {
-				result = "sand-dark",
-				condition_size = 4,
-				condition = { "water-tile" }
-			}
-		},
-		{
-			type = "item",
-			name = "dect-base-grass",
-			icon = "__Dectorio__/graphics/icons/base-grass.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "landscaping",
-		    order = "d[base-grass]",
-		    stack_size = DECT.CONFIG["landscaping_stack_size"],
-		    place_as_tile = {
-				result = "grass",
-				condition_size = 4,
-				condition = { "water-tile" }
-			}
-		},
-		{
-			type = "item",
-			name = "dect-base-grass-dry",
-			icon = "__Dectorio__/graphics/icons/base-grass-dry.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "landscaping",
-		    order = "e[base-grass-dry]",
-		    stack_size = DECT.CONFIG["landscaping_stack_size"],
-		    place_as_tile = {
-				result = "grass-dry",
-				condition_size = 4,
-				condition = { "water-tile" }
-			}
-		},
-		{
-			type = "item",
-			name = "dect-base-red-desert",
-			icon = "__Dectorio__/graphics/icons/base-red-desert.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "landscaping",
-		    order = "f[red-desert]",
-		    stack_size = DECT.CONFIG["landscaping_stack_size"],
-		    place_as_tile = {
-				result = "red-desert",
-				condition_size = 4,
-				condition = { "water-tile" }
-			}
-		},
-		{
-			type = "item",
-			name = "dect-base-red-desert-dark",
-			icon = "__Dectorio__/graphics/icons/base-red-desert-dark.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "landscaping",
-		    order = "g[red-desert-dark]",
-		    stack_size = DECT.CONFIG["landscaping_stack_size"],
-		    place_as_tile = {
-				result = "red-desert-dark",
-				condition_size = 4,
-				condition = { "water-tile" }
-			}
-		},
-		{
-			type = "item",
-			name = "dect-base-water",
-			icon = "__Dectorio__/graphics/icons/base-water.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "landscaping",
-		    order = "i[dect-base-water]",
-		    stack_size = DECT.CONFIG["landscaping_stack_size"],
-		    place_as_tile = {
-				result = "water",
-				condition_size = 1,
-				condition = { "water-tile" }
-			}
-		},
-		{
-			type = "item",
-			name = "dect-base-water-green",
-			icon = "__Dectorio__/graphics/icons/base-water-green.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "landscaping",
-		    order = "j[dect-base-water-green]",
-		    stack_size = DECT.CONFIG["landscaping_stack_size"],
-		    place_as_tile = {
-				result = "water-green",
-				condition_size = 1,
-				condition = { "water-tile" }
-			}
 		}
 	})
+
+	-- Add new items
+	local base_tiles = {"dirt", "sand", "sand-dark", "grass", "grass-dry", "red-desert", "red-desert-dark", "water", "water-green"}
+	for _, tile in pairs(base_tiles) do
+		local cond_size = 4
+		if string.find(tile, "water") then
+			cond_size = 1
+		end
+		data:extend({
+			{
+				type = "item",
+				name = "dect-base-"..tile,
+				icon = "__Dectorio__/graphics/icons/base-"..tile..".png",
+			    flags = {"goes-to-main-inventory"},
+			    subgroup = "landscaping",
+			    order = _.."[base-"..tile.."]",
+			    stack_size = DECT.CONFIG["landscaping_stack_size"],
+			    place_as_tile = {
+					result = tile,
+					condition_size = cond_size,
+					condition = { "water-tile" }
+				}
+			}
+		})
+	end
 
 	-- Modify base landfill stack size
 	local base_landfill = data.raw["item"]["landfill"]
 	base_landfill.subgroup = "landscaping"
-	base_landfill.order = "h[landfill]"
+	base_landfill.order = "7[landfill]"
 	base_landfill.stack_size = DECT.CONFIG["landscaping_stack_size"]
 
 end

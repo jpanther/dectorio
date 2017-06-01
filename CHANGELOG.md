@@ -2,7 +2,7 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.5.12 - Unreleased (coming soon)
+## v0.5.12 - 2017-06-01
 
 ### Added
 * New painted concrete types - Caution (orange/white), Danger (red/yellow), Defect (blue/white) and Operations (black/white)

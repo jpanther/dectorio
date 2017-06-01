@@ -25,13 +25,13 @@ When you launch the game, the new mod will be enabled by default.
 
   ![Gravel and Wooden floorboards](https://cl.ly/253y1V0W362e/gravelwood.png)
 
-* Adds painted concrete tiles - Hazard (black/yellow), Emergency (white/red), Radiation hazard (yellow/pink) and Safety (white/green)
+* Adds painted concrete tiles - Hazard (black/yellow), Danger (red/yellow), Emergency (white/red), Caution (orange/white), Radiation hazard (yellow/pink), Defect (blue/white), Operations (black/white) and Safety (white/green)
 
-  ![Painted concrete](https://cl.ly/0R3i000I0g3g/paintconcrete.png)
+  ![Painted concrete](https://cl.ly/2D04401r202w/paintconcrete.png)
 
-* Painted Hazard concrete replaces default Hazard concrete
-* Default concrete recipe no longer uses iron ore and instead requires iron sticks
-* Increased flooring item stack sizes
+* Painted Hazard concrete replaces default Hazard concrete^
+* Default concrete recipe no longer uses iron ore and instead requires iron sticks^
+* Increased flooring item stack sizes^
 
 ### Landscaping
 
@@ -44,7 +44,7 @@ When you launch the game, the new mod will be enabled by default.
 
 * Adds items for wooden barricade, stone wall, chain-link fence and concrete walls
 * Walls have varied resistances and strengths to allow for better progression
-* Increased wall item stack sizes
+* Increased wall item stack sizes^
 
   ![Walls](https://cl.ly/0N0p3y0D3m2k/4walls.png)
 
@@ -54,8 +54,8 @@ When you launch the game, the new mod will be enabled by default.
 
 ### Signals & Lamp colours
 
-* Adds new signal colours - purple, orange, tangerine and aqua
-* Adds signal colours for raw resources, smelted items, fluids, science packs, inserters, belts, splitters and circuits
+* Adds new signal colours - purple, orange, tangerine and aqua^
+* Adds signal colours for raw resources, smelted items, fluids, science packs, inserters, belts, splitters and circuits^
 
   ![New signal colours](https://cl.ly/2R04150O0P0m/signals.png)
 
@@ -67,9 +67,9 @@ When you launch the game, the new mod will be enabled by default.
 
 * Includes settings for enabling or disabling each of the above features (Options > Mods > Startup). Ideally these should only be changed before starting a new game. Changes on existing games will require content to be migrated and some items may be lost if you disable components you've already used on an existing save. Always make a backup first!
 
-  ![Mod settings](https://cl.ly/24172D1S2O2T/modsetting.png)
+  ![Mod settings](https://cl.ly/23261B1x1e38/modset.png)
 
-* Config.lua file that allows additional customisation
+* Items above marked ^ can be further customised in the config.lua file
 
 ## Development
 
