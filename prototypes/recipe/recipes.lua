@@ -138,59 +138,25 @@ end
 if DECT.ENABLED["painted-concrete"] then
 
 	-- Add new recipes
-	data:extend({
-		{	-- Concrete paint - Hazard
-			type = "recipe",
-			name = "dect-paint-hazard",
-			energy_required = 10,
-			enabled = false,
-			category = "crafting",
-			ingredients = {
-				{"concrete", 10},
-			},
-			result= "dect-paint-hazard",
-			result_count = 10
-		},
-		{	-- Concrete paint - Emergency
-			type = "recipe",
-			name = "dect-paint-emergency",
-			energy_required = 10,
-			enabled = false,
-			category = "crafting",
-			ingredients = {
-				{"concrete", 10},
-			},
-			result= "dect-paint-emergency",
-			result_count = 10
-		},
-		{	-- Concrete paint - Safety
-			type = "recipe",
-			name = "dect-paint-safety",
-			energy_required = 10,
-			enabled = false,
-			category = "crafting",
-			ingredients = {
-				{"concrete", 10},
-			},
-			result= "dect-paint-safety",
-			result_count = 10
-		},
-		{	-- Concrete paint - Radiation Hazard
-			type = "recipe",
-			name = "dect-paint-radiation",
-			energy_required = 10,
-			enabled = false,
-			category = "crafting",
-			ingredients = {
-				{"concrete", 10},
-			},
-			result= "dect-paint-radiation",
-			result_count = 10
-		}
-	})
+	for _, variant in pairs(DECT.CONFIG.PAINT_VARIANTS) do
+		data:extend({
+			{
+				type = "recipe",
+				name = "dect-paint-"..variant,
+				energy_required = 10,
+				enabled = false,
+				category = "crafting",
+				ingredients = {
+					{"concrete", 10},
+				},
+				result= "dect-paint-"..variant,
+				result_count = 10
+			}
+		})
+	end
 
+	-- Disable base hazard concrete recipe
 	if DECT.CONFIG["disable_hazard_concrete"] then
-		-- Disable base hazard concrete recipe
 		data.raw["recipe"]["hazard-concrete"].enabled = false
 	end
 

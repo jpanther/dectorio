@@ -113,10 +113,14 @@ if DECT.ENABLED["painted-concrete"] then
 				},
 				time = 20
 			},
-			effects = {
+			effects = {	
 				{
 					type = "unlock-recipe",
 					recipe = "dect-paint-hazard"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-paint-danger"
 				},
 				{
 					type = "unlock-recipe",
@@ -124,7 +128,19 @@ if DECT.ENABLED["painted-concrete"] then
 				},
 				{
 					type = "unlock-recipe",
+					recipe = "dect-paint-caution"
+				},
+				{
+					type = "unlock-recipe",
 					recipe = "dect-paint-radiation"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-paint-defect"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-paint-operations"
 				},
 				{
 					type = "unlock-recipe",

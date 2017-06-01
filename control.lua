@@ -79,10 +79,9 @@ local function unlock_tech_and_recipes()
 				tech["dect-concrete-paint"].researched = true
 			end
 			if tech["dect-concrete-paint"].researched then
-				rec["dect-paint-hazard"].enabled = true
-				rec["dect-paint-emergency"].enabled = true
-				rec["dect-paint-radiation"].enabled = true
-				rec["dect-paint-safety"].enabled = true
+				for _, variant in pairs(DECT.CONFIG.PAINT_VARIANTS) do
+					rec["dect-paint-"..variant].enabled = true
+				end
 			end
 			if DECT.CONFIG["disable_hazard_concrete"] then
 				rec["hazard-concrete"].enabled = false

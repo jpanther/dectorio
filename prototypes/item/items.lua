@@ -154,72 +154,35 @@ base_stone_brick.stack_size = DECT.CONFIG["flooring_stack_size"]
 
 if DECT.ENABLED["painted-concrete"] then
 
-	-- Add new items
-	data:extend(
-	{
+	-- Add new subgroup
+	data:extend({
 		{
 			type = "item-subgroup",
 			name = "concrete-paint",
 			group = "logistics",
 			order = "i"
-		},
-		{
-			type = "item",
-			name = "dect-paint-hazard",
-			icon = "__Dectorio__/graphics/icons/paint-hazard.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "concrete-paint",
-		    order = "a[paint-hazard]",
-		    stack_size = DECT.CONFIG["flooring_stack_size"],
-		    place_as_tile = {
-				result = "dect-paint-hazard-left",
-				condition_size = 4,
-				condition = { "water-tile" }
-			}
-		},
-		{
-			type = "item",
-			name = "dect-paint-emergency",
-			icon = "__Dectorio__/graphics/icons/paint-emergency.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "concrete-paint",
-		    order = "a[paint-hazard]-b[paint-emergency]",
-		    stack_size = DECT.CONFIG["flooring_stack_size"],
-		    place_as_tile = {
-				result = "dect-paint-emergency-left",
-				condition_size = 4,
-				condition = { "water-tile" }
-			}
-		},
-		{
-			type = "item",
-			name = "dect-paint-safety",
-			icon = "__Dectorio__/graphics/icons/paint-safety.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "concrete-paint",
-		    order = "a[paint-hazard]-b[paint-emergency]-c[paint-radiation]-d[paint-safety]",
-		    stack_size = DECT.CONFIG["flooring_stack_size"],
-		    place_as_tile = {
-				result = "dect-paint-safety-left",
-				condition_size = 4,
-				condition = { "water-tile" }
-			}
-		},
-		{
-			type = "item",
-			name = "dect-paint-radiation",
-			icon = "__Dectorio__/graphics/icons/paint-radiation.png",
-		    flags = {"goes-to-main-inventory"},
-		    subgroup = "concrete-paint",
-		    order = "a[paint-hazard]-b[paint-emergency]-c[paint-radiation]",
-		    stack_size = DECT.CONFIG["flooring_stack_size"],
-		    place_as_tile = {
-				result = "dect-paint-radiation-left",
-				condition_size = 4,
-				condition = { "water-tile" }
-			}
 		}
 	})
+
+	-- Add new items
+	for _, variant in pairs(DECT.CONFIG.PAINT_VARIANTS) do
+		data:extend({
+			{
+				type = "item",
+				name = "dect-paint-"..variant,
+				icon = "__Dectorio__/graphics/icons/paint-"..variant..".png",
+			    flags = {"goes-to-main-inventory"},
+			    subgroup = "concrete-paint",
+			    order = _.."[paint-"..variant.."]",
+			    stack_size = DECT.CONFIG["flooring_stack_size"],
+			    place_as_tile = {
+					result = "dect-paint-"..variant.."-left",
+					condition_size = 4,
+					condition = { "water-tile" }
+				}
+			}
+		})
+	end
 
 end
 

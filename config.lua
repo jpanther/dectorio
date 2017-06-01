@@ -2,20 +2,12 @@
 
 local DECT = {}
 
--- IN-GAME OPTIONS
--- These options are configured through the in-game options (Options > Mods > Startup)
--- Don't change them here!
-DECT.ENABLED = {
-    ["signals"] = settings.startup["dectorio-signals"].value,
-    ["walls"] = settings.startup["dectorio-walls"].value,
-    ["landscaping"] = settings.startup["dectorio-landscaping"].value,
-    ["wood-floor"] = settings.startup["dectorio-flooring"].value,
-    ["gravel"] = settings.startup["dectorio-flooring"].value,
-    ["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
-}
-
 -- CONFIGURABLE OPTIONS
+-- ---------------------------------
 -- These options can be changed to suit individual play-style
+-- If playing multiplayer, ensure the same config.lua is used on each player's system
+-- ---------------------------------
+
 DECT.CONFIG = {
     -- How likely it is that decorations are removed when placing flooring (default: 1)
     -- (0 = keep all decorations, 0.5 = remove 50% of decorations, 1 = remove all decorations)
@@ -106,9 +98,25 @@ DECT.CONFIG.SIGNALS = {
     {type="fluid", name="lubricant", color={r=0.00,g=0.75,b=0.30,a=0.68}},              -- Dark Pastel Green
 }
 
--- INTERNAL CONFIGURATION
--- DO NOT CHANGE BELOW THIS LINE
 -- ---------------------------------
+-- STOP HERE! DO NOT CHANGE BELOW THIS LINE!
+-- ---------------------------------
+
+
+-- INTERNAL CONFIGURATION
+-- ---------------------------------
+
+-- In-game configurable settings
+DECT.ENABLED = {
+    ["signals"] = settings.startup["dectorio-signals"].value,
+    ["walls"] = settings.startup["dectorio-walls"].value,
+    ["landscaping"] = settings.startup["dectorio-landscaping"].value,
+    ["wood-floor"] = settings.startup["dectorio-flooring"].value,
+    ["gravel"] = settings.startup["dectorio-flooring"].value,
+    ["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
+}
+
+DECT.CONFIG.PAINT_VARIANTS = {"hazard", "danger", "emergency", "caution", "radiation", "defect", "operations", "safety"}
 
 DECT.INCOMPATIBLE = {}
 DECT.INCOMPATIBLE.REASONS = {
