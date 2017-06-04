@@ -174,3 +174,20 @@ if DECT.ENABLED["walls"] then
 	base_stone_wall.order = "a[b-stone-wall]"
 
 end
+
+if DECT.ENABLED["signs"] then
+
+	data:extend({
+		{
+			type = "item",
+			name = "dect-sign-wood",
+			icon = "__Dectorio__/graphics/icons/sign-wood.png",
+			flags = {"goes-to-quickbar"},
+			subgroup = "terrain",
+			order = "x[sign-wood]",
+			place_result = "dect-sign-wood",
+			stack_size = 50
+		}
+	})
+
+end

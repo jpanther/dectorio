@@ -20,7 +20,7 @@
 
 --------------------------
 
---data.lua
+-- data.lua
 
 DECT = require("config")
 require("prototypes.entity.entities")

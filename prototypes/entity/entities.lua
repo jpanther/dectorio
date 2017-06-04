@@ -1264,3 +1264,30 @@ if DECT.ENABLED["walls"] then
     data:extend({dect_hazard_gate})
 
 end
+
+if DECT.ENABLED["signs"] then
+
+    data:extend({{
+        type = "simple-entity",
+        name = "dect-sign-wood",
+        icon = "__Dectorio__/graphics/icons/sign-wood.png",
+        flags = {"placeable-neutral"},
+        render_layer = "object",
+        minable = {mining_time = 1, result = "dect-sign-wood", count = 1},
+        max_health = 40,
+        collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile"},
+        collision_box = {{-0.4, 0}, {0.4, 0.4}},
+        selection_box = {{-0.8, -1.1}, {0.8, 0.4}},
+        vehicle_impact_sound = {filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0},
+        pictures = {
+            {
+                filename = "__Dectorio__/graphics/entity/sign-wood/sign-wood.png",
+                priority = "extra-high",
+                width = 100,
+                height = 100,
+                shift = {0.92, 0.05}
+            }
+        }
+    }})
+
+end

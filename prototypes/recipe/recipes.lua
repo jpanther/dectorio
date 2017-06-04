@@ -240,3 +240,21 @@ if DECT.ENABLED["walls"] then
 	data.raw["recipe"]["gate"].ingredients = data.raw["recipe"]["dect-hazard-gate"].ingredients
 
 end
+
+if DECT.ENABLED["signs"] then
+
+	data:extend({
+		{
+			type = "recipe",
+			name = "dect-sign-wood",
+			enabled = false,
+			ingredients = {
+				{"raw-wood", 2},
+				{"wood", 1},
+				{"coal", 1},
+			},
+			result = "dect-sign-wood"
+		}
+	})
+
+end

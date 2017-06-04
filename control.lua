@@ -28,6 +28,13 @@ DECT = require("config")
 local function init_global()
     global = global or {}
     global.mod_incompatibility = nil
+    global.icons = nil
+    global.signs = global.signs or {}
+    global.sign_last_built = global.sign_last_built or {}
+
+    if global.icons == nil then
+    	global.icons = game.entity_prototypes["DECT_SIGN_ICONS"].localised_description
+    end
 end
 
 -- Send chat notification to all players or force
@@ -109,6 +116,14 @@ local function unlock_tech_and_recipes()
 				rec["dect-hazard-gate"].enabled = true
 			end
 		end
+		if DECT.ENABLED["signs"] then
+			if rec["dect-sign-wood"].enabled then
+				tech["dect-signs"].researched = true
+			end
+			if tech["dect-signs"].researched then
+				rec["dect-sign-wood"].enabled = true
+			end
+		end
 	end
 end
 
@@ -165,6 +180,23 @@ local function on_configuration_changed(data)
     end
 end
 
+local function createGui_sign(player_index)
+	if game.players[player_index].gui.center["dect-gui-sign"] then
+		game.players[player_index].gui.center.Dectorio.destroy()
+	end
+	gui = game.players[player_index].gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui-sign-title"}, direction="horizontal"})
+	gui_table = gui.add({type="table", name="dect-icons-table", colspan = math.ceil(#global.icons / 10)})
+	for _, icon in pairs(global.icons) do
+		gui_table.add({type="button", name="dect-icon-"..icon, style="dect-icon-"..icon})
+	end
+end
+
+local function create_sign(icon, position, parent)
+	local offset = {x=0, y=0.75}
+	local icon_entity = game.surfaces[1].create_entity({name=icon, position={position.x-offset.x, position.y-offset.y}})
+	table.insert(global.signs, {sign=parent, objects={icon_entity}})
+end
+
 -- Fire events!
 script.on_init(function(data)
     on_init(data)
@@ -172,4 +204,44 @@ end)
 
 script.on_configuration_changed(function(data)
     on_configuration_changed(data)
+end)
+
+script.on_event(defines.events.on_built_entity, function(event)
+	if event.created_entity.name == "dect-sign-wood" then
+		global.sign_last_built[event.player_index] = event.created_entity
+		createGui_sign(event.player_index)
+	end
+end)
+
+script.on_event(defines.events.on_preplayer_mined_item, function(event)
+	if event.entity.name == "dect-sign-wood" then
+		for i=1, #global.signs do
+			if event.entity == global.signs[i].sign then
+				for j=1, #global.signs[i].objects do
+					global.signs[i].objects[j].destroy();
+				end
+				table.remove(global.signs, i)
+				break
+			end
+		end
+		if gui ~= nil then
+			gui.destroy()
+			gui = nil
+		end
+	end
+end)
+
+script.on_event(defines.events.on_gui_click, function(event)
+	if event.element.parent then
+		if event.element.parent.name == "dect-icons-table" then
+			for _, icon in pairs(global.icons) do
+				if event.element.name == "dect-icon-"..icon then
+					create_sign("dect-icon-"..icon, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
+					event.element.parent.parent.destroy()
+					gui = nil
+					break
+				end
+			end
+		end
+	end
 end)

@@ -2,6 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.5.13 - Unreleased (coming soon)
+
+### Added
+* Wooden signs
+
 ## v0.5.12 - 2017-06-01
 
 ### Added

@@ -114,9 +114,11 @@ DECT.ENABLED = {
     ["wood-floor"] = settings.startup["dectorio-flooring"].value,
     ["gravel"] = settings.startup["dectorio-flooring"].value,
     ["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
+    ["signs"] = settings.startup["dectorio-signs"].value,
 }
 
 DECT.CONFIG.PAINT_VARIANTS = {"hazard", "danger", "emergency", "caution", "radiation", "defect", "operations", "safety"}
+DECT.CONFIG.SIGN_ICONS = {"fluid", "item"}
 
 DECT.INCOMPATIBLE = {}
 DECT.INCOMPATIBLE.REASONS = {
