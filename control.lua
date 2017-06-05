@@ -26,30 +26,30 @@ DECT = require("config")
 
 -- Send chat notification to all players or force
 local function notification(txt, force)
-    if force ~= nil then
-        force.print(txt)
-    else
-        for k, p in pairs(game.players) do
-            game.players[k].print(txt)
-        end
-    end
+	if force ~= nil then
+		force.print(txt)
+	else
+		for k, p in pairs(game.players) do
+			game.players[k].print(txt)
+		end
+	end
 end
 
 -- Initialise global vars
 local function init_global()
-    global = global or {}
-    global.mod_incompatibility = nil
-    global.icons = nil
-    global.signs = global.signs or {}
-    global.sign_last_built = global.sign_last_built or {}
+	global = global or {}
+	global.mod_incompatibility = nil
+	global.icons = nil
+	global.signs = global.signs or {}
+	global.sign_last_built = global.sign_last_built or {}
 
-    if global.icons == nil then
-    	local prototypes = {
-    		["item"] = game.item_prototypes,
-    		["fluid"] = game.fluid_prototypes
-    	}
-    	local icons = {}
-    	for protokey, prototype in pairs(prototypes) do
+	if global.icons == nil then
+		local prototypes = {
+			["item"] = game.item_prototypes,
+			["fluid"] = game.fluid_prototypes
+		}
+		local icons = {}
+		for protokey, prototype in pairs(prototypes) do
 			for _, obj in pairs(prototype) do
 				for _, category in pairs(DECT.CONFIG.SIGN_CATEGORIES) do
 					local new_icon = {name=obj.name, type=protokey}
@@ -69,8 +69,8 @@ local function init_global()
 				end
 			end
 		end
-	    global.icons = icons
-    end
+		global.icons = icons
+	end
 end
 
 -- Check if any technologies or recipes need to be enabled
@@ -155,55 +155,23 @@ end
 
 -- Check game for known incompatibile mods
 local function check_incompatible_mods()
-    for mod, version in pairs(game.active_mods) do
-        if DECT.INCOMPATIBLE.MODS[mod] then 
-            return true
-        end
-    end
-    return false
+	for mod, version in pairs(game.active_mods) do
+		if DECT.INCOMPATIBLE.MODS[mod] then 
+			return true
+		end
+	end
+	return false
 end
 
 -- Notify player of incompatible mods
 local function incompability_detected()
-    for mod, version in pairs(game.active_mods) do
-        if DECT.INCOMPATIBLE.MODS[mod] then 
-            notification({"dect-notify-incompatible", {"dect-notify-dectorio"}})
-            notification({DECT.INCOMPATIBLE.MODS[mod], {"dect-notify-dectorio"}, mod})
-            notification({"dect-notify-modportal", {"dect-notify-dectorio"}})      
-        end
-    end
-end
-
-local function on_init(data)
-	init_global()
-
-	if global.mod_incompatibility == true then
-        incompability_detected()
-    end
-
-	unlock_tech_and_recipes()
-end
-
-local function on_configuration_changed(data)
-	init_global()
-
-	-- Notify version and updates
-    if data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version == nil then
-        notification({"dect-notify-version", {"dect-notify-dectorio"}, data.mod_changes["Dectorio"].new_version})
-    elseif data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version ~= nil then
-    	unlock_tech_and_recipes()
-        local oldver = data.mod_changes["Dectorio"].old_version
-        local newver = data.mod_changes["Dectorio"].new_version
-        notification({"dect-notify-newversion", {"dect-notify-dectorio"}, oldver, newver})
-    end
-    
-    -- Check for incompatible mods and notify
-    if data.mod_changes ~= nil then
-        global.mod_incompatibility = check_incompatible_mods()
-        if global.mod_incompatibility == true then
-            incompability_detected()
-        end
-    end
+	for mod, version in pairs(game.active_mods) do
+		if DECT.INCOMPATIBLE.MODS[mod] then 
+			notification({"dect-notify-incompatible", {"dect-notify-dectorio"}})
+			notification({DECT.INCOMPATIBLE.MODS[mod], {"dect-notify-dectorio"}, mod})
+			notification({"dect-notify-modportal", {"dect-notify-dectorio"}})      
+		end
+	end
 end
 
 local function showGui_sign(player)
@@ -223,24 +191,47 @@ local function create_sign(icon, position, parent)
 	table.insert(global.signs, {sign=parent, objects={icon_entity}})
 end
 
--- Fire events!
-script.on_init(function(data)
-    on_init(data)
-end)
+local function on_init(data)
+	init_global()
 
-script.on_configuration_changed(function(data)
-    on_configuration_changed(data)
-end)
+	if global.mod_incompatibility == true then
+		incompability_detected()
+	end
 
-script.on_event(defines.events.on_built_entity, function(event)
+	unlock_tech_and_recipes()
+end
+
+local function on_configuration_changed(data)
+	init_global()
+
+	-- Notify version and updates
+	if data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version == nil then
+		notification({"dect-notify-version", {"dect-notify-dectorio"}, data.mod_changes["Dectorio"].new_version})
+	elseif data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version ~= nil then
+		unlock_tech_and_recipes()
+		local oldver = data.mod_changes["Dectorio"].old_version
+		local newver = data.mod_changes["Dectorio"].new_version
+		notification({"dect-notify-newversion", {"dect-notify-dectorio"}, oldver, newver})
+	end
+
+	-- Check for incompatible mods and notify
+	if data.mod_changes ~= nil then
+		global.mod_incompatibility = check_incompatible_mods()
+		if global.mod_incompatibility == true then
+			incompability_detected()
+		end
+	end
+end
+
+local function on_built_entity(event)
 	local player = game.players[event.player_index]
 	if event.created_entity.name == "dect-sign-wood" or event.created_entity.name == "dect-sign-steel" then
 		global.sign_last_built[event.player_index] = event.created_entity
 		showGui_sign(player)
 	end
-end)
+end
 
-script.on_event(defines.events.on_preplayer_mined_item, function(event)
+local function on_mined_entity(event)
 	if event.entity.name == "dect-sign-wood" or event.entity.name == "dect-sign-steel" then
 		for i=1, #global.signs do
 			if event.entity == global.signs[i].sign then
@@ -256,9 +247,9 @@ script.on_event(defines.events.on_preplayer_mined_item, function(event)
 			gui = nil
 		end
 	end
-end)
+end
 
-script.on_event(defines.events.on_gui_click, function(event)
+local function on_gui_click(event)
 	if event.element.parent then
 		if event.element.parent.name == "dect-icons-table" then
 			for _, icon in pairs(global.icons) do
@@ -271,4 +262,29 @@ script.on_event(defines.events.on_gui_click, function(event)
 			end
 		end
 	end
+end
+
+-- Fire events!
+script.on_init(function(data)
+	on_init(data)
+end)
+
+script.on_configuration_changed(function(data)
+	on_configuration_changed(data)
+end)
+
+script.on_event(defines.events.on_built_entity, function(event)
+	on_built_entity(event)
+end)
+
+script.on_event(defines.events.on_preplayer_mined_item, function(event)
+	on_mined_entity(event)
+end)
+
+script.on_event(defines.events.on_robot_pre_mined, function(event)
+	on_mined_entity(event)
+end)
+
+script.on_event(defines.events.on_gui_click, function(event)
+	on_gui_click(event)
 end)
