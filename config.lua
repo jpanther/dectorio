@@ -118,7 +118,8 @@ DECT.ENABLED = {
 }
 
 DECT.CONFIG.PAINT_VARIANTS = {"hazard", "danger", "emergency", "caution", "radiation", "defect", "operations", "safety"}
-DECT.CONFIG.SIGN_ICONS = {"fluid", "item"}
+DECT.CONFIG.SIGN_CATEGORIES = {"item", "fluid", "tool", "ammo", "armor", "capsule", "gun", "mining-tool", "module"}
+DECT.CONFIG.SIGN_BLACKLIST = {"barrel", "loader", "simple%-entity", "player%-port", "computer", "coin", "small%-plane", "railgun", "vehicle%-machine%-gun", "tank%-machine%-gun"}
 
 DECT.INCOMPATIBLE = {}
 DECT.INCOMPATIBLE.REASONS = {

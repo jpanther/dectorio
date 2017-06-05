@@ -24,6 +24,17 @@
 
 DECT = require("config")
 
+-- Send chat notification to all players or force
+local function notification(txt, force)
+    if force ~= nil then
+        force.print(txt)
+    else
+        for k, p in pairs(game.players) do
+            game.players[k].print(txt)
+        end
+    end
+end
+
 -- Initialise global vars
 local function init_global()
     global = global or {}
@@ -33,18 +44,32 @@ local function init_global()
     global.sign_last_built = global.sign_last_built or {}
 
     if global.icons == nil then
-    	global.icons = game.entity_prototypes["DECT_SIGN_ICONS"].localised_description
-    end
-end
-
--- Send chat notification to all players or force
-local function notification(txt, force)
-    if force ~= nil then
-        force.print(txt)
-    else
-        for k, p in pairs (game.players) do
-            game.players[k].print(txt)
-        end
+    	local prototypes = {
+    		["item"] = game.item_prototypes,
+    		["fluid"] = game.fluid_prototypes
+    	}
+    	local icons = {}
+    	for protokey, prototype in pairs(prototypes) do
+			for _, obj in pairs(prototype) do
+				for _, category in pairs(DECT.CONFIG.SIGN_CATEGORIES) do
+					local new_icon = {name=obj.name, type=protokey}
+					if protokey == "fluid" and category == "fluid" then
+						table.insert(icons, new_icon)
+					elseif protokey == "item" and obj.type == category then
+						local match = false
+						for _, icon_be_gone in pairs(DECT.CONFIG.SIGN_BLACKLIST) do
+							if string.find(obj.name, tostring(icon_be_gone)) then
+								match = true
+							end
+						end
+						if not match then
+							table.insert(icons, new_icon)
+						end
+					end
+				end
+			end
+		end
+	    global.icons = icons
     end
 end
 
@@ -180,14 +205,14 @@ local function on_configuration_changed(data)
     end
 end
 
-local function createGui_sign(player_index)
-	if game.players[player_index].gui.center["dect-gui-sign"] then
-		game.players[player_index].gui.center.Dectorio.destroy()
+local function showGui_sign(player)
+	if player.gui.center["dect-gui-sign"] then
+		player.gui.center["dect-gui-sign"].destroy()
 	end
-	gui = game.players[player_index].gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui-sign-title"}, direction="horizontal"})
-	gui_table = gui.add({type="table", name="dect-icons-table", colspan = math.ceil(#global.icons / 10)})
+	local gui_frame = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui-sign-title"}, direction="horizontal"})
+	local gui_table = gui_frame.add({type="table", name="dect-icons-table", colspan = math.ceil(#global.icons / 14), style="dect-icon-table"})
 	for _, icon in pairs(global.icons) do
-		gui_table.add({type="button", name="dect-icon-"..icon, style="dect-icon-"..icon})
+		gui_table.add({type="sprite-button", name="dect-icon-"..icon.name, sprite=icon.type.."/"..icon.name, style="dect-icon-button", tooltip={"",icon.name}})
 	end
 end
 
@@ -207,9 +232,10 @@ script.on_configuration_changed(function(data)
 end)
 
 script.on_event(defines.events.on_built_entity, function(event)
+	local player = game.players[event.player_index]
 	if event.created_entity.name == "dect-sign-wood" then
 		global.sign_last_built[event.player_index] = event.created_entity
-		createGui_sign(event.player_index)
+		showGui_sign(player)
 	end
 end)
 
@@ -235,8 +261,8 @@ script.on_event(defines.events.on_gui_click, function(event)
 	if event.element.parent then
 		if event.element.parent.name == "dect-icons-table" then
 			for _, icon in pairs(global.icons) do
-				if event.element.name == "dect-icon-"..icon then
-					create_sign("dect-icon-"..icon, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
+				if event.element.name == "dect-icon-"..icon.name then
+					create_sign("dect-icon-"..icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
 					event.element.parent.parent.destroy()
 					gui = nil
 					break
