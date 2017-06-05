@@ -26,7 +26,7 @@ if DECT.ENABLED["signs"] then
                             width = 32,
                             height = 32,
                             scale = 0.7,
-                            shift = {-0.02, -0.22},
+                            shift = {-0.02, -0.14},
                             tint = sprite.tint
                         }
                     }

@@ -147,6 +147,7 @@ local function unlock_tech_and_recipes()
 			end
 			if tech["dect-signs"].researched then
 				rec["dect-sign-wood"].enabled = true
+				rec["dect-sign-steel"].enabled = true
 			end
 		end
 	end
@@ -233,14 +234,14 @@ end)
 
 script.on_event(defines.events.on_built_entity, function(event)
 	local player = game.players[event.player_index]
-	if event.created_entity.name == "dect-sign-wood" then
+	if event.created_entity.name == "dect-sign-wood" or event.created_entity.name == "dect-sign-steel" then
 		global.sign_last_built[event.player_index] = event.created_entity
 		showGui_sign(player)
 	end
 end)
 
 script.on_event(defines.events.on_preplayer_mined_item, function(event)
-	if event.entity.name == "dect-sign-wood" then
+	if event.entity.name == "dect-sign-wood" or event.entity.name == "dect-sign-steel" then
 		for i=1, #global.signs do
 			if event.entity == global.signs[i].sign then
 				for j=1, #global.signs[i].objects do

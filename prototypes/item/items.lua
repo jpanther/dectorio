@@ -187,6 +187,16 @@ if DECT.ENABLED["signs"] then
 			order = "x[sign-wood]",
 			place_result = "dect-sign-wood",
 			stack_size = 50
+		},
+		{
+			type = "item",
+			name = "dect-sign-steel",
+			icon = "__Dectorio__/graphics/icons/sign-steel.png",
+			flags = {"goes-to-quickbar"},
+			subgroup = "terrain",
+			order = "y[sign-steel]",
+			place_result = "dect-sign-steel",
+			stack_size = 50
 		}
 	})
 

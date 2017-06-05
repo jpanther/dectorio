@@ -240,6 +240,10 @@ if DECT.ENABLED["signs"] then
 				{
 					type = "unlock-recipe",
 					recipe = "dect-sign-wood"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-sign-steel"
 				}
 			},
 			order = "a-j-z"
