@@ -124,11 +124,31 @@ DECT.INCOMPATIBLE.REASONS = {
     ["tech"] = "dect-notify-reason-tech",
 }
 DECT.INCOMPATIBLE.MODS = {
-    ["Expanded_Color_Lamps"] = DECT.INCOMPATIBLE.REASONS["signals"],
-    ["more-colours"] = DECT.INCOMPATIBLE.REASONS["signals"],
-    ["More signal color"] = DECT.INCOMPATIBLE.REASONS["signals"],
-    ["Reinforced-Walls"] = DECT.INCOMPATIBLE.REASONS["tech"],
-    ["concrete-and-stone"] = DECT.INCOMPATIBLE.REASONS["tech"],
+    ["Expanded_Color_Lamps"] = {
+        name = "Expanded_Color_Lamps",
+        component = "signals",
+        reason = "signals"
+    },
+    ["more-colours"] = {
+        name = "more-colours",
+        component = "signals",
+        reason = "signals"
+    },
+    ["More signal color"] = {
+        name = "More signal color",
+        component = "signals",
+        reason = "signals"
+    },
+    ["Reinforced-Walls"] = {
+        name = "Reinforced-Walls",
+        component = "walls",
+        reason = "tech"
+    },
+    ["concrete-and-stone"] = {
+        name = "concrete-and-stone",
+        component = "walls",
+        reason = "tech"
+    },
 }
 
 return DECT
