@@ -2,7 +2,7 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.5.13 - Unreleased (coming soon)
+## v0.5.13 - 2017-07-12
 
 ### Bugfixes
 * Notifications will no longer warn about incompatible mods when those components of Dectorio are disabled
