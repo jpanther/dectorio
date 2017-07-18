@@ -1279,6 +1279,8 @@ if DECT.ENABLED["signs"] then
 			collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
 			selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 			drawing_box = {{-0.5, -1.6}, {0.5, 0.5}},
+			repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
+			mined_sound = { filename = "__Dectorio__/sound/deconstruct-wood.ogg" },
 			vehicle_impact_sound = {filename = "__base__/sound/car-wood-impact.ogg", volume = 1.0},
 			pictures = {
 				{
@@ -1301,6 +1303,8 @@ if DECT.ENABLED["signs"] then
 			collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
 			selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 			drawing_box = {{-0.5, -1.6}, {0.5, 0.5}},
+			repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
+			mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
 			vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 1.0},
 			pictures = {
 				{
