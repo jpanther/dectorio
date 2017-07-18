@@ -179,7 +179,8 @@ local function showGui_sign(player)
 		player.gui.center["dect-gui-sign"].destroy()
 	end
 	local gui_frame = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui-sign-title"}, direction="horizontal"})
-	local gui_table = gui_frame.add({type="table", name="dect-icons-table", colspan = math.ceil(#global.icons / 14), style="dect-icon-table"})
+	local gui_scroll = gui_frame.add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="auto", style="dect-scroll"})
+	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", colspan=20, style="dect-icon-table"})
 	for _, icon in pairs(global.icons) do
 		gui_table.add({type="sprite-button", name="dect-icon-"..icon.name, sprite=icon.type.."/"..icon.name, style="dect-icon-button", tooltip={"",icon.name}})
 	end
@@ -255,7 +256,7 @@ local function on_gui_click(event)
 			for _, icon in pairs(global.icons) do
 				if event.element.name == "dect-icon-"..icon.name then
 					create_sign("dect-icon-"..icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
-					event.element.parent.parent.destroy()
+					event.element.parent.parent.parent.destroy()
 					gui = nil
 					break
 				end

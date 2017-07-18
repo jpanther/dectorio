@@ -1,13 +1,15 @@
 -- style.lua
 
-data.raw["gui-style"]["default"]["dect-icon-table"] = {
+default_gui = data.raw["gui-style"]["default"]
+
+default_gui["dect-icon-table"] = {
 	type = "table_style",
 	cell_spacing = 1,
 	horizontal_spacing = 1,
 	vertical_spacing = 1
 }
 
-data.raw["gui-style"]["default"]["dect-icon-button"] = {
+default_gui["dect-icon-button"] = {
 	type = "button_style",
 	parent = "button_style",
 	minimal_width = 32,
@@ -18,7 +20,7 @@ data.raw["gui-style"]["default"]["dect-icon-button"] = {
 	left_padding = 0,
 }
 
-data.raw["gui-style"]["default"]["dect-icon-button-active"] = {
+default_gui["dect-icon-button-active"] = {
 	type = "button_style",
 	parent = "button_style",
 	minimal_width = 32,
@@ -34,4 +36,13 @@ data.raw["gui-style"]["default"]["dect-icon-button-active"] = {
 		corner_size = {3, 3},
 		position = {0, 8}
 	}
+}
+
+default_gui["dect-scroll"] = {
+    type = "scroll_pane_style",
+    parent = "scroll_pane_style",
+    minimal_width = 670,
+    maximal_width = 670,
+    minimal_height = 480,
+    maximal_height = 480
 }
