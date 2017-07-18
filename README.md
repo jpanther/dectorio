@@ -79,7 +79,11 @@ Feel free to get in touch with any issues or suggestions for new features you'd 
 
 ### Language Support
 
-Currently the mod is only available in English. If you are able to translate the mod into an additional language, please let me know and I'll package it into the bundle for distribution (with credit to you).
+Supported languages:
+* English
+* German
+
+If you are able to translate the mod into an additional language, please let me know and I'll package it into the bundle for distribution (with credit to you).
 
 ### Mod Compatibility
 
@@ -90,3 +94,12 @@ It is not recommended to use other coloured signal mods at the same time as Dect
 ### Changelog
 
 Refer to the [CHANGELOG](CHANGELOG.md) for a detailed list of changes in each version.
+
+### Credits
+
+Developed with ❤ by [James Panther](https://github.com/jpanther) in Melbourne, Australia.
+Special thanks to marcfj for support and playtesting.
+
+## Translators
+
+German translation by [seeba8](https://github.com/seeba8).

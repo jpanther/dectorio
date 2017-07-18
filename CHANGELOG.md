@@ -7,6 +7,16 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 ### Added
 * Wooden and steel signs (unlocked via new _Signs_ technology)
 
+## v0.5.14 - 2017-07-18
+
+### Added
+* German translation (thanks to [seeba8](https://github.com/seeba8))
+
+## v0.5.13 - 2017-07-12
+
+### Bugfixes
+* Notifications will no longer warn about incompatible mods when those components of Dectorio are disabled
+
 ## v0.5.12 - 2017-06-01
 
 ### Added

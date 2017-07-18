@@ -155,23 +155,28 @@ end
 
 -- Check game for known incompatibile mods
 local function check_incompatible_mods()
-	for mod, version in pairs(game.active_mods) do
-		if DECT.INCOMPATIBLE.MODS[mod] then 
-			return true
-		end
-	end
-	return false
+    for mod, version in pairs(game.active_mods) do
+        if DECT.INCOMPATIBLE.MODS[mod] then 
+            if DECT.ENABLED[DECT.INCOMPATIBLE.MODS[mod].component] then
+            	return true
+            end
+        end
+    end
+    return false
 end
 
 -- Notify player of incompatible mods
 local function incompability_detected()
-	for mod, version in pairs(game.active_mods) do
-		if DECT.INCOMPATIBLE.MODS[mod] then 
-			notification({"dect-notify-incompatible", {"dect-notify-dectorio"}})
-			notification({DECT.INCOMPATIBLE.MODS[mod], {"dect-notify-dectorio"}, mod})
-			notification({"dect-notify-modportal", {"dect-notify-dectorio"}})      
-		end
-	end
+    for mod, version in pairs(game.active_mods) do
+        if DECT.INCOMPATIBLE.MODS[mod] then
+        	incompatible = DECT.INCOMPATIBLE.MODS[mod]
+        	if DECT.ENABLED[incompatible.component] then
+	            notification({"dect-notify-incompatible", {"dect-notify-dectorio"}})
+	            notification({"dect-notify-modportal", {"dect-notify-dectorio"}})
+	            notification({DECT.INCOMPATIBLE.REASONS[incompatible.reason], {"dect-notify-dectorio"}, incompatible.name})
+	        end
+        end
+    end
 end
 
 local function showGui_sign(player)
