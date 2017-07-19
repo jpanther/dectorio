@@ -7,6 +7,9 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 ### Added
 * Wooden and steel signs (unlocked via new _Signs_ technology)
 
+### Bugfixes
+* Base Hazard Concrete is now correctly made available for crafting on saves if Dectorio is later removed
+
 ## v0.5.14 - 2017-07-18
 
 ### Added

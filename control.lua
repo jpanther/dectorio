@@ -270,6 +270,20 @@ local function on_gui_click(event)
 	end
 end
 
+local function on_research_finished(event)
+	init_global()
+
+	-- Manually unlock vanilla hazard concrete because the recipe is hidden and will break saves if the mod is later removed
+	if DECT.CONFIG["disable_hazard_concrete"] then
+		for _, next_force in pairs(game.forces) do
+			force = next_force
+			if event.research.name == "concrete" then
+				force.recipes["hazard-concrete"].enabled = true
+			end
+		end
+	end
+end
+
 -- Fire events!
 script.on_init(function(data)
 	on_init(data)
@@ -293,4 +307,8 @@ end)
 
 script.on_event(defines.events.on_gui_click, function(event)
 	on_gui_click(event)
+end)
+
+script.on_event(defines.events.on_research_finished,function(event)
+	on_research_finished(event)
 end)

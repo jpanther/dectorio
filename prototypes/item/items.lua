@@ -83,6 +83,11 @@ if DECT.ENABLED["painted-concrete"] then
 		})
 	end
 
+	-- Hide base hazard concrete item
+	if DECT.CONFIG["disable_hazard_concrete"] then
+		table.insert(data.raw.item["hazard-concrete"].flags,"hidden")
+	end
+
 end
 
 if DECT.ENABLED["wood-floor"] then
