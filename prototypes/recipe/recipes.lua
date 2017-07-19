@@ -157,7 +157,8 @@ if DECT.ENABLED["painted-concrete"] then
 
 	-- Disable base hazard concrete recipe
 	if DECT.CONFIG["disable_hazard_concrete"] then
-		data.raw["recipe"]["hazard-concrete"].enabled = false
+		local base_hazard_recipe = data.raw["recipe"]["hazard-concrete"]
+		base_hazard_recipe.hidden = true
 	end
 
 end

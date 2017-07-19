@@ -154,11 +154,16 @@ if DECT.ENABLED["painted-concrete"] then
 	if DECT.CONFIG["disable_hazard_concrete"] then
 
 		-- Remove base Hazard concrete (as it's replaced by painted concrete)
-		data.raw["technology"]["concrete"].effects = {{
-		        type = "unlock-recipe",
-		        recipe = "concrete"
-		    }}
-		      
+		local base_concrete_effects = data.raw["technology"]["concrete"].effects
+		for i = 1, #base_concrete_effects do
+			effect = base_concrete_effects[i]
+			if effect.type == "unlock-recipe" and effect.recipe == "hazard-concrete" then
+				index = i
+			end
+		end
+		
+		table.remove(base_concrete_effects, index)
+
 	end
 
 end
