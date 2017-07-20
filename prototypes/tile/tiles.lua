@@ -162,16 +162,14 @@ if DECT.ENABLED["painted-concrete"] then
 	end
 
 	if DECT.CONFIG["disable_hazard_concrete"] then
-		-- Migrate any base hazard tiles to painted concrete and remove remaining items
+		-- Migrate any base hazard tiles to painted concrete
 		local base_tile_hazard_left = data.raw["tile"]["hazard-concrete-left"]
 		local dect_tile_hazard_left = data.raw["tile"]["dect-paint-hazard-left"]
 		local base_tile_hazard_right = data.raw["tile"]["hazard-concrete-right"]
 		local dect_tile_hazard_right = data.raw["tile"]["dect-paint-hazard-right"]
 		
-		base_tile_hazard_left.next_direction = dect_tile_hazard_left.next_direction
 		base_tile_hazard_left.minable.result = dect_tile_hazard_left.minable.result
 		base_tile_hazard_left.variants = dect_tile_hazard_left.variants
-		base_tile_hazard_right.next_direction = dect_tile_hazard_right.next_direction
 		base_tile_hazard_right.minable.result = dect_tile_hazard_right.minable.result
 		base_tile_hazard_right.variants = dect_tile_hazard_right.variants
 	end
