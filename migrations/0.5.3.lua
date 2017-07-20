@@ -24,7 +24,7 @@ for index, force in pairs(game.forces) do
 	end
 	if settings.startup["dectorio-painted-concrete"].value then
 		if tech["dect-concrete-paint"].researched then
-			rec["dect-paint-hazard"].enabled = true
+			rec["hazard-concrete"].enabled = true
 			rec["dect-paint-emergency"].enabled = true
 			rec["dect-paint-radiation"].enabled = true
 			rec["dect-paint-safety"].enabled = true

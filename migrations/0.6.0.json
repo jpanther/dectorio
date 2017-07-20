@@ -1,0 +1,11 @@
+{
+	"item":
+	[
+		["dect-paint-hazard", "hazard-concrete"]
+	],
+	"tile":
+	[
+		["dect-paint-hazard-left", "hazard-concrete-left"],
+		["dect-paint-hazard-right", "hazard-concrete-right"]
+	]
+}

@@ -116,7 +116,7 @@ if DECT.ENABLED["painted-concrete"] then
 			effects = {	
 				{
 					type = "unlock-recipe",
-					recipe = "dect-paint-hazard"
+					recipe = "hazard-concrete"
 				},
 				{
 					type = "unlock-recipe",
@@ -151,20 +151,15 @@ if DECT.ENABLED["painted-concrete"] then
 		}
 	})
 
-	if DECT.CONFIG["disable_hazard_concrete"] then
-
-		-- Remove base Hazard concrete (as it's replaced by painted concrete)
-		local base_concrete_effects = data.raw["technology"]["concrete"].effects
-		for i = 1, #base_concrete_effects do
-			effect = base_concrete_effects[i]
-			if effect.type == "unlock-recipe" and effect.recipe == "hazard-concrete" then
-				index = i
-			end
+	-- Remove Hazard concrete from Concrete tech (as it's now under the painted concrete tech)
+	local base_concrete_effects = data.raw["technology"]["concrete"].effects
+	for i = 1, #base_concrete_effects do
+		effect = base_concrete_effects[i]
+		if effect.type == "unlock-recipe" and effect.recipe == "hazard-concrete" then
+			index = i
 		end
-		
-		table.remove(base_concrete_effects, index)
-
-	end
+	end	
+	table.remove(base_concrete_effects, index)
 
 end
 

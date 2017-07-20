@@ -2,15 +2,15 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.5.15 - Unreleased (coming soon)
+## v0.6.0 - Unreleased (coming soon)
 
 ### Added
 * Wooden and steel signs (unlocked via new _Signs_ technology)
 * Added more variations to the edge gfx for the gravel tiles
 
-### Bugfixes
-* Base Hazard Concrete is now correctly made available for crafting on saves if Dectorio is later removed
-* Blueprints that contain Hazard Concrete tiles will now import correctly
+### Changed
+* Hazard concrete now places as the vanilla hazard-concrete tile (fixes blueprint imports and issues when Dectorio is removed)
+* Hazard concrete keeps the Dectorio look, however you can set a config.lua flag to change it to use the vanilla look, if preferred
 
 ## v0.5.14 - 2017-07-18
 

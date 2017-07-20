@@ -17,9 +17,9 @@ DECT.CONFIG = {
 	-- (true = recipe uses iron sticks, false = recipe uses iron ore)
 	["modified_concrete_recipe"] = true,
 
-	-- Whether painted concrete (when enabled) disables the base game hazard concrete (default: true)
-	-- (true = only painted concrete is used, false = both painted and original hazard concrete variants are available)
-	["disable_hazard_concrete"] = true,
+	-- Whether hazard concrete takes keeps the vanilla tileset (default: false)
+	-- (true = hazard concrete keeps the vanilla look, false = hazard concrete uses the modded Dectorio look)
+	["vanilla_hazard_concrete"] = false,
 
 	-- Whether landscaping items are blueprintable (default: false)
 	-- (true = landscaping items appear in blueprints, false = landscaping items do not appear in blueprints)
@@ -117,7 +117,7 @@ DECT.ENABLED = {
 	["signs"] = settings.startup["dectorio-signs"].value,
 }
 
-DECT.CONFIG.PAINT_VARIANTS = {"hazard", "danger", "emergency", "caution", "radiation", "defect", "operations", "safety"}
+DECT.CONFIG.PAINT_VARIANTS = {"danger", "emergency", "caution", "radiation", "defect", "operations", "safety"}
 DECT.CONFIG.SIGN_CATEGORIES = {"item", "fluid", "tool", "ammo", "armor", "capsule", "gun", "mining-tool", "module"}
 DECT.CONFIG.SIGN_BLACKLIST = {"barrel", "loader", "simple%-entity", "player%-port", "computer", "coin", "small%-plane", "railgun", "vehicle%-machine%-gun", "tank%-machine%-gun"}
 

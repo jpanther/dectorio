@@ -143,7 +143,7 @@ if DECT.ENABLED["painted-concrete"] then
 			{
 				type = "recipe",
 				name = "dect-paint-"..variant,
-				energy_required = 10,
+				energy_required = 5,
 				enabled = false,
 				category = "crafting",
 				ingredients = {
@@ -155,11 +155,7 @@ if DECT.ENABLED["painted-concrete"] then
 		})
 	end
 
-	-- Disable base hazard concrete recipe
-	if DECT.CONFIG["disable_hazard_concrete"] then
-		local base_hazard_recipe = data.raw["recipe"]["hazard-concrete"]
-		base_hazard_recipe.hidden = true
-	end
+	data.raw["recipe"]["hazard-concrete"].energy_required = 5
 
 end
 

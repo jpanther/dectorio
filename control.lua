@@ -107,17 +107,13 @@ local function unlock_tech_and_recipes()
 			end
 		end
 		if DECT.ENABLED["painted-concrete"] then
-			if rec["dect-paint-hazard"].enabled then
+			if rec["dect-paint-emergency"].enabled then
 				tech["dect-concrete-paint"].researched = true
 			end
 			if tech["dect-concrete-paint"].researched then
 				for _, variant in pairs(DECT.CONFIG.PAINT_VARIANTS) do
 					rec["dect-paint-"..variant].enabled = true
 				end
-			end
-			if DECT.CONFIG["disable_hazard_concrete"] then
-				rec["hazard-concrete"].enabled = false
-			elseif tech["concrete"].researched then
 				rec["hazard-concrete"].enabled = true
 			end
 		end
@@ -270,20 +266,6 @@ local function on_gui_click(event)
 	end
 end
 
-local function on_research_finished(event)
-	init_global()
-
-	-- Manually unlock vanilla hazard concrete because the recipe is hidden and will break saves if the mod is later removed
-	if DECT.CONFIG["disable_hazard_concrete"] then
-		for _, next_force in pairs(game.forces) do
-			force = next_force
-			if event.research.name == "concrete" then
-				force.recipes["hazard-concrete"].enabled = true
-			end
-		end
-	end
-end
-
 -- Fire events!
 script.on_init(function(data)
 	on_init(data)
@@ -307,8 +289,4 @@ end)
 
 script.on_event(defines.events.on_gui_click, function(event)
 	on_gui_click(event)
-end)
-
-script.on_event(defines.events.on_research_finished,function(event)
-	on_research_finished(event)
 end)

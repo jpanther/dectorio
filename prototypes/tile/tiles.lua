@@ -161,17 +161,13 @@ if DECT.ENABLED["painted-concrete"] then
 		end
 	end
 
-	if DECT.CONFIG["disable_hazard_concrete"] then
-		-- Migrate any base hazard tiles to painted concrete
+	if not DECT.CONFIG["vanilla_hazard_concrete"] then
+		-- Use the Dectorio look and feel for Hazard concrete
 		local base_tile_hazard_left = data.raw["tile"]["hazard-concrete-left"]
-		local dect_tile_hazard_left = data.raw["tile"]["dect-paint-hazard-left"]
 		local base_tile_hazard_right = data.raw["tile"]["hazard-concrete-right"]
-		local dect_tile_hazard_right = data.raw["tile"]["dect-paint-hazard-right"]
 		
-		base_tile_hazard_left.minable.result = dect_tile_hazard_left.minable.result
-		base_tile_hazard_left.variants = dect_tile_hazard_left.variants
-		base_tile_hazard_right.minable.result = dect_tile_hazard_right.minable.result
-		base_tile_hazard_right.variants = dect_tile_hazard_right.variants
+		base_tile_hazard_left.variants = tile_variants("concrete", "hazard-left")
+		base_tile_hazard_right.variants = tile_variants("concrete", "hazard-right")
 	end
 
 end
