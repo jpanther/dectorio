@@ -97,7 +97,7 @@ Refer to the [CHANGELOG](CHANGELOG.md) for a detailed list of changes in each ve
 
 ### Credits
 
-Developed with ❤ by [James Panther](https://github.com/jpanther) in Melbourne, Australia.
+Developed with ❤ by [James Panther](https://github.com/jpanther) in Melbourne, Australia.  
 Special thanks to marcfj for support and playtesting.
 
 #### Translators
