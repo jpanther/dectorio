@@ -17,8 +17,8 @@ DECT.CONFIG = {
 	-- (true = recipe uses iron sticks, false = recipe uses iron ore)
 	["modified_concrete_recipe"] = true,
 
-	-- Whether hazard concrete takes keeps the vanilla tileset (default: false)
-	-- (true = hazard concrete keeps the vanilla look, false = hazard concrete uses the modded Dectorio look)
+	-- Whether hazard concrete keeps the vanilla tileset (default: false)
+	-- (false = hazard concrete uses the modded Dectorio look, true = hazard concrete keeps the vanilla (faded & cracked) look)
 	["vanilla_hazard_concrete"] = false,
 
 	-- Whether landscaping items are blueprintable (default: false)

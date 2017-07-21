@@ -6,6 +6,9 @@ end
 
 if DECT.ENABLED["signals"] then
 
+	-- Coloured signals
+	-- ----------
+
 	-- Get signals
 	local colors = DECT.CONFIG.SIGNALS
 
@@ -16,7 +19,7 @@ if DECT.ENABLED["signals"] then
 		end
 	end
 
-	-- Create new virtual color items if they don't already exist
+	-- Create new virtual colour items if they don't already exist
 	for i, color in pairs(colors) do
 		if color.type=="virtual" then
 			local tint = {r=color.color.r, g=color.color.g, b=color.color.b, a=0.70}
@@ -43,5 +46,54 @@ if DECT.ENABLED["signals"] then
 	-- Update the lamps
 	local lamp = data.raw.lamp["small-lamp"]
 	lamp.signal_to_color_mapping = colors
+
+
+	-- Icon signals
+	-- ----------
+
+	local iconsets = {
+		["arrow"] = {
+			name = "arrow",
+			background = {r=1.00,g=0.58,b=0.14,a=0.2},
+			order = "eb",
+			icons = {"down", "up", "left", "right", "vertical", "horizontal", "universal", "reset"}
+		},
+		["misc"] =  {
+			name = "misc",
+			background = {r=0.65,g=0.38,b=0.99,a=0.2},
+			order = "ea",
+			icons = {"clock", "alarm", "battery", "power", "nuclear", "rocket", "temperature", "finish", "gears", "star"}
+		},
+	}
+
+	-- Create new virtual signals with icons
+	for i, iconset in pairs(iconsets) do
+		data:extend({
+			{
+				type = "item-subgroup",
+				name = iconset.name,
+				group = "signals",
+				order = iconset.order
+			}
+		})
+
+		local pos = 1
+		for j, icon in pairs(iconset.icons) do
+
+			data:extend({
+				{
+					type = "virtual-signal",
+					name = "dect-signal-"..iconset.name.."-"..icon,
+					icons = {
+						{ icon = "__base__/graphics/icons/signal/signal_grey.png", tint = iconset.background },
+						{ icon = "__Dectorio__/graphics/signal/"..iconset.name.."-"..icon..".png" }
+					},
+					subgroup = iconset.name,
+					order = iconset.order.."["..iconset.name.."]-"..char(pos).."["..icon.."]"
+				}
+			})
+			pos = pos + 1
+		end
+	end
 
 end

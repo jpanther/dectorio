@@ -7,10 +7,12 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 ### Added
 * Wooden and steel signs (unlocked via new _Signs_ technology)
 * Added more variations to the edge gfx for the gravel tiles
+* New icon based signals for easier circuit network logic
 
 ### Changed
 * Hazard concrete now places as the vanilla hazard-concrete tile (fixes blueprint imports and issues when Dectorio is removed)
 * Hazard concrete keeps the Dectorio look, however you can set a config.lua flag to change it to use the vanilla look, if preferred
+* Balancing - halved crafting time of painted concrete
 
 ## v0.5.14 - 2017-07-18
 
