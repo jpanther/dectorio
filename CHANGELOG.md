@@ -2,13 +2,14 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.6.0 - Unreleased (coming soon)
+## v0.6.0 - 2017-07-21
 
 ### Added
 * Wooden and steel signs (unlocked via new _Signs_ technology)
 * _Glowing lamp_ which will glow bright colours over a large radius when passed a signal from the circuit network
 * Added more variations to the edge gfx for the gravel tiles
 * New icon based signals for easier circuit network logic
+* Signal colour for Steam
 
 ### Changed
 * Hazard concrete now places as the vanilla hazard-concrete tile (fixes blueprint imports and issues when Dectorio is removed)

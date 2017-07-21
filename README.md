@@ -52,16 +52,27 @@ When you launch the game, the new mod will be enabled by default.
 
   ![Gates](https://cl.ly/042x3E3P0A0o/hazgate.png)
 
-### Signals & Lamp colours
+### Signs
+
+* Adds placable wooden and steel signs with configurable icons
+
+  ![Signs](https://cl.ly/2K0Q3V2Q062y/signs.png)
+
+### Signals & Lamps
+
+* Adds a new Glowing lamp that will glow bright colours over a large radius when passed a coloured signal from the circuit network
+
+  ![Glowing lamp](https://cl.ly/2i0b1F383D2a/glow.png)
 
 * Adds new signal colours - purple, orange, tangerine and aqua^
 * Adds signal colours for raw resources, smelted items, fluids, science packs, inserters, belts, splitters and circuits^
 
   ![New signal colours](https://cl.ly/2R04150O0P0m/signals.png)
 
+* Adds new icon based signals for making it easier to understand your circuit network logic
 * New signal icons for base game signal colours that better represent the actual signal colour
 
-  ![Signal selection](https://cl.ly/0l3J0y1M3C21/signalselection.png)
+  ![Signal selection](https://cl.ly/443j3p1R1712/signal-icons.png)
 
 ### General
 
@@ -88,6 +99,8 @@ If you are able to translate the mod into an additional language, please let me 
 ### Mod Compatibility
 
 Limited testing has been completed with other mods. Warnings will be shown in-game to highlight any known issues. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
+
+Mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mods/Mylon/Concreep), [FARL](https://mods.factorio.com/mods/Choumiko/FARL), [Pavement Drive Assist](https://mods.factorio.com/mods/Arcitos/PavementDriveAssist)
 
 It is not recommended to use other coloured signal mods at the same time as Dectorio. This can cause coloured signals to be overwritten multiple times and lead to game-breaking compatibility issues with other mods. If you would like more colours, you can add these in the Dectorio config.lua file (instructions are in the file).
 
