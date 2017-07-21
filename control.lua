@@ -146,6 +146,9 @@ local function unlock_tech_and_recipes()
 				rec["dect-sign-steel"].enabled = true
 			end
 		end
+		if tech["optics"].researched then
+			rec["dect-small-lamp-glow"].enabled = true
+		end
 	end
 end
 

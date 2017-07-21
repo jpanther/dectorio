@@ -9,5 +9,8 @@ for index, force in pairs(game.forces) do
 	if tech["dect-concrete-paint"].researched then
 		rec["hazard-concrete"].enabled = true
 	end
-		
+	if tech["optics"].researched then
+		rec["dect-small-lamp-glow"].enabled = true
+	end
+				
 end

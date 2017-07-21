@@ -96,6 +96,7 @@ DECT.CONFIG.SIGNALS = {
 	{type="fluid", name="petroleum-gas", color={r=0.38,g=0.13,b=0.38,a=0.68}},          -- Palatinate Purple
 	{type="fluid", name="sulfuric-acid", color={r=0.94,g=0.82,b=0.13,a=0.68}},          -- Broom
 	{type="fluid", name="lubricant", color={r=0.00,g=0.75,b=0.30,a=0.68}},              -- Dark Pastel Green
+	{type="fluid", name="steam", color={r=0.92,g=0.92,b=0.92,a=0.68}},                  -- Gallery
 }
 
 -- ---------------------------------
