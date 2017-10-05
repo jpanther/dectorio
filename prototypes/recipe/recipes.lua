@@ -129,10 +129,6 @@ if DECT.ENABLED["landscaping"] then
 		}
 	})
 
-	-- Adjust base landfill recipe
-	local base_landfill = data.raw["recipe"]["landfill"]
-	base_landfill.energy_required = 10
-
 end
 
 if DECT.ENABLED["painted-concrete"] then
