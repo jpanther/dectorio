@@ -190,9 +190,9 @@ local function showGui_sign(player)
 	end
 end
 
-local function create_sign(icon, position, parent)
+local function create_sign(player, icon, position, parent)
 	local offset = {x=0, y=0.75}
-	local icon_entity = game.surfaces[1].create_entity({name=icon, position={position.x-offset.x, position.y-offset.y}})
+	local icon_entity = game.surfaces[player.surface.name].create_entity({name=icon, position={position.x-offset.x, position.y-offset.y}})
 	table.insert(global.signs, {sign=parent, objects={icon_entity}})
 end
 
@@ -259,7 +259,7 @@ local function on_gui_click(event)
 		if event.element.parent.name == "dect-icons-table" then
 			for _, icon in pairs(global.icons) do
 				if event.element.name == "dect-icon-"..icon.name then
-					create_sign("dect-icon-"..icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
+					create_sign(game.players[event.player_index], "dect-icon-"..icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
 					event.element.parent.parent.parent.destroy()
 					gui = nil
 					break
