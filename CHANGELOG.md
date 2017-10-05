@@ -2,6 +2,16 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.6.1 - 2017-10-05
+
+### Changed
+* Reverted Landfill crafting time back to vanilla recipe
+
+### Bugfixes
+* Fixed error in migration script that would cause a crash when painted concrete was disabled
+* Fixed that signs would render icons incorrectly when placed on alternate surfaces (ie. when using Factorissimo)
+* Fixed GUI bug that would crash headless server when placing signs with certain other mods enabled
+
 ## v0.6.0 - 2017-07-21
 
 ### Added
