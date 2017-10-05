@@ -186,7 +186,15 @@ local function showGui_sign(player)
 	local gui_scroll = gui_frame.add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="auto", style="dect-scroll"})
 	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", colspan=20, style="dect-icon-table"})
 	for _, icon in pairs(global.icons) do
-		gui_table.add({type="sprite-button", name="dect-icon-"..icon.name, sprite=icon.type.."/"..icon.name, style="dect-icon-button", tooltip={"",icon.name}})
+		local match = false
+		for _, child in pairs(gui_table.children_names) do
+			if child.name == "dect-icon-"..icon.name then
+				match = true
+			end
+		end
+		if not match then
+			gui_table.add({type="sprite-button", name="dect-icon-"..icon.name, sprite=icon.type.."/"..icon.name, style="dect-icon-button", tooltip={"",icon.name}})
+		end
 	end
 end
 
