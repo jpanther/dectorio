@@ -82,6 +82,8 @@ When you launch the game, the new mod will be enabled by default.
 
 * Items above marked ^ can be further customised in the config.lua file
 
+Check out the [Mod Spotlight video by Xterminator](https://www.youtube.com/watch?v=4OOs8o0dnug) to see the mod in action.
+
 ## Development
 
 ### Bugs & Suggestions
@@ -111,7 +113,7 @@ Refer to the [CHANGELOG](CHANGELOG.md) for a detailed list of changes in each ve
 ### Credits
 
 Developed with ❤ by [James Panther](https://github.com/jpanther) in Melbourne, Australia.  
-Special thanks to marcfj for support and playtesting.
+Special thanks to [marcfj](https://github.com/marcfj) for support and playtesting.
 
 #### Translators
 
