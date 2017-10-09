@@ -95,6 +95,7 @@ Feel free to get in touch with any issues or suggestions for new features you'd 
 Supported languages:
 * English
 * German
+* Polish
 
 If you are able to translate the mod into an additional language, please let me know and I'll package it into the bundle for distribution (with credit to you).
 
@@ -118,3 +119,4 @@ Special thanks to [marcfj](https://github.com/marcfj) for support and playtestin
 #### Translators
 
 German translation by [seeba8](https://github.com/seeba8).
+Polish translation by [Tomirad](https://github.com/Tomirad).

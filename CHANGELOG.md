@@ -2,6 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.6.2 - Unreleased (coming soon)
+
+### Added
+* Polish translation (thanks to [Tomirad](https://github.com/Tomirad))
+
 ## v0.6.1 - 2017-10-05
 
 ### Changed
