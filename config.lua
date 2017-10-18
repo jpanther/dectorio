@@ -13,10 +13,6 @@ DECT.CONFIG = {
 	-- (0 = keep all decorations, 0.5 = remove 50% of decorations, 1 = remove all decorations)
 	["decorative_removal_probability"] = 1,
 
-	-- Whether the base concrete recipe should be modified to use iron sticks in place of iron ore (default: true)
-	-- (true = recipe uses iron sticks, false = recipe uses iron ore)
-	["modified_concrete_recipe"] = true,
-
 	-- Whether hazard concrete keeps the vanilla tileset (default: false)
 	-- (false = hazard concrete uses the modded Dectorio look, true = hazard concrete keeps the vanilla (faded & cracked) look)
 	["vanilla_hazard_concrete"] = false,

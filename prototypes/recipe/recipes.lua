@@ -1,16 +1,5 @@
 --recipes.lua
 
-if DECT.CONFIG["modified_concrete_recipe"] then
-	
-	-- Modify base concrete recipe to replace iron ore with iron sticks
-	data.raw["recipe"]["concrete"].ingredients = {
-				{"stone-brick", 5},
-				{"iron-stick", 2},
-				{type="fluid", name="water", amount=100}
-			}
-
-end
-
 if DECT.ENABLED["landscaping"] then
 
 	-- Add recipes for base assets
@@ -183,7 +172,10 @@ if DECT.ENABLED["walls"] then
 			type = "recipe",
 			name = "dect-concrete-wall",
 			enabled = false,
-			ingredients = {{"concrete", 5}},
+			ingredients = {
+				{"concrete", 5},
+				{"iron-stick", 2}
+			},
 			result = "dect-concrete-wall"
 		},
 		{
