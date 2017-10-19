@@ -30,7 +30,6 @@ When you launch the game, the new mod will be enabled by default.
   ![Painted concrete](https://cl.ly/2D04401r202w/paintconcrete.png)
 
 * Painted Hazard concrete replaces default Hazard concrete^
-* Default concrete recipe no longer uses iron ore and instead requires iron sticks^
 * Increased flooring item stack sizes^
 
 ### Landscaping
@@ -80,9 +79,9 @@ When you launch the game, the new mod will be enabled by default.
 
   ![Mod settings](https://cl.ly/23261B1x1e38/modset.png)
 
-* Items above marked ^ can be further customised in the config.lua file
+* Items above marked ^ can be further customised in the mod settings dialog
 
-Check out the [Mod Spotlight video by Xterminator](https://www.youtube.com/watch?v=4OOs8o0dnug) to see the mod in action.
+Check out the [Mod Spotlight video by Xterminator](https://www.youtube.com/watch?v=4OOs8o0dnug) to see the mod in action (note that this features an older version of Dectorio without some of the features mentioned above).
 
 ## Development
 
