@@ -27,7 +27,7 @@ if DECT.ENABLED["landscaping"] then
 				flags = {"goes-to-main-inventory"},
 				subgroup = "landscaping",
 				order = _.."[base-"..tile.."]",
-				stack_size = DECT.CONFIG["landscaping_stack_size"],
+				stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
 				place_as_tile = {
 					result = tile,
 					condition_size = cond_size,
@@ -41,15 +41,15 @@ if DECT.ENABLED["landscaping"] then
 	local base_landfill = data.raw["item"]["landfill"]
 	base_landfill.subgroup = "landscaping"
 	base_landfill.order = "7[landfill]"
-	base_landfill.stack_size = DECT.CONFIG["landscaping_stack_size"]
+	base_landfill.stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"]
 
 end
 
 -- Change base concrete & stone path
 local base_concrete = data.raw["item"]["concrete"]
 local base_stone_brick = data.raw["item"]["stone-brick"]
-base_concrete.stack_size = DECT.CONFIG["flooring_stack_size"]
-base_stone_brick.stack_size = DECT.CONFIG["flooring_stack_size"]
+base_concrete.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
+base_stone_brick.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
 
 if DECT.ENABLED["painted-concrete"] then
 
@@ -73,7 +73,7 @@ if DECT.ENABLED["painted-concrete"] then
 				flags = {"goes-to-main-inventory"},
 				subgroup = "concrete-paint",
 				order = _.."[paint-"..variant.."]",
-				stack_size = DECT.CONFIG["flooring_stack_size"],
+				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 				place_as_tile = {
 					result = "dect-paint-"..variant.."-left",
 					condition_size = 4,
@@ -87,9 +87,9 @@ if DECT.ENABLED["painted-concrete"] then
 	local base_hazard_item = data.raw["item"]["hazard-concrete"]
 	base_hazard_item.subgroup = "concrete-paint"
 	base_hazard_item.order = "00[a-hazard-concrete]"
-	base_hazard_item.stack_size = DECT.CONFIG["flooring_stack_size"]
+	base_hazard_item.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
 	
-	if not DECT.CONFIG["vanilla_hazard_concrete"] then
+	if not DECT.CONFIG.SETTINGS["vanilla_hazard_concrete"] then
 		base_hazard_item.icon = "__Dectorio__/graphics/icons/paint-hazard.png"
 	end
 
@@ -107,7 +107,7 @@ if DECT.ENABLED["wood-floor"] then
 			fuel_value = "2MJ",
 			subgroup = "terrain",
 			order = "a[stone-brick]-b[wood-floor]",
-			stack_size = DECT.CONFIG["flooring_stack_size"],
+			stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 			place_as_tile = {
 				result = "dect-wood-floor",
 				condition_size = 4,
@@ -140,7 +140,7 @@ if DECT.ENABLED["walls"] then
 			flags = {"goes-to-quickbar"},
 			subgroup = "defensive-structure",
 			order = "a[d-concrete-wall]",
-			stack_size = DECT.CONFIG["walls_stack_size"],
+			stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"],
 			place_result = "dect-concrete-wall"
 		},
 		{
@@ -150,7 +150,7 @@ if DECT.ENABLED["walls"] then
 			flags = {"goes-to-quickbar"},
 			subgroup = "defensive-structure",
 			order = "a[c-chain-wall]",
-			stack_size = DECT.CONFIG["walls_stack_size"],
+			stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"],
 			place_result = "dect-chain-wall"
 		},
 		{
@@ -162,7 +162,7 @@ if DECT.ENABLED["walls"] then
 			fuel_value = "12MJ",
 			subgroup = "defensive-structure",
 			order = "a[a-wood-wall]",
-			stack_size = DECT.CONFIG["walls_stack_size"],
+			stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"],
 			place_result = "dect-wood-wall"
 		},
 		{
@@ -180,7 +180,7 @@ if DECT.ENABLED["walls"] then
 	-- Change base stone wall
 	local base_stone_wall = data.raw["item"]["stone-wall"]
 	base_stone_wall.icon = "__Dectorio__/graphics/icons/stone-brick-wall.png"
-	base_stone_wall.stack_size = DECT.CONFIG["walls_stack_size"]
+	base_stone_wall.stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"]
 	base_stone_wall.order = "a[b-stone-wall]"
 
 end

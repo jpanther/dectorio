@@ -1,33 +1,13 @@
 -- Dectorio configuration
 
 local DECT = {}
+DECT.CONFIG = {}
 
 -- CONFIGURABLE OPTIONS
 -- ---------------------------------
 -- These options can be changed to suit individual play-style
 -- If playing multiplayer, ensure the same config.lua is used on each player's system
 -- ---------------------------------
-
-DECT.CONFIG = {
-	-- How likely it is that decorations are removed when placing flooring (default: 1)
-	-- (0 = keep all decorations, 0.5 = remove 50% of decorations, 1 = remove all decorations)
-	["decorative_removal_probability"] = 1,
-
-	-- Whether hazard concrete keeps the vanilla tileset (default: false)
-	-- (false = hazard concrete uses the modded Dectorio look, true = hazard concrete keeps the vanilla (faded & cracked) look)
-	["vanilla_hazard_concrete"] = false,
-
-	-- Whether landscaping items are blueprintable (default: false)
-	-- (true = landscaping items appear in blueprints, false = landscaping items do not appear in blueprints)
-	["landscaping_blueprintable"] = false,
-
-	-- How many items are stackable in a single inventory slot (defaults: flooring = 500, walls = 200)
-	-- (any positive integer value)
-	["flooring_stack_size"] = 500,
-	["landscaping_stack_size"] = 500,
-	["walls_stack_size"] = 200,
-
-}
 
 DECT.CONFIG.SIGNALS = {
 	-- All the signal colors to be changed/added
@@ -112,6 +92,15 @@ DECT.ENABLED = {
 	["gravel"] = settings.startup["dectorio-flooring"].value,
 	["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
 	["signs"] = settings.startup["dectorio-signs"].value,
+}
+
+DECT.CONFIG.SETTINGS = {
+	["decorative_removal_probability"] = settings.startup["dectorio-decorative-removal-probability"].value,
+	["vanilla_hazard_concrete"] = settings.startup["dectorio-vanilla-hazard-concrete-style"].value,
+	["landscaping_blueprintable"] = settings.startup["dectorio-landscaping-blueprintable"].value,
+	["flooring_stack_size"] = settings.startup["dectorio-flooring-stack-size"].value,
+	["landscaping_stack_size"] = settings.startup["dectorio-landscaping-stack-size"].value,
+	["walls_stack_size"] = settings.startup["dectorio-walls-stack-size"].value,
 }
 
 DECT.CONFIG.PAINT_VARIANTS = {"danger", "emergency", "caution", "radiation", "defect", "operations", "safety"}
