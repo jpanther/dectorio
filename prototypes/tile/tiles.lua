@@ -68,15 +68,10 @@ data.raw["tile"]["concrete"].decorative_removal_probability = DECT.CONFIG.SETTIN
 if DECT.ENABLED["landscaping"] then
 
 	-- Make tiles unblueprintable
-	data.raw["tile"]["dirt"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
-	data.raw["tile"]["sand"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
-	data.raw["tile"]["sand-dark"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
-	data.raw["tile"]["grass"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
-	data.raw["tile"]["grass-dry"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
-	data.raw["tile"]["red-desert"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
-	data.raw["tile"]["red-desert-dark"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
-	data.raw["tile"]["water"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
-	data.raw["tile"]["water-green"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
+	local base_tiles = DECT.CONFIG.BASE_TILES
+	for _, tile in pairs(base_tiles) do
+		data.raw["tile"][tile].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
+	end
 
 end
 
