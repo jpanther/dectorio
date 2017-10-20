@@ -63,8 +63,8 @@ When you launch the game, the new mod will be enabled by default.
 
   ![Glowing lamp](https://cl.ly/2i0b1F383D2a/glow.png)
 
-* Adds new signal colours - purple, orange, tangerine and aqua^
-* Adds signal colours for raw resources, smelted items, fluids, science packs, inserters, belts, splitters and circuits^
+* Adds new signal colours - purple, orange, tangerine and aqua
+* Adds signal colours for raw resources, smelted items, fluids, science packs, inserters, belts, splitters and circuits
 
   ![New signal colours](https://cl.ly/2R04150O0P0m/signals.png)
 
@@ -77,7 +77,7 @@ When you launch the game, the new mod will be enabled by default.
 
 * Includes settings for enabling or disabling each of the above features (Options > Mods > Startup). Ideally these should only be changed before starting a new game. Changes on existing games will require content to be migrated and some items may be lost if you disable components you've already used on an existing save. Always make a backup first!
 
-  ![Mod settings](https://cl.ly/23261B1x1e38/modset.png)
+  ![Mod settings](https://cl.ly/0u3s0Y3G1A39/modsettings.png)
 
 * Items above marked ^ can be further customised in the mod settings dialog
 
@@ -102,7 +102,9 @@ If you are able to translate the mod into an additional language, please let me 
 
 Limited testing has been completed with other mods. Warnings will be shown in-game to highlight any known issues. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
 
-Mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mods/Mylon/Concreep), [FARL](https://mods.factorio.com/mods/Choumiko/FARL), [Pavement Drive Assist](https://mods.factorio.com/mods/Arcitos/PavementDriveAssist)
+Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mods/Earendel/alien-biomes).
+
+Mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mods/Mylon/Concreep), [FARL](https://mods.factorio.com/mods/Choumiko/FARL), [Pavement Drive Assist](https://mods.factorio.com/mods/Arcitos/PavementDriveAssist).
 
 It is not recommended to use other coloured signal mods at the same time as Dectorio. This can cause coloured signals to be overwritten multiple times and lead to game-breaking compatibility issues with other mods. If you would like more colours, you can add these in the Dectorio config.lua file (instructions are in the file).
 
@@ -117,5 +119,5 @@ Special thanks to [marcfj](https://github.com/marcfj) for support and playtestin
 
 #### Translators
 
-German translation by [seeba8](https://github.com/seeba8).
+German translation by [seeba8](https://github.com/seeba8).  
 Polish translation by [Tomirad](https://github.com/Tomirad).

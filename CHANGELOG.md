@@ -2,7 +2,9 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.7.0 - Unreleased (coming soon)
+## v0.7.0 - 2017-10-20
+
+Please take note of the concrete recipe changes in this release. You may need to adjust parts of your factory.
 
 ### Added
 * New in-game settings for configuring Dectorio (replaces the old settings that were configured via config.lua)
