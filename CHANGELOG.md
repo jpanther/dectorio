@@ -2,6 +2,15 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.7.0 - Unreleased (coming soon)
+
+### Added
+* New in-game settings for configuring Dectorio (replaces the old settings that were configured via config.lua)
+
+### Changed
+* Concrete recipe no longer requires iron sticks and reverts to the vanilla iron ore recipe
+* Concrete walls now require iron sticks to craft
+
 ## v0.6.2 - 2017-10-10
 
 ### Added

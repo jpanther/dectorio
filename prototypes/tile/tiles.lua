@@ -62,21 +62,21 @@ local function tile_variants(set, variant)
 end
 
 -- Modify decorations on base tiles
-data.raw["tile"]["stone-path"].decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"]
-data.raw["tile"]["concrete"].decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"]
+data.raw["tile"]["stone-path"].decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"]
+data.raw["tile"]["concrete"].decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"]
 
 if DECT.ENABLED["landscaping"] then
 
 	-- Make tiles unblueprintable
-	data.raw["tile"]["dirt"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
-	data.raw["tile"]["sand"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
-	data.raw["tile"]["sand-dark"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
-	data.raw["tile"]["grass"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
-	data.raw["tile"]["grass-dry"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
-	data.raw["tile"]["red-desert"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
-	data.raw["tile"]["red-desert-dark"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
-	data.raw["tile"]["water"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
-	data.raw["tile"]["water-green"].can_be_part_of_blueprint = DECT.CONFIG["landscaping_blueprintable"]
+	data.raw["tile"]["dirt"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
+	data.raw["tile"]["sand"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
+	data.raw["tile"]["sand-dark"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
+	data.raw["tile"]["grass"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
+	data.raw["tile"]["grass-dry"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
+	data.raw["tile"]["red-desert"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
+	data.raw["tile"]["red-desert-dark"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
+	data.raw["tile"]["water"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
+	data.raw["tile"]["water-green"].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
 
 end
 
@@ -92,7 +92,7 @@ if DECT.ENABLED["wood-floor"] then
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.2,
 			layer = 63,
-			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
+			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 			variants = tile_variants("wood", "boards"),
 			walking_sound = {
 				{ filename = "__Dectorio__/sound/walking/wood-01.ogg", volume = 0.95 },
@@ -120,7 +120,7 @@ if DECT.ENABLED["gravel"] then
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.1,
 			layer = 62,
-			decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
+			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 			variants = tile_variants("stone", "gravel"),
 			walking_sound = data.raw["tile"]["dirt"].walking_sound,
 			map_color={r=169, g=169, b=169},
@@ -150,7 +150,7 @@ if DECT.ENABLED["painted-concrete"] then
 					collision_mask = {"ground-tile"},
 					walking_speed_modifier = 1.4,
 					layer = 61,
-					decorative_removal_probability = DECT.CONFIG["decorative_removal_probability"],
+					decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 					variants = tile_variants("concrete", variant.."-"..direction.this),
 					walking_sound = data.raw["tile"]["concrete"].walking_sound,
 					map_color={r=105, g=105, b=105},
@@ -161,7 +161,7 @@ if DECT.ENABLED["painted-concrete"] then
 		end
 	end
 
-	if not DECT.CONFIG["vanilla_hazard_concrete"] then
+	if not DECT.CONFIG.SETTINGS["vanilla_hazard_concrete"] then
 		-- Use the Dectorio look and feel for Hazard concrete
 		local base_tile_hazard_left = data.raw["tile"]["hazard-concrete-left"]
 		local base_tile_hazard_right = data.raw["tile"]["hazard-concrete-right"]
