@@ -11,6 +11,8 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 ### Changed
 * Concrete recipe no longer requires iron sticks and reverts to the vanilla iron ore recipe
 * Concrete walls now require iron sticks to craft
+* Adjusted flooring layer priority so they appear correctly when placed adjacent to each other (order is now ground > gravel > stone path > wood floor > concrete)
+* Tweaked minimap colours for some flooring styles
 
 ## v0.6.2 - 2017-10-10
 

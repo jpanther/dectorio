@@ -114,16 +114,18 @@ if DECT.ENABLED["gravel"] then
 			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
 			collision_mask = {"ground-tile"},
 			walking_speed_modifier = 1.1,
-			layer = 62,
+			layer = 60,
 			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 			variants = tile_variants("stone", "gravel"),
 			walking_sound = data.raw["tile"]["dirt"].walking_sound,
-			map_color={r=169, g=169, b=169},
+			map_color={r=146, g=146, b=146},
 			ageing=0,
 			vehicle_friction_modifier = dirt_vehicle_speed_modifier
 		}
 	})
 
+	-- Move stone path up a layer so it sits atop gravel
+	data.raw["tile"]["stone-path"].layer = 61
 end
 
 if DECT.ENABLED["painted-concrete"] then
@@ -144,10 +146,10 @@ if DECT.ENABLED["painted-concrete"] then
 					mined_sound = data.raw["tile"]["concrete"].mined_sound,
 					collision_mask = {"ground-tile"},
 					walking_speed_modifier = 1.4,
-					layer = 61,
+					layer = 62,
 					decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 					variants = tile_variants("concrete", variant.."-"..direction.this),
-					walking_sound = data.raw["tile"]["concrete"].walking_sound,
+ 					walking_sound = data.raw["tile"]["concrete"].walking_sound,
 					map_color={r=105, g=105, b=105},
 					ageing=0,
 					vehicle_friction_modifier = concrete_vehicle_speed_modifier
@@ -156,11 +158,20 @@ if DECT.ENABLED["painted-concrete"] then
 		end
 	end
 
+	-- Move concrete up a layer so it sits atop stone path
+	data.raw["tile"]["concrete"].layer = 62
+
+	-- Adjust base hazard concrete
+	local base_tile_hazard_left = data.raw["tile"]["hazard-concrete-left"]
+	local base_tile_hazard_right = data.raw["tile"]["hazard-concrete-right"]
+
+	base_tile_hazard_left.layer = 62
+	base_tile_hazard_right.layer = 62
+	base_tile_hazard_left.transition_merges_with_tile = nil
+	base_tile_hazard_right.transition_merges_with_tile = nil
+	
+	-- Use the Dectorio look and feel for Hazard concrete
 	if not DECT.CONFIG.SETTINGS["vanilla_hazard_concrete"] then
-		-- Use the Dectorio look and feel for Hazard concrete
-		local base_tile_hazard_left = data.raw["tile"]["hazard-concrete-left"]
-		local base_tile_hazard_right = data.raw["tile"]["hazard-concrete-right"]
-		
 		base_tile_hazard_left.variants = tile_variants("concrete", "hazard-left")
 		base_tile_hazard_right.variants = tile_variants("concrete", "hazard-right")
 	end
