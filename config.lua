@@ -139,6 +139,11 @@ DECT.INCOMPATIBLE.MODS = {
 		component = "walls",
 		reason = "tech"
 	},
+	["no-walls"] = {
+		name = "no-walls",
+		component = "walls",
+		reason = "disable"
+	},
 }
 
 return DECT
