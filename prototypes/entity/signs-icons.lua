@@ -1,4 +1,4 @@
--- sign-icons.lua
+-- entity/sign-icons
 
 if DECT.ENABLED["signs"] then
 

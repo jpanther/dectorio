@@ -23,9 +23,29 @@
 -- data.lua
 
 DECT = require("config")
-require("prototypes.entity.entities")
-require("prototypes.item.items")
-require("prototypes.recipe.recipes")
+
+require("prototypes.entity.lamp")
+require("prototypes.entity.signs")
+require("prototypes.entity.walls")
+
+require("prototypes.item.flooring")
+require("prototypes.item.lamp")
+require("prototypes.item.landscaping")
+require("prototypes.item.signs")
+require("prototypes.item.walls")
+
+require("prototypes.recipe.flooring")
+require("prototypes.recipe.lamp")
+require("prototypes.recipe.landscaping")
+require("prototypes.recipe.signs")
+require("prototypes.recipe.walls")
+
 require("prototypes.tile.tiles")
-require("prototypes.technology.technology")
-require("prototypes.signal.signal")
+
+require("prototypes.technology.flooring")
+require("prototypes.technology.lamp")
+require("prototypes.technology.landscaping")
+require("prototypes.technology.signs")
+require("prototypes.technology.walls")
+
+require("prototypes.signal.signals")

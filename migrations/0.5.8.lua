@@ -7,7 +7,7 @@ for index, force in pairs(game.forces) do
 	local rec = force.recipes
 
 	if settings.startup["dectorio-landscaping"].value then
-		if tech["landfill"].researched then
+		if tech["landfill"].researched and rec["dect-base-water"] then
 			rec["dect-base-water"].enabled = true
 			rec["dect-base-water-green"].enabled = true
 		end
