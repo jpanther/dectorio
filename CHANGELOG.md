@@ -6,6 +6,7 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 
 ### Added
 * New in-game settings for configuring Dectorio (replaces the old settings that were configured via config.lua)
+* Landscaping support for Alien Biomes mod
 
 ### Changed
 * Concrete recipe no longer requires iron sticks and reverts to the vanilla iron ore recipe
