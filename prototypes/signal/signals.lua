@@ -1,4 +1,4 @@
--- signal.lua
+-- signal/signals
 
 local function char(num)
 	return string.char(string.byte("a")+num-1)

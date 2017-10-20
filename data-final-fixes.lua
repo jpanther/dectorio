@@ -1,4 +1,5 @@
 -- data-final-fixes.lua
 
-require("prototypes.style")
-require("prototypes.entity.sign-icons")
+require("prototypes.style.gui")
+
+require("prototypes.entity.signs-icons")

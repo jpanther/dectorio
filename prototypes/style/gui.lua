@@ -1,4 +1,4 @@
--- style.lua
+-- style/gui
 
 default_gui = data.raw["gui-style"]["default"]
 

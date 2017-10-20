@@ -1,4 +1,4 @@
---tiles.lua
+-- tile/tiles
 
 -- Return tile variants array for given set and variant
 local function tile_variants(set, variant)

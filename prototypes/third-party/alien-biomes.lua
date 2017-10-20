@@ -1,4 +1,4 @@
---alien-biomes.lua
+-- third-party/alien-biomes
 
 if DECT.ENABLED["landscaping"] and data.raw["tree"]["coral-lava-01"] then
 
@@ -80,9 +80,9 @@ if DECT.ENABLED["landscaping"] and data.raw["tree"]["coral-lava-01"] then
 	end
 	data.raw["technology"]["dect-landscaping"].effects = technology_effects
 	data.raw["technology"]["landfill"].effects = {
-				{
-					type = "unlock-recipe",
-					recipe = "landfill"
-				}
-			}
+		{
+			type = "unlock-recipe",
+			recipe = "landfill"
+		}
+	}
 end
