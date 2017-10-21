@@ -2,6 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.7.1 - 2017-10-21
+
+### Bugfixes
+* Fixed migration error for existing saves without Alien Biomes
+
 ## v0.7.0 - 2017-10-20
 
 Please take note of the concrete recipe changes in this release. You may need to adjust parts of your factory.
