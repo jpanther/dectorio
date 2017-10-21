@@ -7,7 +7,7 @@ for index, force in pairs(game.forces) do
 	local rec = force.recipes
 
 	if settings.startup["dectorio-landscaping"].value then
-		if tech["dect-landscaping"].researched and data.raw["tree"]["coral-lava-01"] then
+		if tech["dect-landscaping"].researched and rec["dect-alien-biomes-grass-red"] then
 			alien_biomes = {
 				"grass-red","grass-orange","grass-yellow","grass-yellow-fade","grass-dry","grass-medium","grass","grass-blue-fade","grass-blue","grass-purple-fade","grass-purple",
 				"dirt-red","dirt-brown","dirt-tan","dirt","dirt-dull","dirt-grey","dirt-red-dark","dirt-brown-dark","dirt-tan-dark","dirt-dark","dirt-dull-dark","dirt-grey-dark",
