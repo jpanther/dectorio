@@ -6,11 +6,15 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 
 ### Added
 * New gravel styles - Iron, Copper and Coal Gravel (placed using raw iron, copper and coal ores)
+* New traffic bollard decorative item (unlocked via _Plastics_ technology)
+
+### Bugfixes
+* Added some additional locale strings to fix issues with Creative Mode mod
 
 ## v0.7.1 - 2017-10-21
 
 ### Bugfixes
-* Fixed migration error for existing saves without Alien Biomes
+* Fixed migration error for existing saves without Alien Biomes mod
 
 ## v0.7.0 - 2017-10-20
 

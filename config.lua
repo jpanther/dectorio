@@ -92,6 +92,7 @@ DECT.ENABLED = {
 	["gravel"] = settings.startup["dectorio-flooring"].value,
 	["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
 	["signs"] = settings.startup["dectorio-signs"].value,
+	["decoratives"] = settings.startup["dectorio-decoratives"].value,
 }
 
 DECT.CONFIG.SETTINGS = {

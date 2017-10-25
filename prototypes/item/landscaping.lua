@@ -8,7 +8,7 @@ if DECT.ENABLED["landscaping"] then
 			type = "item-subgroup",
 			name = "landscaping",
 			group = "logistics",
-			order = "g"
+			order = "g-a"
 		}
 	})
 
