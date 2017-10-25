@@ -2,6 +2,11 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.7.2 - Unreleased (coming soon)
+
+### Added
+* New gravel styles - Iron, Copper and Coal Gravel (placed using raw iron, copper and coal ores)
+
 ## v0.7.1 - 2017-10-21
 
 ### Bugfixes

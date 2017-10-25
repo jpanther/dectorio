@@ -75,10 +75,31 @@ end
 
 if DECT.ENABLED["gravel"] then
 
-	-- Allow stone to be placed as gravel
+	-- Allow ores to be placed as gravel
 	local base_stone = data.raw["item"]["stone"]
 	base_stone.place_as_tile = {
 		result = "dect-gravel",
+		condition_size = 4,
+		condition = { "water-tile" }
+	}
+
+	local base_iron = data.raw["item"]["iron-ore"]
+	base_iron.place_as_tile = {
+		result = "dect-iron-gravel",
+		condition_size = 4,
+		condition = { "water-tile" }
+	}
+
+	local base_copper = data.raw["item"]["copper-ore"]
+	base_copper.place_as_tile = {
+		result = "dect-copper-gravel",
+		condition_size = 4,
+		condition = { "water-tile" }
+	}
+
+	local base_coal = data.raw["item"]["coal"]
+	base_coal.place_as_tile = {
+		result = "dect-coal-gravel",
 		condition_size = 4,
 		condition = { "water-tile" }
 	}
