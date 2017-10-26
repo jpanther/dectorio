@@ -43,6 +43,22 @@ if DECT.ENABLED["landscaping"] then
 				{
 					type = "unlock-recipe",
 					recipe = "dect-base-red-desert-dark"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-base-stone-rock"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-base-red-desert-rock-big-01"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-base-red-desert-rock-huge-01"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-base-red-desert-rock-huge-02"
 				}
 			},
 			order = "a"
