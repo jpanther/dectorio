@@ -27,18 +27,21 @@ DECT = require("config")
 require("prototypes.entity.lamp")
 require("prototypes.entity.signs")
 require("prototypes.entity.walls")
+require("prototypes.entity.decoratives")
 
 require("prototypes.item.flooring")
 require("prototypes.item.lamp")
 require("prototypes.item.landscaping")
 require("prototypes.item.signs")
 require("prototypes.item.walls")
+require("prototypes.item.decoratives")
 
 require("prototypes.recipe.flooring")
 require("prototypes.recipe.lamp")
 require("prototypes.recipe.landscaping")
 require("prototypes.recipe.signs")
 require("prototypes.recipe.walls")
+require("prototypes.recipe.decoratives")
 
 require("prototypes.tile.tiles")
 
@@ -47,5 +50,6 @@ require("prototypes.technology.lamp")
 require("prototypes.technology.landscaping")
 require("prototypes.technology.signs")
 require("prototypes.technology.walls")
+require("prototypes.technology.decoratives")
 
 require("prototypes.signal.signals")

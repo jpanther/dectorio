@@ -9,7 +9,7 @@ local function tile_variants(set, variant)
 		u_transition = 16,
 		o_transition = 1
 	}
-	if set == "wood" or set == "stone" then
+	if set == "wood" or set == "stone" or set == "iron" or set == "copper" or set == "coal" then
 		sprite_count = {
 			inner_corner = 8, 
 			outer_corner = 1,
@@ -119,6 +119,54 @@ if DECT.ENABLED["gravel"] then
 			variants = tile_variants("stone", "gravel"),
 			walking_sound = data.raw["tile"]["dirt"].walking_sound,
 			map_color={r=146, g=146, b=146},
+			ageing=0,
+			vehicle_friction_modifier = dirt_vehicle_speed_modifier
+		},		
+		{
+			type = "tile",
+			name = "dect-iron-gravel",
+			needs_correction = false,
+			minable = {hardness = 0.2, mining_time = 0.5, result = "iron-ore"},
+			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
+			collision_mask = {"ground-tile"},
+			walking_speed_modifier = 1.1,
+			layer = 60,
+			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
+			variants = tile_variants("iron", "gravel"),
+			walking_sound = data.raw["tile"]["dirt"].walking_sound,
+			map_color={r=114, g=137, b=163},
+			ageing=0,
+			vehicle_friction_modifier = dirt_vehicle_speed_modifier
+		},		
+		{
+			type = "tile",
+			name = "dect-copper-gravel",
+			needs_correction = false,
+			minable = {hardness = 0.2, mining_time = 0.5, result = "copper-ore"},
+			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
+			collision_mask = {"ground-tile"},
+			walking_speed_modifier = 1.1,
+			layer = 60,
+			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
+			variants = tile_variants("copper", "gravel"),
+			walking_sound = data.raw["tile"]["dirt"].walking_sound,
+			map_color={r=163, g=118, b=115},
+			ageing=0,
+			vehicle_friction_modifier = dirt_vehicle_speed_modifier
+		},
+		{
+			type = "tile",
+			name = "dect-coal-gravel",
+			needs_correction = false,
+			minable = {hardness = 0.2, mining_time = 0.5, result = "coal"},
+			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
+			collision_mask = {"ground-tile"},
+			walking_speed_modifier = 1.1,
+			layer = 60,
+			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
+			variants = tile_variants("coal", "gravel"),
+			walking_sound = data.raw["tile"]["dirt"].walking_sound,
+			map_color={r=84, g=84, b=84},
 			ageing=0,
 			vehicle_friction_modifier = dirt_vehicle_speed_modifier
 		}
