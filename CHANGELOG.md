@@ -8,6 +8,7 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 * New gravel styles - Iron, Copper and Coal Gravel (placed using raw iron, copper and coal ores)
 * New _Traffic bollard_ decorative item (unlocked via _Plastics_ technology)
 * Landscaping technology now allows placement of decorative rock entities
+* Better handling for when third party mods that affect Dectorio are added or removed
 
 ### Bugfixes
 * Added some additional locale strings to fix issues with Creative Mode mod

@@ -163,6 +163,44 @@ local function on_configuration_changed(data)
 			incompability_detected()
 		end
 	end
+
+	-- Check if Alien Biomes was added
+   if data.mod_changes ~= nil and data.mod_changes["alien-biomes"] ~= nil and data.mod_changes["alien-biomes"].old_version == nil then
+		if DECT.ENABLED["landscaping"] then
+			for _,force in pairs(game.forces) do
+				local tech = force.technologies
+				local rec = force.recipes
+				if tech["dect-landscaping"].researched and rec["dect-alien-biomes-grass-red"] then
+					local alien_biomes = {
+						"grass-red","grass-orange","grass-yellow","grass-yellow-fade","grass-dry","grass-medium","grass","grass-blue-fade","grass-blue","grass-purple-fade","grass-purple",
+						"dirt-red","dirt-brown","dirt-tan","dirt","dirt-dull","dirt-grey","dirt-red-dark","dirt-brown-dark","dirt-tan-dark","dirt-dark","dirt-dull-dark","dirt-grey-dark",
+						"sand-red","sand-orange","sand-gold","sand","sand-dull","sand-grey","sand-red-dark","sand-orange-dark","sand-gold-dark","sand-dark","sand-dull-dark","sand-grey-dark",
+						"snow","volcanic-cool","volcanic-medium","volcanic-hot"
+					}
+					for _, tile in pairs(alien_biomes) do
+						rec["dect-alien-biomes-"..tile].enabled = true
+					end
+					notification({"dect-notify-supportedmod-added", {"dect-notify-dectorio"}, "Alien Biomes"})
+				end
+			end
+		end
+	end
+
+	-- Check if Alien Biomes was removed
+   if data.mod_changes ~= nil and data.mod_changes["alien-biomes"] ~= nil and data.mod_changes["alien-biomes"].new_version == nil then
+		if DECT.ENABLED["landscaping"] then
+			for _,force in pairs(game.forces) do
+				local tech = force.technologies
+				local rec = force.recipes
+				if tech["dect-landscaping"].researched then
+					for _, tile in pairs(DECT.CONFIG.BASE_TILES) do
+						rec["dect-base-"..tile].enabled = true
+					end
+					notification({"dect-notify-supportedmod-removed", {"dect-notify-dectorio"}, "Alien Biomes"})
+				end
+			end
+		end
+	end
 end
 
 local function on_built_entity(event)
