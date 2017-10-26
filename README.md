@@ -18,9 +18,18 @@ When you launch the game, the new mod will be enabled by default.
 
 ## Current Features
 
+### Decorative items
+
+* Adds traffic bollards for decorating roadways or protecting your factory from vehicular collisions
+
+  ![Traffic bollard](https://cl.ly/2U2c3M391i3Y/bollard.png)
+
 ### Flooring styles
 
-* Adds basic gravel path (placed using raw stone)
+* Adds basic gravel paths (placed using raw stone, coal, iron and copper)
+
+  ![Gravel styles](https://cl.ly/0I0Y2Y1v2N0N/gravel.png)
+
 * Adds wooden floorboard tiles with sound effects
 
   ![Gravel and Wooden floorboards](https://cl.ly/253y1V0W362e/gravelwood.png)
@@ -36,6 +45,7 @@ When you launch the game, the new mod will be enabled by default.
 
 * Adds items for placing dirt, sand, dark sand, grass, dry grass, red desert and dark red desert tiles
 * Ability to place water and green water tiles (aka. 'waterfill')
+* Ability to place decorative rocks
 
   ![Landscaping items](https://cl.ly/171X1J1s1D24/landscapeitems.png)
 
