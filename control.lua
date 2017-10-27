@@ -107,6 +107,7 @@ local function incompability_detected()
 	end
 end
 
+-- Show the GUI for sign icon selection
 local function showGui_sign(player)
 	if player.gui.center["dect-gui-sign"] then
 		player.gui.center["dect-gui-sign"].destroy()
@@ -127,6 +128,7 @@ local function showGui_sign(player)
 	end
 end
 
+-- Place a sign on game surface
 local function create_sign(player, icon, position, parent)
 	local offset = {x=0, y=0.75}
 	local icon_entity = game.surfaces[player.surface.name].create_entity({name=icon, position={position.x-offset.x, position.y-offset.y}})
@@ -165,7 +167,7 @@ local function on_configuration_changed(data)
 	end
 
 	-- Check if Alien Biomes was added
-   if data.mod_changes ~= nil and data.mod_changes["alien-biomes"] ~= nil and data.mod_changes["alien-biomes"].old_version == nil then
+	if data.mod_changes ~= nil and data.mod_changes["alien-biomes"] ~= nil and data.mod_changes["alien-biomes"].old_version == nil then
 		if DECT.ENABLED["landscaping"] then
 			for _,force in pairs(game.forces) do
 				local tech = force.technologies
@@ -187,7 +189,7 @@ local function on_configuration_changed(data)
 	end
 
 	-- Check if Alien Biomes was removed
-   if data.mod_changes ~= nil and data.mod_changes["alien-biomes"] ~= nil and data.mod_changes["alien-biomes"].new_version == nil then
+	if data.mod_changes ~= nil and data.mod_changes["alien-biomes"] ~= nil and data.mod_changes["alien-biomes"].new_version == nil then
 		if DECT.ENABLED["landscaping"] then
 			for _,force in pairs(game.forces) do
 				local tech = force.technologies
@@ -201,6 +203,7 @@ local function on_configuration_changed(data)
 			end
 		end
 	end
+
 end
 
 local function on_built_entity(event)

@@ -727,7 +727,83 @@ if DECT.ENABLED["walls"] then
 					{
 						layers = {
 							{
-								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical.png",
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical-1.png",
+								priority = "extra-high",
+								width = 22,
+								height = 42,
+								shift = {0, -0.15625}
+							},
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical-shadow.png",
+								priority = "extra-high",
+								width = 47,
+								height = 60,
+								shift = {0.390625, 1.16},
+								draw_as_shadow = true
+							}
+						}
+					},
+					{
+						layers = {
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical-2.png",
+								priority = "extra-high",
+								width = 22,
+								height = 42,
+								shift = {0, -0.15625}
+							},
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical-shadow.png",
+								priority = "extra-high",
+								width = 47,
+								height = 60,
+								shift = {0.390625, 1.16},
+								draw_as_shadow = true
+							}
+						}
+					},
+					{
+						layers = {
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical-3.png",
+								priority = "extra-high",
+								width = 22,
+								height = 42,
+								shift = {0, -0.15625}
+							},
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical-shadow.png",
+								priority = "extra-high",
+								width = 47,
+								height = 60,
+								shift = {0.390625, 1.16},
+								draw_as_shadow = true
+							}
+						}
+					},
+					{
+						layers = {
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical-4.png",
+								priority = "extra-high",
+								width = 22,
+								height = 42,
+								shift = {0, -0.15625}
+							},
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical-shadow.png",
+								priority = "extra-high",
+								width = 47,
+								height = 60,
+								shift = {0.390625, 1.16},
+								draw_as_shadow = true
+							}
+						}
+					},
+					{
+						layers = {
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-vertical-5.png",
 								priority = "extra-high",
 								width = 22,
 								height = 42,
@@ -748,7 +824,83 @@ if DECT.ENABLED["walls"] then
 					{
 						layers = {
 							{
-								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal.png",
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal-1.png",
+								priority = "extra-high",
+								width = 32,
+								height = 42,
+								shift = {0, -0.15625}
+							},
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal-shadow.png",
+								priority = "extra-high",
+								width = 59,
+								height = 32,
+								shift = {0.421875, 0.5},
+								draw_as_shadow = true
+							}
+						}
+					},
+					{
+						layers = {
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal-2.png",
+								priority = "extra-high",
+								width = 32,
+								height = 42,
+								shift = {0, -0.15625}
+							},
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal-shadow.png",
+								priority = "extra-high",
+								width = 59,
+								height = 32,
+								shift = {0.421875, 0.5},
+								draw_as_shadow = true
+							}
+						}
+					},
+					{
+						layers = {
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal-3.png",
+								priority = "extra-high",
+								width = 32,
+								height = 42,
+								shift = {0, -0.15625}
+							},
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal-shadow.png",
+								priority = "extra-high",
+								width = 59,
+								height = 32,
+								shift = {0.421875, 0.5},
+								draw_as_shadow = true
+							}
+						}
+					},
+					{
+						layers = {
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal-4.png",
+								priority = "extra-high",
+								width = 32,
+								height = 42,
+								shift = {0, -0.15625}
+							},
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal-shadow.png",
+								priority = "extra-high",
+								width = 59,
+								height = 32,
+								shift = {0.421875, 0.5},
+								draw_as_shadow = true
+							}
+						}
+					},
+					{
+						layers = {
+							{
+								filename = "__Dectorio__/graphics/entity/chain-wall/wall-straight-horizontal-5.png",
 								priority = "extra-high",
 								width = 32,
 								height = 42,
