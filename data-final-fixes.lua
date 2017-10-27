@@ -1,4 +1,4 @@
--- data-final-fixes.lua
+-- data-final-fixes
 
 require("prototypes.style.gui")
 

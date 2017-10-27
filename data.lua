@@ -20,7 +20,7 @@
 
 --------------------------
 
--- data.lua
+-- data
 
 DECT = require("config")
 

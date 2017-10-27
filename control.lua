@@ -20,7 +20,7 @@
 
 --------------------------
 
---control.lua
+-- control
 
 DECT = require("config")
 
@@ -107,34 +107,7 @@ local function incompability_detected()
 	end
 end
 
--- Show the GUI for sign icon selection
-local function showGui_sign(player)
-	if player.gui.center["dect-gui-sign"] then
-		player.gui.center["dect-gui-sign"].destroy()
-	end
-	local gui_frame = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui-sign-title"}, direction="horizontal"})
-	local gui_scroll = gui_frame.add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="auto", style="dect-scroll"})
-	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", colspan=20, style="dect-icon-table"})
-	for _, icon in pairs(global.icons) do
-		local match = false
-		for _, child in pairs(gui_table.children_names) do
-			if child.name == "dect-icon-"..icon.name then
-				match = true
-			end
-		end
-		if not match then
-			gui_table.add({type="sprite-button", name="dect-icon-"..icon.name, sprite=icon.type.."/"..icon.name, style="dect-icon-button", tooltip={"",icon.name}})
-		end
-	end
-end
-
--- Place a sign on game surface
-local function create_sign(player, icon, position, parent)
-	local offset = {x=0, y=0.75}
-	local icon_entity = game.surfaces[player.surface.name].create_entity({name=icon, position={position.x-offset.x, position.y-offset.y}})
-	table.insert(global.signs, {sign=parent, objects={icon_entity}})
-end
-
+-- Initialisation stuff
 local function on_init(data)
 	init_global()
 
@@ -206,6 +179,36 @@ local function on_configuration_changed(data)
 
 end
 
+-- SIGN FUNCTIONS
+-- Show the GUI for sign icon selection
+local function showGui_sign(player)
+	if player.gui.center["dect-gui-sign"] then
+		player.gui.center["dect-gui-sign"].destroy()
+	end
+	local gui_frame = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui-sign-title"}, direction="horizontal"})
+	local gui_scroll = gui_frame.add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="auto", style="dect-scroll"})
+	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", colspan=20, style="dect-icon-table"})
+	for _, icon in pairs(global.icons) do
+		local match = false
+		for _, child in pairs(gui_table.children_names) do
+			if child.name == "dect-icon-"..icon.name then
+				match = true
+			end
+		end
+		if not match then
+			gui_table.add({type="sprite-button", name="dect-icon-"..icon.name, sprite=icon.type.."/"..icon.name, style="dect-icon-button", tooltip={"",icon.name}})
+		end
+	end
+end
+
+-- Place a sign on game surface
+local function create_sign(player, icon, position, parent)
+	local offset = {x=0, y=0.75}
+	local icon_entity = game.surfaces[player.surface.name].create_entity({name=icon, position={position.x-offset.x, position.y-offset.y}})
+	table.insert(global.signs, {sign=parent, objects={icon_entity}})
+end
+
+-- When a new sign is built
 local function on_built_entity(event)
 	local player = game.players[event.player_index]
 	if event.created_entity.name == "dect-sign-wood" or event.created_entity.name == "dect-sign-steel" then
@@ -214,6 +217,7 @@ local function on_built_entity(event)
 	end
 end
 
+-- When an existing sign is mined
 local function on_mined_entity(event)
 	if event.entity.name == "dect-sign-wood" or event.entity.name == "dect-sign-steel" then
 		for i=1, #global.signs do
@@ -232,6 +236,7 @@ local function on_mined_entity(event)
 	end
 end
 
+-- Handle GUI clicks
 local function on_gui_click(event)
 	if event.element.parent then
 		if event.element.parent.name == "dect-icons-table" then
@@ -248,26 +253,9 @@ local function on_gui_click(event)
 end
 
 -- Fire events!
-script.on_init(function(data)
-	on_init(data)
-end)
-
-script.on_configuration_changed(function(data)
-	on_configuration_changed(data)
-end)
-
-script.on_event(defines.events.on_built_entity, function(event)
-	on_built_entity(event)
-end)
-
-script.on_event(defines.events.on_preplayer_mined_item, function(event)
-	on_mined_entity(event)
-end)
-
-script.on_event(defines.events.on_robot_pre_mined, function(event)
-	on_mined_entity(event)
-end)
-
-script.on_event(defines.events.on_gui_click, function(event)
-	on_gui_click(event)
-end)
+script.on_init(on_init)
+script.on_configuration_changed(on_configuration_changed)
+script.on_event(defines.events.on_built_entity, on_built_entity)
+script.on_event(defines.events.on_preplayer_mined_item, on_mined_entity)
+script.on_event(defines.events.on_robot_pre_mined, on_mined_entity)
+script.on_event(defines.events.on_gui_click, on_gui_click)
