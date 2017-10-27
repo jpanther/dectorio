@@ -7,6 +7,14 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 ### Added
 * New gfx variants for chain-link fence so it looks more realistic
 
+### Bugfixes
+* Major fixes to make signs more robust in multiplayer games
+    * Signs are now indestructible and unminable while the player that placed the sign is selecting an icon
+    * Icon selection GUI now has a 'Cancel' button
+    * Only one sign can be placed at a time (by the same player), preventing blank signs from being placed
+    * Icons are now indestructible and can only be removed by removing the sign
+    * Icons are now correctly removed when a sign is destroyed, preventing orphaned icons from being left on the game surface
+
 ## v0.7.2 - 2017-10-26
 
 ### Added
