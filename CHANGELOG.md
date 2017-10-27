@@ -2,7 +2,7 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.7.3 - Unreleased (coming soon)
+## v0.7.3 - 2017-10-27
 
 ### Added
 * New gfx variants for chain-link fence so it looks more realistic
