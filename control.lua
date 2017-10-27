@@ -181,13 +181,14 @@ end
 
 -- SIGN FUNCTIONS
 -- Show the GUI for sign icon selection
-local function showGui_sign(player)
+local function create_sign_gui(player)
 	if player.gui.center["dect-gui-sign"] then
 		player.gui.center["dect-gui-sign"].destroy()
 	end
-	local gui_frame = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui-sign-title"}, direction="horizontal"})
-	local gui_scroll = gui_frame.add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="auto", style="dect-scroll"})
+	sign_gui = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui-sign-title"}, direction="vertical"})
+	local gui_scroll = sign_gui.add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="auto", style="dect-scroll"})
 	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", colspan=20, style="dect-icon-table"})
+	local gui_cancel = sign_gui.add({type="button", name="dect-gui-button-cancel", caption={"dect-gui-sign-cancel"}})
 	for _, icon in pairs(global.icons) do
 		local match = false
 		for _, child in pairs(gui_table.children_names) do
@@ -205,6 +206,7 @@ end
 local function create_sign(player, icon, position, parent)
 	local offset = {x=0, y=0.75}
 	local icon_entity = game.surfaces[player.surface.name].create_entity({name=icon, position={position.x-offset.x, position.y-offset.y}})
+	icon_entity.destructible = false
 	table.insert(global.signs, {sign=parent, objects={icon_entity}})
 end
 
@@ -212,8 +214,15 @@ end
 local function on_built_entity(event)
 	local player = game.players[event.player_index]
 	if event.created_entity.name == "dect-sign-wood" or event.created_entity.name == "dect-sign-steel" then
-		global.sign_last_built[event.player_index] = event.created_entity
-		showGui_sign(player)
+		if sign_gui ~= nil then
+			player.insert({name=event.created_entity.name, count=1})
+			event.created_entity.destroy()
+		else
+			global.sign_last_built[event.player_index] = event.created_entity
+			event.created_entity.destructible = false
+			event.created_entity.minable = false
+			create_sign_gui(player)
+		end
 	end
 end
 
@@ -229,22 +238,29 @@ local function on_mined_entity(event)
 				break
 			end
 		end
-		if gui ~= nil then
-			gui.destroy()
-			gui = nil
-		end
 	end
 end
 
 -- Handle GUI clicks
 local function on_gui_click(event)
 	if event.element.parent then
-		if event.element.parent.name == "dect-icons-table" then
+		if event.element.parent.name == "dect-gui-sign" then
+			if event.element.name == "dect-gui-button-cancel" then
+				if global.sign_last_built[event.player_index] then
+					game.players[event.player_index].insert({name = global.sign_last_built[event.player_index].name, count = 1})
+					global.sign_last_built[event.player_index].destroy()
+				end
+				sign_gui.destroy()
+				sign_gui = nil
+			end
+		elseif event.element.parent.name == "dect-icons-table" then
 			for _, icon in pairs(global.icons) do
 				if event.element.name == "dect-icon-"..icon.name then
 					create_sign(game.players[event.player_index], "dect-icon-"..icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
-					event.element.parent.parent.parent.destroy()
-					gui = nil
+					global.sign_last_built[event.player_index].destructible = true
+					global.sign_last_built[event.player_index].minable = true
+					sign_gui.destroy()
+					sign_gui = nil
 					break
 				end
 			end
@@ -258,4 +274,5 @@ script.on_configuration_changed(on_configuration_changed)
 script.on_event(defines.events.on_built_entity, on_built_entity)
 script.on_event(defines.events.on_preplayer_mined_item, on_mined_entity)
 script.on_event(defines.events.on_robot_pre_mined, on_mined_entity)
+script.on_event(defines.events.on_entity_died, on_mined_entity)
 script.on_event(defines.events.on_gui_click, on_gui_click)
