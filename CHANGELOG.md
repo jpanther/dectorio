@@ -2,7 +2,7 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.7.4 - Unreleased (coming soon)
+## v0.7.4 - 2017-11-04
 
 ### Bugfixes
 * Fixed technology error that appeared when Decoratives setting was set to disabled
