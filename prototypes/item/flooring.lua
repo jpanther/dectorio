@@ -13,7 +13,7 @@ if DECT.ENABLED["painted-concrete"] then
 		{
 			type = "item-subgroup",
 			name = "concrete-paint",
-			group = "logistics",
+			group = DECT.ITEM_GROUP["logistics"],
 			order = "i"
 		}
 	})
@@ -60,7 +60,7 @@ if DECT.ENABLED["wood-floor"] then
 			flags = {"goes-to-main-inventory"},
 			fuel_category = "chemical",
 			fuel_value = "2MJ",
-			subgroup = "terrain",
+			subgroup = DECT.ITEM_SUBGROUP["terrain"],
 			order = "a[stone-brick]-b[wood-floor]",
 			stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 			place_as_tile = {
