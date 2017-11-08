@@ -102,14 +102,14 @@ Feel free to get in touch with any issues or suggestions for new features you'd 
 #### **Did you find a bug?**
 
 * **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/jpanther/Dectorio/issues).
-> **Note:** If you find a **Closed** issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
+  > **Note:** If you find a **Closed** issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
 
 * If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/jpanther/Dectorio/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample** or a **test case** demonstrating the expected behaviour that is not occurring.
 
 #### **Can you write a patch that fixes a bug or do you want to implement a new feature?**
 
 * Fork the `develop` branch.
-> **Note:** The `master` branch is reserved for releases and is always in a 'production-ready' state. The `develop` branch is where the latest changes are developed and tested ahead of the next release.
+  > **Note:** The `master` branch is reserved for releases and is always in a 'production-ready' state. The `develop` branch is where the latest changes are developed and tested ahead of the next release.
 
 * Create a new branch in your fork that describes the issue or new feature (i.e. `bugfix-nastybug` or `feature-mynewfeature`)
 
