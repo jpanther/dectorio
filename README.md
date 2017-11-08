@@ -95,9 +95,31 @@ Check out the [Mod Spotlight video by Xterminator](https://www.youtube.com/watch
 
 ## Development
 
-### Bugs & Suggestions
+### Contributing
 
-Feel free to get in touch with any issues or suggestions for new features you'd like to see. You can get in contact via the 'Discussion' tab on the [Factorio mod portal](https://mods.factorio.com/mods/PantherX/Dectorio/discussion), the [Factorio Forums](https://forums.factorio.com/memberlist.php?mode=viewprofile&u=28042) or you can also view and log issues directly to the GitHub repo.
+Feel free to get in touch with any issues or suggestions for new features you'd like to see. I also welcome pull requests to fix bugs or implement new features. The best way to make contact is via [GitHub Issues](https://github.com/jpanther/Dectorio/issues), however you can alternatively post on the [Factorio Mod Portal](https://mods.factorio.com/mods/PantherX/Dectorio/discussion) (but please note that it may take longer to get a response this way as there are no notifications of new messages on the portal and I only check it sporadically). Usually when I find issues reported on the Mod Portal, I'll open a new GitHub issue to track its progress.
+
+#### **Did you find a bug?**
+
+* **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/jpanther/Dectorio/issues).
+> **Note:** If you find a **Closed** issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
+
+* If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/jpanther/Dectorio/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample** or a **test case** demonstrating the expected behaviour that is not occurring.
+
+#### **Can you write a patch that fixes a bug or do you want to implement a new feature?**
+
+* Fork the `develop` branch.
+> **Note:** The `master` branch is reserved for releases and is always in a 'production-ready' state. The `develop` branch is where the latest changes are developed and tested ahead of the next release.
+
+* Create a new branch in your fork that describes the issue or new feature (i.e. `bugfix-nastybug` or `feature-mynewfeature`)
+
+* Make the changes required to fix the bug or implement the new feature.
+
+* Pull the upstream `develop` branch and merge it into your fork regularly to stay up to date with changes.
+
+* When you're ready to submit your changes, and there are no conflicts with the upstream branch, push your fork and open a new GitHub pull request to the `develop` branch with your patch.
+
+* Ensure the PR description clearly describes what the patch does. If it fixes a reported bug or feature request, include the relevant issue number.
 
 ### Language Support
 
@@ -106,7 +128,7 @@ Supported languages:
 * German
 * Polish
 
-If you are able to translate the mod into an additional language, please let me know and I'll package it into the bundle for distribution (with credit to you).
+If you are able to translate the mod into an additional language, please let me know (refer to the [_Contributing_](#contributing) section above) and I'll package it into the bundle for distribution (with credit to you).
 
 ### Mod Compatibility
 
