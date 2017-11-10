@@ -20,7 +20,7 @@ if DECT.ENABLED["decoratives"] then
 			flags = {"goes-to-quickbar"},
 			-- subgroup = "decoratives",
 			-- order = "a[traffic-bollard]",
-			subgroup = "terrain",
+			subgroup = DECT.ITEM_SUBGROUP["terrain"],
 			order = "w[traffic-bollard]",
 			place_result = "dect-traffic-bollard",
 			stack_size = 50

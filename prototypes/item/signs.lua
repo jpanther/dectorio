@@ -8,7 +8,7 @@ if DECT.ENABLED["signs"] then
 			name = "dect-sign-wood",
 			icon = "__Dectorio__/graphics/icons/sign-wood.png",
 			flags = {"goes-to-quickbar"},
-			subgroup = "terrain",
+			subgroup = DECT.ITEM_SUBGROUP["terrain"],
 			order = "x[sign-wood]",
 			place_result = "dect-sign-wood",
 			stack_size = 50
@@ -18,7 +18,7 @@ if DECT.ENABLED["signs"] then
 			name = "dect-sign-steel",
 			icon = "__Dectorio__/graphics/icons/sign-steel.png",
 			flags = {"goes-to-quickbar"},
-			subgroup = "terrain",
+			subgroup = DECT.ITEM_SUBGROUP["terrain"],
 			order = "y[sign-steel]",
 			place_result = "dect-sign-steel",
 			stack_size = 50

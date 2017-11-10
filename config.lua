@@ -93,7 +93,19 @@ DECT.ENABLED = {
 	["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
 	["signs"] = settings.startup["dectorio-signs"].value,
 	["decoratives"] = settings.startup["dectorio-decoratives"].value,
+	["item-group"] = settings.startup["dectorio-item-group"].value,
 }
+
+DECT.ITEM_GROUP = setmetatable({}, {
+	__index = function (self, key)
+		return DECT.ENABLED["item-group"] and "dectorio" or key
+	end
+})
+DECT.ITEM_SUBGROUP = setmetatable({}, {
+	__index = function (self, key)
+		return DECT.ENABLED["item-group"] and "dectorio-subgroup" or key
+	end
+})
 
 DECT.CONFIG.SETTINGS = {
 	["decorative_removal_probability"] = settings.startup["dectorio-decorative-removal-probability"].value,
