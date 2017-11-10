@@ -7,7 +7,7 @@ if DECT.ENABLED["signs"] then
 		{
 			type = "item-subgroup",
 			name = "signs",
-			group = DECT.ITEM_GROUP["signs"],
+			group = DECT.ITEM_GROUP,
 			order = "0"
 		}
 	})

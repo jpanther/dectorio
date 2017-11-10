@@ -7,7 +7,7 @@ if DECT.ENABLED["landscaping"] then
 		{
 			type = "item-subgroup",
 			name = "landscaping",
-			group = DECT.ITEM_GROUP["landscaping"],
+			group = DECT.ITEM_GROUP,
 			order = "l-a"
 		}
 	})
@@ -42,7 +42,7 @@ if DECT.ENABLED["landscaping"] then
 		{
 			type = "item-subgroup",
 			name = "landscaping-rocks",
-			group = DECT.ITEM_GROUP["landscaping-rocks"],
+			group = DECT.ITEM_GROUP,
 			order = "l-b"
 		}
 	})
