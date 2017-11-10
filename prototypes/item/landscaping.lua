@@ -7,8 +7,8 @@ if DECT.ENABLED["landscaping"] then
 		{
 			type = "item-subgroup",
 			name = "landscaping",
-			group = DECT.ITEM_GROUP["logistics"],
-			order = "g-a"
+			group = DECT.ITEM_GROUP["landscaping"],
+			order = "l-a"
 		}
 	})
 
@@ -41,9 +41,9 @@ if DECT.ENABLED["landscaping"] then
 	data:extend({
 		{
 			type = "item-subgroup",
-			name = "landscaping2",
-			group = DECT.ITEM_GROUP["logistics"],
-			order = "g-b"
+			name = "landscaping-rocks",
+			group = DECT.ITEM_GROUP["landscaping-rocks"],
+			order = "l-b"
 		}
 	})
 
@@ -62,7 +62,7 @@ if DECT.ENABLED["landscaping"] then
 				name = "dect-base-"..rock,
 				icon = data.raw["simple-entity"][rock].icon,
 				flags = {"goes-to-main-inventory"},
-				subgroup = "landscaping2",
+				subgroup = "landscaping-rocks",
 				order = _.."[base-"..rock.."]",
 				stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
 				place_result = rock,

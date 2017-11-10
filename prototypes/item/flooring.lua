@@ -12,9 +12,9 @@ if DECT.ENABLED["painted-concrete"] then
 	data:extend({
 		{
 			type = "item-subgroup",
-			name = "concrete-paint",
-			group = DECT.ITEM_GROUP["logistics"],
-			order = "i"
+			name = "flooring",
+			group = DECT.ITEM_GROUP["flooring"],
+			order = "i-b"
 		}
 	})
 
@@ -26,7 +26,7 @@ if DECT.ENABLED["painted-concrete"] then
 				name = "dect-paint-"..variant,
 				icon = "__Dectorio__/graphics/icons/paint-"..variant..".png",
 				flags = {"goes-to-main-inventory"},
-				subgroup = "concrete-paint",
+				subgroup = "flooring",
 				order = _.."[paint-"..variant.."]",
 				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 				place_as_tile = {
@@ -40,10 +40,10 @@ if DECT.ENABLED["painted-concrete"] then
 
 	-- Move base hazard concrete item under painted concrete
 	local base_hazard_item = data.raw["item"]["hazard-concrete"]
-	base_hazard_item.subgroup = "concrete-paint"
+	base_hazard_item.subgroup = "flooring"
 	base_hazard_item.order = "00[a-hazard-concrete]"
 	base_hazard_item.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
-	
+
 	if not DECT.CONFIG.SETTINGS["vanilla_hazard_concrete"] then
 		base_hazard_item.icon = "__Dectorio__/graphics/icons/paint-hazard.png"
 	end
@@ -60,8 +60,8 @@ if DECT.ENABLED["wood-floor"] then
 			flags = {"goes-to-main-inventory"},
 			fuel_category = "chemical",
 			fuel_value = "2MJ",
-			subgroup = DECT.ITEM_SUBGROUP["terrain"],
-			order = "a[stone-brick]-b[wood-floor]",
+			subgroup = "flooring",
+			order = "00[0-wood-floor]",
 			stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 			place_as_tile = {
 				result = "dect-wood-floor",

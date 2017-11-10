@@ -2,15 +2,15 @@
 
 if DECT.ENABLED["decoratives"] then
 
-	-- -- Add subgroup for decoratives
-	-- data:extend({
-	-- 	{
-	-- 		type = "item-subgroup",
-	-- 		name = "decoratives",
-	-- 		group = "logistics",
-	-- 		order = "g-b"
-	-- 	}
-	-- })
+	-- Add subgroup for decoratives
+	data:extend({
+		{
+			type = "item-subgroup",
+			name = "decoratives",
+			group = DECT.ITEM_GROUP["decoratives"],
+			order = "e-b"
+		}
+	})
 
 	data:extend({
 		{
@@ -18,10 +18,8 @@ if DECT.ENABLED["decoratives"] then
 			name = "dect-traffic-bollard",
 			icon = "__Dectorio__/graphics/icons/traffic-bollard.png",
 			flags = {"goes-to-quickbar"},
-			-- subgroup = "decoratives",
-			-- order = "a[traffic-bollard]",
-			subgroup = DECT.ITEM_SUBGROUP["terrain"],
-			order = "w[traffic-bollard]",
+			subgroup = "decoratives",
+			order = "a[traffic-bollard]",
 			place_result = "dect-traffic-bollard",
 			stack_size = 50
 		}

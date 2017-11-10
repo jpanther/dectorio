@@ -2,15 +2,13 @@
 
 if DECT.ENABLED["walls"] then
 
-	local subgroup = DECT.ITEM_SUBGROUP["defensive-structure"]
-
 	data:extend({
 		{
 			type = "item",
 			name = "dect-concrete-wall",
 			icon = "__Dectorio__/graphics/icons/concrete-wall.png",
 			flags = {"goes-to-quickbar"},
-			subgroup = subgroup,
+			subgroup = "defensive-structure",
 			order = "a[d-concrete-wall]",
 			stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"],
 			place_result = "dect-concrete-wall"
@@ -20,7 +18,7 @@ if DECT.ENABLED["walls"] then
 			name = "dect-chain-wall",
 			icon = "__Dectorio__/graphics/icons/chain-wall.png",
 			flags = {"goes-to-quickbar"},
-			subgroup = subgroup,
+			subgroup = "defensive-structure",
 			order = "a[c-chain-wall]",
 			stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"],
 			place_result = "dect-chain-wall"
@@ -32,7 +30,7 @@ if DECT.ENABLED["walls"] then
 			flags = {"goes-to-quickbar"},
 			fuel_category = "chemical",
 			fuel_value = "12MJ",
-			subgroup = subgroup,
+			subgroup = "defensive-structure",
 			order = "a[a-wood-wall]",
 			stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"],
 			place_result = "dect-wood-wall"
@@ -42,7 +40,7 @@ if DECT.ENABLED["walls"] then
 			name = "dect-hazard-gate",
 			icon = "__Dectorio__/graphics/icons/hazard-gate.png",
 			flags = {"goes-to-quickbar"},
-			subgroup = subgroup,
+			subgroup = "defensive-structure",
 			order = "a[wall]-b[hazard-gate]",
 			stack_size = 50,
 			place_result = "dect-hazard-gate"

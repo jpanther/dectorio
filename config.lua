@@ -98,12 +98,7 @@ DECT.ENABLED = {
 
 DECT.ITEM_GROUP = setmetatable({}, {
 	__index = function (self, key)
-		return DECT.ENABLED["item-group"] and "dectorio" or key
-	end
-})
-DECT.ITEM_SUBGROUP = setmetatable({}, {
-	__index = function (self, key)
-		return DECT.ENABLED["item-group"] and "dectorio-subgroup" or key
+		return DECT.ENABLED["item-group"] and "dectorio" or "logistics"
 	end
 })
 
