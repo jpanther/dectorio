@@ -7,7 +7,7 @@ if DECT.ENABLED["decoratives"] then
 		{
 			type = "item-subgroup",
 			name = "decoratives",
-			group = DECT.ITEM_GROUP["decoratives"],
+			group = DECT.ITEM_GROUP,
 			order = "e-b"
 		}
 	})

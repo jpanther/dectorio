@@ -13,7 +13,7 @@ if DECT.ENABLED["painted-concrete"] then
 		{
 			type = "item-subgroup",
 			name = "flooring",
-			group = DECT.ITEM_GROUP["flooring"],
+			group = DECT.ITEM_GROUP,
 			order = "i-b"
 		}
 	})
