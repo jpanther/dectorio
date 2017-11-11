@@ -50,7 +50,7 @@ if DECT.ENABLED["signals"] then
 	local lamp_glow = data.raw.lamp["dect-small-lamp-glow"]
 	lamp_glow.signal_to_color_mapping = colors
 
-	
+
 	-- Icon signals
 	-- ----------
 
@@ -87,6 +87,7 @@ if DECT.ENABLED["signals"] then
 				{
 					type = "virtual-signal",
 					name = "dect-signal-"..iconset.name.."-"..icon,
+					localised_name = { "dect-signal."..iconset.name.."-"..icon },
 					icons = {
 						{ icon = "__base__/graphics/icons/signal/signal_grey.png", tint = iconset.background },
 						{ icon = "__Dectorio__/graphics/signal/"..iconset.name.."-"..icon..".png" }
