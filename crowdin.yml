@@ -1,7 +1,0 @@
-"files" : [
-  {
-    "source" : "/locale/en/*.cfg",
-    "translation" : "/locale/%two_letters_code%/*.cfg",
-    "type" : "ini",
-    "update_option" : "update_as_unapproved"
-  }
