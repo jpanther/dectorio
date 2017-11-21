@@ -13,7 +13,7 @@ DECT.CONFIG.SIGNALS = {
 	-- All the signal colors to be changed/added
 	-- RGBA values from 0 to 1, alpha is optional
 	-- The order of the virtual signals is the order they will appear in-game
-	-- NOTE: New virtual signals will need localised names to be provided in '/locale/[language]/signals.cfg'
+	-- NOTE: New virtual signals will need localised names to be provided in '/locale/[language]/dectorio.cfg'
 	-- Color names are from Name That Color (http://chir.ag/projects/name-that-color/)
 	{type="virtual", name="signal-red", color={r=1.00,g=0.16,b=0.10,a=1.00}},           -- Scarlet
 	{type="virtual", name="signal-orange", color={r=0.99,g=0.44,b=0.22,a=1.00}},        -- Orange
@@ -93,7 +93,11 @@ DECT.ENABLED = {
 	["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
 	["signs"] = settings.startup["dectorio-signs"].value,
 	["decoratives"] = settings.startup["dectorio-decoratives"].value,
+	["item-group"] = settings.startup["dectorio-item-group"].value,
 }
+
+-- The subgroups for all items in the mod
+DECT.ITEM_GROUP = DECT.ENABLED["item-group"] and "dectorio" or "logistics"
 
 DECT.CONFIG.SETTINGS = {
 	["decorative_removal_probability"] = settings.startup["dectorio-decorative-removal-probability"].value,
@@ -111,8 +115,8 @@ DECT.CONFIG.BASE_TILES = {"dirt", "sand", "sand-dark", "grass", "grass-dry", "re
 
 DECT.INCOMPATIBLE = {}
 DECT.INCOMPATIBLE.REASONS = {
-	["signals"] = "dect-notify-reason-signals",
-	["tech"] = "dect-notify-reason-tech",
+	["signals"] = "dect-notify.reason-signals",
+	["tech"] = "dect-notify.reason-tech",
 }
 DECT.INCOMPATIBLE.MODS = {
 	["Expanded_Color_Lamps"] = {

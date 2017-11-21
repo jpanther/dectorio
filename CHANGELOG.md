@@ -2,6 +2,16 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.7.5 - 2017-11-21
+
+### Added
+* New crafting tab to separate decorative items from other crafting menus - can be disabled in settings (thanks to [Aidiakapi](https://github.com/Aidiakapi))
+* New localisation system - help translate Dectorio by visiting [CrowdIn](https://crowdin.com/project/dectorio)
+* Added initial Czech translation (thanks to [dereksp](https://crowdin.com/profile/dereksp))
+
+### Bugfixes
+* Fixed some audio and repairability issues with traffic bollards
+
 ## v0.7.4 - 2017-11-04
 
 ### Bugfixes

@@ -34,7 +34,7 @@ if DECT.ENABLED["signs"] then
 			flags = {"placeable-neutral"},
 			render_layer = "object",
 			minable = {mining_time = 1, result = "dect-sign-steel", count = 1},
-			max_health = 40,
+			max_health = 65,
 			collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
 			selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 			drawing_box = {{-0.5, -1.6}, {0.5, 0.5}},

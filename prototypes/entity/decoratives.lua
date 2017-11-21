@@ -4,16 +4,16 @@ if DECT.ENABLED["decoratives"] then
 
 	data:extend({
 		{
-			type = "simple-entity",
+			type = "simple-entity-with-force",
 			name = "dect-traffic-bollard",
 			icon = "__Dectorio__/graphics/icons/traffic-bollard.png",
-			flags = {"placeable-neutral"},
+			flags = {"placeable-neutral", "placeable-player", "player-creation"},
 			render_layer = "object",
-			minable = {mining_time = 1, result = "dect-traffic-bollard", count = 1},
+			minable = {hardness = 0.2, mining_time = 0.3, result = "dect-traffic-bollard", count = 1},
 			max_health = 120,
+			corpse = "small-remnants",
 			collision_box = {{-0.15, -0.15}, {0.25, 0.15}},
 			selection_box = {{-0.25, -1.4}, {0.25, 0.16}},
-			drawing_box = {{-0.2, -1}, {0.2, 0.1}},
 			repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
 			mined_sound = { filename = "__core__/sound/deconstruct-small.ogg" },
 			vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.7},

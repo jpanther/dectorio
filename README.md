@@ -1,4 +1,5 @@
 # Dectorio
+[![GitHub issues](https://img.shields.io/github/issues/jpanther/Dectorio.svg)](https://github.com/jpanther/Dectorio/issues) [![CrowdIn](https://d322cqt584bo4o.cloudfront.net/dectorio/localized.svg)](https://crowdin.com/project/dectorio) [![GitHub license](https://img.shields.io/github/license/jpanther/Dectorio.svg)](https://github.com/jpanther/Dectorio/blob/develop/LICENSE)
 
 A simple mod that adds decorative elements to beautify your factory. New technology research is required to unlock the various items before they can be crafted and some default recipes are adjusted to better reflect how these items should be made.
 
@@ -123,12 +124,20 @@ Feel free to get in touch with any issues or suggestions for new features you'd 
 
 ### Language Support
 
-Supported languages:
-* English
-* German
-* Polish
+Dectorio uses CrowdIn to translate the mod into various languages.
 
-If you are able to translate the mod into an additional language, please let me know (refer to the [_Contributing_](#contributing) section above) and I'll package it into the bundle for distribution (with credit to you).
+Fully supported languages:
+* English
+* German (84%)
+* Polish (85%)
+
+Languages in progress:
+* Chinese Simplified (38%)
+* Chinese Traditional (46%)
+* Czech (52%)
+* Korean (39%)
+
+If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
 ### Mod Compatibility
 
@@ -151,9 +160,10 @@ Refer to the [CHANGELOG](CHANGELOG.md) for a detailed list of changes in each ve
 ### Credits
 
 Developed with ❤ by [James Panther](https://github.com/jpanther) in Melbourne, Australia.  
-Special thanks to [marcfj](https://github.com/marcfj) for support and playtesting.
+Special thanks to [marcfj](https://github.com/marcfj) for support and play testing.
 
 #### Translators
 
 German translation by [seeba8](https://github.com/seeba8).  
 Polish translation by [Tomirad](https://github.com/Tomirad).
+Czech translation by [dereksp](https://crowdin.com/profile/dereksp).

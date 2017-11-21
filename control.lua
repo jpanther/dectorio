@@ -74,7 +74,7 @@ local function init_global()
 end
 
 -- Check if any technologies or recipes need to be enabled
-local function unlock_tech_and_recipes() 
+local function unlock_tech_and_recipes()
 	for _,force in pairs(game.forces) do
 		force.reset_recipes()
 		force.reset_technologies()
@@ -84,7 +84,7 @@ end
 -- Check game for known incompatibile mods
 local function check_incompatible_mods()
 	for mod, version in pairs(game.active_mods) do
-		if DECT.INCOMPATIBLE.MODS[mod] then 
+		if DECT.INCOMPATIBLE.MODS[mod] then
 			if DECT.ENABLED[DECT.INCOMPATIBLE.MODS[mod].component] then
 				return true
 			end
@@ -99,9 +99,9 @@ local function incompability_detected()
 		if DECT.INCOMPATIBLE.MODS[mod] then
 			incompatible = DECT.INCOMPATIBLE.MODS[mod]
 			if DECT.ENABLED[incompatible.component] then
-				notification({"dect-notify-incompatible", {"dect-notify-dectorio"}})
-				notification({"dect-notify-modportal", {"dect-notify-dectorio"}})
-				notification({DECT.INCOMPATIBLE.REASONS[incompatible.reason], {"dect-notify-dectorio"}, incompatible.name})
+				notification({"dect-notify.incompatible", {"dect-notify.dectorio"}})
+				notification({"dect-notify.mod-portal", {"dect-notify.dectorio"}})
+				notification({DECT.INCOMPATIBLE.REASONS[incompatible.reason], {"dect-notify.dectorio"}, incompatible.name})
 			end
 		end
 	end
@@ -123,12 +123,12 @@ local function on_configuration_changed(data)
 
 	-- Notify version and updates
 	if data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version == nil then
-		notification({"dect-notify-version", {"dect-notify-dectorio"}, data.mod_changes["Dectorio"].new_version})
+		notification({"dect-notify.version", {"dect-notify.dectorio"}, data.mod_changes["Dectorio"].new_version})
 	elseif data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version ~= nil then
 		unlock_tech_and_recipes()
 		local oldver = data.mod_changes["Dectorio"].old_version
 		local newver = data.mod_changes["Dectorio"].new_version
-		notification({"dect-notify-newversion", {"dect-notify-dectorio"}, oldver, newver})
+		notification({"dect-notify.new-version", {"dect-notify.dectorio"}, oldver, newver})
 	end
 
 	-- Check for incompatible mods and notify
@@ -155,7 +155,7 @@ local function on_configuration_changed(data)
 					for _, tile in pairs(alien_biomes) do
 						rec["dect-alien-biomes-"..tile].enabled = true
 					end
-					notification({"dect-notify-supportedmod-added", {"dect-notify-dectorio"}, "Alien Biomes"})
+					notification({"dect-notify.supported-mod-added", {"dect-notify.dectorio"}, "Alien Biomes"})
 				end
 			end
 		end
@@ -171,7 +171,7 @@ local function on_configuration_changed(data)
 					for _, tile in pairs(DECT.CONFIG.BASE_TILES) do
 						rec["dect-base-"..tile].enabled = true
 					end
-					notification({"dect-notify-supportedmod-removed", {"dect-notify-dectorio"}, "Alien Biomes"})
+					notification({"dect-notify.supported-mod-removed", {"dect-notify.dectorio"}, "Alien Biomes"})
 				end
 			end
 		end
@@ -185,10 +185,10 @@ local function create_sign_gui(player)
 	if player.gui.center["dect-gui-sign"] then
 		player.gui.center["dect-gui-sign"].destroy()
 	end
-	sign_gui = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui-sign-title"}, direction="vertical"})
+	sign_gui = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui.sign-title"}, direction="vertical"})
 	local gui_scroll = sign_gui.add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="auto", style="dect-scroll"})
 	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", colspan=20, style="dect-icon-table"})
-	local gui_cancel = sign_gui.add({type="button", name="dect-gui-button-cancel", caption={"dect-gui-sign-cancel"}})
+	local gui_cancel = sign_gui.add({type="button", name="dect-gui-button-cancel", caption={"dect-gui.sign-cancel"}})
 	for _, icon in pairs(global.icons) do
 		local match = false
 		for _, child in pairs(gui_table.children_names) do
