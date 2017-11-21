@@ -128,13 +128,14 @@ Dectorio uses CrowdIn to translate the mod into various languages.
 
 Fully supported languages:
 * English
-* German
-* Polish
+* German (84%)
+* Polish (85%)
 
 Languages in progress:
-* Chinese (Simplified)
-* Chinese (Traditional)
-* Korean
+* Chinese Simplified (38%)
+* Chinese Traditional (46%)
+* Czech (52%)
+* Korean (39%)
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
@@ -159,9 +160,10 @@ Refer to the [CHANGELOG](CHANGELOG.md) for a detailed list of changes in each ve
 ### Credits
 
 Developed with ❤ by [James Panther](https://github.com/jpanther) in Melbourne, Australia.  
-Special thanks to [marcfj](https://github.com/marcfj) for support and playtesting.
+Special thanks to [marcfj](https://github.com/marcfj) for support and play testing.
 
 #### Translators
 
 German translation by [seeba8](https://github.com/seeba8).  
 Polish translation by [Tomirad](https://github.com/Tomirad).
+Czech translation by [dereksp](https://crowdin.com/profile/dereksp).
