@@ -52,6 +52,13 @@ data:extend({
 	},
 	{
 		type = "bool-setting",
+		name = "dectorio-item-group",
+		setting_type = "startup",
+		default_value = true,
+		order = "a-h"
+	},
+	{
+		type = "bool-setting",
 		name = "dectorio-vanilla-hazard-concrete-style",
 		setting_type = "startup",
 		default_value = false,

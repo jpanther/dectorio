@@ -29,6 +29,7 @@ require("prototypes.entity.signs")
 require("prototypes.entity.walls")
 require("prototypes.entity.decoratives")
 
+require("prototypes.item.item-group")
 require("prototypes.item.flooring")
 require("prototypes.item.lamp")
 require("prototypes.item.landscaping")
