@@ -111,7 +111,8 @@ DECT.CONFIG.SETTINGS = {
 DECT.CONFIG.PAINT_VARIANTS = {"danger", "emergency", "caution", "radiation", "defect", "operations", "safety"}
 DECT.CONFIG.SIGN_CATEGORIES = {"item", "fluid", "tool", "ammo", "armor", "capsule", "gun", "mining-tool", "module"}
 DECT.CONFIG.SIGN_BLACKLIST = {"barrel", "loader", "simple%-entity", "player%-port", "computer", "coin", "small%-plane", "railgun", "vehicle%-machine%-gun", "tank%-machine%-gun", "factory%-1%-", "factory%-2%-", "factory%-3%-"}
-DECT.CONFIG.BASE_TILES = {"dirt", "sand", "sand-dark", "grass", "grass-dry", "red-desert", "red-desert-dark", "water", "water-green"}
+DECT.CONFIG.BASE_TILES = {"dirt", "sand", "sand-dark", "grass", "grass-dry", "red-desert", "red-desert-dark"}
+DECT.CONFIG.BASE_WATER_TILES = {"water", "water-green"}
 
 DECT.INCOMPATIBLE = {}
 DECT.INCOMPATIBLE.REASONS = {

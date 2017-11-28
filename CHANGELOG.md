@@ -2,6 +2,14 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.7.6 - Unreleased (coming soon)
+
+### Added
+* New mod setting for toggling placing ores as gravel
+
+### Bugfixes
+* Fixed that water tiles were not available for crafting when playing with _Alien Biomes_
+
 ## v0.7.5 - 2017-11-21
 
 ### Added
