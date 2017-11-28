@@ -24,7 +24,7 @@ data:extend({
 	},
 	{
 		type = "bool-setting",
-		name = "dectorio-walls",
+		name = "dectorio-gravel",
 		setting_type = "startup",
 		default_value = true,
 		order = "a-d"
@@ -38,38 +38,45 @@ data:extend({
 	},
 	{
 		type = "bool-setting",
-		name = "dectorio-signs",
+		name = "dectorio-walls",
 		setting_type = "startup",
 		default_value = true,
 		order = "a-f"
 	},
 	{
 		type = "bool-setting",
-		name = "dectorio-signals",
+		name = "dectorio-signs",
 		setting_type = "startup",
 		default_value = true,
 		order = "a-g"
 	},
 	{
 		type = "bool-setting",
-		name = "dectorio-item-group",
+		name = "dectorio-signals",
 		setting_type = "startup",
 		default_value = true,
 		order = "a-h"
 	},
 	{
 		type = "bool-setting",
+		name = "dectorio-item-group",
+		setting_type = "startup",
+		default_value = true,
+		order = "b-a"
+	},
+	{
+		type = "bool-setting",
 		name = "dectorio-vanilla-hazard-concrete-style",
 		setting_type = "startup",
 		default_value = false,
-		order = "b-a"
+		order = "c-a"
 	},
 	{
 		type = "bool-setting",
 		name = "dectorio-landscaping-blueprintable",
 		setting_type = "startup",
 		default_value = false,
-		order = "b-b"
+		order = "c-b"
 	},
 	{
 		type = "double-setting",
@@ -78,7 +85,7 @@ data:extend({
 		default_value = 1,
 		minimum_value = 0,
 		maximum_value = 1,
-		order = "c-a"
+		order = "d-a"
 	},
 	{
 		type = "int-setting",
@@ -87,7 +94,7 @@ data:extend({
 		default_value = 500,
 		minimum_value = 100,
 		maximum_value = 5000,
-		order = "c-b"
+		order = "d-b"
 	},
 	{
 		type = "int-setting",
@@ -96,7 +103,7 @@ data:extend({
 		default_value = 500,
 		minimum_value = 100,
 		maximum_value = 5000,
-		order = "c-c"
+		order = "d-c"
 	},
 	{
 		type = "int-setting",
@@ -105,6 +112,6 @@ data:extend({
 		default_value = 200,
 		minimum_value = 100,
 		maximum_value = 5000,
-		order = "c-d"
+		order = "d-d"
 	}
 })
