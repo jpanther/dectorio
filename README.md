@@ -88,7 +88,7 @@ When you launch the game, the new mod will be enabled by default.
 
 * Includes settings for enabling or disabling each of the above features (Options > Mods > Startup). Ideally these should only be changed before starting a new game. Changes on existing games will require content to be migrated and some items may be lost if you disable components you've already used on an existing save. Always make a backup first!
 
-  ![Mod settings](https://cl.ly/0u3s0Y3G1A39/modsettings.png)
+  ![Mod settings](https://cl.ly/3J0S0z0T2B1l/mod-settings.png)
 
 * Items above marked ^ can be further customised in the mod settings dialog
 
@@ -128,14 +128,14 @@ Dectorio uses CrowdIn to translate the mod into various languages.
 
 Fully supported languages:
 * English
-* German (84%)
-* Polish (85%)
 
-Languages in progress:
-* Chinese Simplified (38%)
-* Chinese Traditional (46%)
-* Czech (52%)
-* Korean (39%)
+Community translations:
+* Chinese Simplified (37%)
+* Chinese Traditional (45%)
+* Czech (50%)
+* German (80%)
+* Korean (95%)
+* Polish (81%)
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
@@ -145,13 +145,13 @@ Limited testing has been completed with other mods. Warnings will be shown in-ga
 
 It is not recommended to use other coloured signal mods at the same time as Dectorio. This can cause coloured signals to be overwritten multiple times and lead to game-breaking compatibility issues with other mods. If you would like more colours, you can add these in the Dectorio config.lua file (instructions are in the file).
 
-Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mods/Earendel/alien-biomes).
+Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mods/Earendel/alien-biomes) and [Water Fix](https://mods.factorio.com/mods/Earendel/water-fix).
 
 Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mods/Mylon/Concreep), [FARL](https://mods.factorio.com/mods/Choumiko/FARL), [Pavement Drive Assist](https://mods.factorio.com/mods/Arcitos/PavementDriveAssist).
 
 Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mods/Arcitos/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mods/kapaer/beautiful_bridge_railway), [Naked Rails](https://mods.factorio.com/mods/futileohm/naked-rails).
 
-Mods with known compatiblity issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mods/Klonan/Expanded_Color_Lamps), [More Colours](https://mods.factorio.com/mods/zx64/more-colours), [More signal color](https://mods.factorio.com/mods/devilwarriors/More%20signal%20color), [Concrete and Stone](https://mods.factorio.com/mods/Earendel/concrete-and-stone), [Reinforced Walls](https://mods.factorio.com/mods/ChurchOrganist/Reinforced-Walls), [No Walls or Gates](https://mods.factorio.com/mods/abregado/no-walls).
+Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mods/Klonan/Expanded_Color_Lamps), [More Colours](https://mods.factorio.com/mods/zx64/more-colours), [More signal color](https://mods.factorio.com/mods/devilwarriors/More%20signal%20color), [Concrete and Stone](https://mods.factorio.com/mods/Earendel/concrete-and-stone), [Reinforced Walls](https://mods.factorio.com/mods/ChurchOrganist/Reinforced-Walls), [No Walls or Gates](https://mods.factorio.com/mods/abregado/no-walls).
 
 ### Changelog
 
@@ -165,5 +165,6 @@ Special thanks to [marcfj](https://github.com/marcfj) for support and play testi
 #### Translators
 
 German translation by [seeba8](https://github.com/seeba8).  
-Polish translation by [Tomirad](https://github.com/Tomirad).
-Czech translation by [dereksp](https://crowdin.com/profile/dereksp).
+Polish translation by [Tomirad](https://github.com/Tomirad).  
+Czech translation by [dereksp](https://crowdin.com/profile/dereksp).  
+Korean translation by [Xagros](https://crowdin.com/profile/GimoXagros).  
