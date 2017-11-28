@@ -6,6 +6,7 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 
 ### Added
 * New mod setting for toggling placing ores as gravel
+* Dectorio floorings can now be placed adjacent to water when _Water Fix_ mod is installed
 
 ### Bugfixes
 * Fixed that water tiles were not available for crafting when playing with _Alien Biomes_
