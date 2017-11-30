@@ -2,14 +2,17 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
-## v0.7.6 - Unreleased (coming soon)
+## v0.7.6 - 2017-12-01
 
 ### Added
-* New mod setting for toggling placing ores as gravel
+* New setting for toggling whether ores can be placed as gravel
 * Dectorio floorings can now be placed adjacent to water when _Water Fix_ mod is installed
 
 ### Bugfixes
 * Fixed that water tiles were not available for crafting when playing with _Alien Biomes_
+
+### Locales
+* Updated German, Korean and Polish translations
 
 ## v0.7.5 - 2017-11-21
 
@@ -48,12 +51,12 @@ The latest stable release is available at <https://github.com/jpanther/Dectorio/
 * Better handling for when third party mods that affect Dectorio are added or removed
 
 ### Bugfixes
-* Added some additional locale strings to fix issues with Creative Mode mod
+* Added some additional locale strings to fix issues with _Creative Mode_ mod
 
 ## v0.7.1 - 2017-10-21
 
 ### Bugfixes
-* Fixed migration error for existing saves without Alien Biomes mod
+* Fixed migration error for existing saves without _Alien Biomes_ mod
 
 ## v0.7.0 - 2017-10-20
 
@@ -61,7 +64,7 @@ Please take note of the concrete recipe changes in this release. You may need to
 
 ### Added
 * New in-game settings for configuring Dectorio (replaces the old settings that were configured via config.lua)
-* Landscaping support for Alien Biomes mod
+* Landscaping support for _Alien Biomes_ mod
 
 ### Changed
 * Concrete recipe no longer requires iron sticks and reverts to the vanilla iron ore recipe
