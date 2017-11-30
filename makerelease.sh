@@ -5,6 +5,10 @@
 # https://stedolan.github.io/jq/
 modname=`cat info.json|jq -r .name`
 modver=`cat info.json|jq -r .version`
+gitbranch=`git rev-parse --abbrev-ref HEAD`
+
+# Switch to master branch
+git checkout master
 
 # Create git tag for this version
 git tag "v$modver"
@@ -14,3 +18,6 @@ git archive --prefix "${modname}_$modver/" -o "../release/${modname}_$modver.zip
 
 # Push tag to git
 git push origin "v$modver"
+
+# Switch back to original branch
+git checkout $gitbranch
