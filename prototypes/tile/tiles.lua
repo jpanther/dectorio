@@ -3,7 +3,7 @@
 -- Return tile variants array for given set and variant
 local function tile_variants(set, variant)
 	local sprite_count = {
-		inner_corner = 32, 
+		inner_corner = 32,
 		outer_corner = 16,
 		side = 16,
 		u_transition = 16,
@@ -11,7 +11,7 @@ local function tile_variants(set, variant)
 	}
 	if set == "wood" or set == "stone" or set == "iron" or set == "copper" or set == "coal" then
 		sprite_count = {
-			inner_corner = 8, 
+			inner_corner = 8,
 			outer_corner = 1,
 			side = 8,
 			u_transition = 8,
@@ -57,6 +57,27 @@ local function tile_variants(set, variant)
 		o_transition = {
 			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."-o.png",
 			count = sprite_count.o_transition
+		}
+	}
+end
+
+-- Return tile variants array for given set and variant
+local function tile_variants_material(set, variant)
+	return {
+		main = data.raw["tile"]["concrete"].variants.main,
+		inner_corner_mask = data.raw["tile"]["concrete"].variants.inner_corner_mask,
+		outer_corner_mask = data.raw["tile"]["concrete"].variants.outer_corner_mask,
+		side_mask = data.raw["tile"]["concrete"].variants.side_mask,
+		u_transition_mask = data.raw["tile"]["concrete"].variants.u_transition_mask,
+		o_transition_mask = data.raw["tile"]["concrete"].variants.o_transition_mask,
+		material_background = {
+			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set..".png",
+			count = 8,
+			hr_version = {
+				picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/hr-"..set..".png",
+				count = 8,
+				scale = 0.5
+			}
 		}
 	}
 end
@@ -117,11 +138,11 @@ if DECT.ENABLED["gravel"] then
 			layer = 60,
 			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 			variants = tile_variants("stone", "gravel"),
-			walking_sound = data.raw["tile"]["dirt"].walking_sound,
+			walking_sound = data.raw["tile"]["dry-dirt"].walking_sound,
 			map_color={r=146, g=146, b=146},
 			ageing=0,
 			vehicle_friction_modifier = dirt_vehicle_speed_modifier
-		},		
+		},
 		{
 			type = "tile",
 			name = "dect-iron-gravel",
@@ -133,11 +154,11 @@ if DECT.ENABLED["gravel"] then
 			layer = 60,
 			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 			variants = tile_variants("iron", "gravel"),
-			walking_sound = data.raw["tile"]["dirt"].walking_sound,
+			walking_sound = data.raw["tile"]["dry-dirt"].walking_sound,
 			map_color={r=114, g=137, b=163},
 			ageing=0,
 			vehicle_friction_modifier = dirt_vehicle_speed_modifier
-		},		
+		},
 		{
 			type = "tile",
 			name = "dect-copper-gravel",
@@ -149,7 +170,7 @@ if DECT.ENABLED["gravel"] then
 			layer = 60,
 			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 			variants = tile_variants("copper", "gravel"),
-			walking_sound = data.raw["tile"]["dirt"].walking_sound,
+			walking_sound = data.raw["tile"]["dry-dirt"].walking_sound,
 			map_color={r=163, g=118, b=115},
 			ageing=0,
 			vehicle_friction_modifier = dirt_vehicle_speed_modifier
@@ -165,7 +186,7 @@ if DECT.ENABLED["gravel"] then
 			layer = 60,
 			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 			variants = tile_variants("coal", "gravel"),
-			walking_sound = data.raw["tile"]["dirt"].walking_sound,
+			walking_sound = data.raw["tile"]["dry-dirt"].walking_sound,
 			map_color={r=84, g=84, b=84},
 			ageing=0,
 			vehicle_friction_modifier = dirt_vehicle_speed_modifier
@@ -190,13 +211,14 @@ if DECT.ENABLED["painted-concrete"] then
 					name = "dect-paint-"..variant.."-"..direction.this,
 					needs_correction = false,
 					next_direction = "dect-paint-"..variant.."-"..direction.next,
+					transition_merges_with_tile = "concrete",
 					minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-"..variant},
 					mined_sound = data.raw["tile"]["concrete"].mined_sound,
 					collision_mask = {"ground-tile"},
 					walking_speed_modifier = 1.4,
 					layer = 62,
 					decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
-					variants = tile_variants("concrete", variant.."-"..direction.this),
+					variants = tile_variants_material("concrete", variant.."-"..direction.this),
  					walking_sound = data.raw["tile"]["concrete"].walking_sound,
 					map_color={r=105, g=105, b=105},
 					ageing=0,
@@ -215,13 +237,11 @@ if DECT.ENABLED["painted-concrete"] then
 
 	base_tile_hazard_left.layer = 62
 	base_tile_hazard_right.layer = 62
-	base_tile_hazard_left.transition_merges_with_tile = nil
-	base_tile_hazard_right.transition_merges_with_tile = nil
-	
+
 	-- Use the Dectorio look and feel for Hazard concrete
 	if not DECT.CONFIG.SETTINGS["vanilla_hazard_concrete"] then
-		base_tile_hazard_left.variants = tile_variants("concrete", "hazard-left")
-		base_tile_hazard_right.variants = tile_variants("concrete", "hazard-right")
+		base_tile_hazard_left.variants = tile_variants_material("concrete", "hazard-left")
+		base_tile_hazard_right.variants = tile_variants_material("concrete", "hazard-right")
 	end
 
 end

@@ -2,6 +2,23 @@
 
 if DECT.ENABLED["landscaping"] then
 
+	local base_tiles = DECT.CONFIG.BASE_TILES
+	local water_tiles = DECT.CONFIG.BASE_WATER_TILES
+	local base_rocks = DECT.CONFIG.BASE_ROCKS
+
+	-- Add new Landscaping technoogy
+	local landscaping_effects = {}
+	for _, tile in pairs(base_tiles) do
+		if data.raw["tile"][tile] then
+			table.insert(landscaping_effects, {type = "unlock-recipe", recipe = "dect-base-"..tile})
+		end
+	end
+	for _, rock in pairs(base_rocks) do
+		if data.raw["simple-entity"][rock] then
+			table.insert(landscaping_effects, {type = "unlock-recipe", recipe = "dect-base-"..rock})
+		end
+	end
+
 	data:extend({
 		{
 			type = "technology",
@@ -15,52 +32,7 @@ if DECT.ENABLED["landscaping"] then
 				},
 				time = 10
 			},
-			effects = {
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-dirt"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-sand"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-sand-dark"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-grass"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-grass-dry"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-red-desert"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-red-desert-dark"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-stone-rock"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-red-desert-rock-big-01"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-red-desert-rock-huge-01"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-red-desert-rock-huge-02"
-				}
-			},
+			effects = landscaping_effects,
 			order = "a"
 		}
 	})
@@ -68,19 +40,12 @@ if DECT.ENABLED["landscaping"] then
 	-- Move base landfill tech underneath landscaping
 	local base_landfill = data.raw["technology"]["landfill"]
 	base_landfill.prerequisites = {"dect-landscaping"}
-	base_landfill.effects = {
-				{
-					type = "unlock-recipe",
-					recipe = "landfill"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-water"
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "dect-base-water-green"
-				}
-	}
+
+	-- Add waterfill items to Landfill technology
+	for _, tile in pairs(water_tiles) do
+		if data.raw["tile"][tile] then
+			table.insert(base_landfill.effects, {type = "unlock-recipe", recipe = "dect-base-"..tile})
+		end
+	end
 
 end

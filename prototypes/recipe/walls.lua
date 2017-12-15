@@ -1,7 +1,7 @@
 -- recipe/walls
 
 if DECT.ENABLED["walls"] then
-	
+
 	-- Add new recipes
 	data:extend({
 		{
@@ -19,6 +19,7 @@ if DECT.ENABLED["walls"] then
 			name = "dect-concrete-wall-from-stone-wall",
 			localised_name = {"recipe-name.dect-concrete-wall-from-stone-wall"},
 			icon = "__Dectorio__/graphics/icons/concrete-wall-from-stone-wall.png",
+			icon_size = 32,
 			energy_required = 1,
 			enabled = false,
 			ingredients = {

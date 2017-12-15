@@ -6,16 +6,7 @@ if DECT.ENABLED["walls"] then
 	local base_stone_walls = data.raw["technology"]["stone-walls"]
 	base_stone_walls.icon = "__Dectorio__/graphics/technology/basic-walls.png"
 	base_stone_walls.icon_size = 128
-	base_stone_walls.effects = {
-		{
-			type = "unlock-recipe",
-			recipe = "dect-wood-wall"
-		},
-		{
-			type = "unlock-recipe",
-			recipe = "stone-wall"
-		}
-	}
+	table.insert(base_stone_walls.effects, {type = "unlock-recipe", recipe = "dect-wood-wall"})
 
 	data:extend({
 		{
@@ -54,6 +45,6 @@ if DECT.ENABLED["walls"] then
 	-- Change gates to require concrete-walls and unlock Hazard gate
 	local base_gates = data.raw["technology"]["gates"]
 	base_gates.prerequisites = {"dect-advanced-walls", "military-2"}
-	table.insert(base_gates.effects,{type="unlock-recipe",recipe="dect-hazard-gate"})
+	table.insert(base_gates.effects, {type="unlock-recipe", recipe="dect-hazard-gate"})
 
 end

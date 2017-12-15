@@ -2,14 +2,17 @@
 
 if DECT.ENABLED["walls"] then
 
+	-- Make a copy of the base stone wall before clearing it out
+	local base_stone_wall = data.raw["wall"]["stone-wall"]
 	data.raw["wall"]["stone-wall"] = nil
 
-	data:extend({  
+	data:extend({
 		{
 			type = "wall",
 			name = "stone-wall",
 			icon = "__base__/graphics/icons/stone-wall.png",
-			flags = {"placeable-neutral", "player-creation"},
+			icon_size = 32,
+	 		flags = {"placeable-neutral", "player-creation"},
 			collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
 			selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
 			minable = {mining_time = 0.5, result = "stone-wall"},
@@ -288,52 +291,41 @@ if DECT.ENABLED["walls"] then
 							draw_as_shadow = true
 						}
 					}
-				}
-			},
-			wall_diode_green = {
-				filename = "__base__/graphics/entity/gate/wall-diode-green.png",
-				width = 21,
-				height = 22,
-				shift = {0, -0.78125}
-			},
-			wall_diode_green_light = {
-				minimum_darkness = 0.3,
-				color = {g=1},
-				shift = {0, -0.78125},
-				size = 1,
-				intensity = 0.3
-			},
-			wall_diode_red = {
-				filename = "__base__/graphics/entity/gate/wall-diode-red.png",
-				width = 21,
-				height = 22,
-				shift = {0, -0.78125}
-			},
-			wall_diode_red_light = {
-				minimum_darkness = 0.3,
-				color = {r=1},
-				shift = {0, -0.78125},
-				size = 1,
-				intensity = 0.3
-			},
-			circuit_wire_connection_point = {
-				shadow = {
-					red = {0.890625, 0.828125},
-					green = {0.890625, 0.703125}
 				},
-				wire = {
-					red = {-0.28125, -0.71875},
-					green = {-0.28125, -0.84375}
+				water_connection_patch = {
+					sheets = {
+						{
+							filename = "__Dectorio__/graphics/entity/stone-brick-wall/wall-patch.png",
+							priority = "extra-high",
+							width = 52,
+							height = 68,
+							shift = util.by_pixel(0, -2),
+						},
+						{
+							filename = "__Dectorio__/graphics/entity/stone-brick-wall/wall-patch-shadow.png",
+							priority = "extra-high",
+							draw_as_shadow = true,
+							width = 74,
+							height = 96,
+							shift = util.by_pixel(6, 13),
+						}
+					}
 				}
 			},
-			circuit_wire_max_distance = 7.5,
-			circuit_connector_sprites = get_circuit_connector_sprites({0, -0.59375}, nil, 6),
+			wall_diode_green = base_stone_wall.wall_diode_green,
+			wall_diode_green_light = base_stone_wall.wall_diode_green_light,
+			wall_diode_red = base_stone_wall.wall_diode_red,
+			wall_diode_red_light = base_stone_wall.wall_diode_red_light,
+			circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
+			circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
+			circuit_wire_max_distance = default_circuit_wire_max_distance,
 			default_output_signal = {type = "virtual", name = "signal-green"} or {type = "virtual", name = "signal-G"}
 		},
 		{
 			type = "wall",
 			name = "dect-concrete-wall",
 			icon = "__Dectorio__/graphics/icons/concrete-wall.png",
+			icon_size = 32,
 			flags = {"placeable-neutral", "player-creation"},
 			collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
 			selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -382,284 +374,21 @@ if DECT.ENABLED["walls"] then
 					percent = 75
 				}
 			},
-			pictures = {
-				single = {
-					layers = {
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-single.png",
-							priority = "extra-high",
-							width = 22,
-							height = 42,
-							shift = {0, -0.15625}
-						},
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-single-shadow.png",
-							priority = "extra-high",
-							width = 47,
-							height = 32,
-							shift = {0.359375, 0.5},
-							draw_as_shadow = true
-						}
-					}
-				},
-				straight_vertical = {
-					{
-						layers = {
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-vertical-1.png",
-								priority = "extra-high",
-								width = 22,
-								height = 42,
-								shift = {0, -0.15625}
-							},
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-vertical-shadow.png",
-								priority = "extra-high",
-								width = 47,
-								height = 60,
-								shift = {0.390625, 0.625},
-								draw_as_shadow = true
-							}
-						}
-					},
-					{
-						layers = {
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-vertical-2.png",
-								priority = "extra-high",
-								width = 22,
-								height = 42,
-								shift = {0, -0.15625}
-							},
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-vertical-shadow.png",
-								priority = "extra-high",
-								width = 47,
-								height = 60,
-								shift = {0.390625, 0.625},
-								draw_as_shadow = true
-							}
-						}
-					},
-					{
-						layers = {
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-vertical-3.png",
-								priority = "extra-high",
-								width = 22,
-								height = 42,
-								shift = {0, -0.15625}
-							},
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-vertical-shadow.png",
-								priority = "extra-high",
-								width = 47,
-								height = 60,
-								shift = {0.390625, 0.625},
-								draw_as_shadow = true
-							}
-						}
-					}
-				},
-				straight_horizontal = {
-					{
-						layers = {
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-horizontal-1.png",
-								priority = "extra-high",
-								width = 32,
-								height = 42,
-								shift = {0, -0.15625}
-							},
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-horizontal-shadow.png",
-								priority = "extra-high",
-								width = 59,
-								height = 32,
-								shift = {0.421875, 0.5},
-								draw_as_shadow = true
-							}
-						}
-					},
-					{
-						layers = {
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-horizontal-2.png",
-								priority = "extra-high",
-								width = 32,
-								height = 42,
-								shift = {0, -0.15625}
-							},
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-horizontal-shadow.png",
-								priority = "extra-high",
-								width = 59,
-								height = 32,
-								shift = {0.421875, 0.5},
-								draw_as_shadow = true
-							}
-						}
-					},
-					{
-						layers = {
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-horizontal-3.png",
-								priority = "extra-high",
-								width = 32,
-								height = 42,
-								shift = {0, -0.15625}
-							},
-							{
-								filename = "__Dectorio__/graphics/entity/concrete-wall/wall-straight-horizontal-shadow.png",
-								priority = "extra-high",
-								width = 59,
-								height = 32,
-								shift = {0.421875, 0.5},
-								draw_as_shadow = true
-							}
-						}
-					}
-				},
-				corner_right_down = {
-					layers = {
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-corner-right-down.png",
-							priority = "extra-high",
-							width = 27,
-							height = 42,
-							shift = {0.078125, -0.15625}
-						},
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-corner-right-down-shadow.png",
-							priority = "extra-high",
-							width = 53,
-							height = 61,
-							shift = {0.484375, 0.640625},
-							draw_as_shadow = true
-						}
-					}
-				},
-				corner_left_down = {
-					layers = {
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-corner-left-down.png",
-							priority = "extra-high",
-							width = 27,
-							height = 42,
-							shift = {-0.078125, -0.15625}
-						},
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-corner-left-down-shadow.png",
-							priority = "extra-high",
-							width = 53,
-							height = 60,
-							shift = {0.328125, 0.640625},
-							draw_as_shadow = true
-						}
-					}
-				},
-				t_up = {
-					layers = {
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-t-down.png",
-							priority = "extra-high",
-							width = 32,
-							height = 42,
-							shift = {0, -0.15625}
-						},
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-t-down-shadow.png",
-							priority = "extra-high",
-							width = 71,
-							height = 61,
-							shift = {0.546875, 0.640625},
-							draw_as_shadow = true
-						}
-					}
-				},
-				ending_right = {
-					layers = {
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-ending-right.png",
-							priority = "extra-high",
-							width = 27,
-							height = 42,
-							shift = {0.078125, -0.15625}
-						},
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-ending-right-shadow.png",
-							priority = "extra-high",
-							width = 53,
-							height = 32,
-							shift = {0.484375, 0.5},
-							draw_as_shadow = true
-						}
-					}
-				},
-				ending_left = {
-					layers = {
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-ending-left.png",
-							priority = "extra-high",
-							width = 27,
-							height = 42,
-							shift = {-0.078125, -0.15625}
-						},
-						{
-							filename = "__Dectorio__/graphics/entity/concrete-wall/wall-ending-left-shadow.png",
-							priority = "extra-high",
-							width = 53,
-							height = 32,
-							shift = {0.328125, 0.5},
-							draw_as_shadow = true
-						}
-					}
-				}
-			},
-			wall_diode_green = {
-				filename = "__base__/graphics/entity/gate/wall-diode-green.png",
-				width = 21,
-				height = 22,
-				shift = {0, -0.78125}
-			},
-			wall_diode_green_light = {
-				minimum_darkness = 0.3,
-				color = {g=1},
-				shift = {0, -0.78125},
-				size = 1,
-				intensity = 0.3
-			},
-			wall_diode_red = {
-				filename = "__base__/graphics/entity/gate/wall-diode-red.png",
-				width = 21,
-				height = 22,
-				shift = {0, -0.78125}
-			},
-			wall_diode_red_light = {
-				minimum_darkness = 0.3,
-				color = {r=1},
-				shift = {0, -0.78125},
-				size = 1,
-				intensity = 0.3
-			},
-			circuit_wire_connection_point = {
-				shadow = {
-					red = {0.890625, 0.828125},
-					green = {0.890625, 0.703125}
-				},
-				wire = {
-					red = {-0.28125, -0.71875},
-					green = {-0.28125, -0.84375}
-				}
-			},
-			circuit_wire_max_distance = 7.5,
-			circuit_connector_sprites = get_circuit_connector_sprites({0, -0.59375}, nil, 6),
+			pictures = base_stone_wall.pictures,
+			wall_diode_green = base_stone_wall.wall_diode_green,
+			wall_diode_green_light = base_stone_wall.wall_diode_green_light,
+			wall_diode_red = base_stone_wall.wall_diode_red,
+			wall_diode_red_light = base_stone_wall.wall_diode_red_light,
+			circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
+			circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
+			circuit_wire_max_distance = default_circuit_wire_max_distance,
 			default_output_signal = {type = "virtual", name = "signal-green"} or {type = "virtual", name = "signal-G"}
 		},
 		{
 			type = "wall",
 			name = "dect-chain-wall",
 			icon = "__Dectorio__/graphics/icons/chain-wall.png",
+			icon_size = 32,
 			flags = {"placeable-neutral", "player-creation"},
 			collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
 			selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -1013,50 +742,20 @@ if DECT.ENABLED["walls"] then
 					}
 				}
 			},
-			wall_diode_green = {
-				filename = "__base__/graphics/entity/gate/wall-diode-green.png",
-				width = 21,
-				height = 22,
-				shift = {0, -0.78125}
-			},
-			wall_diode_green_light = {
-				minimum_darkness = 0.3,
-				color = {g=1},
-				shift = {0, -0.78125},
-				size = 1,
-				intensity = 0.3
-			},
-			wall_diode_red = {
-				filename = "__base__/graphics/entity/gate/wall-diode-red.png",
-				width = 21,
-				height = 22,
-				shift = {0, -0.78125}
-			},
-			wall_diode_red_light = {
-				minimum_darkness = 0.3,
-				color = {r=1},
-				shift = {0, -0.78125},
-				size = 1,
-				intensity = 0.3
-			},
-			circuit_wire_connection_point = {
-				shadow = {
-					red = {0.890625, 0.828125},
-					green = {0.890625, 0.703125}
-				},
-				wire = {
-					red = {-0.28125, -0.71875},
-					green = {-0.28125, -0.84375}
-				}
-			},
-			circuit_wire_max_distance = 7.5,
-			circuit_connector_sprites = get_circuit_connector_sprites({0, -0.59375}, nil, 6),
+			wall_diode_green = base_stone_wall.wall_diode_green,
+			wall_diode_green_light = base_stone_wall.wall_diode_green_light,
+			wall_diode_red = base_stone_wall.wall_diode_red,
+			wall_diode_red_light = base_stone_wall.wall_diode_red_light,
+			circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
+			circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
+			circuit_wire_max_distance = default_circuit_wire_max_distance,
 			default_output_signal = {type = "virtual", name = "signal-green"} or {type = "virtual", name = "signal-G"}
 		},
 		{
 			type = "wall",
 			name = "dect-wood-wall",
 			icon = "__Dectorio__/graphics/icons/wood-wall.png",
+			icon_size = 32,
 			flags = {"placeable-neutral", "player-creation"},
 			collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
 			selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -1353,44 +1052,13 @@ if DECT.ENABLED["walls"] then
 					}
 				}
 			},
-			wall_diode_green = {
-				filename = "__base__/graphics/entity/gate/wall-diode-green.png",
-				width = 21,
-				height = 22,
-				shift = {0, -0.78125}
-			},
-			wall_diode_green_light = {
-				minimum_darkness = 0.3,
-				color = {g=1},
-				shift = {0, -0.78125},
-				size = 1,
-				intensity = 0.3
-			},
-			wall_diode_red = {
-				filename = "__base__/graphics/entity/gate/wall-diode-red.png",
-				width = 21,
-				height = 22,
-				shift = {0, -0.78125}
-			},
-			wall_diode_red_light = {
-				minimum_darkness = 0.3,
-				color = {r=1},
-				shift = {0, -0.78125},
-				size = 1,
-				intensity = 0.3
-			},
-			circuit_wire_connection_point = {
-				shadow = {
-					red = {0.890625, 0.828125},
-					green = {0.890625, 0.703125}
-				},
-				wire = {
-					red = {-0.28125, -0.71875},
-					green = {-0.28125, -0.84375}
-				}
-			},
-			circuit_wire_max_distance = 7.5,
-			circuit_connector_sprites = get_circuit_connector_sprites({0, -0.59375}, nil, 6),
+			wall_diode_green = base_stone_wall.wall_diode_green,
+			wall_diode_green_light = base_stone_wall.wall_diode_green_light,
+			wall_diode_red = base_stone_wall.wall_diode_red,
+			wall_diode_red_light = base_stone_wall.wall_diode_red_light,
+			circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
+			circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
+			circuit_wire_max_distance = default_circuit_wire_max_distance,
 			default_output_signal = {type = "virtual", name = "signal-green"} or {type = "virtual", name = "signal-G"}
 		}
 

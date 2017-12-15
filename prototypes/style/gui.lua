@@ -11,7 +11,7 @@ default_gui["dect-icon-table"] = {
 
 default_gui["dect-icon-button"] = {
 	type = "button_style",
-	parent = "button_style",
+	parent = "button",
 	minimal_width = 32,
 	minimal_height = 32,
 	top_padding = 0,
@@ -22,7 +22,7 @@ default_gui["dect-icon-button"] = {
 
 default_gui["dect-icon-button-active"] = {
 	type = "button_style",
-	parent = "button_style",
+	parent = "button",
 	minimal_width = 32,
 	minimal_height = 32,
 	top_padding = 0,
@@ -39,10 +39,10 @@ default_gui["dect-icon-button-active"] = {
 }
 
 default_gui["dect-scroll"] = {
-    type = "scroll_pane_style",
-    parent = "scroll_pane_style",
-    minimal_width = 670,
-    maximal_width = 670,
-    minimal_height = 480,
-    maximal_height = 480
+	type = "scroll_pane_style",
+	parent = "scroll_pane",
+	minimal_width = 670,
+	maximal_width = 670,
+	minimal_height = 480,
+	maximal_height = 480
 }

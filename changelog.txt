@@ -1,0 +1,266 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.8.0
+Date: 15. 12. 2017
+  Added:
+    - Factorio 0.16 support
+    - New Painted concrete textures to match new vanilla Concrete style
+    - Painted concrete floorings now support high resolution graphics
+    - New landscaping items for placing all the new base game terrain types
+    - Graphics support for placing stone and concrete walls alongside water (others to come in a future update)
+    - Support for new in-game changelog feature
+    - More robust technology recipe-unlock handling to improve compatibility with third-party mods
+    - Support for migrating Fire hazard concrete from Color Coding mod to Emergency concrete
+  Removed:
+    - Factorio 0.15 support - use Dectorio v0.7.6 when playing 0.15 saves
+    - Removed support for Water Fix mod as the base game now supports placing tiles alongside water
+    - Redundant assets to reduce overall mod size
+  Locales:
+    - Updated German translations
+---------------------------------------------------------------------------------------------------
+Version: 0.7.6
+Date: 01. 12. 2017
+  Added:
+    - New setting for toggling whether ores can be placed as gravel
+    - Dectorio floorings can now be placed adjacent to water when Water Fix mod is installed
+  Bugfixes:
+    - Fixed that water tiles were not available for crafting when playing with Alien Biomes
+  Locales:
+    - Updated German, Korean and Polish translations
+---------------------------------------------------------------------------------------------------
+Version: 0.7.5
+Date: 21. 11. 2017
+  Added:
+    - New crafting tab to separate decorative items from other crafting menus - can be disabled in settings (thanks to Aidiakapi (https://github.com/Aidiakapi))
+    - New localisation system - help translate Dectorio by visiting CrowdIn (https://crowdin.com/project/dectorio)
+    - Added initial Czech translation (thanks to dereksp (https://crowdin.com/profile/dereksp))
+  Bugfixes:
+    - Fixed some audio and repairability issues with traffic bollards
+---------------------------------------------------------------------------------------------------
+Version: 0.7.4
+Date: 04. 11. 2017
+  Bugfixes:
+    - Fixed technology error that appeared when Decoratives setting was set to disabled
+---------------------------------------------------------------------------------------------------
+Version: 0.7.3
+Date: 27. 10. 2017
+  Added:
+    - New gfx variants for chain-link fence so it looks more realistic
+  Bugfixes:
+    - Major fixes to make signs more robust in multiplayer games
+    - Signs are now indestructible and unminable while the player that placed the sign is selecting an icon
+    - Icon selection GUI now has a 'Cancel' button
+    - Only one sign can be placed at a time (by the same player), preventing blank signs from being placed
+    - Icons are now indestructible and can only be removed by removing the sign
+    - Icons are now correctly removed when a sign is destroyed, preventing orphaned icons from being left on the game surface
+---------------------------------------------------------------------------------------------------
+Version: 0.7.2
+Date: 26. 10. 2017
+  Added:
+    - New gravel styles - Iron, Copper and Coal Gravel (placed using raw iron, copper and coal ores)
+    - New Traffic bollard decorative item (unlocked via Plastics technology)
+    - Landscaping technology now allows placement of decorative rock entities
+    - Better handling for when third party mods that affect Dectorio are added or removed
+  Bugfixes:
+    - Added some additional locale strings to fix issues with Creative Mode mod
+---------------------------------------------------------------------------------------------------
+Version: 0.7.1
+Date: 21. 10. 2017
+  Bugfixes:
+    - Fixed migration error for existing saves without Alien Biomes mod
+---------------------------------------------------------------------------------------------------
+Version: 0.7.0
+Date: 20. 10. 2017
+  Added:
+    - New in-game settings for configuring Dectorio (replaces the old settings that were configured via config.lua)
+    - Landscaping support for Alien Biomes mod
+  Changed:
+    - Concrete recipe no longer requires iron sticks and reverts to the vanilla iron ore recipe
+    - Concrete walls now require iron sticks to craft
+    - Adjusted flooring layer priority so they appear correctly when placed adjacent to each other (order is now ground > gravel > stone path > wood floor > concrete)
+    - Tweaked minimap colours for some flooring styles
+---------------------------------------------------------------------------------------------------
+Version: 0.6.2
+Date: 10. 10. 2017
+  Added:
+    - Polish translation (thanks to Tomirad (https://github.com/Tomirad))
+---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+Date: 05. 10. 2017
+  Changed:
+    - Reverted Landfill crafting time back to vanilla recipe
+  Bugfixes:
+    - Fixed error in migration script that would cause a crash when painted concrete was disabled
+    - Fixed that signs would render icons incorrectly when placed on alternate surfaces (ie. when using Factorissimo mod)
+    - Fixed GUI bug that would crash headless server when placing signs with certain other mods enabled
+---------------------------------------------------------------------------------------------------
+Version: 0.6.0
+Date: 21. 07. 2017
+  Added:
+    - Wooden and steel signs (unlocked via new Signs technology)
+    - Glowing lamp which will glow bright colours over a large radius when passed a signal from the circuit network
+    - Added more variations to the edge gfx for the gravel tiles
+    - New icon based signals for easier circuit network logic
+    - Signal colour for Steam
+  Changed:
+    - Hazard concrete now places as the vanilla hazard-concrete tile (fixes blueprint imports and issues when Dectorio is removed)
+    - Hazard concrete keeps the Dectorio look, however you can set a config.lua flag to change it to use the vanilla look, if preferred
+    - Balancing - halved crafting time of painted concrete
+---------------------------------------------------------------------------------------------------
+Version: 0.5.14
+Date: 18. 07. 2017
+  Added:
+    - German translation (thanks to seeba8 (https://github.com/seeba8))
+---------------------------------------------------------------------------------------------------
+Version: 0.5.13
+Date: 12. 07. 2017
+  Bugfixes:
+    - Notifications will no longer warn about incompatible mods when those components of Dectorio are disabled
+---------------------------------------------------------------------------------------------------
+Version: 0.5.12
+Date: 01. 06. 2017
+  Added:
+    - New painted concrete types - Caution (orange/white), Danger (red/yellow), Defect (blue/white) and Operations (black/white)
+  Changed:
+    - Adjusted radiation and safety concrete variants to be less bright
+  Bugfixes:
+    - Fixed hazard-right-side variant not correctly masked
+    - Fixed painted concrete on different layer to normal concrete
+---------------------------------------------------------------------------------------------------
+Version: 0.5.11
+Date: 31. 05. 2017
+  Added:
+    - New flooring - Gravel (placed using raw stone)
+    - Stone wall can now be upgraded to concrete wall
+  Changed:
+    - Adjusted map colours for flooring types to better distinguish the floors
+    - Landscaping items will no longer appear in blueprints (configurable in config.lua)
+    - Wooden walls can now be used as fuel
+---------------------------------------------------------------------------------------------------
+Version: 0.5.10
+Date: 29. 05. 2017
+  Added:
+    - New gate type - Hazard gate (black/yellow striped gates)
+  Changed:
+    - Doubled wood requirement for Wooden floorboards
+    - Wooden floorboards can now be used as fuel
+---------------------------------------------------------------------------------------------------
+Version: 0.5.9
+Date: 26. 05. 2017
+  Bugfixes:
+    - Fixed compatibility issues with other mods that rely on base Hazard concrete items or recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.5.8
+Date: 25. 05. 2017
+  Added:
+    - Landscaping items to place water and green water tiles (requires Earthworks technology)
+    - Tweaked Landfill recipe to take longer to craft
+    - Notifications for incompatible mods and when the mod is updated
+  Changed:
+    - Stone and concrete wall are now acid resistant
+    - Balancing - increased max health and physical resistance of concrete wall
+    - Balancing - adjusted gates to match health and resistances of concrete wall
+---------------------------------------------------------------------------------------------------
+Version: 0.5.7
+Date: 17. 05. 2017
+  Added:
+    - New wall type - Wooden barricade (unlocked via Basic walls technology)
+    - Shadow gfx for chain-link fence entities
+  Changed:
+    - Balancing - reduced max health of chain-link fence to make it less effective than concrete wall
+---------------------------------------------------------------------------------------------------
+Version: 0.5.6
+Date: 16. 05. 2017
+  Added:
+    - New signal colours for additional items - science packs, transport/underground belts, splitters, inserters and red/green/blue circuits
+  Changed:
+    - Tweaked some existing signal colours to better match their item colour
+    - Widened wooden floorboard sprites so there is no gap when placed next to a wall
+  Bugfixes:
+    - Moved wooden floorboards to own layer so they don't join to concrete
+---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: 15. 05. 2017
+  Bugfixes:
+    - Fixed migration error
+---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+Date: 15. 05. 2017
+  Added:
+    - New wall type - Chain-link fence (currently no shadow gfx, these will be added in a future release)
+  Changed:
+    - New Advanced walls technology that unlocks both concrete wall and chain-link fence
+    - Increased stack sizes of landscaping, flooring and walls (configurable in config.lua)
+  Bugfixes:
+    - More robust migration logic
+    - Fixed typo in migrated tech unlock that caused saves to not load in some rare instances
+---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+Date: 14. 05. 2017
+  Added:
+    - Landscaping now allows placement of dark sand, dry grass, red desert and dark red desert tiles
+    - New config.lua file that allows even more customisation over how the mod behaves
+    - Item descriptions for painted concrete
+  Changed:
+    - Gave all modded items prefixed prototype names to avoid potential clashes with other mods
+    - Better handling of migration for base Hazard concrete on existing saves when mod is added
+---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+Date: 11. 05. 2017
+  Added:
+    - New settings for enabling or disabling various parts of the mod (Options > Mods > Startup)
+---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+Date: 11. 05. 2017
+  Changed:
+    - Adjusted white/grey/black signal icons to follow same pattern as the other colours
+---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+Date: 10. 05. 2017
+  Added:
+    - Signal colours for raw resources, smelted items and fluids
+    - New signal colours - purple, orange, tangerine and aqua
+    - New signal icons for base game signal colours that better represent the actual signal colour
+  Bugfixes:
+    - Balancing - increased concrete wall health to better represent raw ingredient cost
+    - Changed stone walls to repurpose base "stone-wall" named prototypes to ensure compatibility with other mods
+    - Technology descriptions are now provided
+---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 06. 05. 2017
+  Bugfixes:
+    - Correctly disables base stone wall recipe in existing saves
+    - Migrates existing base stone wall to new stone wall
+    - Migrates existing hazard concrete to painted hazard concrete
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 04. 05. 2017
+  Added:
+    - Stone and Concrete wall variants
+  Changed:
+    - Removes decorations when placing base concrete and stone paths
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 03. 05. 2017
+  Added:
+    - Landscaping research that allows placement of dirt, sand and grass tiles
+    - Landfill now requires Landscaping to be researched as a pre-requisite
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 02. 05. 2017
+  Added:
+    - Radiation hazard painted concrete style
+    - Painted concrete can now be rotated
+    - Sound effects for wooden floorboards
+  Changed:
+    - Optimised wooden floorboard sprites
+    - Decorations are removed when placing wooden floorboards or painted concrete
+    - Renamed Concrete paint technology to Painted concrete
+    - Removed tile collisions with base concrete
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 30. 04. 2017
+  Initial Release:
+    - Wooden floorboards
+    - Hazard, Emergency and Safety painted concrete styles
+    - Modified base concrete recipe to include iron pipe and remove iron ore requirement
+    - Disables base hazard concrete

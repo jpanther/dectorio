@@ -15,6 +15,8 @@ Download the latest stable release from the [Factorio mod portal](https://mods.f
 * Mac: `~/Library/Application Support/factorio/mods/`
 * Linux: `~/.factorio/mods`
 
+> **Note:** If playing with Factorio 0.15, please download v0.7.6 as this is the last stable release supported on 0.15. v0.8.0 and later are only supported on Factorio 0.16.
+
 When you launch the game, the new mod will be enabled by default.
 
 ## Current Features
@@ -23,21 +25,21 @@ When you launch the game, the new mod will be enabled by default.
 
 * Adds traffic bollards for decorating roadways or protecting your factory from vehicular collisions
 
-  ![Traffic bollard](https://cl.ly/2U2c3M391i3Y/bollard.png)
+  ![Traffic bollard](https://img.pantherx.net/dectorio/traffic-bollard.png)
 
 ### Flooring styles
 
 * Adds basic gravel paths (placed using raw stone, coal, iron and copper)
 
-  ![Gravel styles](https://cl.ly/0I0Y2Y1v2N0N/gravel.png)
+  ![Gravel styles](https://img.pantherx.net/dectorio/gravel.png)
 
 * Adds wooden floorboard tiles with sound effects
 
-  ![Gravel and Wooden floorboards](https://cl.ly/253y1V0W362e/gravelwood.png)
+  ![Gravel and Wooden floorboards](https://img.pantherx.net/dectorio/gravel-wood.png)
 
 * Adds painted concrete tiles - Hazard (black/yellow), Danger (red/yellow), Emergency (white/red), Caution (orange/white), Radiation hazard (yellow/pink), Defect (blue/white), Operations (black/white) and Safety (white/green)
 
-  ![Painted concrete](https://cl.ly/2D04401r202w/paintconcrete.png)
+  ![Painted concrete](https://img.pantherx.net/dectorio/painted-concrete.png)
 
 * Painted Hazard concrete replaces default Hazard concrete^
 * Increased flooring item stack sizes^
@@ -48,7 +50,7 @@ When you launch the game, the new mod will be enabled by default.
 * Ability to place water and green water tiles (aka. 'waterfill')
 * Ability to place decorative rocks
 
-  ![Landscaping items](https://cl.ly/171X1J1s1D24/landscapeitems.png)
+  ![Landscaping items](https://img.pantherx.net/dectorio/landscaping.png)
 
 ### Walls and Gates
 
@@ -56,39 +58,39 @@ When you launch the game, the new mod will be enabled by default.
 * Walls have varied resistances and strengths to allow for better progression
 * Increased wall item stack sizes^
 
-  ![Walls](https://cl.ly/0N0p3y0D3m2k/4walls.png)
+  ![Walls](https://img.pantherx.net/dectorio/walls.png)
 
 * Adds items for hazard gates
 
-  ![Gates](https://cl.ly/042x3E3P0A0o/hazgate.png)
+  ![Gates](https://img.pantherx.net/dectorio/hazard-gates.png)
 
 ### Signs
 
 * Adds placable wooden and steel signs with configurable icons
 
-  ![Signs](https://cl.ly/2K0Q3V2Q062y/signs.png)
+  ![Signs](https://img.pantherx.net/dectorio/signs.png)
 
 ### Signals & Lamps
 
 * Adds a new Glowing lamp that will glow bright colours over a large radius when passed a coloured signal from the circuit network
 
-  ![Glowing lamp](https://cl.ly/2i0b1F383D2a/glow.png)
+  ![Glowing lamp](https://img.pantherx.net/dectorio/glowing-lamp.png)
 
 * Adds new signal colours - purple, orange, tangerine and aqua
 * Adds signal colours for raw resources, smelted items, fluids, science packs, inserters, belts, splitters and circuits
 
-  ![New signal colours](https://cl.ly/2R04150O0P0m/signals.png)
+  ![New signal colours](https://img.pantherx.net/dectorio/signal-colours.png)
 
 * Adds new icon based signals for making it easier to understand your circuit network logic
 * New signal icons for base game signal colours that better represent the actual signal colour
 
-  ![Signal selection](https://cl.ly/443j3p1R1712/signal-icons.png)
+  ![Signal selection](https://img.pantherx.net/dectorio/signals.png)
 
 ### General
 
 * Includes settings for enabling or disabling each of the above features (Options > Mods > Startup). Ideally these should only be changed before starting a new game. Changes on existing games will require content to be migrated and some items may be lost if you disable components you've already used on an existing save. Always make a backup first!
 
-  ![Mod settings](https://cl.ly/3J0S0z0T2B1l/mod-settings.png)
+  ![Mod settings](https://img.pantherx.net/dectorio/settings.png)
 
 * Items above marked ^ can be further customised in the mod settings dialog
 
@@ -130,26 +132,28 @@ Fully supported languages:
 * English
 
 Community translations:
-* Chinese Simplified (37%)
-* Chinese Traditional (45%)
-* Czech (50%)
-* German (80%)
+* Chinese Simplified (36%)
+* Chinese Traditional (43%)
+* Czech (49%)
+* German (100%)
 * Korean (100%)
-* Polish (81%)
+* Polish (80%)
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
 ### Mod Compatibility
 
+**Note:** If playing with Factorio 0.15 saves, please download Dectorio v0.7.6 as this is the last release supported on 0.15. Dectorio v0.8.0 and later are only supported on Factorio 0.16.
+
 Limited testing has been completed with other mods. Warnings will be shown in-game to highlight any known issues. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
 
 It is not recommended to use other coloured signal mods at the same time as Dectorio. This can cause coloured signals to be overwritten multiple times and lead to game-breaking compatibility issues with other mods. If you would like more colours, you can add these in the Dectorio config.lua file (instructions are in the file).
 
-Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mods/Earendel/alien-biomes) and [Water Fix](https://mods.factorio.com/mods/Earendel/water-fix).
+Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mods/Earendel/alien-biomes).
 
 Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mods/Mylon/Concreep), [FARL](https://mods.factorio.com/mods/Choumiko/FARL), [Pavement Drive Assist](https://mods.factorio.com/mods/Arcitos/PavementDriveAssist).
 
-Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mods/Arcitos/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mods/kapaer/beautiful_bridge_railway), [Naked Rails](https://mods.factorio.com/mods/futileohm/naked-rails).
+Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mods/Arcitos/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mods/kapaer/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mods/justarandomgeek/color-coding), [Naked Rails](https://mods.factorio.com/mods/futileohm/naked-rails).
 
 Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mods/Klonan/Expanded_Color_Lamps), [More Colours](https://mods.factorio.com/mods/zx64/more-colours), [More signal color](https://mods.factorio.com/mods/devilwarriors/More%20signal%20color), [Concrete and Stone](https://mods.factorio.com/mods/Earendel/concrete-and-stone), [Reinforced Walls](https://mods.factorio.com/mods/ChurchOrganist/Reinforced-Walls), [No Walls or Gates](https://mods.factorio.com/mods/abregado/no-walls).
 
@@ -157,7 +161,7 @@ Please also be aware that if you are playing with the [Picker Extended Version](
 
 ### Changelog
 
-Refer to the [CHANGELOG](CHANGELOG.md) for a detailed list of changes in each version.
+Refer to the [CHANGELOG](CHANGELOG.md) for a detailed list of changes in each version. The changelog is also available in-game from the _Mods_ screen.
 
 ### Credits
 
@@ -166,7 +170,7 @@ Special thanks to [marcfj](https://github.com/marcfj) for support and play testi
 
 #### Translators
 
-German translation by [seeba8](https://github.com/seeba8).  
+German translation by [seeba8](https://github.com/seeba8) and [ST-DDT](https://crowdin.com/profile/ST-DDT).  
 Polish translation by [Tomirad](https://github.com/Tomirad).  
 Czech translation by [dereksp](https://crowdin.com/profile/dereksp).  
 Korean translation by [Xagros](https://crowdin.com/profile/GimoXagros).  

@@ -27,7 +27,7 @@ if DECT.ENABLED["landscaping"] and data.raw["tree"]["coral-lava-01"] then
 					icon = "__Dectorio__/graphics/third-party/alien-biomes/icons/"..tile..".png",
 					flags = {"goes-to-main-inventory"},
 					subgroup = "landscaping",
-					order = "a-".._.."[alien-biomes-"..tile.."]",
+					order = "a[alien-biomes-"..tile.."]",
 					stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
 					place_as_tile = {
 						result = tile,
