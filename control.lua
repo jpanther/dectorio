@@ -187,7 +187,7 @@ local function create_sign_gui(player)
 	end
 	sign_gui = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui.sign-title"}, direction="vertical"})
 	local gui_scroll = sign_gui.add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="auto", style="dect-scroll"})
-	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", colspan=20, style="dect-icon-table"})
+	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", column_count=20, style="dect-icon-table"})
 	local gui_cancel = sign_gui.add({type="button", name="dect-gui-button-cancel", caption={"dect-gui.sign-cancel"}})
 	for _, icon in pairs(global.icons) do
 		local match = false
@@ -272,7 +272,7 @@ end
 script.on_init(on_init)
 script.on_configuration_changed(on_configuration_changed)
 script.on_event(defines.events.on_built_entity, on_built_entity)
-script.on_event(defines.events.on_preplayer_mined_item, on_mined_entity)
+script.on_event(defines.events.on_pre_player_mined_item, on_mined_entity)
 script.on_event(defines.events.on_robot_pre_mined, on_mined_entity)
 script.on_event(defines.events.on_entity_died, on_mined_entity)
 script.on_event(defines.events.on_gui_click, on_gui_click)

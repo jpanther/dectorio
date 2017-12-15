@@ -2,6 +2,26 @@
 
 The latest stable release is available at <https://github.com/jpanther/Dectorio/releases/latest>
 
+## v0.8.0 - 2017-12-15
+
+### Added
+* Factorio 0.16 support
+* New Painted concrete textures to match new vanilla Concrete style
+* Painted concrete floorings now support high resolution graphics
+* New landscaping items for placing all the new base game terrain types
+* Graphics support for placing stone and concrete walls alongside water (others to come in a future update)
+* Support for new in-game changelog feature
+* More robust technology recipe-unlock handling to improve compatibility with third-party mods
+* Support for migrating Fire hazard concrete from _Color Coding_ mod to Emergency concrete
+
+### Removed
+* Factorio 0.15 support - use Dectorio v0.7.6 when playing 0.15 saves
+* Removed support for _Water Fix_ mod as the base game now supports placing tiles alongside water
+* Redundant assets to reduce overall mod size
+
+### Locales
+* Updated German translations
+
 ## v0.7.6 - 2017-12-01
 
 ### Added
@@ -84,7 +104,7 @@ Please take note of the concrete recipe changes in this release. You may need to
 
 ### Bugfixes
 * Fixed error in migration script that would cause a crash when painted concrete was disabled
-* Fixed that signs would render icons incorrectly when placed on alternate surfaces (ie. when using Factorissimo)
+* Fixed that signs would render icons incorrectly when placed on alternate surfaces (ie. when using _Factorissimo_ mod)
 * Fixed GUI bug that would crash headless server when placing signs with certain other mods enabled
 
 ## v0.6.0 - 2017-07-21

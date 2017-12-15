@@ -30,6 +30,7 @@ if DECT.ENABLED["signals"] then
 					icons = {
 						{ icon = "__base__/graphics/icons/signal/signal_grey.png", tint = tint }
 					},
+					icon_size = 32,
 					subgroup = "virtual-signal-color",
 					order = "d[colors]-0["..char(i).."-"..color.name.."]"
 				}
@@ -92,6 +93,7 @@ if DECT.ENABLED["signals"] then
 						{ icon = "__base__/graphics/icons/signal/signal_grey.png", tint = iconset.background },
 						{ icon = "__Dectorio__/graphics/signal/"..iconset.name.."-"..icon..".png" }
 					},
+					icon_size = 32,
 					subgroup = iconset.name,
 					order = iconset.order.."["..iconset.name.."]-"..char(pos).."["..icon.."]"
 				}

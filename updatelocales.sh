@@ -26,5 +26,5 @@ rm locales.zip
 rm -rf temp
 
 # Commit to repo
-git add locale/*
-git commit -m "Update localisations"
+#git add locale/*
+#git commit -m "Update localisations"

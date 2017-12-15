@@ -17,6 +17,7 @@ if DECT.ENABLED["decoratives"] then
 			type = "item",
 			name = "dect-traffic-bollard",
 			icon = "__Dectorio__/graphics/icons/traffic-bollard.png",
+			icon_size = 32,
 			flags = {"goes-to-quickbar"},
 			subgroup = "decoratives",
 			order = "a[traffic-bollard]",

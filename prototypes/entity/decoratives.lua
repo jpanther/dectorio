@@ -7,6 +7,7 @@ if DECT.ENABLED["decoratives"] then
 			type = "simple-entity-with-force",
 			name = "dect-traffic-bollard",
 			icon = "__Dectorio__/graphics/icons/traffic-bollard.png",
+			icon_size = 32,
 			flags = {"placeable-neutral", "placeable-player", "player-creation"},
 			render_layer = "object",
 			minable = {hardness = 0.2, mining_time = 0.3, result = "dect-traffic-bollard", count = 1},

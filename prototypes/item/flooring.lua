@@ -25,13 +25,14 @@ if DECT.ENABLED["painted-concrete"] then
 				type = "item",
 				name = "dect-paint-"..variant,
 				icon = "__Dectorio__/graphics/icons/paint-"..variant..".png",
+				icon_size = 32,
 				flags = {"goes-to-main-inventory"},
 				subgroup = "flooring",
 				order = _.."[paint-"..variant.."]",
 				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 				place_as_tile = {
 					result = "dect-paint-"..variant.."-left",
-					condition_size = 4,
+					condition_size = 1,
 					condition = { "water-tile" }
 				}
 			}
@@ -57,6 +58,7 @@ if DECT.ENABLED["wood-floor"] then
 			type = "item",
 			name = "dect-wood-floor",
 			icon = "__Dectorio__/graphics/icons/wood-floor.png",
+			icon_size = 32,
 			flags = {"goes-to-main-inventory"},
 			fuel_category = "chemical",
 			fuel_value = "2MJ",
@@ -65,7 +67,7 @@ if DECT.ENABLED["wood-floor"] then
 			stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 			place_as_tile = {
 				result = "dect-wood-floor",
-				condition_size = 4,
+				condition_size = 1,
 				condition = { "water-tile" }
 			}
 		}
@@ -79,28 +81,28 @@ if DECT.ENABLED["gravel"] then
 	local base_stone = data.raw["item"]["stone"]
 	base_stone.place_as_tile = {
 		result = "dect-gravel",
-		condition_size = 4,
+		condition_size = 2,
 		condition = { "water-tile" }
 	}
 
 	local base_iron = data.raw["item"]["iron-ore"]
 	base_iron.place_as_tile = {
 		result = "dect-iron-gravel",
-		condition_size = 4,
+		condition_size = 2,
 		condition = { "water-tile" }
 	}
 
 	local base_copper = data.raw["item"]["copper-ore"]
 	base_copper.place_as_tile = {
 		result = "dect-copper-gravel",
-		condition_size = 4,
+		condition_size = 2,
 		condition = { "water-tile" }
 	}
 
 	local base_coal = data.raw["item"]["coal"]
 	base_coal.place_as_tile = {
 		result = "dect-coal-gravel",
-		condition_size = 4,
+		condition_size = 2,
 		condition = { "water-tile" }
 	}
 
