@@ -100,8 +100,9 @@ local function incompability_detected()
 			incompatible = DECT.INCOMPATIBLE.MODS[mod]
 			if DECT.ENABLED[incompatible.component] then
 				notification({"dect-notify.incompatible", {"dect-notify.dectorio"}})
+				notification({"dect-notify.reason-"..incompatible.reason, {"dect-notify.dectorio"}, incompatible.name})
+				notification({"dect-notify.recommended-action", {"dect-notify.dectorio"}, incompatible.name, incompatible.component})
 				notification({"dect-notify.mod-portal", {"dect-notify.dectorio"}})
-				notification({DECT.INCOMPATIBLE.REASONS[incompatible.reason], {"dect-notify.dectorio"}, incompatible.name})
 			end
 		end
 	end

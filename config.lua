@@ -116,10 +116,6 @@ DECT.CONFIG.BASE_WATER_TILES = {"water", "water-green"}
 DECT.CONFIG.BASE_ROCKS = {"rock-huge", "rock-big", "sand-rock-big"}
 
 DECT.INCOMPATIBLE = {}
-DECT.INCOMPATIBLE.REASONS = {
-	["signals"] = "dect-notify.reason-signals",
-	["tech"] = "dect-notify.reason-tech",
-}
 DECT.INCOMPATIBLE.MODS = {
 	["Expanded_Color_Lamps"] = {
 		name = "Expanded_Color_Lamps",
@@ -150,6 +146,11 @@ DECT.INCOMPATIBLE.MODS = {
 		name = "no-walls",
 		component = "walls",
 		reason = "disable"
+	},
+	["PickerTweaks"] = {
+		name = "PickerTweaks",
+		component = "signals",
+		reason = "item"
 	},
 }
 

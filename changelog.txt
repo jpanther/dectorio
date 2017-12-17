@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.1
+Date: 18. 12. 2017
+  Added:
+    - New warning for incompatibilities when Picker Tweaks mod is installed
+  Changed:
+    - Improved handling when mods add signal colours that may conflict with those already added by Dectorio
+    - Improved notifications for conflicting mods with more information on how to resolve the conflict
+---------------------------------------------------------------------------------------------------
 Version: 0.8.0
 Date: 15. 12. 2017
   Added:
