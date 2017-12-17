@@ -161,7 +161,7 @@ Please also be aware that if you are playing with the [Picker Extended Version](
 
 ### Changelog
 
-Refer to the [CHANGELOG](CHANGELOG.md) for a detailed list of changes in each version. The changelog is also available in-game from the _Mods_ screen.
+Refer to the [CHANGELOG](changelog.txt) for a detailed list of changes in each version. The changelog is also available in-game from the _Mods_ screen.
 
 ### Credits
 

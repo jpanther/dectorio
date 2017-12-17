@@ -6,6 +6,8 @@ Date: 18. 12. 2017
   Changed:
     - Improved handling when mods add signal colours that may conflict with those already added by Dectorio
     - Improved notifications for conflicting mods with more information on how to resolve the conflict
+  Removed:
+    - Markdown version of CHANGELOG.md in favour of Factorio style changelog.txt
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.0
 Date: 15. 12. 2017
