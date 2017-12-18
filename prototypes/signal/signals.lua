@@ -12,7 +12,7 @@ if DECT.ENABLED["signals"] then
 	-- Get signals
 	local colors = DECT.CONFIG.SIGNALS
 
-	-- Clear out any existing signals
+	-- Clear out any existing signals that conflict
 	for name, signal in pairs(data.raw["virtual-signal"]) do
 		if signal.order:find("colors") then
 			data.raw["virtual-signal"][name] = nil
@@ -38,7 +38,7 @@ if DECT.ENABLED["signals"] then
 		end
 	end
 
-	-- Reset black signal to correct icon
+	-- Reset black signal to 'correct' icon
 	if data.raw["virtual-signal"]["signal-black"] then
 		local black = data.raw["virtual-signal"]["signal-black"]
 		black.icons[1].tint = {r=0.16,g=0.16,b=0.16,a=0.70}

@@ -2,22 +2,6 @@
 
 -- Return tile variants array for given set and variant
 local function tile_variants(set, variant)
-	local sprite_count = {
-		inner_corner = 32,
-		outer_corner = 16,
-		side = 16,
-		u_transition = 16,
-		o_transition = 1
-	}
-	if set == "wood" or set == "stone" or set == "iron" or set == "copper" or set == "coal" then
-		sprite_count = {
-			inner_corner = 8,
-			outer_corner = 1,
-			side = 8,
-			u_transition = 8,
-			o_transition = 1
-		}
-	end
 	return {
 		main = {
 			{
@@ -40,23 +24,23 @@ local function tile_variants(set, variant)
 		},
 		inner_corner = {
 			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."-inner-corner.png",
-			count = sprite_count.inner_corner
+			count = 8
 		},
 		outer_corner = {
 			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."-outer-corner.png",
-			count = sprite_count.outer_corner
+			count = 1
 		},
 		side = {
 			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."-side.png",
-			count = sprite_count.side
+			count = 8
 		},
 		u_transition = {
 			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."-u.png",
-			count = sprite_count.u_transition
+			count = 8
 		},
 		o_transition = {
 			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."-o.png",
-			count = sprite_count.o_transition
+			count = 1
 		}
 	}
 end
@@ -129,7 +113,7 @@ if DECT.ENABLED["gravel"] then
 	data:extend({
 		{
 			type = "tile",
-			name = "dect-gravel",
+			name = "dect-stone-gravel",
 			needs_correction = false,
 			minable = {hardness = 0.2, mining_time = 0.5, result = "stone"},
 			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
@@ -145,7 +129,7 @@ if DECT.ENABLED["gravel"] then
 		},
 		{
 			type = "tile",
-			name = "dect-iron-gravel",
+			name = "dect-iron-ore-gravel",
 			needs_correction = false,
 			minable = {hardness = 0.2, mining_time = 0.5, result = "iron-ore"},
 			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
@@ -161,7 +145,7 @@ if DECT.ENABLED["gravel"] then
 		},
 		{
 			type = "tile",
-			name = "dect-copper-gravel",
+			name = "dect-copper-ore-gravel",
 			needs_correction = false,
 			minable = {hardness = 0.2, mining_time = 0.5, result = "copper-ore"},
 			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
