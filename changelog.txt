@@ -2,9 +2,9 @@
 Version: 0.8.1
 Date: 18. 12. 2017
   Added:
-    - New warning for incompatibilities when Picker Tweaks mod is installed
+    - New warning for incompatibilities when 'Picker Tweaks' mod is installed
   Changed:
-    - Gravel is now a craftable item so as to avoid accidental placement of raw ore on the ground
+    - Gravel is now a craftable item so as to avoid accidental placement of raw ore on the ground and to resolve the conflict it caused with the 'Picker Extended Version' mod
     - Improved handling when mods add signal colours that may conflict with those already added by Dectorio
     - Improved notifications for conflicting mods with more information on how to resolve the conflict
   Removed:
@@ -20,10 +20,10 @@ Date: 15. 12. 2017
     - Graphics support for placing stone and concrete walls alongside water (others to come in a future update)
     - Support for new in-game changelog feature
     - More robust technology recipe-unlock handling to improve compatibility with third-party mods
-    - Support for migrating Fire hazard concrete from Color Coding mod to Emergency concrete
+    - Support for migrating Fire hazard concrete from 'Color Coding' mod to Emergency concrete
   Removed:
     - Factorio 0.15 support - use Dectorio v0.7.6 when playing 0.15 saves
-    - Removed support for Water Fix mod as the base game now supports placing tiles alongside water
+    - Removed support for 'Water Fix' mod as the base game now supports placing tiles alongside water
     - Redundant assets to reduce overall mod size
   Locales:
     - Updated German translations
@@ -32,9 +32,9 @@ Version: 0.7.6
 Date: 01. 12. 2017
   Added:
     - New setting for toggling whether ores can be placed as gravel
-    - Dectorio floorings can now be placed adjacent to water when Water Fix mod is installed
+    - Dectorio floorings can now be placed adjacent to water when 'Water Fix' mod is installed
   Bugfixes:
-    - Fixed that water tiles were not available for crafting when playing with Alien Biomes
+    - Fixed that water tiles were not available for crafting when playing with 'Alien Biomes' mod
   Locales:
     - Updated German, Korean and Polish translations
 ---------------------------------------------------------------------------------------------------
@@ -72,18 +72,18 @@ Date: 26. 10. 2017
     - Landscaping technology now allows placement of decorative rock entities
     - Better handling for when third party mods that affect Dectorio are added or removed
   Bugfixes:
-    - Added some additional locale strings to fix issues with Creative Mode mod
+    - Added some additional locale strings to fix issues with 'Creative Mode' mod
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.1
 Date: 21. 10. 2017
   Bugfixes:
-    - Fixed migration error for existing saves without Alien Biomes mod
+    - Fixed migration error for existing saves without 'Alien Biomes' mod
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.0
 Date: 20. 10. 2017
   Added:
     - New in-game settings for configuring Dectorio (replaces the old settings that were configured via config.lua)
-    - Landscaping support for Alien Biomes mod
+    - Landscaping support for 'Alien Biomes' mod
   Changed:
     - Concrete recipe no longer requires iron sticks and reverts to the vanilla iron ore recipe
     - Concrete walls now require iron sticks to craft

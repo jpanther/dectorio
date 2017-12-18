@@ -132,12 +132,12 @@ Fully supported languages:
 * English
 
 Community translations:
-* Chinese Simplified (36%)
-* Chinese Traditional (43%)
-* Czech (49%)
-* German (100%)
-* Korean (100%)
-* Polish (80%)
+* Chinese Simplified (30%)
+* Chinese Traditional (36%)
+* Czech (38%)
+* German (93%)
+* Korean (87%)
+* Polish (71%)
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
@@ -155,9 +155,7 @@ Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.f
 
 Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mods/Arcitos/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mods/kapaer/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mods/justarandomgeek/color-coding), [Naked Rails](https://mods.factorio.com/mods/futileohm/naked-rails).
 
-Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mods/Klonan/Expanded_Color_Lamps), [More Colours](https://mods.factorio.com/mods/zx64/more-colours), [More signal color](https://mods.factorio.com/mods/devilwarriors/More%20signal%20color), [Concrete and Stone](https://mods.factorio.com/mods/Earendel/concrete-and-stone), [Reinforced Walls](https://mods.factorio.com/mods/ChurchOrganist/Reinforced-Walls), [No Walls or Gates](https://mods.factorio.com/mods/abregado/no-walls).
-
-Please also be aware that if you are playing with the [Picker Extended Version](https://mods.factorio.com/mods/Nexela/PickerExtended) mod, if you have the "Enable Gravel" option turned on in Dectorio, the stack sizes of raw ore materials will reflect the tile stack size setting of Picker Extended. By default this will increase your ore stack sizes to 100. If you do not want this behaviour, you can either change the picker tile stack setting to 50 or disable the gravel setting in Dectorio.
+Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mods/Klonan/Expanded_Color_Lamps), [More Colours](https://mods.factorio.com/mods/zx64/more-colours), [More signal color](https://mods.factorio.com/mods/devilwarriors/More%20signal%20color), [Concrete and Stone](https://mods.factorio.com/mods/Earendel/concrete-and-stone), [Reinforced Walls](https://mods.factorio.com/mods/ChurchOrganist/Reinforced-Walls), [No Walls or Gates](https://mods.factorio.com/mods/abregado/no-walls), [Picker Tweaks](https://mods.factorio.com/mods/Nexela/PickerTweaks).
 
 ### Changelog
 
