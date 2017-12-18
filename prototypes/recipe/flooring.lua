@@ -24,6 +24,28 @@ if DECT.ENABLED["painted-concrete"] then
 
 end
 
+if DECT.ENABLED["gravel"] then
+
+	-- Add new recipes
+	for _, variant in pairs(DECT.CONFIG.GRAVEL_VARIANTS) do
+		data:extend({
+			{
+				type = "recipe",
+				name = "dect-"..variant.."-gravel",
+				energy_required = 0.1,
+				enabled = true,
+				category = "crafting",
+				ingredients = {
+					{variant, 1},
+				},
+				result= "dect-"..variant.."-gravel",
+				result_count = 1
+			}
+		})
+	end
+
+end
+
 if DECT.ENABLED["wood-floor"] then
 
 	-- Add new recipes
@@ -45,7 +67,7 @@ if DECT.ENABLED["wood-floor"] then
 end
 
 if DECT.ENABLED["walls"] then
-	
+
 	-- Add new recipes
 	data:extend({
 		{

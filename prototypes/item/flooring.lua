@@ -14,7 +14,7 @@ if DECT.ENABLED["painted-concrete"] then
 			type = "item-subgroup",
 			name = "flooring",
 			group = DECT.ITEM_GROUP,
-			order = "i-b"
+			order = "i-c"
 		}
 	})
 
@@ -77,33 +77,35 @@ end
 
 if DECT.ENABLED["gravel"] then
 
-	-- Allow ores to be placed as gravel
-	local base_stone = data.raw["item"]["stone"]
-	base_stone.place_as_tile = {
-		result = "dect-gravel",
-		condition_size = 2,
-		condition = { "water-tile" }
-	}
+	-- Add new subgroup
+	data:extend({
+		{
+			type = "item-subgroup",
+			name = "flooring-gravel",
+			group = DECT.ITEM_GROUP,
+			order = "i-b"
+		}
+	})
 
-	local base_iron = data.raw["item"]["iron-ore"]
-	base_iron.place_as_tile = {
-		result = "dect-iron-gravel",
-		condition_size = 2,
-		condition = { "water-tile" }
-	}
-
-	local base_copper = data.raw["item"]["copper-ore"]
-	base_copper.place_as_tile = {
-		result = "dect-copper-gravel",
-		condition_size = 2,
-		condition = { "water-tile" }
-	}
-
-	local base_coal = data.raw["item"]["coal"]
-	base_coal.place_as_tile = {
-		result = "dect-coal-gravel",
-		condition_size = 2,
-		condition = { "water-tile" }
-	}
+	-- Add new items
+	for _, variant in pairs(DECT.CONFIG.GRAVEL_VARIANTS) do
+		data:extend({
+			{
+				type = "item",
+				name = "dect-"..variant.."-gravel",
+				icon = "__Dectorio__/graphics/icons/gravel-"..variant..".png",
+				icon_size = 32,
+				flags = {"goes-to-main-inventory"},
+				subgroup = "flooring-gravel",
+				order = _.."[gravel-"..variant.."]",
+				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
+				place_as_tile = {
+					result = "dect-"..variant.."-gravel",
+					condition_size = 2,
+					condition = { "water-tile" }
+				}
+			}
+		})
+	end
 
 end

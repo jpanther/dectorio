@@ -109,6 +109,7 @@ DECT.CONFIG.SETTINGS = {
 }
 
 DECT.CONFIG.PAINT_VARIANTS = {"danger", "emergency", "caution", "radiation", "defect", "operations", "safety"}
+DECT.CONFIG.GRAVEL_VARIANTS = {"stone", "iron-ore", "copper-ore", "coal"}
 DECT.CONFIG.SIGN_CATEGORIES = {"item", "fluid", "tool", "ammo", "armor", "capsule", "gun", "mining-tool", "module"}
 DECT.CONFIG.SIGN_BLACKLIST = {"barrel", "loader", "simple%-entity", "player%-port", "computer", "coin", "small%-plane", "railgun", "vehicle%-machine%-gun", "tank%-machine%-gun", "factory%-1%-", "factory%-2%-", "factory%-3%-"}
 DECT.CONFIG.BASE_TILES = {"dry-dirt", "dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7", "sand-1", "sand-2", "sand-3", "grass-1", "grass-2", "grass-3", "grass-4", "red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3"}
