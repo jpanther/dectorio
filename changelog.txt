@@ -9,6 +9,8 @@ Date: 18. 12. 2017
     - Improved notifications for conflicting mods with more information on how to resolve the conflict
   Removed:
     - Markdown version of CHANGELOG.md in favour of Factorio style changelog.txt
+  Locales:
+    - Updated German translations
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.0
 Date: 15. 12. 2017
