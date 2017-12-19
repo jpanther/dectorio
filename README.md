@@ -34,8 +34,9 @@ When you launch the game, the new mod will be enabled by default.
   ![Gravel styles](https://img.pantherx.net/dectorio/gravel.png)
 
 * Adds wooden floorboard tiles with sound effects
+* Adds grid-based concrete that reflects the classic Factorio 0.15 style concrete
 
-  ![Gravel and Wooden floorboards](https://img.pantherx.net/dectorio/gravel-wood.png)
+  ![Concrete and Wooden floorboards](https://img.pantherx.net/dectorio/concrete-wood.png)
 
 * Adds painted concrete tiles - Hazard (black/yellow), Danger (red/yellow), Emergency (white/red), Caution (orange/white), Radiation hazard (yellow/pink), Defect (blue/white), Operations (black/white) and Safety (white/green)
 
@@ -135,8 +136,8 @@ Community translations:
 * Chinese Simplified (30%)
 * Chinese Traditional (36%)
 * Czech (38%)
-* German (93%)
-* Korean (87%)
+* German (100%)
+* Korean (99%)
 * Polish (71%)
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
