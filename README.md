@@ -29,7 +29,7 @@ When you launch the game, the new mod will be enabled by default.
 
 ### Flooring styles
 
-* Adds basic gravel paths (placed using raw stone, coal, iron and copper)
+* Adds basic gravel paths (crafted from raw stone, coal, iron and copper)
 
   ![Gravel styles](https://img.pantherx.net/dectorio/gravel.png)
 

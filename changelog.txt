@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.3
+Date: 20. 12. 2017
+  Changed:
+    - Updated grid concrete map colour to differentiate it from normal concrete
+  Bugfixes:
+    - Fixed issue with grid concrete when high resolution graphics are active
+---------------------------------------------------------------------------------------------------
 Version: 0.8.2
 Date: 19. 12. 2017
   Added:
