@@ -1,5 +1,12 @@
 -- tile/tiles
 
+-- Some variables to reference base tiles
+local base_dirt = data.raw["tile"]["dry-dirt"]
+local base_stone_path = data.raw["tile"]["stone-path"]
+local base_concrete = data.raw["tile"]["concrete"]
+local base_hazard_left = data.raw["tile"]["hazard-concrete-left"]
+local base_hazard_right = data.raw["tile"]["hazard-concrete-right"]
+
 -- Return tile variants array for given set and variant
 local function tile_variants(set, variant)
 	return {
@@ -48,12 +55,12 @@ end
 -- Return tile variants array for given set and variant
 local function tile_variants_material(set, variant)
 	return {
-		main = data.raw["tile"]["concrete"].variants.main,
-		inner_corner_mask = data.raw["tile"]["concrete"].variants.inner_corner_mask,
-		outer_corner_mask = data.raw["tile"]["concrete"].variants.outer_corner_mask,
-		side_mask = data.raw["tile"]["concrete"].variants.side_mask,
-		u_transition_mask = data.raw["tile"]["concrete"].variants.u_transition_mask,
-		o_transition_mask = data.raw["tile"]["concrete"].variants.o_transition_mask,
+		main = base_concrete.variants.main,
+		inner_corner_mask = base_concrete.variants.inner_corner_mask,
+		outer_corner_mask = base_concrete.variants.outer_corner_mask,
+		side_mask = base_concrete.variants.side_mask,
+		u_transition_mask = base_concrete.variants.u_transition_mask,
+		o_transition_mask = base_concrete.variants.o_transition_mask,
 		material_background = {
 			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set..".png",
 			count = 8,
@@ -67,8 +74,8 @@ local function tile_variants_material(set, variant)
 end
 
 -- Modify decorations on base tiles
-data.raw["tile"]["stone-path"].decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"]
-data.raw["tile"]["concrete"].decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"]
+base_stone_path.decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"]
+base_concrete.decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"]
 
 if DECT.ENABLED["landscaping"] then
 
@@ -89,7 +96,7 @@ if DECT.ENABLED["wood-floor"] then
 			needs_correction = false,
 			minable = {hardness = 0.2, mining_time = 0.5, result = "dect-wood-floor"},
 			mined_sound = { filename = "__Dectorio__/sound/deconstruct-wood.ogg" },
-			collision_mask = {"ground-tile"},
+			collision_mask = { "ground-tile" },
 			walking_speed_modifier = 1.2,
 			layer = 63,
 			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
@@ -102,7 +109,60 @@ if DECT.ENABLED["wood-floor"] then
 			},
 			map_color={r=139, g=69, b=19},
 			ageing=0,
-			vehicle_friction_modifier = stone_path_vehicle_speed_modifier
+			vehicle_friction_modifier = base_stone_path.vehicle_friction_modifier
+		}
+	})
+
+end
+
+if DECT.ENABLED["concrete"] then
+
+	data:extend({
+		{
+			type = "tile",
+			name = "dect-concrete-grid",
+			needs_correction = false,
+			transition_merges_with_tile = "concrete",
+			minable = { hardness = 0.2, mining_time = 0.5, result = "dect-concrete-grid" },
+			mined_sound = base_concrete.mined_sound,
+			collision_mask = { "ground-tile" },
+			walking_speed_modifier = 1.4,
+			layer = 62,
+			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
+			variants = {
+				main = {
+					{
+						picture = "__Dectorio__/graphics/terrain/concrete/grid/concrete-grid.png",
+						count = 16,
+						size = 1,
+						hr_version = {
+							picture = "__Dectorio__/graphics/terrain/concrete/grid/hr-concrete-grid.png",
+							count = 16,
+							size = 1
+						}
+					},
+					{
+						picture = "__Dectorio__/graphics/terrain/concrete/grid/concrete-grid.png",
+						count = 4,
+						size = 4,
+						hr_version = {
+							picture = "__Dectorio__/graphics/terrain/concrete/grid/hr-concrete-grid.png",
+							count = 4,
+							size = 4
+						},
+						probability = 1,
+					},
+				},
+				inner_corner_mask = base_concrete.variants.inner_corner_mask,
+				outer_corner_mask = base_concrete.variants.outer_corner_mask,
+				side_mask = base_concrete.variants.side_mask,
+				u_transition_mask = base_concrete.variants.u_transition_mask,
+				o_transition_mask = base_concrete.variants.o_transition_mask,
+			},
+			walking_sound = base_concrete.walking_sound,
+			map_color = base_concrete.map_color,
+			ageing = 0,
+			vehicle_friction_modifier = base_concrete.vehicle_friction_modifier
 		}
 	})
 
@@ -115,14 +175,14 @@ if DECT.ENABLED["gravel"] then
 			type = "tile",
 			name = "dect-stone-gravel",
 			needs_correction = false,
-			minable = {hardness = 0.2, mining_time = 0.5, result = "stone"},
+			minable = { hardness = 0.2, mining_time = 0.5, result = "stone" },
 			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
-			collision_mask = {"ground-tile"},
+			collision_mask = { "ground-tile" },
 			walking_speed_modifier = 1.1,
 			layer = 60,
 			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 			variants = tile_variants("stone", "gravel"),
-			walking_sound = data.raw["tile"]["dry-dirt"].walking_sound,
+			walking_sound = base_dirt.walking_sound,
 			map_color={r=146, g=146, b=146},
 			ageing=0,
 			vehicle_friction_modifier = dirt_vehicle_speed_modifier
@@ -131,14 +191,14 @@ if DECT.ENABLED["gravel"] then
 			type = "tile",
 			name = "dect-iron-ore-gravel",
 			needs_correction = false,
-			minable = {hardness = 0.2, mining_time = 0.5, result = "iron-ore"},
+			minable = { hardness = 0.2, mining_time = 0.5, result = "iron-ore" },
 			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
-			collision_mask = {"ground-tile"},
+			collision_mask = { "ground-tile" },
 			walking_speed_modifier = 1.1,
 			layer = 60,
 			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 			variants = tile_variants("iron", "gravel"),
-			walking_sound = data.raw["tile"]["dry-dirt"].walking_sound,
+			walking_sound = base_dirt.walking_sound,
 			map_color={r=114, g=137, b=163},
 			ageing=0,
 			vehicle_friction_modifier = dirt_vehicle_speed_modifier
@@ -147,14 +207,14 @@ if DECT.ENABLED["gravel"] then
 			type = "tile",
 			name = "dect-copper-ore-gravel",
 			needs_correction = false,
-			minable = {hardness = 0.2, mining_time = 0.5, result = "copper-ore"},
+			minable = { hardness = 0.2, mining_time = 0.5, result = "copper-ore" },
 			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
-			collision_mask = {"ground-tile"},
+			collision_mask = { "ground-tile" },
 			walking_speed_modifier = 1.1,
 			layer = 60,
 			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 			variants = tile_variants("copper", "gravel"),
-			walking_sound = data.raw["tile"]["dry-dirt"].walking_sound,
+			walking_sound = base_dirt.walking_sound,
 			map_color={r=163, g=118, b=115},
 			ageing=0,
 			vehicle_friction_modifier = dirt_vehicle_speed_modifier
@@ -163,14 +223,14 @@ if DECT.ENABLED["gravel"] then
 			type = "tile",
 			name = "dect-coal-gravel",
 			needs_correction = false,
-			minable = {hardness = 0.2, mining_time = 0.5, result = "coal"},
+			minable = { hardness = 0.2, mining_time = 0.5, result = "coal" },
 			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
-			collision_mask = {"ground-tile"},
+			collision_mask = { "ground-tile" },
 			walking_speed_modifier = 1.1,
 			layer = 60,
 			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 			variants = tile_variants("coal", "gravel"),
-			walking_sound = data.raw["tile"]["dry-dirt"].walking_sound,
+			walking_sound = base_dirt.walking_sound,
 			map_color={r=84, g=84, b=84},
 			ageing=0,
 			vehicle_friction_modifier = dirt_vehicle_speed_modifier
@@ -178,7 +238,7 @@ if DECT.ENABLED["gravel"] then
 	})
 
 	-- Move stone path up a layer so it sits atop gravel
-	data.raw["tile"]["stone-path"].layer = 61
+	base_stone_path.layer = 61
 end
 
 if DECT.ENABLED["painted-concrete"] then
@@ -196,36 +256,31 @@ if DECT.ENABLED["painted-concrete"] then
 					needs_correction = false,
 					next_direction = "dect-paint-"..variant.."-"..direction.next,
 					transition_merges_with_tile = "concrete",
-					minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-"..variant},
-					mined_sound = data.raw["tile"]["concrete"].mined_sound,
-					collision_mask = {"ground-tile"},
+					minable = { hardness = 0.2, mining_time = 0.5, result = "dect-paint-"..variant },
+					mined_sound = base_concrete.mined_sound,
+					collision_mask = { "ground-tile" },
 					walking_speed_modifier = 1.4,
-					layer = 62,
+					layer = 63,
 					decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 					variants = tile_variants_material("concrete", variant.."-"..direction.this),
- 					walking_sound = data.raw["tile"]["concrete"].walking_sound,
+ 					walking_sound = base_concrete.walking_sound,
 					map_color={r=105, g=105, b=105},
 					ageing=0,
-					vehicle_friction_modifier = concrete_vehicle_speed_modifier
+					vehicle_friction_modifier = base_concrete.vehicle_friction_modifier
 				}
 			})
 		end
 	end
 
-	-- Move concrete up a layer so it sits atop stone path
-	data.raw["tile"]["concrete"].layer = 62
-
-	-- Adjust base hazard concrete
-	local base_tile_hazard_left = data.raw["tile"]["hazard-concrete-left"]
-	local base_tile_hazard_right = data.raw["tile"]["hazard-concrete-right"]
-
-	base_tile_hazard_left.layer = 62
-	base_tile_hazard_right.layer = 62
+	-- Move all the base concretes up a layer so it sits atop stone path
+	base_concrete.layer = 62
+	base_hazard_left.layer = 63
+	base_hazard_right.layer = 63
 
 	-- Use the Dectorio look and feel for Hazard concrete
 	if not DECT.CONFIG.SETTINGS["vanilla_hazard_concrete"] then
-		base_tile_hazard_left.variants = tile_variants_material("concrete", "hazard-left")
-		base_tile_hazard_right.variants = tile_variants_material("concrete", "hazard-right")
+		base_hazard_left.variants = tile_variants_material("concrete", "hazard-left")
+		base_hazard_right.variants = tile_variants_material("concrete", "hazard-right")
 	end
 
 end

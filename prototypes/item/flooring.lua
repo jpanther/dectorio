@@ -75,6 +75,28 @@ if DECT.ENABLED["wood-floor"] then
 
 end
 
+if DECT.ENABLED["concrete"] then
+
+	data:extend({
+		{
+			type = "item",
+			name = "dect-concrete-grid",
+			icon = "__Dectorio__/graphics/icons/concrete-grid.png",
+			icon_size = 32,
+			flags = {"goes-to-main-inventory"},
+			subgroup = "flooring",
+			order = "00[1-concrete]",
+			stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
+			place_as_tile = {
+				result = "dect-concrete-grid",
+				condition_size = 1,
+				condition = { "water-tile" }
+			}
+		}
+	})
+
+end
+
 if DECT.ENABLED["gravel"] then
 
 	-- Add new subgroup

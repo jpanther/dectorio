@@ -1,6 +1,6 @@
 {
     "name": "Dectorio",
-    "version": "0.8.1",
+    "version": "0.8.2",
     "title": "Dectorio",
     "author": "PantherX",
     "contact": "",
@@ -8,5 +8,5 @@
     "factorio_version": "0.16",
     "dependencies": ["base >= 0.16", "? alien-biomes >= 0.2.7", "? PickerTweaks >= 1.0.1"],
     "license": "GNU GPLv3",
-    "description": "Adds decorative elements to beautify your factory. Currently includes coloured signals, wooden, chain-link, stone and concrete walls, hazard gates, signs, wooden floorboards, gravel and painted concrete styles."
+    "description": "Adds decorative elements to beautify your factory. Currently includes coloured signals, wooden, chain-link, stone and concrete walls, hazard gates, signs, wooden floorboards, gravel and concrete styles."
 }

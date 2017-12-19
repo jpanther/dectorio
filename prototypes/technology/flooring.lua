@@ -44,7 +44,7 @@ if DECT.ENABLED["painted-concrete"] then
 				},
 				time = 20
 			},
-			effects = {	
+			effects = {
 				{
 					type = "unlock-recipe",
 					recipe = "hazard-concrete"
@@ -89,7 +89,15 @@ if DECT.ENABLED["painted-concrete"] then
 		if effect.type == "unlock-recipe" and effect.recipe == "hazard-concrete" then
 			index = i
 		end
-	end	
+	end
 	table.remove(base_concrete_effects, index)
+
+end
+
+if DECT.ENABLED["concrete"] then
+
+	-- Add grid-based concrete to base Concrete tech
+	local base_concrete_effects = data.raw["technology"]["concrete"].effects
+	table.insert(base_concrete_effects, {type = "unlock-recipe", recipe = "dect-concrete-grid"})
 
 end
