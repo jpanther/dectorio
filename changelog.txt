@@ -3,6 +3,8 @@ Version: 0.8.2
 Date: 19. 12. 2017
   Added:
     - New grid-based Concrete item that reflects the classic 0.15 Factorio concrete style
+  Changed:
+    - Updated Painted concrete graphics to soften the 'brick' look
   Bugfixes:
     - Tweaks to concrete layering to clean up some buggy tile transitions
     - Removal of duplicate recipe definitions for walls
