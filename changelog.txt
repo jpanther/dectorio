@@ -8,6 +8,8 @@ Date: 19. 12. 2017
   Bugfixes:
     - Tweaks to concrete layering to clean up some buggy tile transitions
     - Removal of duplicate recipe definitions for walls
+  Locales:
+    - Updated German and Korean translations
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.1
 Date: 18. 12. 2017
@@ -35,7 +37,7 @@ Date: 15. 12. 2017
     - Support for migrating Fire hazard concrete from 'Color Coding' mod to Emergency concrete
   Removed:
     - Factorio 0.15 support - use Dectorio v0.7.6 when playing 0.15 saves
-    - Removed support for 'Water Fix' mod as the base game now supports placing tiles alongside water
+    - Support for 'Water Fix' mod as the base game now supports placing tiles alongside water
     - Redundant assets to reduce overall mod size
   Locales:
     - Updated German translations
@@ -55,9 +57,11 @@ Date: 21. 11. 2017
   Added:
     - New crafting tab to separate decorative items from other crafting menus - can be disabled in settings (thanks to Aidiakapi (https://github.com/Aidiakapi))
     - New localisation system - help translate Dectorio by visiting CrowdIn (https://crowdin.com/project/dectorio)
-    - Added initial Czech translation (thanks to dereksp (https://crowdin.com/profile/dereksp))
   Bugfixes:
     - Fixed some audio and repairability issues with traffic bollards
+  Locales:
+    - Added initial Czech translation (thanks to dereksp (https://crowdin.com/profile/dereksp))
+    - Added partial support for Chinese Traditional and Chinese Simplified
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.4
 Date: 04. 11. 2017
@@ -104,8 +108,8 @@ Date: 20. 10. 2017
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 10. 10. 2017
-  Added:
-    - Polish translation (thanks to Tomirad (https://github.com/Tomirad))
+  Locales:
+    - Added new Polish translation (thanks to Tomirad (https://github.com/Tomirad))
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.1
 Date: 05. 10. 2017
@@ -131,8 +135,8 @@ Date: 21. 07. 2017
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.14
 Date: 18. 07. 2017
-  Added:
-    - German translation (thanks to seeba8 (https://github.com/seeba8))
+  Locales:
+    - Added new German translation (thanks to seeba8 (https://github.com/seeba8))
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.13
 Date: 12. 07. 2017
@@ -282,7 +286,8 @@ Date: 02. 05. 2017
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 30. 04. 2017
-  Initial Release:
+  Added:
+    - Factorio 0.15 support
     - Wooden floorboards
     - Hazard, Emergency and Safety painted concrete styles
     - Modified base concrete recipe to include iron pipe and remove iron ore requirement
