@@ -73,13 +73,42 @@ if DECT.ENABLED["landscaping"] then
 		end
 	end
 
+	-- Add subgroup for base trees
+	data:extend({
+		{
+			type = "item-subgroup",
+			name = "landscaping-trees",
+			group = DECT.ITEM_GROUP,
+			order = "l-c"
+		}
+	})
+
+	-- Add items for placing trees
+	local base_trees = DECT.CONFIG.BASE_TREES
+	for _, tree in pairs(base_trees) do
+		data:extend({
+			{
+				type = "item",
+				name = "dect-base-"..tree,
+				icon = data.raw["tree"][tree].icon,
+				icon_size = 32,
+				flags = {"goes-to-main-inventory"},
+				subgroup = "landscaping-trees",
+				order = "a[base-"..tree.."]",
+				stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
+				place_result = tree,
+				localised_name = {"entity-name."..tree}
+			}
+		})
+	end
+
 	-- Add subgroup for base rocks
 	data:extend({
 		{
 			type = "item-subgroup",
 			name = "landscaping-rocks",
 			group = DECT.ITEM_GROUP,
-			order = "l-c"
+			order = "l-d"
 		}
 	})
 
