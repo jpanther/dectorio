@@ -12,9 +12,10 @@ local tile_layer = {
 	gravel = 60,
 	stone = 61,
 	concrete = 62,
-	grid = 62,
-	paint = 63,
-	wood = 64,
+	grid = 63,
+	paint = 64,
+	-- no layer 65 - need to leave gap to account for concrete transition layer
+	wood = 66,
 }
 
 -- Return tile variants array for given set and variant
@@ -146,6 +147,9 @@ if DECT.ENABLED["concrete"] then
 			vehicle_friction_modifier = base_concrete.vehicle_friction_modifier
 		}
 	})
+
+	-- Correct the offset so that concrete border is drawn on top of painted concrete
+	base_concrete.transition_overlay_layer_offset = tile_layer.paint - tile_layer.concrete + 1
 
 end
 
