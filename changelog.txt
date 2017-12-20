@@ -11,6 +11,8 @@ Date: 20. 12. 2017
     - Adjusted icons for gravel items
   Bugfixes:
     - Fixed issue with grid concrete when high resolution graphics are active
+  Locales:
+    - Updated Korean translations
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.2
 Date: 19. 12. 2017
