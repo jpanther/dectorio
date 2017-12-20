@@ -2,6 +2,7 @@
 Version: 0.8.3
 Date: 20. 12. 2017
   Added:
+    - Ability to place deep water and green deep water tiles
     - Map colours for all the painted concrete variants
   Changed:
     - Adjusted concrete layering to allow grid concrete and normal concrete to merge nicely

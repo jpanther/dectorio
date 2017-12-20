@@ -56,7 +56,7 @@ if DECT.ENABLED["landscaping"] then
 				icon_size = 32,
 				flags = {"goes-to-main-inventory"},
 				subgroup = "landscaping-water",
-				order = "a[base-"..tile.."]",
+				order = _.."a[base-"..tile.."]",
 				stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
 				place_as_tile = {
 					result = tile,
@@ -66,6 +66,11 @@ if DECT.ENABLED["landscaping"] then
 				localised_name = {"tile-name."..tile}
 			}
 		})
+
+		-- If this is deep water, then it can only be placed in water
+		if string.find(tile, "deep") then
+			data.raw["item"]["dect-base-"..tile].place_as_tile.condition = { "ground-tile" }
+		end
 	end
 
 	-- Add subgroup for base rocks
