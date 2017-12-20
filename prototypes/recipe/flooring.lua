@@ -7,14 +7,14 @@ if DECT.ENABLED["painted-concrete"] then
 		data:extend({
 			{
 				type = "recipe",
-				name = "dect-paint-"..variant,
+				name = "dect-paint-"..variant.name,
 				energy_required = 5,
 				enabled = false,
 				category = "crafting",
 				ingredients = {
 					{"concrete", 10},
 				},
-				result= "dect-paint-"..variant,
+				result= "dect-paint-"..variant.name,
 				result_count = 10
 			}
 		})
@@ -31,14 +31,14 @@ if DECT.ENABLED["gravel"] then
 		data:extend({
 			{
 				type = "recipe",
-				name = "dect-"..variant.."-gravel",
+				name = "dect-"..variant.name.."-gravel",
 				energy_required = 0.1,
 				enabled = true,
 				category = "crafting",
 				ingredients = {
-					{variant, 1},
+					{variant.name, 1},
 				},
-				result= "dect-"..variant.."-gravel",
+				result= "dect-"..variant.name.."-gravel",
 				result_count = 1
 			}
 		})

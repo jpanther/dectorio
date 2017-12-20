@@ -109,8 +109,21 @@ DECT.CONFIG.SETTINGS = {
 	["walls_stack_size"] = settings.startup["dectorio-walls-stack-size"].value,
 }
 
-DECT.CONFIG.PAINT_VARIANTS = {"danger", "emergency", "caution", "radiation", "defect", "operations", "safety"}
-DECT.CONFIG.GRAVEL_VARIANTS = {"stone", "iron-ore", "copper-ore", "coal"}
+DECT.CONFIG.PAINT_VARIANTS = {
+	{name="danger", color={r=0.81,g=0.31,b=0.31}},
+	{name="emergency", color={r=0.86,g=0.36,b=0.38}},
+	{name="caution", color={r=0.85,g=0.56,b=0.26}},
+	{name="radiation", color={r=0.86,g=0.56,b=0.78}},
+	{name="defect", color={r=0.47,g=0.50,b=1.00}},
+	{name="operations", color={r=0.37,g=0.37,b=0.37}},
+	{name="safety", color={r=0.61,g=0.77,b=0.40}},
+}
+DECT.CONFIG.GRAVEL_VARIANTS = {
+	{name="stone", color={r=0.57,g=0.57,b=0.57}},
+	{name="iron-ore", color={r=0.45,g=0.54,b=0.64}},
+	{name="copper-ore", color={r=0.64,g=0.46,b=0.45}},
+	{name="coal", color={r=0.33,g=0.33,b=0.33}},
+}
 DECT.CONFIG.SIGN_CATEGORIES = {"item", "fluid", "tool", "ammo", "armor", "capsule", "gun", "mining-tool", "module"}
 DECT.CONFIG.SIGN_BLACKLIST = {"barrel", "loader", "simple%-entity", "player%-port", "computer", "coin", "small%-plane", "railgun", "vehicle%-machine%-gun", "tank%-machine%-gun", "factory%-1%-", "factory%-2%-", "factory%-3%-"}
 DECT.CONFIG.BASE_TILES = {"dry-dirt", "dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7", "sand-1", "sand-2", "sand-3", "grass-1", "grass-2", "grass-3", "grass-4", "red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3"}

@@ -23,15 +23,15 @@ if DECT.ENABLED["painted-concrete"] then
 		data:extend({
 			{
 				type = "item",
-				name = "dect-paint-"..variant,
-				icon = "__Dectorio__/graphics/icons/paint-"..variant..".png",
+				name = "dect-paint-"..variant.name,
+				icon = "__Dectorio__/graphics/icons/paint-"..variant.name..".png",
 				icon_size = 32,
 				flags = {"goes-to-main-inventory"},
 				subgroup = "flooring",
-				order = _.."[paint-"..variant.."]",
+				order = _.."[paint-"..variant.name.."]",
 				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 				place_as_tile = {
-					result = "dect-paint-"..variant.."-left",
+					result = "dect-paint-"..variant.name.."-left",
 					condition_size = 1,
 					condition = { "water-tile" }
 				}
@@ -114,15 +114,17 @@ if DECT.ENABLED["gravel"] then
 		data:extend({
 			{
 				type = "item",
-				name = "dect-"..variant.."-gravel",
-				icon = "__Dectorio__/graphics/icons/gravel-"..variant..".png",
+				name = "dect-"..variant.name.."-gravel",
+				icons = {
+					{ icon = "__Dectorio__/graphics/icons/gravel.png", tint = variant.color },
+				},
 				icon_size = 32,
 				flags = {"goes-to-main-inventory"},
 				subgroup = "flooring-gravel",
-				order = _.."[gravel-"..variant.."]",
+				order = _.."[gravel-"..variant.name.."]",
 				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 				place_as_tile = {
-					result = "dect-"..variant.."-gravel",
+					result = "dect-"..variant.name.."-gravel",
 					condition_size = 2,
 					condition = { "water-tile" }
 				}

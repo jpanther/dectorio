@@ -155,72 +155,26 @@ end
 
 if DECT.ENABLED["gravel"] then
 
+	for _, variant in pairs(DECT.CONFIG.GRAVEL_VARIANTS) do
 	data:extend({
-		{
-			type = "tile",
-			name = "dect-stone-gravel",
-			needs_correction = false,
-			minable = { hardness = 0.2, mining_time = 0.5, result = "stone" },
-			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
-			collision_mask = { "ground-tile" },
-			walking_speed_modifier = 1.1,
-			layer = tile_layer.gravel,
-			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
-			variants = tile_variants("stone", "gravel"),
-			walking_sound = base_dirt.walking_sound,
-			map_color={r=146, g=146, b=146},
-			ageing=0,
-			vehicle_friction_modifier = dirt_vehicle_speed_modifier
-		},
-		{
-			type = "tile",
-			name = "dect-iron-ore-gravel",
-			needs_correction = false,
-			minable = { hardness = 0.2, mining_time = 0.5, result = "iron-ore" },
-			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
-			collision_mask = { "ground-tile" },
-			walking_speed_modifier = 1.1,
-			layer = tile_layer.gravel,
-			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
-			variants = tile_variants("iron", "gravel"),
-			walking_sound = base_dirt.walking_sound,
-			map_color={r=114, g=137, b=163},
-			ageing=0,
-			vehicle_friction_modifier = dirt_vehicle_speed_modifier
-		},
-		{
-			type = "tile",
-			name = "dect-copper-ore-gravel",
-			needs_correction = false,
-			minable = { hardness = 0.2, mining_time = 0.5, result = "copper-ore" },
-			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
-			collision_mask = { "ground-tile" },
-			walking_speed_modifier = 1.1,
-			layer = tile_layer.gravel,
-			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
-			variants = tile_variants("copper", "gravel"),
-			walking_sound = base_dirt.walking_sound,
-			map_color={r=163, g=118, b=115},
-			ageing=0,
-			vehicle_friction_modifier = dirt_vehicle_speed_modifier
-		},
-		{
-			type = "tile",
-			name = "dect-coal-gravel",
-			needs_correction = false,
-			minable = { hardness = 0.2, mining_time = 0.5, result = "coal" },
-			mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
-			collision_mask = { "ground-tile" },
-			walking_speed_modifier = 1.1,
-			layer = tile_layer.gravel,
-			decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
-			variants = tile_variants("coal", "gravel"),
-			walking_sound = base_dirt.walking_sound,
-			map_color={r=84, g=84, b=84},
-			ageing=0,
-			vehicle_friction_modifier = dirt_vehicle_speed_modifier
-		}
-	})
+			{
+				type = "tile",
+				name = "dect-"..variant.name.."-gravel",
+				needs_correction = false,
+				minable = { hardness = 0.2, mining_time = 0.5, result = variant.name },
+				mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
+				collision_mask = { "ground-tile" },
+				walking_speed_modifier = 1.1,
+				layer = tile_layer.gravel,
+				decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
+				variants = tile_variants(variant.name, "gravel"),
+				walking_sound = base_dirt.walking_sound,
+				map_color = variant.color,
+				ageing = 0,
+				vehicle_friction_modifier = dirt_vehicle_speed_modifier
+			}
+		})
+	end
 
 	-- Move stone path up a layer so it sits atop gravel
 	base_stone_path.layer = tile_layer.stone
@@ -237,20 +191,20 @@ if DECT.ENABLED["painted-concrete"] then
 			data:extend({
 				{
 					type = "tile",
-					name = "dect-paint-"..variant.."-"..direction.this,
+					name = "dect-paint-"..variant.name.."-"..direction.this,
 					needs_correction = false,
-					next_direction = "dect-paint-"..variant.."-"..direction.next,
+					next_direction = "dect-paint-"..variant.name.."-"..direction.next,
 					transition_merges_with_tile = "concrete",
-					minable = { hardness = 0.2, mining_time = 0.5, result = "dect-paint-"..variant },
+					minable = { hardness = 0.2, mining_time = 0.5, result = "dect-paint-"..variant.name },
 					mined_sound = base_concrete.mined_sound,
 					collision_mask = { "ground-tile" },
 					walking_speed_modifier = 1.4,
 					layer = tile_layer.paint,
 					decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
-					variants = tile_variants_material("concrete", variant.."-"..direction.this),
+					variants = tile_variants_material("concrete", variant.name.."-"..direction.this),
  					walking_sound = base_concrete.walking_sound,
-					map_color={r=105, g=105, b=105},
-					ageing=0,
+					map_color = variant.color,
+					ageing = 0,
 					vehicle_friction_modifier = base_concrete.vehicle_friction_modifier
 				}
 			})
