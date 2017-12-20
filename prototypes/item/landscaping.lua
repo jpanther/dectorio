@@ -56,7 +56,7 @@ if DECT.ENABLED["landscaping"] then
 				icon_size = 32,
 				flags = {"goes-to-main-inventory"},
 				subgroup = "landscaping-water",
-				order = "a[base-"..tile.."]",
+				order = _.."a[base-"..tile.."]",
 				stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
 				place_as_tile = {
 					result = tile,
@@ -64,6 +64,40 @@ if DECT.ENABLED["landscaping"] then
 					condition = { "water-tile" }
 				},
 				localised_name = {"tile-name."..tile}
+			}
+		})
+
+		-- If this is deep water, then it can only be placed in water
+		if string.find(tile, "deep") then
+			data.raw["item"]["dect-base-"..tile].place_as_tile.condition = { "ground-tile" }
+		end
+	end
+
+	-- Add subgroup for base trees
+	data:extend({
+		{
+			type = "item-subgroup",
+			name = "landscaping-trees",
+			group = DECT.ITEM_GROUP,
+			order = "l-c"
+		}
+	})
+
+	-- Add items for placing trees
+	local base_trees = DECT.CONFIG.BASE_TREES
+	for _, tree in pairs(base_trees) do
+		data:extend({
+			{
+				type = "item",
+				name = "dect-base-"..tree,
+				icon = data.raw["tree"][tree].icon,
+				icon_size = 32,
+				flags = {"goes-to-main-inventory"},
+				subgroup = "landscaping-trees",
+				order = "a[base-"..tree.."]",
+				stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
+				place_result = tree,
+				localised_name = {"entity-name."..tree}
 			}
 		})
 	end
@@ -74,7 +108,7 @@ if DECT.ENABLED["landscaping"] then
 			type = "item-subgroup",
 			name = "landscaping-rocks",
 			group = DECT.ITEM_GROUP,
-			order = "l-c"
+			order = "l-d"
 		}
 	})
 

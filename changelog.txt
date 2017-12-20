@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.3
+Date: 20. 12. 2017
+  Added:
+    - Ability to place deep water and green deep water tiles
+    - Ability to place trees
+    - Map colours for all the painted concrete variants
+  Changed:
+    - Adjusted concrete layering to allow grid concrete and normal concrete to merge nicely
+    - Updated grid concrete map colour to differentiate it from normal concrete
+    - Adjusted icons for gravel items
+  Bugfixes:
+    - Fixed issue with grid concrete when high resolution graphics are active
+  Locales:
+    - Updated Korean translations
+---------------------------------------------------------------------------------------------------
 Version: 0.8.2
 Date: 19. 12. 2017
   Added:
