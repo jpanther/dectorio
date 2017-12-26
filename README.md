@@ -49,7 +49,7 @@ When you launch the game, the new mod will be enabled by default.
 
 * Adds items for placing dirt, sand, dark sand, grass, dry grass, red desert and dark red desert tiles
 * Ability to place water and green water tiles (aka. 'waterfill')
-* Ability to place decorative rocks
+* Ability to place decorative rocks and trees
 
   ![Landscaping items](https://img.pantherx.net/dectorio/landscaping.png)
 
