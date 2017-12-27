@@ -166,7 +166,8 @@ DECT.INCOMPATIBLE.MODS = {
 	["PickerTweaks"] = {
 		name = "PickerTweaks",
 		component = "signals",
-		reason = "item"
+		reason = "item",
+		setting = "Better Colored Lamps"
 	},
 }
 
