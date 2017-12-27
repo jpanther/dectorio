@@ -1,8 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.4
 Date: 27. 12. 2017
+  Added:
+    - Cliff explosives support
   Changed:
     - Updated incompatible mod notification for PickerTweaks
+    - Moved Stone path and Concrete to Dectorio crafting tab to keep landscaping items together
   Bugfixes:
     - Fixed migration issue when migrating old save games from Dectorio 0.7.1 or earlier
 ---------------------------------------------------------------------------------------------------
