@@ -167,7 +167,7 @@ DECT.INCOMPATIBLE.MODS = {
 		name = "PickerTweaks",
 		component = "signals",
 		reason = "item",
-		setting = "Better Colored Lamps"
+		setting = {type="startup", name="picker-better-lamp-colors", value=true}
 	},
 }
 

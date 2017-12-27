@@ -98,15 +98,17 @@ local function incompability_detected()
 	for mod, version in pairs(game.active_mods) do
 		if DECT.INCOMPATIBLE.MODS[mod] then
 			incompatible = DECT.INCOMPATIBLE.MODS[mod]
-			if DECT.ENABLED[incompatible.component] then
+			if DECT.ENABLED[incompatible.component] and not incompatible.setting then
 				notification({"dect-notify.incompatible", {"dect-notify.dectorio"}})
 				notification({"dect-notify.reason-"..incompatible.reason, {"dect-notify.dectorio"}, incompatible.name})
-				if incompatible.setting then
-					notification({"dect-notify.recommended-setting", {"dect-notify.dectorio"}, incompatible.setting, incompatible.name})
-				else
-					notification({"dect-notify.recommended-action", {"dect-notify.dectorio"}, incompatible.name, incompatible.component})
-				end
+				notification({"dect-notify.recommended-action", {"dect-notify.dectorio"}, incompatible.name, incompatible.component})
 				notification({"dect-notify.mod-portal", {"dect-notify.dectorio"}})
+			elseif DECT.ENABLED[incompatible.component] and incompatible.setting then
+				if settings[incompatible.setting.type][incompatible.setting.name].value == incompatible.setting.value then
+					notification({"dect-notify.incompatible", {"dect-notify.dectorio"}})
+					notification({"dect-notify.reason-"..incompatible.reason, {"dect-notify.dectorio"}, incompatible.name})
+					notification({"dect-notify.recommended-setting", {"dect-notify.dectorio"}, {"mod-setting-name."..incompatible.setting.name}, incompatible.name})
+				end
 			end
 		end
 	end
