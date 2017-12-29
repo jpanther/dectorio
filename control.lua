@@ -209,6 +209,14 @@ local function create_sign_gui(player)
 	end
 end
 
+-- Destroy the sign GUI
+local function destroy_sign_gui()
+	if sign_gui ~= nil then
+		sign_gui.destroy()
+	end
+	sign_gui = nil
+end
+
 -- Place a sign on game surface
 local function create_sign(player, icon, position, parent)
 	local offset = {x=0, y=0.75}
@@ -257,8 +265,7 @@ local function on_gui_click(event)
 					game.players[event.player_index].insert({name = global.sign_last_built[event.player_index].name, count = 1})
 					global.sign_last_built[event.player_index].destroy()
 				end
-				sign_gui.destroy()
-				sign_gui = nil
+				destroy_sign_gui()
 			end
 		elseif event.element.parent.name == "dect-icons-table" then
 			for _, icon in pairs(global.icons) do
@@ -266,8 +273,7 @@ local function on_gui_click(event)
 					create_sign(game.players[event.player_index], "dect-icon-"..icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
 					global.sign_last_built[event.player_index].destructible = true
 					global.sign_last_built[event.player_index].minable = true
-					sign_gui.destroy()
-					sign_gui = nil
+					destroy_sign_gui()
 					break
 				end
 			end

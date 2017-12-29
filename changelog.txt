@@ -8,6 +8,7 @@ Date: 27. 12. 2017
     - Moved Stone path and Concrete to Dectorio crafting tab to keep landscaping items together
   Bugfixes:
     - Fixed migration issue when migrating old save games from Dectorio 0.7.1 or earlier
+    - Fixed an issue that was causing an error to display when placing signs in certain situations
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.3
 Date: 20. 12. 2017
