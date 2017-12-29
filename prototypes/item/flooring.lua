@@ -1,22 +1,44 @@
 -- item/flooring
 
--- Change base concrete & stone path
-local base_concrete = data.raw["item"]["concrete"]
-local base_stone_brick = data.raw["item"]["stone-brick"]
-base_concrete.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
-base_stone_brick.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
-
-if DECT.ENABLED["painted-concrete"] then
+if DECT.ENABLED["wood-floor"] or DECT.ENABLED["concrete"] or DECT.ENABLED["gravel"] then
 
 	-- Add new subgroup
 	data:extend({
 		{
 			type = "item-subgroup",
-			name = "flooring",
+			name = "flooring-basic",
+			group = DECT.ITEM_GROUP,
+			order = "i-b"
+		}
+	})
+
+end
+
+if DECT.ENABLED["painted-concrete"] then
+
+	-- Add new subgroups
+	data:extend({
+		{
+			type = "item-subgroup",
+			name = "flooring-painted",
 			group = DECT.ITEM_GROUP,
 			order = "i-c"
 		}
 	})
+
+end
+
+-- Change base concrete & stone path
+local base_concrete = data.raw["item"]["concrete"]
+local base_stone_brick = data.raw["item"]["stone-brick"]
+base_concrete.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
+base_concrete.subgroup = "flooring-basic"
+base_concrete.order = "00[d-concrete]"
+base_stone_brick.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
+base_stone_brick.subgroup = "flooring-basic"
+base_stone_brick.order = "00[b-stone-brick]"
+
+if DECT.ENABLED["painted-concrete"] then
 
 	-- Add new items
 	for _, variant in pairs(DECT.CONFIG.PAINT_VARIANTS) do
@@ -27,8 +49,8 @@ if DECT.ENABLED["painted-concrete"] then
 				icon = "__Dectorio__/graphics/icons/paint-"..variant.name..".png",
 				icon_size = 32,
 				flags = {"goes-to-main-inventory"},
-				subgroup = "flooring",
-				order = _.."[paint-"..variant.name.."]",
+				subgroup = "flooring-painted",
+				order = "00[b-".._.."-paint-"..variant.name.."]",
 				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 				place_as_tile = {
 					result = "dect-paint-"..variant.name.."-left",
@@ -41,7 +63,7 @@ if DECT.ENABLED["painted-concrete"] then
 
 	-- Move base hazard concrete item under painted concrete
 	local base_hazard_item = data.raw["item"]["hazard-concrete"]
-	base_hazard_item.subgroup = "flooring"
+	base_hazard_item.subgroup = "flooring-painted"
 	base_hazard_item.order = "00[a-hazard-concrete]"
 	base_hazard_item.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
 
@@ -62,8 +84,8 @@ if DECT.ENABLED["wood-floor"] then
 			flags = {"goes-to-main-inventory"},
 			fuel_category = "chemical",
 			fuel_value = "2MJ",
-			subgroup = "flooring",
-			order = "00[0-wood-floor]",
+			subgroup = "flooring-basic",
+			order = "00[a-wood-floor]",
 			stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 			place_as_tile = {
 				result = "dect-wood-floor",
@@ -84,8 +106,8 @@ if DECT.ENABLED["concrete"] then
 			icon = "__Dectorio__/graphics/icons/concrete-grid.png",
 			icon_size = 32,
 			flags = {"goes-to-main-inventory"},
-			subgroup = "flooring",
-			order = "00[1-concrete]",
+			subgroup = "flooring-basic",
+			order = "00[e-concrete-grid]",
 			stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 			place_as_tile = {
 				result = "dect-concrete-grid",
@@ -99,16 +121,6 @@ end
 
 if DECT.ENABLED["gravel"] then
 
-	-- Add new subgroup
-	data:extend({
-		{
-			type = "item-subgroup",
-			name = "flooring-gravel",
-			group = DECT.ITEM_GROUP,
-			order = "i-b"
-		}
-	})
-
 	-- Add new items
 	for _, variant in pairs(DECT.CONFIG.GRAVEL_VARIANTS) do
 		data:extend({
@@ -120,8 +132,8 @@ if DECT.ENABLED["gravel"] then
 				},
 				icon_size = 32,
 				flags = {"goes-to-main-inventory"},
-				subgroup = "flooring-gravel",
-				order = _.."[gravel-"..variant.name.."]",
+				subgroup = "flooring-basic",
+				order = "00[g-gravel-"..variant.name.."]",
 				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 				place_as_tile = {
 					result = "dect-"..variant.name.."-gravel",

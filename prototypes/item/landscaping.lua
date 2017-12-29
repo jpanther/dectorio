@@ -56,7 +56,7 @@ if DECT.ENABLED["landscaping"] then
 				icon_size = 32,
 				flags = {"goes-to-main-inventory"},
 				subgroup = "landscaping-water",
-				order = _.."a[base-"..tile.."]",
+				order = "a[".._.."base-"..tile.."]",
 				stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
 				place_as_tile = {
 					result = tile,
@@ -131,10 +131,13 @@ if DECT.ENABLED["landscaping"] then
 		})
 	end
 
-	-- Modify base landfill stack size
+	-- Modify base landfill and cliff explosives
 	local base_landfill = data.raw["item"]["landfill"]
+	local base_cliff_explosives = data.raw["capsule"]["cliff-explosives"]
 	base_landfill.subgroup = "landscaping-water"
 	base_landfill.order = "b[landfill]"
 	base_landfill.stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"]
+	base_cliff_explosives.subgroup = "landscaping-water"
+	base_cliff_explosives.order = "c[cliff-explosives]"
 
 end

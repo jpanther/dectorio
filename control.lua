@@ -98,11 +98,17 @@ local function incompability_detected()
 	for mod, version in pairs(game.active_mods) do
 		if DECT.INCOMPATIBLE.MODS[mod] then
 			incompatible = DECT.INCOMPATIBLE.MODS[mod]
-			if DECT.ENABLED[incompatible.component] then
+			if DECT.ENABLED[incompatible.component] and not incompatible.setting then
 				notification({"dect-notify.incompatible", {"dect-notify.dectorio"}})
 				notification({"dect-notify.reason-"..incompatible.reason, {"dect-notify.dectorio"}, incompatible.name})
 				notification({"dect-notify.recommended-action", {"dect-notify.dectorio"}, incompatible.name, incompatible.component})
 				notification({"dect-notify.mod-portal", {"dect-notify.dectorio"}})
+			elseif DECT.ENABLED[incompatible.component] and incompatible.setting then
+				if settings[incompatible.setting.type][incompatible.setting.name].value == incompatible.setting.value then
+					notification({"dect-notify.incompatible", {"dect-notify.dectorio"}})
+					notification({"dect-notify.reason-"..incompatible.reason, {"dect-notify.dectorio"}, incompatible.name})
+					notification({"dect-notify.recommended-setting", {"dect-notify.dectorio"}, {"mod-setting-name."..incompatible.setting.name}, incompatible.name})
+				end
 			end
 		end
 	end
@@ -203,6 +209,14 @@ local function create_sign_gui(player)
 	end
 end
 
+-- Destroy the sign GUI
+local function destroy_sign_gui()
+	if sign_gui ~= nil then
+		sign_gui.destroy()
+	end
+	sign_gui = nil
+end
+
 -- Place a sign on game surface
 local function create_sign(player, icon, position, parent)
 	local offset = {x=0, y=0.75}
@@ -251,8 +265,7 @@ local function on_gui_click(event)
 					game.players[event.player_index].insert({name = global.sign_last_built[event.player_index].name, count = 1})
 					global.sign_last_built[event.player_index].destroy()
 				end
-				sign_gui.destroy()
-				sign_gui = nil
+				destroy_sign_gui()
 			end
 		elseif event.element.parent.name == "dect-icons-table" then
 			for _, icon in pairs(global.icons) do
@@ -260,8 +273,7 @@ local function on_gui_click(event)
 					create_sign(game.players[event.player_index], "dect-icon-"..icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
 					global.sign_last_built[event.player_index].destructible = true
 					global.sign_last_built[event.player_index].minable = true
-					sign_gui.destroy()
-					sign_gui = nil
+					destroy_sign_gui()
 					break
 				end
 			end
