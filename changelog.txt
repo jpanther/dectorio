@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.4
-Date: 27. 12. 2017
+Date: 29. 12. 2017
   Added:
     - Cliff explosives support
   Changed:
@@ -9,6 +9,8 @@ Date: 27. 12. 2017
   Bugfixes:
     - Fixed migration issue when migrating old save games from Dectorio 0.7.1 or earlier
     - Fixed an issue that was causing an error to display when placing signs in certain situations
+  Locales:
+    - Updated German and Korean translations
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.3
 Date: 20. 12. 2017

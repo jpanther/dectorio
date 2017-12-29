@@ -133,12 +133,12 @@ Fully supported languages:
 * English
 
 Community translations:
-* Chinese Simplified (30%)
-* Chinese Traditional (36%)
-* Czech (38%)
+* Chinese Simplified (29%)
+* Chinese Traditional (35%)
+* Czech (37%)
 * German (100%)
 * Korean (100%)
-* Polish (71%)
+* Polish (69%)
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
