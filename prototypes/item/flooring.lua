@@ -1,32 +1,14 @@
 -- item/flooring
 
-if DECT.ENABLED["wood-floor"] or DECT.ENABLED["concrete"] or DECT.ENABLED["gravel"] then
-
-	-- Add new subgroup
-	data:extend({
-		{
-			type = "item-subgroup",
-			name = "flooring-basic",
-			group = DECT.ITEM_GROUP,
-			order = "i-b"
-		}
-	})
-
-end
-
-if DECT.ENABLED["painted-concrete"] then
-
-	-- Add new subgroups
-	data:extend({
-		{
-			type = "item-subgroup",
-			name = "flooring-painted",
-			group = DECT.ITEM_GROUP,
-			order = "i-c"
-		}
-	})
-
-end
+-- Add new subgroup for basic floorings
+data:extend({
+	{
+		type = "item-subgroup",
+		name = "flooring-basic",
+		group = DECT.ITEM_GROUP,
+		order = "i-b"
+	}
+})
 
 -- Change base concrete & stone path
 local base_concrete = data.raw["item"]["concrete"]
@@ -39,6 +21,16 @@ base_stone_brick.subgroup = "flooring-basic"
 base_stone_brick.order = "00[b-stone-brick]"
 
 if DECT.ENABLED["painted-concrete"] then
+
+	-- Add new subgroup for painted concretes
+	data:extend({
+		{
+			type = "item-subgroup",
+			name = "flooring-painted",
+			group = DECT.ITEM_GROUP,
+			order = "i-c"
+		}
+	})
 
 	-- Add new items
 	for _, variant in pairs(DECT.CONFIG.PAINT_VARIANTS) do
