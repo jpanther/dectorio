@@ -63,6 +63,14 @@ if DECT.ENABLED["painted-concrete"] then
 		base_hazard_item.icon = "__Dectorio__/graphics/icons/paint-hazard.png"
 	end
 
+else
+
+	-- Move base hazard concrete item under basic flooring
+	local base_hazard_item = data.raw["item"]["hazard-concrete"]
+	base_hazard_item.subgroup = "flooring-basic"
+	base_hazard_item.order = "00[f-hazard-concrete]"
+	base_hazard_item.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
+
 end
 
 if DECT.ENABLED["wood-floor"] then

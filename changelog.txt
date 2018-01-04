@@ -3,6 +3,7 @@ Version: 0.8.5
 Date: 05. 01. 2018
   Bugfixes:
     - Fixed an item grouping issue that appeared when using Dectorio with all the flooring settings disabled
+    - Fixed stack size of vanilla hazard concrete isn't modified when painted concrete setting is disabled
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.4
 Date: 29. 12. 2017
