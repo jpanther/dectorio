@@ -14,7 +14,7 @@ if DECT.ENABLED["signals"] then
 
 	-- Clear out any existing signals that conflict
 	for name, signal in pairs(data.raw["virtual-signal"]) do
-		if signal.order:find("colors") then
+		if signal.subgroup == "virtual-signal-color" then
 			data.raw["virtual-signal"][name] = nil
 		end
 	end
