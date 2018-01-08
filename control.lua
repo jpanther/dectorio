@@ -53,17 +53,25 @@ local function init_global()
 			for _, obj in pairs(prototype) do
 				for _, category in pairs(DECT.CONFIG.SIGN_CATEGORIES) do
 					local new_icon = {name=obj.name, type=protokey}
-					if protokey == "fluid" and category == "fluid" then
-						table.insert(icons, new_icon)
-					elseif protokey == "item" and obj.type == category then
-						local match = false
-						for _, icon_be_gone in pairs(DECT.CONFIG.SIGN_BLACKLIST) do
-							if string.find(obj.name, tostring(icon_be_gone)) then
-								match = true
-							end
+					local duplicate = false
+					for _, icon in pairs(icons) do
+						if icon == new_icon then
+							duplicate = true
 						end
-						if not match then
+					end
+					if not duplicate then
+						if protokey == "fluid" and category == "fluid" then
 							table.insert(icons, new_icon)
+						elseif protokey == "item" and obj.type == category then
+							local match = false
+							for _, icon_be_gone in pairs(DECT.CONFIG.SIGN_BLACKLIST) do
+								if string.find(obj.name, tostring(icon_be_gone)) then
+									match = true
+								end
+							end
+							if not match then
+								table.insert(icons, new_icon)
+							end
 						end
 					end
 				end
@@ -199,7 +207,7 @@ local function create_sign_gui(player)
 	for _, icon in pairs(global.icons) do
 		local match = false
 		for _, child in pairs(gui_table.children_names) do
-			if child.name == "dect-icon-"..icon.name then
+			if child == "dect-icon-"..icon.name then
 				match = true
 			end
 		end
