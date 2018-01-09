@@ -3,6 +3,8 @@ Version: 0.8.6
 Date: 09. 01. 2018
   Changed:
     - Optimised graphics assets to drastically reduce the overall mod size (thanks to iamfactorio)
+  Locales:
+    - Added Russian translation (thanks to iamfactorio)
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.5
 Date: 08. 01. 2018
