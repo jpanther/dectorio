@@ -45,7 +45,10 @@ if DECT.ENABLED["landscaping"] then
 
 	-- Move base landfill tech underneath landscaping
 	local base_landfill = data.raw["technology"]["landfill"]
-	base_landfill.prerequisites = {"dect-landscaping"}
+	if not base_landfill.prerequisites then
+		base_landfill.prerequisites = {}
+	end
+	table.insert(base_landfill.prerequisites, "dect-landscaping")
 
 	-- Add waterfill items to Landfill technology
 	for _, tile in pairs(water_tiles) do

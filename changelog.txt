@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.6
-Date: 09. 01. 2018
+Date: 15. 01. 2018
+  Bugfixes:
+    - Softer handling of Landfill prerequisites so that it is less likely to conflict with other mods
   Changed:
     - Optimised graphics assets to drastically reduce the overall mod size (thanks to iamfactorio)
   Locales:
