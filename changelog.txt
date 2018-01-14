@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.6
 Date: 15. 01. 2018
+  Added:
+    - New mod setting to toggle Waterfill items independently of Landscaping items
   Bugfixes:
     - Softer handling of Landfill prerequisites so that it is less likely to conflict with other mods
   Changed:
