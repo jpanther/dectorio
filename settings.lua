@@ -10,52 +10,59 @@ data:extend({
 	},
 	{
 		type = "bool-setting",
-		name = "dectorio-decoratives",
+		name = "dectorio-waterfill",
 		setting_type = "startup",
 		default_value = true,
 		order = "a-b"
 	},
 	{
 		type = "bool-setting",
-		name = "dectorio-flooring",
+		name = "dectorio-decoratives",
 		setting_type = "startup",
 		default_value = true,
 		order = "a-c"
 	},
 	{
 		type = "bool-setting",
-		name = "dectorio-gravel",
+		name = "dectorio-flooring",
 		setting_type = "startup",
 		default_value = true,
 		order = "a-d"
 	},
 	{
 		type = "bool-setting",
-		name = "dectorio-painted-concrete",
+		name = "dectorio-gravel",
 		setting_type = "startup",
 		default_value = true,
 		order = "a-e"
 	},
 	{
 		type = "bool-setting",
-		name = "dectorio-walls",
+		name = "dectorio-painted-concrete",
 		setting_type = "startup",
 		default_value = true,
 		order = "a-f"
 	},
 	{
 		type = "bool-setting",
-		name = "dectorio-signs",
+		name = "dectorio-walls",
 		setting_type = "startup",
 		default_value = true,
 		order = "a-g"
 	},
 	{
 		type = "bool-setting",
-		name = "dectorio-signals",
+		name = "dectorio-signs",
 		setting_type = "startup",
 		default_value = true,
 		order = "a-h"
+	},
+	{
+		type = "bool-setting",
+		name = "dectorio-signals",
+		setting_type = "startup",
+		default_value = true,
+		order = "a-i"
 	},
 	{
 		type = "bool-setting",

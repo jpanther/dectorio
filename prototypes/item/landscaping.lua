@@ -35,6 +35,10 @@ if DECT.ENABLED["landscaping"] then
 		})
 	end
 
+end
+
+if DECT.ENABLED["waterfill"] or DECT.ENABLED["landscaping"] then
+
 	-- Add subgroup for base water
 	data:extend({
 		{
@@ -44,6 +48,10 @@ if DECT.ENABLED["landscaping"] then
 			order = "l-b"
 		}
 	})
+
+end
+
+if DECT.ENABLED["waterfill"] then
 
 	-- Add new items
 	local water_tiles = DECT.CONFIG.BASE_WATER_TILES
@@ -72,6 +80,10 @@ if DECT.ENABLED["landscaping"] then
 			data.raw["item"]["dect-base-"..tile].place_as_tile.condition = { "ground-tile" }
 		end
 	end
+
+end
+
+if DECT.ENABLED["landscaping"] then
 
 	-- Add subgroup for base trees
 	data:extend({
@@ -130,6 +142,10 @@ if DECT.ENABLED["landscaping"] then
 			}
 		})
 	end
+
+end
+
+if DECT.ENABLED["waterfill"] or DECT.ENABLED["landscaping"] then
 
 	-- Modify base landfill and cliff explosives
 	local base_landfill = data.raw["item"]["landfill"]

@@ -3,9 +3,6 @@
 if DECT.ENABLED["landscaping"] then
 
 	local base_tiles = DECT.CONFIG.BASE_TILES
-	local water_tiles = DECT.CONFIG.BASE_WATER_TILES
-	local base_trees = DECT.CONFIG.BASE_TREES
-	local base_rocks = DECT.CONFIG.BASE_ROCKS
 
 	-- Create new landscaping recipes for base ground tiles
 	for _, tile in pairs(base_tiles) do
@@ -26,6 +23,12 @@ if DECT.ENABLED["landscaping"] then
 			})
 		end
 	end
+
+end
+
+if DECT.ENABLED["waterfill"] then
+
+	local water_tiles = DECT.CONFIG.BASE_WATER_TILES
 
 	-- Create new landscaping recipes for base water tiles
 	for _, tile in pairs(water_tiles) do
@@ -48,6 +51,13 @@ if DECT.ENABLED["landscaping"] then
 			})
 		end
 	end
+
+end
+
+if DECT.ENABLED["landscaping"] then
+
+	local base_trees = DECT.CONFIG.BASE_TREES
+	local base_rocks = DECT.CONFIG.BASE_ROCKS
 
 	-- Create new landscaping recipes for base trees
 	for _, tree in pairs(base_trees) do

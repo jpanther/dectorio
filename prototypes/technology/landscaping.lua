@@ -3,7 +3,6 @@
 if DECT.ENABLED["landscaping"] then
 
 	local base_tiles = DECT.CONFIG.BASE_TILES
-	local water_tiles = DECT.CONFIG.BASE_WATER_TILES
 	local base_trees = DECT.CONFIG.BASE_TREES
 	local base_rocks = DECT.CONFIG.BASE_ROCKS
 
@@ -45,7 +44,17 @@ if DECT.ENABLED["landscaping"] then
 
 	-- Move base landfill tech underneath landscaping
 	local base_landfill = data.raw["technology"]["landfill"]
-	base_landfill.prerequisites = {"dect-landscaping"}
+	if not base_landfill.prerequisites then
+		base_landfill.prerequisites = {}
+	end
+	table.insert(base_landfill.prerequisites, "dect-landscaping")
+
+end
+
+if DECT.ENABLED["waterfill"] then
+
+	local water_tiles = DECT.CONFIG.BASE_WATER_TILES
+	local base_landfill = data.raw["technology"]["landfill"]
 
 	-- Add waterfill items to Landfill technology
 	for _, tile in pairs(water_tiles) do

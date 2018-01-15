@@ -1,13 +1,8 @@
 -- third-party/alien-biomes
 
-if DECT.ENABLED["landscaping"] and data.raw["tree"]["coral-lava-01"] then
+if DECT.ENABLED["landscaping"] and settings.startup["alien-biomes-terrain-scale"] then
 
-	alien_biomes = {
-		"grass-red","grass-orange","grass-yellow","grass-yellow-fade","grass-dry","grass-medium","grass","grass-blue-fade","grass-blue","grass-purple-fade","grass-purple",
-		"dirt-red","dirt-brown","dirt-tan","dirt","dirt-dull","dirt-grey","dirt-red-dark","dirt-brown-dark","dirt-tan-dark","dirt-dark","dirt-dull-dark","dirt-grey-dark",
-		"sand-red","sand-orange","sand-gold","sand","sand-dull","sand-grey","sand-red-dark","sand-orange-dark","sand-gold-dark","sand-dark","sand-dull-dark","sand-grey-dark",
-		"snow","volcanic-cool","volcanic-medium","volcanic-hot"
-	}
+	local alien_biomes = DECT.CONFIG.ALIEN_BIOMES
 
 	-- Clear out existing landscaping items and recipes
 	local base_tiles = DECT.CONFIG.BASE_TILES
@@ -23,8 +18,9 @@ if DECT.ENABLED["landscaping"] and data.raw["tree"]["coral-lava-01"] then
 				{
 					type = "item",
 					name = "dect-alien-biomes-"..tile,
-					localised_name = { "tile-name."..tile },
+					localised_name = data.raw["tile"][tile].localised_name,
 					icon = "__Dectorio__/graphics/third-party/alien-biomes/icons/"..tile..".png",
+					icon_size = 32,
 					flags = {"goes-to-main-inventory"},
 					subgroup = "landscaping",
 					order = "a[alien-biomes-"..tile.."]",
@@ -79,10 +75,5 @@ if DECT.ENABLED["landscaping"] and data.raw["tree"]["coral-lava-01"] then
 		end
 	end
 	data.raw["technology"]["dect-landscaping"].effects = technology_effects
-	data.raw["technology"]["landfill"].effects = {
-		{
-			type = "unlock-recipe",
-			recipe = "landfill"
-		}
-	}
+
 end

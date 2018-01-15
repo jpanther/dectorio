@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.6
+Date: 15. 01. 2018
+  Added:
+    - New mod setting to toggle Waterfill items independently of Landscaping items
+  Bugfixes:
+    - Softer handling of Landfill prerequisites so that it is less likely to conflict with other mods
+    - Fixed that Waterfill items weren't unlocked when Earthworks was researched while 'Alien Biomes' mod was installed
+  Changed:
+    - Updated to include support for 'Alien Biomes' mod version 3
+    - Optimised graphics assets to drastically reduce the overall mod size (thanks to iamfactorio)
+  Locales:
+    - Added Russian translation (thanks to iamfactorio)
+---------------------------------------------------------------------------------------------------
 Version: 0.8.5
 Date: 08. 01. 2018
   Bugfixes:
