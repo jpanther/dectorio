@@ -139,6 +139,7 @@ Community translations:
 * German (100%)
 * Korean (100%)
 * Polish (69%)
+* Russian (100%)
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
