@@ -6,16 +6,22 @@ local base_stone_path = data.raw["tile"]["stone-path"]
 local base_concrete = data.raw["tile"]["concrete"]
 local base_hazard_left = data.raw["tile"]["hazard-concrete-left"]
 local base_hazard_right = data.raw["tile"]["hazard-concrete-right"]
+local base_refined_concrete = data.raw["tile"]["refined-concrete"]
+local base_refined_hazard_left = data.raw["tile"]["refined-hazard-concrete-left"]
+local base_refined_hazard_right = data.raw["tile"]["refined-hazard-concrete-right"]
 
 -- Sort out the layers
 local tile_layer = {
 	gravel = 60,
 	stone = 61,
 	concrete = 62,
-	grid = 63,
-	paint = 64,
-	-- no layer 65 - need to leave gap to account for concrete transition layer
-	wood = 66,
+	paint = 63,
+	-- 64 transition layer
+	refined = 65,
+	refined_paint = 66,
+	-- 67 transition layer
+	grid = 68,
+	wood = 69,
 }
 
 -- Return tile variants array for given set and variant
@@ -149,7 +155,8 @@ if DECT.ENABLED["concrete"] then
 	})
 
 	-- Correct the offset so that concrete border is drawn on top of painted concrete
-	base_concrete.transition_overlay_layer_offset = tile_layer.paint - tile_layer.concrete + 1
+	--base_concrete.transition_overlay_layer_offset = tile_layer.paint - tile_layer.concrete + 1
+	--base_refined_concrete.transition_overlay_layer_offset = tile_layer.refined_paint - tile_layer.refined + 1
 
 end
 
@@ -188,6 +195,7 @@ if DECT.ENABLED["painted-concrete"] then
 	}
 	for _, variant in pairs(DECT.CONFIG.PAINT_VARIANTS) do
 		for _, direction in pairs(directions) do
+			-- Normal variant
 			data:extend({
 				{
 					type = "tile",
@@ -208,6 +216,28 @@ if DECT.ENABLED["painted-concrete"] then
 					vehicle_friction_modifier = base_concrete.vehicle_friction_modifier
 				}
 			})
+
+			-- Refined variant
+			data:extend({
+				{
+					type = "tile",
+					name = "dect-paint-refined-"..variant.name.."-"..direction.this,
+					needs_correction = false,
+					next_direction = "dect-paint-refined-"..variant.name.."-"..direction.next,
+					transition_merges_with_tile = "refined-concrete",
+					minable = { hardness = 0.2, mining_time = 0.5, result = "dect-paint-refined-"..variant.name },
+					mined_sound = base_concrete.mined_sound,
+					collision_mask = { "ground-tile" },
+					walking_speed_modifier = 1.4,
+					layer = tile_layer.refined,
+					decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
+					variants = tile_variants_material("refined-concrete", variant.name.."-"..direction.this),
+					walking_sound = base_concrete.walking_sound,
+					map_color = variant.color,
+					ageing = 0,
+					vehicle_friction_modifier = base_concrete.vehicle_friction_modifier
+				}
+			})
 		end
 	end
 
@@ -215,11 +245,16 @@ if DECT.ENABLED["painted-concrete"] then
 	base_concrete.layer = tile_layer.concrete
 	base_hazard_left.layer = tile_layer.paint
 	base_hazard_right.layer = tile_layer.paint
+	base_refined_concrete.layer = tile_layer.refined
+	base_refined_hazard_left.layer = tile_layer.refined_paint
+	base_refined_hazard_right.layer = tile_layer.refined_paint
 
 	-- Use the Dectorio look and feel for Hazard concrete
 	if not DECT.CONFIG.SETTINGS["vanilla_hazard_concrete"] then
 		base_hazard_left.variants = tile_variants_material("concrete", "hazard-left")
 		base_hazard_right.variants = tile_variants_material("concrete", "hazard-right")
+		base_refined_hazard_left.variants = tile_variants_material("refined-concrete", "hazard-left")
+		base_refined_hazard_right.variants = tile_variants_material("refined-concrete", "hazard-right")
 	end
 
 end
