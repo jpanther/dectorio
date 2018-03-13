@@ -53,14 +53,50 @@ if DECT.ENABLED["painted-concrete"] then
 		})
 	end
 
+	-- Add new subgroup for refined painted concretes
+	data:extend({
+		{
+			type = "item-subgroup",
+			name = "flooring-painted-refined",
+			group = DECT.ITEM_GROUP,
+			order = "i-d"
+		}
+	})
+
+	-- Add new items
+	for _, variant in pairs(DECT.CONFIG.PAINT_VARIANTS) do
+		data:extend({
+			{
+				type = "item",
+				name = "dect-paint-refined-"..variant.name,
+				icon = "__Dectorio__/graphics/icons/paint-"..variant.name.."-refined.png",
+				icon_size = 32,
+				flags = {"goes-to-main-inventory"},
+				subgroup = "flooring-painted-refined",
+				order = "00[b-".._.."-paint-refined-"..variant.name.."]",
+				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
+				place_as_tile = {
+					result = "dect-paint-refined-"..variant.name.."-left",
+					condition_size = 1,
+					condition = { "water-tile" }
+				}
+			}
+		})
+	end
+
 	-- Move base hazard concrete item under painted concrete
 	local base_hazard_item = data.raw["item"]["hazard-concrete"]
 	base_hazard_item.subgroup = "flooring-painted"
 	base_hazard_item.order = "00[a-hazard-concrete]"
 	base_hazard_item.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
+	local base_refined_hazard_item = data.raw["item"]["refined-hazard-concrete"]
+	base_refined_hazard_item.subgroup = "flooring-painted-refined"
+	base_refined_hazard_item.order = "00[a-hazard-concrete]"
+	base_refined_hazard_item.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
 
 	if not DECT.CONFIG.SETTINGS["vanilla_hazard_concrete"] then
 		base_hazard_item.icon = "__Dectorio__/graphics/icons/paint-hazard.png"
+		base_refined_hazard_item.icon = "__Dectorio__/graphics/icons/paint-hazard-refined.png"
 	end
 
 else
@@ -70,6 +106,10 @@ else
 	base_hazard_item.subgroup = "flooring-basic"
 	base_hazard_item.order = "00[f-hazard-concrete]"
 	base_hazard_item.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
+	local base_refined_hazard_item = data.raw["item"]["refined-hazard-concrete"]
+	base_refined_hazard_item.subgroup = "flooring-basic"
+	base_refined_hazard_item.order = "00[f-refined-hazard-concrete]"
+	base_refined_hazard_item.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
 
 end
 

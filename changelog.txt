@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.7
+Date: 13. 03. 2018
+  Added:
+    - New Painted refined concrete tiles
+    - Support for 'Alien Biomes' remove obsolete tiles setting
+  Changed:
+    - Updated grid concrete graphics to make the grid less intense (thanks to kirazy)
+  Locales:
+    - New Simplified Chinese translation (thanks to jessefjxm)
+    - Updated German and Korean translations
+---------------------------------------------------------------------------------------------------
 Version: 0.8.6
 Date: 15. 01. 2018
   Added:

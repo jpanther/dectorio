@@ -51,7 +51,15 @@ if DECT.ENABLED["painted-concrete"] then
 				},
 				{
 					type = "unlock-recipe",
+					recipe = "refined-hazard-concrete"
+				},
+				{
+					type = "unlock-recipe",
 					recipe = "dect-paint-danger"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-paint-refined-danger"
 				},
 				{
 					type = "unlock-recipe",
@@ -59,7 +67,15 @@ if DECT.ENABLED["painted-concrete"] then
 				},
 				{
 					type = "unlock-recipe",
+					recipe = "dect-paint-refined-emergency"
+				},
+				{
+					type = "unlock-recipe",
 					recipe = "dect-paint-caution"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-paint-refined-caution"
 				},
 				{
 					type = "unlock-recipe",
@@ -67,7 +83,15 @@ if DECT.ENABLED["painted-concrete"] then
 				},
 				{
 					type = "unlock-recipe",
+					recipe = "dect-paint-refined-radiation"
+				},
+				{
+					type = "unlock-recipe",
 					recipe = "dect-paint-defect"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-paint-refined-defect"
 				},
 				{
 					type = "unlock-recipe",
@@ -75,7 +99,15 @@ if DECT.ENABLED["painted-concrete"] then
 				},
 				{
 					type = "unlock-recipe",
+					recipe = "dect-paint-refined-operations"
+				},
+				{
+					type = "unlock-recipe",
 					recipe = "dect-paint-safety"
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "dect-paint-refined-safety"
 				}
 			},
 			order = "e-p-b-a"
@@ -87,6 +119,14 @@ if DECT.ENABLED["painted-concrete"] then
 	for i = 1, #base_concrete_effects do
 		effect = base_concrete_effects[i]
 		if effect.type == "unlock-recipe" and effect.recipe == "hazard-concrete" then
+			index = i
+		end
+	end
+	table.remove(base_concrete_effects, index)
+	local base_concrete_effects = data.raw["technology"]["concrete"].effects
+	for i = 1, #base_concrete_effects do
+		effect = base_concrete_effects[i]
+		if effect.type == "unlock-recipe" and effect.recipe == "refined-hazard-concrete" then
 			index = i
 		end
 	end

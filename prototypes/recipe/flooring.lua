@@ -8,7 +8,7 @@ if DECT.ENABLED["painted-concrete"] then
 			{
 				type = "recipe",
 				name = "dect-paint-"..variant.name,
-				energy_required = 5,
+				energy_required = 0.25,
 				enabled = false,
 				category = "crafting",
 				ingredients = {
@@ -16,11 +16,21 @@ if DECT.ENABLED["painted-concrete"] then
 				},
 				result= "dect-paint-"..variant.name,
 				result_count = 10
+			},
+			{
+				type = "recipe",
+				name = "dect-paint-refined-"..variant.name,
+				energy_required = 0.25,
+				enabled = false,
+				category = "crafting",
+				ingredients = {
+					{"refined-concrete", 10},
+				},
+				result= "dect-paint-refined-"..variant.name,
+				result_count = 10
 			}
 		})
 	end
-
-	data.raw["recipe"]["hazard-concrete"].energy_required = 5
 
 end
 
