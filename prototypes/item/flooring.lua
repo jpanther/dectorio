@@ -11,8 +11,12 @@ data:extend({
 })
 
 -- Change base concrete & stone path
+local base_refined_concrete = data.raw["item"]["refined-concrete"]
 local base_concrete = data.raw["item"]["concrete"]
 local base_stone_brick = data.raw["item"]["stone-brick"]
+base_refined_concrete.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
+base_refined_concrete.subgroup = "flooring-basic"
+base_refined_concrete.order = "00[f-refined-concrete]"
 base_concrete.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
 base_concrete.subgroup = "flooring-basic"
 base_concrete.order = "00[d-concrete]"
