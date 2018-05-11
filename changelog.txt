@@ -6,6 +6,8 @@ Date: 11. 05. 2018
   Bugfixes:
     - Fixed an issue with Painted refined concrete tile borders
     - Fixed migration issue with Alien Biomes (thanks to Aidiakapi)
+  Locales:
+    - Updated Korean and Simplified Chinese translations
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.7
 Date: 13. 03. 2018

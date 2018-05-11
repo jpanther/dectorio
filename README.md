@@ -133,11 +133,11 @@ Fully supported languages:
 * English
 
 Community translations:
-* Chinese Simplified (90%)
+* Chinese Simplified (100%)
 * Chinese Traditional (29%)
 * Czech (33%)
 * German (90%)
-* Korean (90%)
+* Korean (100%)
 * Polish (60%)
 * Russian (86%)
 
