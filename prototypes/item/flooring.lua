@@ -16,7 +16,7 @@ local base_concrete = data.raw["item"]["concrete"]
 local base_stone_brick = data.raw["item"]["stone-brick"]
 base_refined_concrete.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
 base_refined_concrete.subgroup = "flooring-basic"
-base_refined_concrete.order = "00[f-refined-concrete]"
+base_refined_concrete.order = "00[e-refined-concrete]"
 base_concrete.stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"]
 base_concrete.subgroup = "flooring-basic"
 base_concrete.order = "00[d-concrete]"
@@ -151,7 +151,7 @@ if DECT.ENABLED["concrete"] then
 			icon_size = 32,
 			flags = {"goes-to-main-inventory"},
 			subgroup = "flooring-basic",
-			order = "00[e-concrete-grid]",
+			order = "00[f-concrete-grid]",
 			stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
 			place_as_tile = {
 				result = "dect-concrete-grid",

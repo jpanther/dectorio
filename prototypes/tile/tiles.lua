@@ -229,7 +229,7 @@ if DECT.ENABLED["painted-concrete"] then
 					mined_sound = base_concrete.mined_sound,
 					collision_mask = { "ground-tile" },
 					walking_speed_modifier = 1.4,
-					layer = tile_layer.refined,
+					layer = tile_layer.refined_paint,
 					decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 					variants = tile_variants_material("refined-concrete", variant.name.."-"..direction.this),
 					walking_sound = base_concrete.walking_sound,
