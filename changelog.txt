@@ -4,8 +4,10 @@ Date: 15. 05. 2018
   Added:
     - Added new Landfill tile that places as dirt which avoids an issue where robots would incorrectly use grass items from inventory instead of landfill when placing blueprints
     - Added additional checks so that Dectorio only modifies coloured signals when they clash with those defined in config.lua
+    - Added negative dependency checks to prevent clashes with Expanded Color Lamps mod and variants
   Changed:
     - Moved Refined concrete to Dectorio tab (thanks to Optera)
+    - Removed references to incompatible mods that have not been updated to 0.16
   Bugfixes:
     - Fixed an issue with Painted refined concrete tile borders
     - Fixed migration issue with Alien Biomes (thanks to Aidiakapi)
