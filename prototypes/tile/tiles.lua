@@ -94,6 +94,17 @@ end
 base_stone_path.decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"]
 base_concrete.decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"]
 
+-- Add landfill tile
+local landfill = table.deepcopy(data.raw.tile["dirt-5"])
+landfill.name = "dect-landfill"
+landfill.autoplace = nil
+landfill.ageing = 0
+landfill.localised_name = { "item-name.landfill" }
+data:extend({
+  landfill
+})
+data.raw.item.landfill.place_as_tile.result = "dect-landfill"
+
 if DECT.ENABLED["landscaping"] then
 
 	-- Make tiles unblueprintable
@@ -229,7 +240,7 @@ if DECT.ENABLED["painted-concrete"] then
 					mined_sound = base_concrete.mined_sound,
 					collision_mask = { "ground-tile" },
 					walking_speed_modifier = 1.4,
-					layer = tile_layer.refined,
+					layer = tile_layer.refined_paint,
 					decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"],
 					variants = tile_variants_material("refined-concrete", variant.name.."-"..direction.this),
 					walking_sound = base_concrete.walking_sound,

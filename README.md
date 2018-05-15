@@ -9,7 +9,7 @@ Requires Factorio version 0.15 or later.
 
 ## How to install
 
-Download the latest stable release from the [Factorio mod portal](https://mods.factorio.com/mods/PantherX/Dectorio) or at <https://github.com/jpanther/Dectorio/releases/latest> and copy the entire zip file to your Factorio mods directory:
+Download the latest stable release from the [Factorio mod portal](https://mods.factorio.com/mod/Dectorio) or at <https://github.com/jpanther/Dectorio/releases/latest> and copy the entire zip file to your Factorio mods directory:
 
 * Windows: `%appdata%\Factorio\mods`
 * Mac: `~/Library/Application Support/factorio/mods/`
@@ -101,7 +101,7 @@ Check out the [Mod Spotlight video by Xterminator](https://www.youtube.com/watch
 
 ### Contributing
 
-Feel free to get in touch with any issues or suggestions for new features you'd like to see. I also welcome pull requests to fix bugs or implement new features. The best way to make contact is via [GitHub Issues](https://github.com/jpanther/Dectorio/issues), however you can alternatively post on the [Factorio Mod Portal](https://mods.factorio.com/mods/PantherX/Dectorio/discussion) (but please note that it may take longer to get a response this way as there are no notifications of new messages on the portal and I only check it sporadically). Usually when I find issues reported on the Mod Portal, I'll open a new GitHub issue to track its progress.
+Feel free to get in touch with any issues or suggestions for new features you'd like to see. I also welcome pull requests to fix bugs or implement new features. The best way to make contact is via [GitHub Issues](https://github.com/jpanther/Dectorio/issues), however you can alternatively post on the [Factorio Mod Portal](https://mods.factorio.com/mod/Dectorio/discussion) (but please note that it may take longer to get a response this way as there are no notifications of new messages on the portal and I only check it sporadically). Usually when I find issues reported on the Mod Portal, I'll open a new GitHub issue to track its progress.
 
 #### **Did you find a bug?**
 
@@ -133,11 +133,11 @@ Fully supported languages:
 * English
 
 Community translations:
-* Chinese Simplified (90%)
+* Chinese Simplified (100%)
 * Chinese Traditional (29%)
 * Czech (33%)
 * German (90%)
-* Korean (90%)
+* Korean (100%)
 * Polish (60%)
 * Russian (86%)
 
@@ -151,13 +151,13 @@ Limited testing has been completed with other mods. Warnings will be shown in-ga
 
 It is not recommended to use other coloured signal mods at the same time as Dectorio. This can cause coloured signals to be overwritten multiple times and lead to game-breaking compatibility issues with other mods. If you would like more colours, you can add these in the Dectorio config.lua file (instructions are in the file).
 
-Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mods/Earendel/alien-biomes).
+Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mod/alien-biomes).
 
-Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mods/Mylon/Concreep), [FARL](https://mods.factorio.com/mods/Choumiko/FARL), [Pavement Drive Assist](https://mods.factorio.com/mods/Arcitos/PavementDriveAssist).
+Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mod/Concreep), [Fully Automated Rail Layer (FARL)](https://mods.factorio.com/mod/FARL), [Pavement Drive Assist](https://mods.factorio.com/mod/PavementDriveAssist).
 
-Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mods/Arcitos/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mods/kapaer/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mods/justarandomgeek/color-coding), [Naked Rails](https://mods.factorio.com/mods/futileohm/naked-rails).
+Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mod/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mod/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mod/color-coding), [Naked Rails](https://mods.factorio.com/mod/naked-rails).
 
-Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mods/Klonan/Expanded_Color_Lamps), [More Colours](https://mods.factorio.com/mods/zx64/more-colours), [More signal color](https://mods.factorio.com/mods/devilwarriors/More%20signal%20color), [Concrete and Stone](https://mods.factorio.com/mods/Earendel/concrete-and-stone), [Reinforced Walls](https://mods.factorio.com/mods/ChurchOrganist/Reinforced-Walls), [No Walls or Gates](https://mods.factorio.com/mods/abregado/no-walls), [Picker Tweaks](https://mods.factorio.com/mods/Nexela/PickerTweaks).
+Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mod/Expanded_Color_Lamps), [Updated Expanded Color Lamps](https://mods.factorio.com/mod/Updated_Expanded_Color_Lamps), [Concrete and Stone 0.16](https://mods.factorio.com/mod/concrete-and-stone-016), [Reinforced Walls 016](https://mods.factorio.com/mod/Reinforced-Walls-016), [Picker Tweaks](https://mods.factorio.com/mod/PickerTweaks).
 
 ### Changelog
 
@@ -173,6 +173,6 @@ Special thanks to [marcfj](https://github.com/marcfj) for support and play testi
 German - [seeba8](https://github.com/seeba8) and [ST-DDT](https://crowdin.com/profile/ST-DDT).  
 Polish - [Tomirad](https://github.com/Tomirad).  
 Czech - [dereksp](https://crowdin.com/profile/dereksp).  
-Korean - [Xagros](https://crowdin.com/profile/GimoXagros).
-Russian - [nastyslave](https://crowdin.com/profile/nastyslave).
-Chinese Simplified - [jessefjxm](https://crowdin.com/profile/jessefjxm).
+Korean - [Xagros](https://crowdin.com/profile/GimoXagros).  
+Russian - [nastyslave](https://crowdin.com/profile/nastyslave).  
+Chinese Simplified - [jessefjxm](https://crowdin.com/profile/jessefjxm).  

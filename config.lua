@@ -168,30 +168,20 @@ DECT.INCOMPATIBLE.MODS = {
 		component = "signals",
 		reason = "signals"
 	},
-	["more-colours"] = {
-		name = "more-colours",
+	["Updated_Expanded_Color_Lamps"] = {
+		name = "Updated_Expanded_Color_Lamps",
 		component = "signals",
 		reason = "signals"
 	},
-	["More signal color"] = {
-		name = "More signal color",
-		component = "signals",
-		reason = "signals"
-	},
-	["Reinforced-Walls"] = {
+	["Reinforced-Walls-016"] = {
 		name = "Reinforced-Walls",
 		component = "walls",
 		reason = "tech"
 	},
-	["concrete-and-stone"] = {
+	["concrete-and-stone-016"] = {
 		name = "concrete-and-stone",
 		component = "walls",
 		reason = "tech"
-	},
-	["no-walls"] = {
-		name = "no-walls",
-		component = "walls",
-		reason = "disable"
 	},
 	["PickerTweaks"] = {
 		name = "PickerTweaks",
