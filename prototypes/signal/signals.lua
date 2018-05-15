@@ -12,16 +12,20 @@ if DECT.ENABLED["signals"] then
 	-- Get signals
 	local colors = DECT.CONFIG.SIGNALS
 
-	-- Clear out any existing signals that conflict
+	-- Clear out any existing signals that conflict with config
 	for name, signal in pairs(data.raw["virtual-signal"]) do
 		if signal.subgroup == "virtual-signal-color" then
-			data.raw["virtual-signal"][name] = nil
+			for i, color in pairs(colors) do
+				if color.type == "virtual" and color.name == name then
+					data.raw["virtual-signal"][name] = nil
+				end
+			end
 		end
 	end
 
 	-- Create new virtual colour items if they don't already exist
 	for i, color in pairs(colors) do
-		if color.type=="virtual" then
+		if color.type == "virtual" then
 			local tint = {r=color.color.r, g=color.color.g, b=color.color.b, a=0.70}
 			data:extend({
 				{

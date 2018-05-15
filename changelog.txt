@@ -3,6 +3,7 @@ Version: 0.8.8
 Date: 15. 05. 2018
   Added:
     - Added new Landfill tile that places as dirt which avoids an issue where robots would incorrectly use grass items from inventory instead of landfill when placing blueprints
+    - Added additional checks so that Dectorio only modifies coloured signals when they clash with those defined in config.lua
   Changed:
     - Moved Refined concrete to Dectorio tab (thanks to Optera)
   Bugfixes:
