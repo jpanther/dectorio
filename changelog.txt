@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.8
-Date: 11. 05. 2018
+Date: 15. 05. 2018
+  Added:
+    - Added new Landfill tile that places as dirt which avoids an issue where robots would incorrectly use grass items from inventory instead of landfill when placing blueprints
   Changed:
     - Moved Refined concrete to Dectorio tab (thanks to Optera)
   Bugfixes:
