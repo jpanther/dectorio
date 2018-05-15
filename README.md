@@ -173,6 +173,6 @@ Special thanks to [marcfj](https://github.com/marcfj) for support and play testi
 German - [seeba8](https://github.com/seeba8) and [ST-DDT](https://crowdin.com/profile/ST-DDT).  
 Polish - [Tomirad](https://github.com/Tomirad).  
 Czech - [dereksp](https://crowdin.com/profile/dereksp).  
-Korean - [Xagros](https://crowdin.com/profile/GimoXagros).
-Russian - [nastyslave](https://crowdin.com/profile/nastyslave).
-Chinese Simplified - [jessefjxm](https://crowdin.com/profile/jessefjxm).
+Korean - [Xagros](https://crowdin.com/profile/GimoXagros).  
+Russian - [nastyslave](https://crowdin.com/profile/nastyslave).  
+Chinese Simplified - [jessefjxm](https://crowdin.com/profile/jessefjxm).  
