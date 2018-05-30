@@ -191,4 +191,6 @@ DECT.INCOMPATIBLE.MODS = {
 	},
 }
 
+DECT.DEBUG = false
+
 return DECT

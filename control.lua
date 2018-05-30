@@ -315,6 +315,31 @@ local function on_load(data)
 			notification({"dect-notify.cmd-no-orphaned-signs", {"dect-notify.dectorio"}})
 		end
 	end)
+
+	if DECT.DEBUG then
+		-- Special debug command to remove all signs and reset global sign data
+		commands.add_command("dect-debug-reset-signs", "Destroy all signs and reset sign data", function()
+			-- Find and remove all signs on all surfaces
+			for _, surface in pairs(game.surfaces) do
+				local signs = surface.find_entities_filtered{name={"dect-sign-wood", "dect-sign-steel"}}
+				for _, sign in pairs(signs) do
+					sign.destroy()
+				end
+			end
+			-- Find and remove any sign icons
+			for _, sign in pairs(global.signs) do
+				for _, object in pairs(sign.objects) do
+					object.destroy()
+				end
+			end
+			-- Clear out any global sign data
+			global.signs = {}
+			for _, player in pairs(game.players) do
+				global.sign_last_built[player.index] = nil
+				global.sign_gui[player.index] = nil
+			end
+		end)
+	end
 end
 
 -- Fire events!
