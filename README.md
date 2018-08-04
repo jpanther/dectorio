@@ -136,10 +136,10 @@ Community translations:
 * Chinese Simplified (100%)
 * Chinese Traditional (29%)
 * Czech (33%)
-* German (90%)
+* German (100%)
 * Korean (100%)
 * Polish (60%)
-* Russian (86%)
+* Russian (90%)
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
@@ -174,5 +174,5 @@ German - [seeba8](https://github.com/seeba8) and [ST-DDT](https://crowdin.com/pr
 Polish - [Tomirad](https://github.com/Tomirad).  
 Czech - [dereksp](https://crowdin.com/profile/dereksp).  
 Korean - [Xagros](https://crowdin.com/profile/GimoXagros).  
-Russian - [nastyslave](https://crowdin.com/profile/nastyslave).  
+Russian - [nastyslave](https://crowdin.com/profile/nastyslave) and [diraria](https://crowdin.com/profile/diraria).  
 Chinese Simplified - [jessefjxm](https://crowdin.com/profile/jessefjxm).  
