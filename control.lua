@@ -42,6 +42,7 @@ local function init_global()
 	global.icons = nil
 	global.signs = global.signs or {}
 	global.sign_last_built = global.sign_last_built or {}
+	global.sign_gui = global.sign_gui or {}
 
 	if global.icons == nil then
 		local prototypes = {
@@ -196,10 +197,10 @@ local function create_sign_gui(player)
 	if player.gui.center["dect-gui-sign"] then
 		player.gui.center["dect-gui-sign"].destroy()
 	end
-	sign_gui = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui.sign-title"}, direction="vertical"})
-	local gui_scroll = sign_gui.add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="auto", style="dect-scroll"})
+	global.sign_gui[player.index] = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui.sign-title"}, direction="vertical"})
+	local gui_scroll = global.sign_gui[player.index].add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="auto", style="dect-scroll"})
 	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", column_count=20, style="dect-icon-table"})
-	local gui_cancel = sign_gui.add({type="button", name="dect-gui-button-cancel", caption={"dect-gui.sign-cancel"}})
+	local gui_cancel = global.sign_gui[player.index].add({type="button", name="dect-gui-button-cancel", caption={"dect-gui.sign-cancel"}})
 	for _, icon in pairs(global.icons) do
 		local match = false
 		for _, child in pairs(gui_table.children_names) do
@@ -214,11 +215,11 @@ local function create_sign_gui(player)
 end
 
 -- Destroy the sign GUI
-local function destroy_sign_gui()
-	if sign_gui ~= nil then
-		sign_gui.destroy()
+local function destroy_sign_gui(player)
+	if global.sign_gui[player.index] ~= nil then
+		global.sign_gui[player.index].destroy()
 	end
-	sign_gui = nil
+	global.sign_gui[player.index] = nil
 end
 
 -- Place a sign on game surface
@@ -233,7 +234,7 @@ end
 local function on_built_entity(event)
 	local player = game.players[event.player_index]
 	if event.created_entity.name == "dect-sign-wood" or event.created_entity.name == "dect-sign-steel" then
-		if sign_gui ~= nil then
+		if global.sign_gui[event.player_index] ~= nil then
 			player.insert({name=event.created_entity.name, count=1})
 			event.created_entity.destroy()
 		else
@@ -269,7 +270,7 @@ local function on_gui_click(event)
 					game.players[event.player_index].insert({name = global.sign_last_built[event.player_index].name, count = 1})
 					global.sign_last_built[event.player_index].destroy()
 				end
-				destroy_sign_gui()
+				destroy_sign_gui(game.players[event.player_index])
 			end
 		elseif event.element.parent.name == "dect-icons-table" then
 			for _, icon in pairs(global.icons) do
@@ -277,7 +278,7 @@ local function on_gui_click(event)
 					create_sign(game.players[event.player_index], "dect-icon-"..icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
 					global.sign_last_built[event.player_index].destructible = true
 					global.sign_last_built[event.player_index].minable = true
-					destroy_sign_gui()
+					destroy_sign_gui(game.players[event.player_index])
 					break
 				end
 			end
@@ -285,7 +286,64 @@ local function on_gui_click(event)
 	end
 end
 
+-- Kill off any ophaned signs when a player leaves the game while still selecting an icon
+local function on_player_state_changed(event)
+	local player = game.players[event.player_index]
+	if global.sign_gui[player.index] ~= nil then
+		destroy_sign_gui(player)
+		global.sign_last_built[player.index].destroy()
+	end
+end
+
+local function on_load(data)
+	-- Command to remove any unminable signs from the player's current surface
+	commands.add_command("dect-destroy-orphaned-signs", {"dect-cmd.destroy-orphaned-signs"}, function()
+		local surface = game.player.surface
+		local signs = surface.find_entities_filtered{name={"dect-sign-wood", "dect-sign-steel"}}
+		local match = false
+
+		for _, sign in pairs(signs) do
+			if sign.minable == false then
+				local pos = sign.position
+				match = true
+				sign.destroy()
+				notification({"dect-notify.cmd-removed-orphaned-sign", {"dect-notify.dectorio"}, pos})
+			end
+		end
+
+		if not match then
+			notification({"dect-notify.cmd-no-orphaned-signs", {"dect-notify.dectorio"}})
+		end
+	end)
+
+	if DECT.DEBUG then
+		-- Special debug command to remove all signs and reset global sign data
+		commands.add_command("dect-debug-reset-signs", "Destroy all signs and reset sign data", function()
+			-- Find and remove all signs on all surfaces
+			for _, surface in pairs(game.surfaces) do
+				local signs = surface.find_entities_filtered{name={"dect-sign-wood", "dect-sign-steel"}}
+				for _, sign in pairs(signs) do
+					sign.destroy()
+				end
+			end
+			-- Find and remove any sign icons
+			for _, sign in pairs(global.signs) do
+				for _, object in pairs(sign.objects) do
+					object.destroy()
+				end
+			end
+			-- Clear out any global sign data
+			global.signs = {}
+			for _, player in pairs(game.players) do
+				global.sign_last_built[player.index] = nil
+				global.sign_gui[player.index] = nil
+			end
+		end)
+	end
+end
+
 -- Fire events!
+script.on_load(on_load)
 script.on_init(on_init)
 script.on_configuration_changed(on_configuration_changed)
 script.on_event(defines.events.on_built_entity, on_built_entity)
@@ -293,3 +351,6 @@ script.on_event(defines.events.on_pre_player_mined_item, on_mined_entity)
 script.on_event(defines.events.on_robot_pre_mined, on_mined_entity)
 script.on_event(defines.events.on_entity_died, on_mined_entity)
 script.on_event(defines.events.on_gui_click, on_gui_click)
+script.on_event(defines.events.on_pre_player_left_game, on_player_state_changed)
+script.on_event(defines.events.on_pre_player_died, on_player_state_changed)
+script.on_event(defines.events.on_player_joined_game, on_player_state_changed)

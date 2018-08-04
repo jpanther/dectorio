@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.9
+Date: 04. 08. 2018
+  Added:
+    - Enabled support for multiple players to place signs concurrently in multiplayer games
+    - Added console command to allow admins to remove any orphaned signs that are unminable
+  Bugfixes:
+    - Fixed an issue where placing a sign could sometimes cause a desync in multiplayer games
+    - Fixed an issue where an orphaned indestructible sign could be left behind when a player leaves a multiplayer game
+  Locales:
+    - Updated German and Russian translations (thanks to ST-DDT and diraria)
+---------------------------------------------------------------------------------------------------
 Version: 0.8.8
 Date: 15. 05. 2018
   Added:
