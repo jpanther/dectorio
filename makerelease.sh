@@ -10,6 +10,9 @@ gitbranch=`git rev-parse --abbrev-ref HEAD`
 # Switch to master branch
 git checkout master
 
+# Merge in develop branch
+git merge --no-ff develop
+
 # Create git tag for this version
 git tag "v$modver"
 
