@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.10
+Date: 21. 01. 2019
+  Bugfixes:
+    - Fixed an issue where decorations were not being removed from all concrete variants (thanks to ST-DDT)
+  Locales:
+    - Added French translation (thanks to Taniotoshi)
+    - Updated Russian translation (thanks to scheugen86)
+---------------------------------------------------------------------------------------------------
 Version: 0.8.9
 Date: 04. 08. 2018
   Added:
