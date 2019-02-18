@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.10
-Date: 03. 02. 2019
+Date: 18. 02. 2019
   Bugfixes:
     - Fixed an issue where decorations were not being removed from all concrete variants (thanks to ST-DDT)
   Locales:
