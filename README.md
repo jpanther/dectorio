@@ -136,6 +136,7 @@ Community translations:
 * Chinese Simplified (100%)
 * Chinese Traditional (29%)
 * Czech (33%)
+* French (100%)
 * German (100%)
 * Korean (100%)
 * Polish (60%)
@@ -173,6 +174,7 @@ Special thanks to [marcfj](https://github.com/marcfj) for support and play testi
 German - [seeba8](https://github.com/seeba8) and [ST-DDT](https://crowdin.com/profile/ST-DDT).  
 Polish - [Tomirad](https://github.com/Tomirad).  
 Czech - [dereksp](https://crowdin.com/profile/dereksp).  
+French - [Taniotoshi](https://crowdin.com/profile/Taniotoshi).  
 Korean - [Xagros](https://crowdin.com/profile/GimoXagros).  
-Russian - [nastyslave](https://crowdin.com/profile/nastyslave) and [diraria](https://crowdin.com/profile/diraria).  
+Russian - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria) and [scheugen86](https://crowdin.com/profile/scheugen86).  
 Chinese Simplified - [jessefjxm](https://crowdin.com/profile/jessefjxm).  

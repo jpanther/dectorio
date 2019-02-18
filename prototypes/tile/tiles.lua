@@ -91,8 +91,14 @@ local function tile_variants_material(set, variant)
 end
 
 -- Modify decorations on base tiles
-base_stone_path.decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"]
-base_concrete.decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"]
+local decorative_removal_probability = DECT.CONFIG.SETTINGS["decorative_removal_probability"]
+base_stone_path.decorative_removal_probability = decorative_removal_probability
+base_concrete.decorative_removal_probability = decorative_removal_probability
+base_hazard_left.decorative_removal_probability = decorative_removal_probability
+base_hazard_right.decorative_removal_probability = decorative_removal_probability
+base_refined_concrete.decorative_removal_probability = decorative_removal_probability
+base_refined_hazard_left.decorative_removal_probability = decorative_removal_probability
+base_refined_hazard_right.decorative_removal_probability = decorative_removal_probability
 
 -- Add landfill tile
 local landfill = table.deepcopy(data.raw.tile["dirt-5"])
