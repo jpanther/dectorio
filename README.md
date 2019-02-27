@@ -93,6 +93,8 @@ When you launch the game, the new mod will be enabled by default.
 
 Check out the [Mod Spotlight video by Xterminator](https://www.youtube.com/watch?v=4OOs8o0dnug) to see the mod in action (note that this features an older version of Dectorio without some of the features mentioned above).
 
+🇩🇪 German players may be interested in this [Mod Monday video by SeeNo](https://www.youtube.com/watch?v=0SzAF997sOk).
+
 ## Development
 
 ### Contributing
