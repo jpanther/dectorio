@@ -41,7 +41,6 @@ if DECT.ENABLED["waterfill"] then
 					enabled = false,
 					category = "crafting-with-fluid",
 					ingredients = {
-						{"iron-axe", 2},
 						{"explosives", 5},
 						{type="fluid", name="water", amount=100}
 					},

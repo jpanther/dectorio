@@ -29,7 +29,7 @@ DECT.CONFIG.SIGNALS = {
 	{type="virtual", name="signal-grey", color={r=0.80,g=0.80,b=0.80,a=1.00}},          -- Iron
 	{type="virtual", name="signal-black", color={r=0.22,g=0.13,b=0.56,a=1.00}},         -- Blue Gem
 
-	{type="item", name="raw-wood", color={r=0.57,g=0.36,b=0.12,a=0.86}},                -- Afghan Tan
+	{type="item", name="wood", color={r=0.57,g=0.36,b=0.12,a=0.86}},                    -- Afghan Tan
 	{type="item", name="coal", color={r=0.17,g=0.17,b=0.17,a=0.86}},                    -- Bunker
 	{type="item", name="stone", color={r=0.64,g=0.50,b=0.30,a=0.86}},                   -- Muesli
 	{type="item", name="iron-ore", color={r=0.24,g=0.80,b=0.99,a=0.86}},                -- Picton Blue
@@ -38,12 +38,12 @@ DECT.CONFIG.SIGNALS = {
 	{type="item", name="copper-ore", color={r=0.91,g=0.58,b=0.13,a=0.86}},              -- Carrot Orange
 	{type="item", name="copper-plate", color={r=0.92,g=0.59,b=0.46,a=0.86}},            -- Dark Salmon
 	{type="item", name="uranium-ore", color={r=0.69,g=0.96,b=0.18,a=0.86}},             -- Green Yellow
-	{type="item", name="science-pack-1", color={r=0.71,g=0.05,b=0.09,a=1.00}},          -- Cornell Red
-	{type="item", name="science-pack-2", color={r=0.18,g=0.60,b=0.11,a=1.00}},          -- Forest Green
-	{type="item", name="science-pack-3", color={r=0.15,g=0.65,b=0.75,a=1.00}},          -- Blue Green
+	{type="item", name="automation-science-pack", color={r=0.71,g=0.05,b=0.09,a=1.00}}, -- Cornell Red
+	{type="item", name="logistic-science-pack", color={r=0.18,g=0.60,b=0.11,a=1.00}},   -- Forest Green
+	{type="item", name="chemical-science-pack", color={r=0.15,g=0.65,b=0.75,a=1.00}},   -- Blue Green
 	{type="item", name="military-science-pack", color={r=0.23,g=0.27,b=0.31,a=1.00}},   -- Limed Spruce
 	{type="item", name="production-science-pack", color={r=0.58,g=0.11,b=0.76,a=1.00}}, -- Dark Orchid
-	{type="item", name="high-tech-science-pack", color={r=0.81,g=0.69,b=0.08,a=1.00}},  -- Galliano
+	{type="item", name="utility-science-pack", color={r=0.81,g=0.69,b=0.08,a=1.00}},    -- Galliano
 	{type="item", name="space-science-pack", color={r=0.96,g=0.96,b=0.96,a=1.00}},      -- White Smoke
 	{type="item", name="transport-belt", color={r=0.90,g=0.75,b=0.10,a=0.92}},          -- Sunflower
 	{type="item", name="underground-belt", color={r=0.90,g=0.75,b=0.10,a=0.92}},        -- Sunflower

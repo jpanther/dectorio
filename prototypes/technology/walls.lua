@@ -18,8 +18,8 @@ if DECT.ENABLED["walls"] then
 			unit = {
 				count = 150,
 				ingredients = {
-					{"science-pack-1", 1},
-					{"science-pack-2", 1}
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1}
 				},
 				time = 20
 			},
@@ -45,6 +45,6 @@ if DECT.ENABLED["walls"] then
 	-- Change gates to require concrete-walls and unlock Hazard gate
 	local base_gates = data.raw["technology"]["gates"]
 	base_gates.prerequisites = {"dect-advanced-walls", "military-2"}
-	table.insert(base_gates.effects, {type="unlock-recipe", recipe="dect-hazard-gate"})
+	--table.insert(base_gates.effects, {type="unlock-recipe", recipe="dect-hazard-gate"})
 
 end
