@@ -10,7 +10,7 @@ if DECT.ENABLED["walls"] then
 		{
 			type = "wall",
 			name = "stone-wall",
-			icon = "__base__/graphics/icons/stone-wall.png",
+			icon = "__base__/graphics/icons/wall.png",
 			icon_size = 32,
 	 		flags = {"placeable-neutral", "player-creation"},
 			collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
@@ -310,7 +310,8 @@ if DECT.ENABLED["walls"] then
 							shift = util.by_pixel(6, 13),
 						}
 					}
-				}
+				},
+				gate_connection_patch = base_stone_wall.pictures.gate_connection_patch
 			},
 			wall_diode_green = base_stone_wall.wall_diode_green,
 			wall_diode_green_light = base_stone_wall.wall_diode_green_light,
@@ -740,6 +741,25 @@ if DECT.ENABLED["walls"] then
 							draw_as_shadow = true
 						}
 					}
+				},
+				gate_connection_patch = {
+					sheets = {
+						{
+							filename = "__Dectorio__/graphics/entity/chain-wall/wall-gate.png",
+							priority = "extra-high",
+							width = 42,
+							height = 56,
+							shift = util.by_pixel(0, -8),
+						},
+						{
+							filename = "__base__/graphics/entity/wall/wall-gate-shadow.png",
+							priority = "extra-high",
+							width = 66,
+							height = 40,
+							shift = util.by_pixel(14, 18),
+							draw_as_shadow = true
+						}
+					}
 				}
 			},
 			wall_diode_green = base_stone_wall.wall_diode_green,
@@ -1050,6 +1070,25 @@ if DECT.ENABLED["walls"] then
 							draw_as_shadow = true
 						}
 					}
+				},
+				gate_connection_patch = {
+					sheets = {
+						{
+							filename = "__Dectorio__/graphics/entity/wood-wall/wall-gate.png",
+							priority = "extra-high",
+							width = 42,
+							height = 56,
+							shift = util.by_pixel(0, -8),
+						},
+						{
+							filename = "__base__/graphics/entity/wall/wall-gate-shadow.png",
+							priority = "extra-high",
+							width = 66,
+							height = 40,
+							shift = util.by_pixel(14, 18),
+							draw_as_shadow = true
+						}
+					}
 				}
 			},
 			wall_diode_green = base_stone_wall.wall_diode_green,
@@ -1070,17 +1109,5 @@ if DECT.ENABLED["walls"] then
 	local dect_concrete_wall = data.raw["wall"]["dect-concrete-wall"]
 	base_gate.max_health = dect_concrete_wall.max_health
 	base_gate.resistances = dect_concrete_wall.resistances
-
-	-- Add Hazard gate variant
-	local dect_hazard_gate = table.deepcopy(data.raw["gate"]["gate"])
-	dect_hazard_gate.name = "dect-hazard-gate"
-	dect_hazard_gate.minable.result = "dect-hazard-gate"
-	dect_hazard_gate.vertical_animation.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-vertical.png"
-	dect_hazard_gate.horizontal_animation.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-horizontal.png"
-	dect_hazard_gate.vertical_rail_animation_left.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-rail-vertical-left.png"
-	dect_hazard_gate.vertical_rail_animation_right.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-rail-vertical-right.png"
-	dect_hazard_gate.horizontal_rail_animation_left.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-rail-horizontal-left.png"
-	dect_hazard_gate.horizontal_rail_animation_right.layers[1].filename = "__Dectorio__/graphics/entity/hazard-gate/gate-rail-horizontal-right.png"
-	data:extend({dect_hazard_gate})
 
 end

@@ -11,7 +11,7 @@ if DECT.ENABLED["signs"] then
 			unit = {
 				count = 15,
 				ingredients = {
-					{"science-pack-1", 1},
+					{"automation-science-pack", 1},
 				},
 				time = 10
 			},

@@ -8,8 +8,7 @@ if DECT.ENABLED["signs"] then
 			name = "dect-sign-wood",
 			enabled = false,
 			ingredients = {
-				{"raw-wood", 2},
-				{"wood", 1},
+				{"wood", 2},
 			},
 			result = "dect-sign-wood"
 		},

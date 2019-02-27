@@ -17,7 +17,7 @@ git merge --no-ff develop
 git tag "v$modver"
 
 # Prepare zip for Factorio native use and mod portal
-git archive --prefix "${modname}_$modver/" -o "../release/${modname}_$modver.zip" HEAD
+git archive --prefix "${modname}_$modver/" -o "~/Desktop/tmp/${modname}_$modver.zip" HEAD
 
 # Push tag to git
 git push origin "v$modver"

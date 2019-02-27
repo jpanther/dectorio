@@ -15,7 +15,7 @@ Download the latest stable release from the [Factorio mod portal](https://mods.f
 * Mac: `~/Library/Application Support/factorio/mods/`
 * Linux: `~/.factorio/mods`
 
-> **Note:** If playing with Factorio 0.15, please download v0.7.6 as this is the last stable release supported on 0.15. v0.8.0 and later are only supported on Factorio 0.16.
+> **Note:** If playing with Factorio 0.15, please download v0.7.6, or for Factorio 0.16, please download v0.8.10 as these are the last stable versions supported on these base game releases. v0.9.0 and later are only supported on Factorio 0.17.
 
 When you launch the game, the new mod will be enabled by default.
 
@@ -53,17 +53,13 @@ When you launch the game, the new mod will be enabled by default.
 
   ![Landscaping items](https://img.pantherx.net/dectorio/landscaping.png)
 
-### Walls and Gates
+### Walls
 
 * Adds items for wooden barricade, stone wall, chain-link fence and concrete walls
 * Walls have varied resistances and strengths to allow for better progression
 * Increased wall item stack sizes^
 
   ![Walls](https://img.pantherx.net/dectorio/walls.png)
-
-* Adds items for hazard gates
-
-  ![Gates](https://img.pantherx.net/dectorio/hazard-gates.png)
 
 ### Signs
 
@@ -133,20 +129,20 @@ Fully supported languages:
 * English
 
 Community translations:
-* Chinese Simplified (100%)
+* Chinese Simplified (96%)
 * Chinese Traditional (29%)
-* Czech (33%)
-* French (100%)
-* German (100%)
-* Korean (100%)
-* Polish (60%)
-* Russian (90%)
+* Czech (32%)
+* French (96%)
+* German (96%)
+* Korean (96%)
+* Polish (58%)
+* Russian (96%)
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
 ### Mod Compatibility
 
-**Note:** If playing with Factorio 0.15 saves, please download Dectorio v0.7.6 as this is the last release supported on 0.15. Dectorio v0.8.0 and later are only supported on Factorio 0.16.
+**Note:** If playing with Factorio 0.15, please download v0.7.6, or for Factorio 0.16, please download v0.8.10 as these are the last stable versions supported on these base game releases. v0.9.0 and later are only supported on Factorio 0.17.
 
 Limited testing has been completed with other mods. Warnings will be shown in-game to highlight any known issues. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
 
@@ -158,7 +154,7 @@ Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.f
 
 Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mod/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mod/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mod/color-coding), [Naked Rails](https://mods.factorio.com/mod/naked-rails).
 
-Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mod/Expanded_Color_Lamps), [Updated Expanded Color Lamps](https://mods.factorio.com/mod/Updated_Expanded_Color_Lamps), [Concrete and Stone 0.16](https://mods.factorio.com/mod/concrete-and-stone-016), [Reinforced Walls 016](https://mods.factorio.com/mod/Reinforced-Walls-016), [Picker Tweaks](https://mods.factorio.com/mod/PickerTweaks).
+Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mod/Expanded_Color_Lamps), [Concrete and Stone 0.16](https://mods.factorio.com/mod/concrete-and-stone-016), [Reinforced Walls 016](https://mods.factorio.com/mod/Reinforced-Walls-016), [Picker Tweaks](https://mods.factorio.com/mod/PickerTweaks).
 
 ### Changelog
 

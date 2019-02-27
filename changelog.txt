@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.0
+Date: 27. 02. 2019
+  Added:
+    - Factorio 0.17 support
+    - Thumbnail image for mod directory
+  Changed:
+    - Wooden sign and Wooden wall recipes adjusted to compensate for raw wood changes
+    - Waterfill recipe adjusted to remove pickaxe requirement
+  Removed:
+    - Factorio 0.16 support (use Dectorio v0.8.10 when playing 0.16 saves)
+    - Hazard gate as it is now the default base game style
+---------------------------------------------------------------------------------------------------
 Version: 0.8.10
 Date: 18. 02. 2019
   Bugfixes:
@@ -130,7 +142,7 @@ Date: 15. 12. 2017
     - More robust technology recipe-unlock handling to improve compatibility with third-party mods
     - Support for migrating Fire hazard concrete from 'Color Coding' mod to Emergency concrete
   Removed:
-    - Factorio 0.15 support - use Dectorio v0.7.6 when playing 0.15 saves
+    - Factorio 0.15 support (use Dectorio v0.7.6 when playing 0.15 saves)
     - Support for 'Water Fix' mod as the base game now supports placing tiles alongside water
     - Redundant assets to reduce overall mod size
   Locales:
