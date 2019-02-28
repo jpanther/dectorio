@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.1
+Date: 28. 02. 2019
+  Added:
+    - Frequently asked questions (see Mod Portal or FAQ.md in the mod package)
+  Changed:
+    - Updated thumbnail image with 0.17 textures
+  Bugfixes:
+    - Fixed migration issue on some old saves
+---------------------------------------------------------------------------------------------------
 Version: 0.9.0
 Date: 27. 02. 2019
   Added:
@@ -9,7 +18,7 @@ Date: 27. 02. 2019
     - Waterfill recipe adjusted to remove pickaxe requirement
   Removed:
     - Factorio 0.16 support (use Dectorio v0.8.10 when playing 0.16 saves)
-    - Hazard gate as it is now the default base game style
+    - Removed Hazard gate as it is now the default base game style
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.10
 Date: 18. 02. 2019

@@ -93,11 +93,17 @@ When you launch the game, the new mod will be enabled by default.
 
 Check out the [Mod Spotlight video by Xterminator](https://www.youtube.com/watch?v=4OOs8o0dnug) to see the mod in action (note that this features an older version of Dectorio without some of the features mentioned above).
 
+🇩🇪 German players may be interested in this [Mod Monday video by SeeNo](https://www.youtube.com/watch?v=0SzAF997sOk).
+
+## Frequently Asked Questions
+
+Have a question that isn't covered here? Visit the [Dectorio FAQ](FAQ.md) to see if it's already been answered. If you still have a query, read below for details on how to raise an issue on GitHub.
+
 ## Development
 
 ### Contributing
 
-Feel free to get in touch with any issues or suggestions for new features you'd like to see. I also welcome pull requests to fix bugs or implement new features. The best way to make contact is via [GitHub Issues](https://github.com/jpanther/Dectorio/issues), however you can alternatively post on the [Factorio Mod Portal](https://mods.factorio.com/mod/Dectorio/discussion) (but please note that it may take longer to get a response this way as there are no notifications of new messages on the portal and I only check it sporadically). Usually when I find issues reported on the Mod Portal, I'll open a new GitHub issue to track its progress.
+Feel free to get in touch with any issues or suggestions for new features you'd like to see. I also welcome pull requests to fix bugs or implement new features. The best way to make contact is via [GitHub Issues](https://github.com/jpanther/Dectorio/issues).
 
 #### **Did you find a bug?**
 
