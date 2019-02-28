@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.1
 Date: 28. 02. 2019
+  Added:
+    - Frequently asked questions (see Mod Portal or FAQ.md in the mod package)
   Changed:
     - Updated thumbnail image with 0.17 textures
   Bugfixes:
