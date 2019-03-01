@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.2
+Date: 01. 03. 2019
+  Changed:
+    - Updated technology icons
+    - Additional PNG compression of Refined concrete gfx to reduce mod package size
+---------------------------------------------------------------------------------------------------
 Version: 0.9.1
 Date: 28. 02. 2019
   Added:
