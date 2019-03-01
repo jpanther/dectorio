@@ -70,7 +70,7 @@ if DECT.ENABLED["signals"] then
 			name = "misc",
 			background = {r=0.65,g=0.38,b=0.99,a=0.2},
 			order = "ea",
-			icons = {"clock", "alarm", "battery", "power", "nuclear", "rocket", "temperature", "finish", "gears", "star"}
+			icons = {"clock", "alarm", "battery", "power", "nuclear", "rocket", "temperature", "finish", "gears", "star", "light", "mine", "oil", "gun", "tank", "train", "wall", "siren", "warning-shield", "warning-triangle"}
 		},
 	}
 
