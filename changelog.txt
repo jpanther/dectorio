@@ -2,10 +2,11 @@
 Version: 0.9.2
 Date: 01. 03. 2019
   Added:
-    - High resolution gfx for signs
+    - High resolution gfx for Wooden and Steel signs
+    - High resolution gfx for Traffic bollard
   Changed:
     - Updated technology icons
-    - Additional PNG compression of Refined concrete gfx to reduce mod package size
+    - Additional compression of Refined concrete gfx to reduce mod package size
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.1
 Date: 28. 02. 2019

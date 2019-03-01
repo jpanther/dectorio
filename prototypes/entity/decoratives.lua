@@ -24,7 +24,15 @@ if DECT.ENABLED["decoratives"] then
 					priority = "extra-high",
 					width = 35,
 					height = 42,
-					shift = {0.4, -0.6}
+					shift = {0.4, -0.6},
+					hr_version = {
+						filename = "__Dectorio__/graphics/decoratives/traffic-bollard/hr-traffic-bollard.png",
+						priority = "extra-high",
+						width = 70,
+						height = 84,
+						shift = {0.4, -0.6},
+						scale = 0.5
+					}
 				}
 			}
 		}
