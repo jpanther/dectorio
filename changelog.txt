@@ -4,6 +4,7 @@ Date: 01. 03. 2019
   Added:
     - High resolution gfx for Wooden and Steel signs
     - High resolution gfx for Traffic bollard
+    - 7 new signal colours - maroon, brown, olive, emerald, teal, navy and violet
   Changed:
     - Updated technology icons
     - Additional compression of Refined concrete gfx to reduce mod package size
