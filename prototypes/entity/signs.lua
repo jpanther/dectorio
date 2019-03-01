@@ -24,7 +24,15 @@ if DECT.ENABLED["signs"] then
 					priority = "extra-high",
 					width = 85,
 					height = 65,
-					shift = {0.8, -0.45}
+					shift = {0.8, -0.45},
+					hr_version = {
+						filename = "__Dectorio__/graphics/entity/sign-wood/hr-sign-wood.png",
+						priority = "extra-high",
+						width = 170,
+						height = 130,
+						shift = {0.8, -0.45},
+						scale = 0.5
+					}
 				}
 			}
 		},
@@ -49,7 +57,15 @@ if DECT.ENABLED["signs"] then
 					priority = "extra-high",
 					width = 85,
 					height = 65,
-					shift = {0.77, -0.45}
+					shift = {0.77, -0.45},
+					hr_version = {
+						filename = "__Dectorio__/graphics/entity/sign-steel/hr-sign-steel.png",
+						priority = "extra-high",
+						width = 170,
+						height = 130,
+						shift = {0.77, -0.43},
+						scale = 0.5
+					}
 				}
 			}
 		}

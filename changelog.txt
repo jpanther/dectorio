@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.2
 Date: 01. 03. 2019
+  Added:
+    - High resolution gfx for signs
   Changed:
     - Updated technology icons
     - Additional PNG compression of Refined concrete gfx to reduce mod package size
