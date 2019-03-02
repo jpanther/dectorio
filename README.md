@@ -73,12 +73,12 @@ When you launch the game, the new mod will be enabled by default.
 
   ![Glowing lamp](https://img.pantherx.net/dectorio/glowing-lamp.png)
 
-* Adds new signal colours - purple, orange, tangerine and aqua
+* Adds 11 new signal colours - Purple, Orange, Tangerine, Aqua, Maroon, Brown, Olive, Emerald, Teal, Navy and Violet
 * Adds signal colours for raw resources, smelted items, fluids, science packs, inserters, belts, splitters and circuits
 
   ![New signal colours](https://img.pantherx.net/dectorio/signal-colours.png)
 
-* Adds new icon based signals for making it easier to understand your circuit network logic
+* Adds 28 new icon based signals for making it easier to understand your circuit network logic
 * New signal icons for base game signal colours that better represent the actual signal colour
 
   ![Signal selection](https://img.pantherx.net/dectorio/signals.png)

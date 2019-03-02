@@ -62,7 +62,9 @@ local function init_global()
 					end
 					if not duplicate then
 						if protokey == "fluid" and category == "fluid" then
-							table.insert(icons, new_icon)
+							if game.entity_prototypes["dect-icon-"..obj.name] then
+								table.insert(icons, new_icon)
+							end
 						elseif protokey == "item" and obj.type == category then
 							local match = false
 							for _, icon_be_gone in pairs(DECT.CONFIG.SIGN_BLACKLIST) do
@@ -71,7 +73,9 @@ local function init_global()
 								end
 							end
 							if not match then
-								table.insert(icons, new_icon)
+								if game.entity_prototypes["dect-icon-"..obj.name] then
+									table.insert(icons, new_icon)
+								end
 							end
 						end
 					end

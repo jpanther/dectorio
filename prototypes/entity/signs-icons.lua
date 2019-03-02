@@ -7,11 +7,15 @@ if DECT.ENABLED["signs"] then
 			for _, obj in pairs(data.raw[cat]) do
 				local sprite = {}
 				if obj.icons == nil and obj.icon ~= nil then
-					sprite.file = obj.icon
-					sprite.tint = nil
+					if obj.icon_size == 32 then
+						sprite.file = obj.icon
+						sprite.tint = nil
+					end
 				else
-					sprite.file = obj.icons[1].icon
-					sprite.tint = obj.icons[1].tint
+					if obj.icon_size == 32 then
+						sprite.file = obj.icons[1].icon
+						sprite.tint = obj.icons[1].tint
+					end
 				end
 				if sprite.file then
 					new_icon = {

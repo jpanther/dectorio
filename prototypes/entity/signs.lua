@@ -10,7 +10,7 @@ if DECT.ENABLED["signs"] then
 			icon_size = 32,
 			flags = {"placeable-neutral"},
 			render_layer = "object",
-			minable = {mining_time = 1, result = "dect-sign-wood", count = 1},
+			minable = {mining_time = 0.2, result = "dect-sign-wood", count = 1},
 			max_health = 40,
 			collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
 			selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -24,7 +24,15 @@ if DECT.ENABLED["signs"] then
 					priority = "extra-high",
 					width = 85,
 					height = 65,
-					shift = {0.8, -0.45}
+					shift = {0.8, -0.45},
+					hr_version = {
+						filename = "__Dectorio__/graphics/entity/sign-wood/hr-sign-wood.png",
+						priority = "extra-high",
+						width = 170,
+						height = 130,
+						shift = {0.8, -0.45},
+						scale = 0.5
+					}
 				}
 			}
 		},
@@ -35,7 +43,7 @@ if DECT.ENABLED["signs"] then
 			icon_size = 32,
 			flags = {"placeable-neutral"},
 			render_layer = "object",
-			minable = {mining_time = 1, result = "dect-sign-steel", count = 1},
+			minable = {mining_time = 0.2, result = "dect-sign-steel", count = 1},
 			max_health = 65,
 			collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
 			selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -49,7 +57,15 @@ if DECT.ENABLED["signs"] then
 					priority = "extra-high",
 					width = 85,
 					height = 65,
-					shift = {0.77, -0.45}
+					shift = {0.77, -0.45},
+					hr_version = {
+						filename = "__Dectorio__/graphics/entity/sign-steel/hr-sign-steel.png",
+						priority = "extra-high",
+						width = 170,
+						height = 130,
+						shift = {0.77, -0.43},
+						scale = 0.5
+					}
 				}
 			}
 		}

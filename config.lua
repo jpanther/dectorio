@@ -25,9 +25,16 @@ DECT.CONFIG.SIGNALS = {
 	{type="virtual", name="signal-blue", color={r=0.07,g=0.35,b=0.98,a=1.00}},          -- Crayon Blue
 	{type="virtual", name="signal-purple", color={r=0.65,g=0.38,b=0.99,a=1.00}},        -- Lavender Indigo
 	{type="virtual", name="signal-pink", color={r=1.00,g=0.42,b=0.99,a=1.00}},          -- Ultra Pink
-	{type="virtual", name="signal-white", color={r=1.00,g=1.00,b=1.00,a=1.00}},         -- White
-	{type="virtual", name="signal-grey", color={r=0.80,g=0.80,b=0.80,a=1.00}},          -- Iron
+	{type="virtual", name="signal-maroon", color={r=0.50,g=0.00,b=0.00,a=1.00}},				-- Burnt Umber
+	{type="virtual", name="signal-brown", color={r=0.60,g=0.39,b=0.14,a=1.00}},					-- Cape Palliser
+	{type="virtual", name="signal-olive", color={r=0.50,g=0.50,b=0.01,a=1.00}},					-- Trendy Green
+	{type="virtual", name="signal-emerald", color={r=0.17,g=0.54,b=0.25,a=1.00}},				-- Goblin
+	{type="virtual", name="signal-teal", color={r=0.28,g=0.60,b=0.56,a=1.00}},					-- Breaker Bay
+	{type="virtual", name="signal-navy", color={r=0.00,g=0.00,b=0.50,a=1.00}},					-- Jacksons Purple
+	{type="virtual", name="signal-violet", color={r=0.56,g=0.12,b=0.70,a=1.00}},				-- Vivid Violet
 	{type="virtual", name="signal-black", color={r=0.22,g=0.13,b=0.56,a=1.00}},         -- Blue Gem
+	{type="virtual", name="signal-grey", color={r=0.80,g=0.80,b=0.80,a=1.00}},          -- Iron
+	{type="virtual", name="signal-white", color={r=1.00,g=1.00,b=1.00,a=1.00}},         -- White
 
 	{type="item", name="wood", color={r=0.57,g=0.36,b=0.12,a=0.86}},                    -- Afghan Tan
 	{type="item", name="coal", color={r=0.17,g=0.17,b=0.17,a=0.86}},                    -- Bunker
