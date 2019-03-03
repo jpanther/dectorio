@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.3
 Date: 03. 03. 2019
+  Changed:
+    - Updated mod dependencies to remove deprecated third party mods
   Bugfixes:
     - Fixed an issue where Painted refined concrete had an incorrect walking speed modifier
 ---------------------------------------------------------------------------------------------------

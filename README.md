@@ -158,9 +158,9 @@ Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/
 
 Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mod/Concreep), [Fully Automated Rail Layer (FARL)](https://mods.factorio.com/mod/FARL), [Pavement Drive Assist](https://mods.factorio.com/mod/PavementDriveAssist).
 
-Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mod/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mod/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mod/color-coding), [Naked Rails](https://mods.factorio.com/mod/naked-rails).
+Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mod/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mod/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mod/color-coding), [Naked Rails](https://mods.factorio.com/mod/naked-rails), [Refinforced Walls](https://mods.factorio.com/mod/Reinforced-Walls).
 
-Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mod/Expanded_Color_Lamps), [Concrete and Stone 0.16](https://mods.factorio.com/mod/concrete-and-stone-016), [Reinforced Walls 016](https://mods.factorio.com/mod/Reinforced-Walls-016), [Picker Tweaks](https://mods.factorio.com/mod/PickerTweaks).
+Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mod/Expanded_Color_Lamps).
 
 ### Changelog
 
