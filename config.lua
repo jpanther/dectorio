@@ -175,12 +175,12 @@ DECT.INCOMPATIBLE.MODS = {
 		component = "signals",
 		reason = "signals"
 	},
-	-- ["PickerTweaks"] = {
-	-- 	name = "PickerTweaks",
-	-- 	component = "signals",
-	-- 	reason = "item",
-	-- 	setting = {type="startup", name="picker-better-lamp-colors", value=true}
-	-- },
+	["PickerSignals"] = {
+	 	name = "PickerSignals",
+	 	component = "signals",
+	 	reason = "item",
+	 	setting = {type="startup", name="picker-better-lamp-colors", value=true}
+	},
 }
 
 DECT.DEBUG = false
