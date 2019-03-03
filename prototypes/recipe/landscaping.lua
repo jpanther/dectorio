@@ -24,6 +24,23 @@ if DECT.ENABLED["landscaping"] then
 		end
 	end
 
+	-- Create Lawnmower recipe
+	data:extend({
+		{
+			type = "recipe",
+			name = "dect-lawnmower",
+			energy_required = 3,
+			enabled = false,
+			ingredients = {
+				{"steel-plate", 2},
+				{"iron-gear-wheel", 6},
+				{"engine-unit", 1}
+			},
+			result = "dect-lawnmower",
+			result_count = 1
+		}
+	})
+
 end
 
 if DECT.ENABLED["waterfill"] then

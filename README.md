@@ -49,6 +49,7 @@ When you launch the game, the new mod will be enabled by default.
 
 * Adds items for placing dirt, sand, dark sand, grass, dry grass, red desert and dark red desert tiles
 * Ability to place water and green water tiles (aka. 'waterfill')
+* Adds a Lawnmower tool that will remove decorative items from a given area, leaving a completely clear surface
 * Ability to place decorative rocks and trees
 
   ![Landscaping items](https://img.pantherx.net/dectorio/landscaping.png)
@@ -158,7 +159,7 @@ Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/
 
 Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mod/Concreep), [Fully Automated Rail Layer (FARL)](https://mods.factorio.com/mod/FARL), [Pavement Drive Assist](https://mods.factorio.com/mod/PavementDriveAssist).
 
-Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mod/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mod/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mod/color-coding), [Naked Rails](https://mods.factorio.com/mod/naked-rails), [Refinforced Walls](https://mods.factorio.com/mod/Reinforced-Walls).
+Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mod/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mod/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mod/color-coding), [Naked Rails](https://mods.factorio.com/mod/naked-rails), [Reinforced Walls](https://mods.factorio.com/mod/Reinforced-Walls).
 
 Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mod/Expanded_Color_Lamps).
 

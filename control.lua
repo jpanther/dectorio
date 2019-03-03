@@ -234,8 +234,17 @@ local function create_sign(player, icon, position, parent)
 	table.insert(global.signs, {sign=parent, objects={icon_entity}})
 end
 
--- When a new sign is built
+-- Clear any decorations around a given entity
+local function destroy_decoratives_near_entity(entity)
+	if entity.type ~= "entity-ghost" and entity.type ~= "tile-ghost" then
+		entity.surface.destroy_decoratives({area=entity.bounding_box})
+	end
+end
+
+-- When a new entity is built by hand
 local function on_built_entity(event)
+	destroy_decoratives_near_entity(event.created_entity)
+	-- If the entity is a sign
 	local player = game.players[event.player_index]
 	if event.created_entity.name == "dect-sign-wood" or event.created_entity.name == "dect-sign-steel" then
 		if global.sign_gui[event.player_index] ~= nil then
@@ -248,6 +257,11 @@ local function on_built_entity(event)
 			create_sign_gui(player)
 		end
 	end
+end
+
+-- When a new entity is built by robot
+local function on_robot_built_entity(event)
+	destroy_decoratives_near_entity(event.created_entity)
 end
 
 -- When an existing sign is mined
@@ -288,6 +302,13 @@ local function on_gui_click(event)
 			end
 		end
 	end
+end
+
+-- If the Lawnmower is used to select an area
+function on_selected_area(event)
+  if event.item ~= "dect-lawnmower" then return end
+  local surface = game.players[event.player_index].surface
+	surface.destroy_decoratives({area=event.area})
 end
 
 -- Kill off any ophaned signs when a player leaves the game while still selecting an icon
@@ -351,10 +372,13 @@ script.on_load(on_load)
 script.on_init(on_init)
 script.on_configuration_changed(on_configuration_changed)
 script.on_event(defines.events.on_built_entity, on_built_entity)
+script.on_event(defines.events.on_robot_built_entity, on_robot_built_entity)
 script.on_event(defines.events.on_pre_player_mined_item, on_mined_entity)
 script.on_event(defines.events.on_robot_pre_mined, on_mined_entity)
 script.on_event(defines.events.on_entity_died, on_mined_entity)
 script.on_event(defines.events.on_gui_click, on_gui_click)
+script.on_event(defines.events.on_player_selected_area, on_selected_area)
+script.on_event(defines.events.on_player_alt_selected_area, on_selected_area)
 script.on_event(defines.events.on_pre_player_left_game, on_player_state_changed)
 script.on_event(defines.events.on_pre_player_died, on_player_state_changed)
 script.on_event(defines.events.on_player_joined_game, on_player_state_changed)

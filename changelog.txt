@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.3
 Date: 03. 03. 2019
+  Added:
+    - New Lawnmower tool that will remove all decoratives from a selected area
+    - Decoratives are now automatically removed around newly placed entities
   Changed:
     - Updated mod dependencies to remove deprecated third party mods
   Bugfixes:

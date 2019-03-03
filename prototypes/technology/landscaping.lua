@@ -39,6 +39,28 @@ if DECT.ENABLED["landscaping"] then
 			},
 			effects = landscaping_effects,
 			order = "a"
+		},
+		{
+			type = "technology",
+			name = "dect-lawnmower",
+			icon = "__Dectorio__/graphics/technology/lawnmower.png",
+			icon_size = 128,
+			prerequisites = {"dect-landscaping", "engine"},
+			unit = {
+				count = 30,
+				ingredients = {
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1},
+				},
+				time = 15
+			},
+			effects = {
+				{
+					type = "unlock-recipe",
+					recipe = "dect-lawnmower"
+				}
+			},
+			order = "b-d-a"
 		}
 	})
 
