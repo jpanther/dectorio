@@ -54,9 +54,21 @@ If you would like to translate into a new language that isn't listed on the Crow
 
 The Glowing lamp works the same way as the base game lamp however when you connect it to a circuit network and pass it a signal, the colour it outputs will glow over a large area on the map. It's useful for making decorative lighting effects or warning lights to show when the factory has an issue. Dectorio adds signal colours to lots of base game items, so you can send a signal of 'iron' and the light will glow a blue colour so you know that's the resource that needs attention.
 
+## How do I use the Lawnmower?
+
+![Lawnmower](https://img.pantherx.net/dectorio/faq/lawnmower.png)
+
+The Lawnmower is a tool that is used while being held in your hand. Simply pick up the Lawnmower from your inventory and while holding it in your cursor, click and drag over an area on the game surface. When you release the mouse button, any decorative items that are inside the area you selected will be deleted.
+
 ## What's the point of the extra signals like the star or arrows?
 
 These are simply additional signals that you can use when making circuit network conditions. For instance, if you had a circuit network that was calculating the battery level of your accumulators, you might find it easier to follow your logic if you assign this a 'battery' signal, rather than using an arbitrary letter or number. They don't offer any other additional functionality.
+
+## I have a sign that's stuck on the map and it cannot be mined. How do I remove it?
+
+![Sign cannot be mined](https://img.pantherx.net/dectorio/faq/cannot-be-mined.png)
+
+Sometimes if something happens while a player is placing a sign - they might be killed, the server goes down, the game crashes, etc. - there can be a situation where the sign is still on the map, but doesn't have an icon. If you try to delete this sign it will say "This cannot be mined." If this is the case, you can run a special command that will find and remove these entities for you. Open the console in game (by default the tilde '~' key) and type `/dect-destroy-orphaned-signs`. If it finds any signs that meet the criteria, you will be told in the console where they were removed.
 
 ## Why can't I add other mods from the mod portal that add more coloured signals?
 
@@ -84,6 +96,8 @@ The mod is slowly being converted to HD textures. About 60% is currently in HD a
 
 That's fine, you can turn this off by checking the "Use default Factorio Hazard concrete style" option under the Mod Startup settings. Checking this box will mean that your Hazard concrete looks like the original base game, but you can still use all the other Dectorio concrete styles too.
 
+![Default Hazard concrete setting](https://img.pantherx.net/dectorio/faq/default-hazard-concrete.png)
+
 ## Are Angels and Bobs mods supported?
 
 Dectorio doesn't specifically adjust recipes when Angels and Bobs are present but it does work fine with either of these mod packs installed. This does introduce some progression issues with technology required to build certain items like walls and gates and I plan to make recipe adjustments in future updates to smooth this out a bit.
@@ -106,4 +120,4 @@ Note that these old versions of Dectorio will not be updated with new features o
 
 ## The Mod Portal discussion page is disabled!
 
-Yes, yes it is. I tried to keep track of comments people left on the mod portal but it easily got out of hand. There are limited moderation tools available and the discussion generally wasn't helpful for tracking down problems. My preference has always been to use [GitHub Issues](https://github.com/jpanther/Dectorio/issues) to keep track of any bugs or feature requests and so that is now the default way to get in touch. Any old discussion topics on the Mod Portal have been archived.
+Yes, yes it is. I tried to keep track of comments people left on the mod portal but it easily got out of hand. There are limited moderation tools available and the discussion generally wasn't helpful for tracking down problems. My preference has always been to use [GitHub Issues](https://github.com/jpanther/Dectorio/issues) to keep track of any bugs or feature requests and so that is now the default way to get in touch. You can also occasionally find me on the official [Factorio Discord](https://discord.gg/G4fpTay) or [Twitter](https://twitter.com/jpanther). Any old discussion topics on the Mod Portal have been archived.
