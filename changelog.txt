@@ -11,6 +11,7 @@ Date: 05. 03. 2019
   Bugfixes:
     - Fixed an issue where Painted refined concrete had an incorrect walking speed modifier
     - Fixed an issue where multiplayer games wouldn't start correctly with a completely new save
+    - Fixed migration issue on some old saves running v0.8.8 or earlier
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.2
 Date: 02. 03. 2019
