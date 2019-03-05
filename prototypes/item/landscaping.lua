@@ -158,7 +158,15 @@ if DECT.ENABLED["landscaping"] then
 	    alt_selection_cursor_box_type = "not-allowed",
 	    can_be_mod_opened = false,
 	    show_in_library = false
-	  }
+	  },
+		{
+			type = "sound",
+			name = "dect-lawnmower",
+			variations = {
+				{ filename = "__Dectorio__/sound/lawnmower-01.ogg", volume = 0.9 },
+				{ filename = "__Dectorio__/sound/lawnmower-02.ogg", volume = 1 }
+			}
+		}
 	})
 
 end

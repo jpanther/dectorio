@@ -342,6 +342,7 @@ end
 local function on_selected_area(event)
   if event.item ~= "dect-lawnmower" then return end
   local surface = game.players[event.player_index].surface
+	game.play_sound({path="dect-lawnmower",	position=event.area.left_top})
 	surface.destroy_decoratives({area=event.area})
 end
 
