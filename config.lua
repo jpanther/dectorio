@@ -132,8 +132,7 @@ DECT.CONFIG.GRAVEL_VARIANTS = {
 	{name="copper-ore", color={r=0.64,g=0.46,b=0.45}},
 	{name="coal", color={r=0.33,g=0.33,b=0.33}},
 }
-DECT.CONFIG.SIGN_CATEGORIES = {"item", "fluid", "tool", "ammo", "armor", "capsule", "gun", "mining-tool", "module"}
-DECT.CONFIG.SIGN_BLACKLIST = {"barrel", "loader", "simple%-entity", "player%-port", "computer", "coin", "small%-plane", "railgun", "vehicle%-machine%-gun", "tank%-machine%-gun", "factory%-1%-", "factory%-2%-", "factory%-3%-", "signpost", "dect%-signal%-", "infinity%-chest"}
+-- When changing these tables, the migration scripts need to be adjusted to compensate!
 DECT.CONFIG.BASE_TILES = {"dry-dirt", "dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7", "sand-1", "sand-2", "sand-3", "grass-1", "grass-2", "grass-3", "grass-4", "red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3"}
 DECT.CONFIG.BASE_WATER_TILES = {"water", "deepwater", "water-green", "deepwater-green"}
 DECT.CONFIG.BASE_TREES = {"tree-01", "tree-02", "tree-03", "tree-04", "tree-05", "tree-06", "tree-07", "tree-08", "tree-09", "dead-dry-hairy-tree", "dead-grey-trunk", "dead-tree-desert", "dry-hairy-tree", "dry-tree"}
@@ -175,27 +174,12 @@ DECT.INCOMPATIBLE.MODS = {
 		component = "signals",
 		reason = "signals"
 	},
-	["Updated_Expanded_Color_Lamps"] = {
-		name = "Updated_Expanded_Color_Lamps",
-		component = "signals",
-		reason = "signals"
-	},
-	["Reinforced-Walls-016"] = {
-		name = "Reinforced-Walls",
-		component = "walls",
-		reason = "tech"
-	},
-	["concrete-and-stone-016"] = {
-		name = "concrete-and-stone",
-		component = "walls",
-		reason = "tech"
-	},
-	["PickerTweaks"] = {
-		name = "PickerTweaks",
-		component = "signals",
-		reason = "item",
-		setting = {type="startup", name="picker-better-lamp-colors", value=true}
-	},
+	-- ["PickerTweaks"] = {
+	-- 	name = "PickerTweaks",
+	-- 	component = "signals",
+	-- 	reason = "item",
+	-- 	setting = {type="startup", name="picker-better-lamp-colors", value=true}
+	-- },
 }
 
 DECT.DEBUG = false

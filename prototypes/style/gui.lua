@@ -4,7 +4,7 @@ default_gui = data.raw["gui-style"]["default"]
 
 default_gui["dect-icon-table"] = {
 	type = "table_style",
-	cell_spacing = 1,
+	cell_spacing = 2,
 	horizontal_spacing = 1,
 	vertical_spacing = 1
 }
@@ -36,13 +36,4 @@ default_gui["dect-icon-button-active"] = {
 		corner_size = {3, 3},
 		position = {0, 8}
 	}
-}
-
-default_gui["dect-scroll"] = {
-	type = "scroll_pane_style",
-	parent = "scroll_pane",
-	minimal_width = 670,
-	maximal_width = 670,
-	minimal_height = 480,
-	maximal_height = 480
 }

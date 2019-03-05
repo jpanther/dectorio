@@ -42,7 +42,7 @@ if DECT.ENABLED["waterfill"] or DECT.ENABLED["landscaping"] then
 	data:extend({
 		{
 			type = "item-subgroup",
-			name = "landscaping-water",
+			name = "landscaping-earthworks",
 			group = DECT.ITEM_GROUP,
 			order = "l-b"
 		}
@@ -61,7 +61,7 @@ if DECT.ENABLED["waterfill"] then
 				name = "dect-base-"..tile,
 				icon = "__Dectorio__/graphics/icons/base-"..tile..".png",
 				icon_size = 32,
-				subgroup = "landscaping-water",
+				subgroup = "landscaping-earthworks",
 				order = "a[".._.."base-"..tile.."]",
 				stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
 				place_as_tile = {
@@ -139,6 +139,36 @@ if DECT.ENABLED["landscaping"] then
 		})
 	end
 
+	-- Add Lawnmower item
+	data:extend({
+	  {
+	    type = "selection-tool",
+	    name = "dect-lawnmower",
+	    icon = "__Dectorio__/graphics/icons/lawnmower.png",
+	    icon_size = 32,
+	    stack_size = 1,
+			stackable = false,
+	    subgroup = "landscaping-earthworks",
+	    order = "d[lawnmower]",
+	    selection_color = {r=0.10, g=0.46, b=0.13, a=0.33},
+	    alt_selection_color = {r=0.10, g=0.46, b=0.13, a=0.33},
+	    selection_mode = {"any-entity"},
+	    alt_selection_mode = {"any-entity"},
+	    selection_cursor_box_type = "not-allowed",
+	    alt_selection_cursor_box_type = "not-allowed",
+	    can_be_mod_opened = false,
+	    show_in_library = false
+	  },
+		{
+			type = "sound",
+			name = "dect-lawnmower",
+			variations = {
+				{ filename = "__Dectorio__/sound/lawnmower-01.ogg", volume = 0.9 },
+				{ filename = "__Dectorio__/sound/lawnmower-02.ogg", volume = 1 }
+			}
+		}
+	})
+
 end
 
 if DECT.ENABLED["waterfill"] or DECT.ENABLED["landscaping"] then
@@ -146,10 +176,10 @@ if DECT.ENABLED["waterfill"] or DECT.ENABLED["landscaping"] then
 	-- Modify base landfill and cliff explosives
 	local base_landfill = data.raw["item"]["landfill"]
 	local base_cliff_explosives = data.raw["capsule"]["cliff-explosives"]
-	base_landfill.subgroup = "landscaping-water"
+	base_landfill.subgroup = "landscaping-earthworks"
 	base_landfill.order = "b[landfill]"
 	base_landfill.stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"]
-	base_cliff_explosives.subgroup = "landscaping-water"
+	base_cliff_explosives.subgroup = "landscaping-earthworks"
 	base_cliff_explosives.order = "c[cliff-explosives]"
 
 end

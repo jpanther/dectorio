@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.3
+Date: 05. 03. 2019
+  Added:
+    - New Lawnmower tool that will remove all decoratives from a selected area
+    - Decoratives are now automatically removed around newly placed entities
+  Changed:
+    - Complete rewrite of sign logic to reduce conflicts in games with very large modpacks
+    - Sign GUI now appears on the left so you can see the sign you are currently placing
+    - Updated mod dependencies to remove deprecated third party mods
+  Bugfixes:
+    - Fixed an issue where Painted refined concrete had an incorrect walking speed modifier
+    - Fixed an issue where multiplayer games wouldn't start correctly with a completely new save
+    - Fixed migration issue on some old saves running v0.8.8 or earlier
+---------------------------------------------------------------------------------------------------
 Version: 0.9.2
 Date: 02. 03. 2019
   Added:
