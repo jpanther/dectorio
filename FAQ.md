@@ -56,9 +56,9 @@ The Glowing lamp works the same way as the base game lamp however when you conne
 
 ## How do I use the Lawnmower?
 
-![Lawnmower](https://img.pantherx.net/dectorio/faq/lawnmower.png)
-
 The Lawnmower is a tool that is used while being held in your hand. Simply pick up the Lawnmower from your inventory and while holding it in your cursor, click and drag over an area on the game surface. When you release the mouse button, any decorative items that are inside the area you selected will be deleted.
+
+![Lawnmower](https://img.pantherx.net/dectorio/faq/lawnmower.png)
 
 ## What's the point of the extra signals like the star or arrows?
 
@@ -66,9 +66,9 @@ These are simply additional signals that you can use when making circuit network
 
 ## I have a sign that's stuck on the map and it cannot be mined. How do I remove it?
 
-![Sign cannot be mined](https://img.pantherx.net/dectorio/faq/cannot-be-mined.png)
-
 Sometimes if something happens while a player is placing a sign - they might be killed, the server goes down, the game crashes, etc. - there can be a situation where the sign is still on the map, but doesn't have an icon. If you try to delete this sign it will say "This cannot be mined." If this is the case, you can run a special command that will find and remove these entities for you. Open the console in game (by default the tilde '~' key) and type `/dect-destroy-orphaned-signs`. If it finds any signs that meet the criteria, you will be told in the console where they were removed.
+
+![Sign cannot be mined](https://img.pantherx.net/dectorio/faq/cannot-be-mined.png)
 
 ## Why can't I add other mods from the mod portal that add more coloured signals?
 
