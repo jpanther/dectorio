@@ -43,38 +43,17 @@ local function init_global()
 	global.signs = global.signs or {}
 	global.sign_last_built = global.sign_last_built or {}
 	global.sign_gui = global.sign_gui or {}
+end
 
+-- Initialise global.icons with all the possible icons
+local function init_icons()
 	if global.icons == nil then
-		local prototypes = {
-			["item"] = game.item_prototypes,
-			["fluid"] = game.fluid_prototypes
-		}
 		local icons = {}
-		for protokey, prototype in pairs(prototypes) do
-			for _, obj in pairs(prototype) do
-				for _, category in pairs(DECT.CONFIG.SIGN_CATEGORIES) do
-					local new_icon = {name=obj.name, type=protokey}
-					local duplicate = false
-					for _, icon in pairs(icons) do
-						if icon == new_icon then
-							duplicate = true
-						end
-					end
-					if not duplicate then
-						if protokey == "fluid" and category == "fluid" then
-							table.insert(icons, new_icon)
-						elseif protokey == "item" and obj.type == category then
-							local match = false
-							for _, icon_be_gone in pairs(DECT.CONFIG.SIGN_BLACKLIST) do
-								if string.find(obj.name, tostring(icon_be_gone)) then
-									match = true
-								end
-							end
-							if not match then
-								table.insert(icons, new_icon)
-							end
-						end
-					end
+		for _, prototype in pairs(game.entity_prototypes) do
+			if prototype.type == "simple-entity" then
+				if prototype.name:find("dect%-icon") then
+					local orig_prototype = prototype.name:gsub("dect%-icon%-", "")
+					table.insert(icons, {name=prototype.name, type=prototype.order, prototype=orig_prototype})
 				end
 			end
 		end
@@ -173,6 +152,7 @@ end
 local function on_init(data)
 	init_global()
 	init_commands()
+	init_icons()
 end
 
 -- Load stuff (on every load)
@@ -210,6 +190,10 @@ local function on_configuration_changed(data)
 			incompability_detected()
 		end
 	end
+
+	-- Re-scan for icon changes
+	global.icons = nil
+	init_icons()
 
 	-- Check if Alien Biomes was added
 	if data.mod_changes ~= nil and data.mod_changes["alien-biomes"] ~= nil and data.mod_changes["alien-biomes"].old_version == nil then
@@ -250,24 +234,26 @@ end
 -- SIGN FUNCTIONS
 -- Show the GUI for sign icon selection
 local function create_sign_gui(player)
-	if player.gui.center["dect-gui-sign"] then
-		player.gui.center["dect-gui-sign"].destroy()
+	if global.sign_gui[player.index] ~= nil then
+		destroy_sign_gui(player)
 	end
 	global.sign_gui[player.index] = player.gui.center.add({type="frame", name="dect-gui-sign", caption={"dect-gui.sign-title"}, direction="vertical"})
 	local gui_scroll = global.sign_gui[player.index].add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="auto", style="dect-scroll"})
 	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", column_count=20, style="dect-icon-table"})
 	local gui_cancel = global.sign_gui[player.index].add({type="button", name="dect-gui-button-cancel", caption={"dect-gui.sign-cancel"}})
 	for _, icon in pairs(global.icons) do
-		local match = false
-		for _, child in pairs(gui_table.children_names) do
-			if child == "dect-icon-"..icon.name then
-				match = true
+			local match = false
+			for _, child in pairs(gui_table.children_names) do
+				if child == icon.name then
+					match = true
+				end
+			end
+			if not match then
+				if player.gui.is_valid_sprite_path("entity/"..icon.name) then
+					gui_table.add({type="sprite-button", name=icon.name, sprite="entity/"..icon.name, style="dect-icon-button", tooltip={"", icon.prototype}})
+				end
 			end
 		end
-		if not match then
-			gui_table.add({type="sprite-button", name="dect-icon-"..icon.name, sprite=icon.type.."/"..icon.name, style="dect-icon-button", tooltip={"",icon.name}})
-		end
-	end
 end
 
 -- Destroy the sign GUI
@@ -330,8 +316,8 @@ local function on_gui_click(event)
 			end
 		elseif event.element.parent.name == "dect-icons-table" then
 			for _, icon in pairs(global.icons) do
-				if event.element.name == "dect-icon-"..icon.name then
-					create_sign(game.players[event.player_index], "dect-icon-"..icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
+				if event.element.name == icon.name then
+					create_sign(game.players[event.player_index], icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
 					global.sign_last_built[event.player_index].destructible = true
 					global.sign_last_built[event.player_index].minable = true
 					destroy_sign_gui(game.players[event.player_index])
