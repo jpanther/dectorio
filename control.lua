@@ -82,11 +82,57 @@ local function init_global()
 	end
 end
 
--- Check if any technologies or recipes need to be enabled
-local function unlock_tech_and_recipes()
-	for _,force in pairs(game.forces) do
-		force.reset_recipes()
-		force.reset_technologies()
+-- Initialise some command handlers
+local function init_commands()
+	-- Clear out any old ones before we attempt to add them
+	-- (mainly because when some old saves are migrated they might already have these and will with throw an error)
+	commands.remove_command("dect-destroy-orphaned-signs")
+	commands.remove_command("dect-debug-reset-signs")
+
+	-- Command to remove any unminable signs from the player's current surface
+	commands.add_command("dect-destroy-orphaned-signs", {"dect-cmd.destroy-orphaned-signs"}, function()
+		local surface = game.player.surface
+		local signs = surface.find_entities_filtered{name={"dect-sign-wood", "dect-sign-steel"}}
+		local gui_open = false
+		local match = false
+
+		for _, sign in pairs(signs) do
+			if sign.minable == false then
+				-- TODO: Potential issue will arise here if command is executed in MP while someone has GUI open
+				local pos = sign.position
+				match = true
+				sign.destroy()
+				notify({"dect-notify.cmd-removed-orphaned-sign", {"dect-notify.dectorio"}, pos})
+			end
+		end
+		if not match then
+			notify({"dect-notify.cmd-no-orphaned-signs", {"dect-notify.dectorio"}})
+		end
+	end)
+
+	if DECT.DEBUG then
+		-- Special debug command to remove all signs and reset global sign data (normal use shouldn't require this)
+		commands.add_command("dect-debug-reset-signs", "Destroy all signs and reset sign data", function()
+			-- Find and remove all signs on all surfaces
+			for _, surface in pairs(game.surfaces) do
+				local signs = surface.find_entities_filtered{name={"dect-sign-wood", "dect-sign-steel"}}
+				for _, sign in pairs(signs) do
+					sign.destroy()
+				end
+			end
+			-- Find and remove any sign icons
+			for _, sign in pairs(global.signs) do
+				for _, object in pairs(sign.objects) do
+					object.destroy()
+				end
+			end
+			-- Clear out any global sign data
+			global.signs = {}
+			for _, player in pairs(game.players) do
+				global.sign_last_built[player.index] = nil
+				global.sign_gui[player.index] = nil
+			end
+		end)
 	end
 end
 
@@ -126,12 +172,12 @@ end
 -- Initialisation stuff
 local function on_init(data)
 	init_global()
+	init_commands()
+end
 
-	if global.mod_incompatibility == true then
-		incompability_detected()
-	end
-
-	unlock_tech_and_recipes()
+-- Load stuff (on every load)
+local function on_load(data)
+	init_commands()
 end
 
 local function on_configuration_changed(data)
@@ -141,7 +187,17 @@ local function on_configuration_changed(data)
 	if data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version == nil then
 		notification({"dect-notify.version", {"dect-notify.dectorio"}, data.mod_changes["Dectorio"].new_version})
 	elseif data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version ~= nil then
-		unlock_tech_and_recipes()
+
+		-- Reset tech and recipes
+		for _,force in pairs(game.forces) do
+			force.reset_recipes()
+			force.reset_technologies()
+		end
+
+		-- Re-initialise command handlers
+		init_commands()
+
+		-- Notify version change
 		local oldver = data.mod_changes["Dectorio"].old_version
 		local newver = data.mod_changes["Dectorio"].new_version
 		notification({"dect-notify.new-version", {"dect-notify.dectorio"}, oldver, newver})
@@ -292,53 +348,6 @@ local function on_player_state_changed(event)
 	if global.sign_gui[player.index] ~= nil then
 		destroy_sign_gui(player)
 		global.sign_last_built[player.index].destroy()
-	end
-end
-
-local function on_load(data)
-	-- Command to remove any unminable signs from the player's current surface
-	commands.add_command("dect-destroy-orphaned-signs", {"dect-cmd.destroy-orphaned-signs"}, function()
-		local surface = game.player.surface
-		local signs = surface.find_entities_filtered{name={"dect-sign-wood", "dect-sign-steel"}}
-		local match = false
-
-		for _, sign in pairs(signs) do
-			if sign.minable == false then
-				local pos = sign.position
-				match = true
-				sign.destroy()
-				notification({"dect-notify.cmd-removed-orphaned-sign", {"dect-notify.dectorio"}, pos})
-			end
-		end
-
-		if not match then
-			notification({"dect-notify.cmd-no-orphaned-signs", {"dect-notify.dectorio"}})
-		end
-	end)
-
-	if DECT.DEBUG then
-		-- Special debug command to remove all signs and reset global sign data
-		commands.add_command("dect-debug-reset-signs", "Destroy all signs and reset sign data", function()
-			-- Find and remove all signs on all surfaces
-			for _, surface in pairs(game.surfaces) do
-				local signs = surface.find_entities_filtered{name={"dect-sign-wood", "dect-sign-steel"}}
-				for _, sign in pairs(signs) do
-					sign.destroy()
-				end
-			end
-			-- Find and remove any sign icons
-			for _, sign in pairs(global.signs) do
-				for _, object in pairs(sign.objects) do
-					object.destroy()
-				end
-			end
-			-- Clear out any global sign data
-			global.signs = {}
-			for _, player in pairs(game.players) do
-				global.sign_last_built[player.index] = nil
-				global.sign_gui[player.index] = nil
-			end
-		end)
 	end
 end
 
