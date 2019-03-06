@@ -1,6 +1,6 @@
 -- third-party/alien-biomes
 
-if DECT.ENABLED["landscaping"] and settings.startup["alien-biomes-terrain-scale"] then
+if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 
 	local alien_biomes = DECT.CONFIG.ALIEN_BIOMES
 

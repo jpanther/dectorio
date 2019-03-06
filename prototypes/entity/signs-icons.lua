@@ -2,8 +2,8 @@
 
 if DECT.ENABLED["signs"] then
 
-	local categories = {"item", "fluid", "tool", "ammo", "armor", "capsule", "gun", "mining-tool", "module"}
-	local blacklist = {"barrel", "loader", "simple%-entity", "player%-port", "computer", "coin", "small%-plane", "railgun", "vehicle%-machine%-gun", "tank%-machine%-gun", "factory%-1%-", "factory%-2%-", "factory%-3%-", "signpost", "dect%-signal%-", "infinity%-chest", "infinity%-pipe", "heat%-interface", "pollution", "escape%-pod%-power", "dummy%-steel%-axe"}
+	local categories = DECT.CONFIG.SIGN_CATEGORIES
+	local blacklist = DECT.CONFIG.SIGN_BLACKLIST
 
 	for _, cat in pairs(categories) do
 		if data.raw[cat] then
