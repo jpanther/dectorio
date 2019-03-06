@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.11
 Date: 07. 03. 2019
+  Added:
+    - Thumbnail image for mod directory
   Changed:
     - Updated technology icons
     - Additional compression of Refined concrete gfx to reduce mod package size
