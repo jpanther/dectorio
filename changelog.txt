@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.11
+Date: 07. 03. 2019
+  Changed:
+    - Updated technology icons
+    - Additional compression of Refined concrete gfx to reduce mod package size
+---------------------------------------------------------------------------------------------------
 Version: 0.8.10
 Date: 18. 02. 2019
   Bugfixes:
