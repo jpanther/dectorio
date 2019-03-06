@@ -9,6 +9,7 @@ Date: 07. 03. 2019
     - Updated technology icons
     - Additional compression of Refined concrete gfx to reduce mod package size
   Bugfixes:
+    - Fixed an issue where Painted refined concrete had an incorrect walking speed modifier
     - Fixed an issue where multiplayer games wouldn't start correctly with a completely new save
     - Fixed an issue when modded items exist that have an icon_size of less than 32 pixels
 ---------------------------------------------------------------------------------------------------
