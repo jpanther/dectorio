@@ -57,7 +57,8 @@ local function init_icons()
 		for _, prototype in pairs(game.entity_prototypes) do
 			if prototype.type == "simple-entity" then
 				if prototype.name:find("dect%-icon") then
-					table.insert(icons, {name=prototype.name, type=prototype.order})
+					local orig_prototype = prototype.name:gsub("dect%-icon%-", "")
+					table.insert(icons, {name=prototype.name, type=prototype.order, prototype=orig_prototype})
 				end
 			end
 		end
@@ -237,7 +238,6 @@ local function create_sign_gui(player)
 	global.sign_gui[player.index] = player.gui.left.add({type="frame", name="dect-gui-sign", caption={"dect-gui.sign-title"}, direction="vertical"})
 	local gui_scroll = global.sign_gui[player.index].add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="never"})
 	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", column_count=8, style="dect-icon-table"})
-	local gui_cancel = global.sign_gui[player.index].add({type="button", name="dect-gui-button-cancel", caption={"dect-gui.sign-cancel"}, style="red_button"})
 	for _, icon in pairs(global.icons) do
 		local match = false
 		for _, child in pairs(gui_table.children_names) do
@@ -246,10 +246,12 @@ local function create_sign_gui(player)
 			end
 		end
 		if not match then
-			local prototype = icon.name:gsub("dect%-icon%-", "")
-			gui_table.add({type="sprite-button", name=icon.name, sprite="entity/"..icon.name, style="dect-icon-button", tooltip={"", prototype}})
+			if player.gui.is_valid_sprite_path("entity/"..icon.name) then
+				gui_table.add({type="sprite-button", name=icon.name, sprite="entity/"..icon.name, style="dect-icon-button", tooltip={"", icon.prototype}})
+			end
 		end
 	end
+	local gui_cancel = global.sign_gui[player.index].add({type="button", name="dect-gui-button-cancel", caption={"dect-gui.sign-cancel"}, style="red_button"})
 end
 
 -- Destroy the sign GUI

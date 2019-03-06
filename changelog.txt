@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.4
+Date: 06. 03. 2019
+  Added:
+    - Detection of Yuoki Industries modded items to prevent multiplayer desync when placing signs
+---------------------------------------------------------------------------------------------------
 Version: 0.9.3
 Date: 05. 03. 2019
   Added:
