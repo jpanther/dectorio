@@ -24,8 +24,11 @@
 
 DECT = require("config")
 
+-- HELPER FUNCTIONS
+-- ---------------------------------
+
 -- Send chat notification to all players or force
-local function notification(txt, force)
+local function notify(txt, force)
 	if force ~= nil then
 		force.print(txt)
 	else
@@ -35,11 +38,13 @@ local function notification(txt, force)
 	end
 end
 
+-- BOOTSTRAP FUNCTIONS
+-- ---------------------------------
+
 -- Initialise global vars
 local function init_global()
 	global = global or {}
-	global.mod_incompatibility = nil
-	global.icons = nil
+	global.icons = global.icons or nil
 	global.signs = global.signs or {}
 	global.sign_last_built = global.sign_last_built or {}
 	global.sign_gui = global.sign_gui or {}
@@ -115,40 +120,7 @@ local function init_commands()
 	end
 end
 
--- Check game for known incompatibile mods
-local function check_incompatible_mods()
-	for mod, version in pairs(game.active_mods) do
-		if DECT.INCOMPATIBLE.MODS[mod] then
-			if DECT.ENABLED[DECT.INCOMPATIBLE.MODS[mod].component] then
-				return true
-			end
-		end
-	end
-	return false
-end
-
--- Notify player of incompatible mods
-local function incompability_detected()
-	for mod, version in pairs(game.active_mods) do
-		if DECT.INCOMPATIBLE.MODS[mod] then
-			incompatible = DECT.INCOMPATIBLE.MODS[mod]
-			if DECT.ENABLED[incompatible.component] and not incompatible.setting then
-				notification({"dect-notify.incompatible", {"dect-notify.dectorio"}})
-				notification({"dect-notify.reason-"..incompatible.reason, {"dect-notify.dectorio"}, incompatible.name})
-				notification({"dect-notify.recommended-action", {"dect-notify.dectorio"}, incompatible.name, incompatible.component})
-				notification({"dect-notify.mod-portal", {"dect-notify.dectorio"}})
-			elseif DECT.ENABLED[incompatible.component] and incompatible.setting then
-				if settings[incompatible.setting.type][incompatible.setting.name].value == incompatible.setting.value then
-					notification({"dect-notify.incompatible", {"dect-notify.dectorio"}})
-					notification({"dect-notify.reason-"..incompatible.reason, {"dect-notify.dectorio"}, incompatible.name})
-					notification({"dect-notify.recommended-setting", {"dect-notify.dectorio"}, {"mod-setting-name."..incompatible.setting.name}, incompatible.name})
-				end
-			end
-		end
-	end
-end
-
--- Initialisation stuff
+-- Initialisation stuff (on first load)
 local function on_init(data)
 	init_global()
 	init_commands()
@@ -160,12 +132,13 @@ local function on_load(data)
 	init_commands()
 end
 
+-- Things to check when the mod is updated or other mods are added/removed
 local function on_configuration_changed(data)
 	init_global()
 
 	-- Notify version and updates
 	if data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version == nil then
-		notification({"dect-notify.version", {"dect-notify.dectorio"}, data.mod_changes["Dectorio"].new_version})
+		notify({"dect-notify.version", {"dect-notify.dectorio"}, data.mod_changes["Dectorio"].new_version})
 	elseif data.mod_changes ~= nil and data.mod_changes["Dectorio"] ~= nil and data.mod_changes["Dectorio"].old_version ~= nil then
 
 		-- Reset tech and recipes
@@ -180,14 +153,37 @@ local function on_configuration_changed(data)
 		-- Notify version change
 		local oldver = data.mod_changes["Dectorio"].old_version
 		local newver = data.mod_changes["Dectorio"].new_version
-		notification({"dect-notify.new-version", {"dect-notify.dectorio"}, oldver, newver})
+		notify({"dect-notify.new-version", {"dect-notify.dectorio"}, oldver, newver})
 	end
 
 	-- Check for incompatible mods and notify
 	if data.mod_changes ~= nil then
-		global.mod_incompatibility = check_incompatible_mods()
-		if global.mod_incompatibility == true then
-			incompability_detected()
+		local mod_incompatibility = false
+		for mod, version in pairs(game.active_mods) do
+			if DECT.INCOMPATIBLE.MODS[mod] then
+				if DECT.ENABLED[DECT.INCOMPATIBLE.MODS[mod].component] then
+					mod_incompatibility = true
+				end
+			end
+		end
+		if mod_incompatibility == true then
+			for mod, version in pairs(game.active_mods) do
+				if DECT.INCOMPATIBLE.MODS[mod] then
+					incompatible = DECT.INCOMPATIBLE.MODS[mod]
+					if DECT.ENABLED[incompatible.component] and not incompatible.setting then
+						notify({"dect-notify.incompatible", {"dect-notify.dectorio"}})
+						notify({"dect-notify.reason-"..incompatible.reason, {"dect-notify.dectorio"}, incompatible.name})
+						notify({"dect-notify.recommended-action", {"dect-notify.dectorio"}, incompatible.name, incompatible.component})
+						notify({"dect-notify.mod-portal", {"dect-notify.dectorio"}})
+					elseif DECT.ENABLED[incompatible.component] and incompatible.setting then
+						if settings[incompatible.setting.type][incompatible.setting.name].value == incompatible.setting.value then
+							notify({"dect-notify.incompatible", {"dect-notify.dectorio"}})
+							notify({"dect-notify.reason-"..incompatible.reason, {"dect-notify.dectorio"}, incompatible.name})
+							notify({"dect-notify.recommended-setting", {"dect-notify.dectorio"}, {"mod-setting-name."..incompatible.setting.name}, incompatible.name})
+						end
+					end
+				end
+			end
 		end
 	end
 
@@ -207,7 +203,7 @@ local function on_configuration_changed(data)
 							rec["dect-alien-biomes-"..tile].enabled = true
 						end
 					end
-					notification({"dect-notify.supported-mod-added", {"dect-notify.dectorio"}, "Alien Biomes"})
+					notify({"dect-notify.supported-mod-added", {"dect-notify.dectorio"}, "Alien Biomes"})
 				end
 			end
 		end
@@ -223,7 +219,7 @@ local function on_configuration_changed(data)
 					for _, tile in pairs(DECT.CONFIG.BASE_TILES) do
 						rec["dect-base-"..tile].enabled = true
 					end
-					notification({"dect-notify.supported-mod-removed", {"dect-notify.dectorio"}, "Alien Biomes"})
+					notify({"dect-notify.supported-mod-removed", {"dect-notify.dectorio"}, "Alien Biomes"})
 				end
 			end
 		end
@@ -231,7 +227,9 @@ local function on_configuration_changed(data)
 
 end
 
--- SIGN FUNCTIONS
+-- GUI & ENTITY FUNCTIONS
+-- ---------------------------------
+
 -- Show the GUI for sign icon selection
 local function create_sign_gui(player)
 	if global.sign_gui[player.index] ~= nil then
@@ -272,8 +270,34 @@ local function create_sign(player, icon, position, parent)
 	table.insert(global.signs, {sign=parent, objects={icon_entity}})
 end
 
--- When a new sign is built
+-- Handle GUI clicks
+local function on_gui_click(event)
+	if event.element.parent then
+		if event.element.parent.name == "dect-gui-sign" then
+			if event.element.name == "dect-gui-button-cancel" then
+				if global.sign_last_built[event.player_index] then
+					game.players[event.player_index].insert({name = global.sign_last_built[event.player_index].name, count = 1})
+					global.sign_last_built[event.player_index].destroy()
+				end
+				destroy_sign_gui(game.players[event.player_index])
+			end
+		elseif event.element.parent.name == "dect-icons-table" then
+			for _, icon in pairs(global.icons) do
+				if event.element.name == icon.name then
+					create_sign(game.players[event.player_index], icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
+					global.sign_last_built[event.player_index].destructible = true
+					global.sign_last_built[event.player_index].minable = true
+					destroy_sign_gui(game.players[event.player_index])
+					break
+				end
+			end
+		end
+	end
+end
+
+-- When a new entity is built by hand
 local function on_built_entity(event)
+	-- If the entity is a sign
 	local player = game.players[event.player_index]
 	if event.created_entity.name == "dect-sign-wood" or event.created_entity.name == "dect-sign-steel" then
 		if global.sign_gui[event.player_index] ~= nil then
@@ -303,31 +327,6 @@ local function on_mined_entity(event)
 	end
 end
 
--- Handle GUI clicks
-local function on_gui_click(event)
-	if event.element.parent then
-		if event.element.parent.name == "dect-gui-sign" then
-			if event.element.name == "dect-gui-button-cancel" then
-				if global.sign_last_built[event.player_index] then
-					game.players[event.player_index].insert({name = global.sign_last_built[event.player_index].name, count = 1})
-					global.sign_last_built[event.player_index].destroy()
-				end
-				destroy_sign_gui(game.players[event.player_index])
-			end
-		elseif event.element.parent.name == "dect-icons-table" then
-			for _, icon in pairs(global.icons) do
-				if event.element.name == icon.name then
-					create_sign(game.players[event.player_index], icon.name, global.sign_last_built[event.player_index].position, global.sign_last_built[event.player_index])
-					global.sign_last_built[event.player_index].destructible = true
-					global.sign_last_built[event.player_index].minable = true
-					destroy_sign_gui(game.players[event.player_index])
-					break
-				end
-			end
-		end
-	end
-end
-
 -- Kill off any ophaned signs when a player leaves the game while still selecting an icon
 local function on_player_state_changed(event)
 	local player = game.players[event.player_index]
@@ -337,9 +336,11 @@ local function on_player_state_changed(event)
 	end
 end
 
--- Fire events!
-script.on_load(on_load)
+-- EVENTS
+-- ---------------------------------
+
 script.on_init(on_init)
+script.on_load(on_load)
 script.on_configuration_changed(on_configuration_changed)
 script.on_event(defines.events.on_built_entity, on_built_entity)
 script.on_event(defines.events.on_pre_player_mined_item, on_mined_entity)

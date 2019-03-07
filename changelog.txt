@@ -6,6 +6,7 @@ Date: 07. 03. 2019
     - Detection of Yuoki Industries modded items to prevent multiplayer desync when placing signs
   Changed:
     - Complete rewrite of sign logic to reduce conflicts in games with very large modpacks
+    - Reduced mining time of signs
     - Updated technology icons
     - Additional compression of Refined concrete gfx to reduce mod package size
   Bugfixes:
