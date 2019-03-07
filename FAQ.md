@@ -114,9 +114,9 @@ That's a pity, but that's the nature of modding. If you have a valid concern abo
 
 The latest versions of Dectorio are designed to work with Factorio 0.17 and later. Due to the way the base game changes with each major release, there's no way to make the latest versions of Dectorio compatible with older versions of Factorio. However, old stable versions of Dectorio are kept available on the mod portal for each major Factorio release.
 
-For Factorio 0.16.x download Dectorio v0.8.10 and for Factorio 0.15.x download Dectorio v0.7.6.
+For Factorio 0.16.x download Dectorio v0.8.11 and for Factorio 0.15.x download Dectorio v0.7.6.
 
-Note that these old versions of Dectorio will not be updated with new features or bugfixes. You'll need to upgrade your Factorio version to take advantage of the latest changes.
+Note that these old versions of Dectorio will not be updated with new features, but they will occasionally have bugfixes if it's appropriate. You'll need to upgrade your Factorio version to take advantage of the latest changes.
 
 ## The Mod Portal discussion page is disabled!
 
