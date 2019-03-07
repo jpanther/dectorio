@@ -15,7 +15,7 @@ Download the latest stable release from the [Factorio mod portal](https://mods.f
 * Mac: `~/Library/Application Support/factorio/mods/`
 * Linux: `~/.factorio/mods`
 
-> **Note:** If playing with Factorio 0.15, please download v0.7.6, or for Factorio 0.16, please download v0.8.10 as these are the last stable versions supported on these base game releases. v0.9.0 and later are only supported on Factorio 0.17.
+> **Note:** If playing with Factorio 0.15, please download v0.7.6, or for Factorio 0.16, please download v0.8.11 as these are the last stable versions supported on these base game releases. v0.9.0 and later are only supported on Factorio 0.17.
 
 When you launch the game, the new mod will be enabled by default.
 
@@ -149,7 +149,7 @@ If you are able to translate the mod into any of the above languages, or you kno
 
 ### Mod Compatibility
 
-**Note:** If playing with Factorio 0.15, please download v0.7.6, or for Factorio 0.16, please download v0.8.10 as these are the last stable versions supported on these base game releases. v0.9.0 and later are only supported on Factorio 0.17.
+**Note:** If playing with Factorio 0.15, please download v0.7.6, or for Factorio 0.16, please download v0.8.11 as these are the last stable versions supported on these base game releases. v0.9.0 and later are only supported on Factorio 0.17.
 
 Limited testing has been completed with other mods. Warnings will be shown in-game to highlight any known issues. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
 
