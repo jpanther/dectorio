@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.5
+Date: 07. 03. 2019
+  Bugfixes:
+    - Fixes an issue where a player is removed from a multiplayer game and they have left-over data
+---------------------------------------------------------------------------------------------------
 Version: 0.9.4
 Date: 06. 03. 2019
   Added:
