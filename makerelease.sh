@@ -10,7 +10,7 @@ gitbranch=`git rev-parse --abbrev-ref HEAD`
 # Switch to master branch
 git checkout master
 
-# Merge changes from develop branch
+# Merge in develop branch
 git merge --no-ff develop
 
 # Create git tag for this version

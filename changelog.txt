@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.5
+Date: 08. 03. 2019
+  Bugfixes:
+    - Fixes an issue where a player is removed from a multiplayer game and they have left-over data
+  Locales:
+    - Updated Czech translation (thanks to Meritic)
+    - Updated Russian translation (thanks to antonus777)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.4
 Date: 06. 03. 2019
   Added:
@@ -52,6 +60,20 @@ Date: 27. 02. 2019
   Removed:
     - Factorio 0.16 support (use Dectorio v0.8.10 when playing 0.16 saves)
     - Removed Hazard gate as it is now the default base game style
+---------------------------------------------------------------------------------------------------
+Version: 0.8.11
+Date: 07. 03. 2019
+  Added:
+    - Thumbnail image for mod directory
+    - Detection of Yuoki Industries modded items to prevent multiplayer desync when placing signs
+  Changed:
+    - Complete rewrite of sign logic to reduce conflicts in games with very large modpacks
+    - Updated technology icons
+    - Additional compression of Refined concrete gfx to reduce mod package size
+  Bugfixes:
+    - Fixed an issue where Painted refined concrete had an incorrect walking speed modifier
+    - Fixed an issue where multiplayer games wouldn't start correctly with a completely new save
+    - Fixed an issue when modded items exist that have an icon_size of less than 32 pixels
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.10
 Date: 18. 02. 2019
