@@ -136,14 +136,14 @@ Fully supported languages:
 * English
 
 Community translations:
-* Chinese Simplified (96%)
-* Chinese Traditional (29%)
-* Czech (32%)
+* Chinese Simplified (91%)
+* Chinese Traditional (31%)
+* Czech (67%)
 * French (96%)
-* German (96%)
-* Korean (96%)
-* Polish (58%)
-* Russian (96%)
+* German (92%)
+* Korean (91%)
+* Polish (57%)
+* Russian (91%)
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
@@ -176,8 +176,8 @@ Special thanks to [marcfj](https://github.com/marcfj) for support and play testi
 
 German - [seeba8](https://github.com/seeba8) and [ST-DDT](https://crowdin.com/profile/ST-DDT).  
 Polish - [Tomirad](https://github.com/Tomirad).  
-Czech - [dereksp](https://crowdin.com/profile/dereksp).  
+Czech - [dereksp](https://crowdin.com/profile/dereksp) and [Meritic](https://crowdin.com/profile/Meritic).  
 French - [Taniotoshi](https://crowdin.com/profile/Taniotoshi).  
 Korean - [Xagros](https://crowdin.com/profile/GimoXagros).  
-Russian - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria) and [scheugen86](https://crowdin.com/profile/scheugen86).  
+Russian - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86) and [antonus777](https://crowdin.com/profile/antonus777).  
 Chinese Simplified - [jessefjxm](https://crowdin.com/profile/jessefjxm).  

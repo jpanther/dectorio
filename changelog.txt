@@ -1,8 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.5
-Date: 07. 03. 2019
+Date: 08. 03. 2019
   Bugfixes:
     - Fixes an issue where a player is removed from a multiplayer game and they have left-over data
+  Locales:
+    - Updated Czech translation (thanks to Meritic)
+    - Updated Russian translation (thanks to antonus777)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.4
 Date: 06. 03. 2019
