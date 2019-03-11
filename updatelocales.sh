@@ -16,9 +16,11 @@ unzip locales.zip -d temp
 # Move translations into place
 mv temp/locale/cs-CZ/dectorio.ini locale/cs/dectorio.cfg
 mv temp/locale/de-DE/dectorio.ini locale/de/dectorio.cfg
+mv temp/locale/es-ES/dectorio.ini locale/es-ES/dectorio.cfg
 mv temp/locale/fr-FR/dectorio.ini locale/fr/dectorio.cfg
 mv temp/locale/ko-KR/dectorio.ini locale/ko/dectorio.cfg
 mv temp/locale/pl-PL/dectorio.ini locale/pl/dectorio.cfg
+mv temp/locale/pt-BR/dectorio.ini locale/pt-BR/dectorio.cfg
 mv temp/locale/ru-RU/dectorio.ini locale/ru/dectorio.cfg
 mv temp/locale/zh-CN/dectorio.ini locale/zh-CN/dectorio.cfg
 mv temp/locale/zh-TW/dectorio.ini locale/zh-TW/dectorio.cfg

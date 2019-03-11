@@ -3,6 +3,10 @@ Version: 0.9.6
 Date: 12. 03. 2019
   Bugfixes:
     - Fixes compatibility with recently updated Alien Biomes mod
+  Locales:
+    - Added Portuguese, Brazilian translation (thanks to celaquila)
+    - Added Spanish translation (thanks to notallme)
+    - Updated Russian translation (thanks to schmarotzerltd)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.5
 Date: 08. 03. 2019
