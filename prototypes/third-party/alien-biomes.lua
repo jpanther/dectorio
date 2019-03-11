@@ -21,7 +21,6 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 					localised_name = data.raw["tile"][tile].localised_name,
 					icon = "__Dectorio__/graphics/third-party/alien-biomes/icons/"..tile..".png",
 					icon_size = 32,
-					flags = {"goes-to-main-inventory"},
 					subgroup = "landscaping",
 					order = "a[alien-biomes-"..tile.."]",
 					stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
