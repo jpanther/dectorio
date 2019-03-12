@@ -184,6 +184,12 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 		end
 	end
 
+	for _, tree in pairs(trees) do
+		if data.raw["tree"][tree] then
+			table.insert(landscaping_effects, {type = "unlock-recipe", recipe = "dect-alien-biomes-"..tree})
+		end
+	end
+
 	for _, tile in pairs(alien_biomes) do
 		local effect = nil
 		if data.raw["tile"][tile] then
