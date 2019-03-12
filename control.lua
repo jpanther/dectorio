@@ -197,10 +197,15 @@ local function on_configuration_changed(data)
 			for _,force in pairs(game.forces) do
 				local tech = force.technologies
 				local rec = force.recipes
-				if tech["dect-landscaping"].researched and settings.startup["alien-biomes-terrain-scale"] then
-					for _, tile in pairs(DECT.CONFIG.ALIEN_BIOMES) do
-						if rec["dect-alien-biomes-"..tile] then
-							rec["dect-alien-biomes-"..tile].enabled = true
+				if tech["dect-landscaping"].researched and game.active_mods["alien-biomes"] then
+					for _, tile in pairs(game.tile_prototypes) do
+						if rec["dect-alien-biomes-"..tile.name] then
+							rec["dect-alien-biomes-"..tile.name].enabled = true
+						end
+					end
+					for _, entity in pairs(game.entity_prototypes) do
+						if rec["dect-alien-biomes-"..entity.name] then
+							rec["dect-alien-biomes-"..entity.name].enabled = true
 						end
 					end
 					notify({"dect-notify.supported-mod-added", {"dect-notify.dectorio"}, "Alien Biomes"})
