@@ -32,6 +32,15 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 		"volcanic-purple-heat-1", "volcanic-purple-heat-2", "volcanic-purple-heat-3", "volcanic-purple-heat-4",
 		"frozen-snow-0", "frozen-snow-1", "frozen-snow-2", "frozen-snow-3", "frozen-snow-4", "frozen-snow-5", "frozen-snow-6", "frozen-snow-7", "frozen-snow-8", "frozen-snow-9"
 	}
+
+	-- Trees
+	local trees = {
+		"tree-wetland-a", "tree-wetland-b", "tree-wetland-c", "tree-wetland-d", "tree-wetland-e", "tree-wetland-f", "tree-wetland-g", "tree-wetland-h", "tree-wetland-i", "tree-wetland-j", "tree-wetland-k", "tree-wetland-l", "tree-wetland-m", "tree-wetland-n", "tree-wetland-o", "tree-grassland-a", "tree-grassland-b", "tree-grassland-c", "tree-grassland-d", "tree-grassland-e", "tree-grassland-f", "tree-grassland-g", "tree-grassland-h", "tree-grassland-i", "tree-grassland-j", "tree-grassland-k", "tree-grassland-l", "tree-grassland-m", "tree-grassland-n", "tree-grassland-o", "tree-grassland-p", "tree-grassland-q", "tree-dryland-a", "tree-dryland-b", "tree-dryland-c", "tree-dryland-d", "tree-dryland-e", "tree-dryland-f", "tree-dryland-g", "tree-dryland-h", "tree-dryland-i", "tree-dryland-j", "tree-dryland-k", "tree-dryland-l", "tree-dryland-m", "tree-dryland-n", "tree-dryland-o", "tree-desert-a", "tree-desert-b", "tree-desert-c", "tree-desert-d", "tree-desert-e", "tree-desert-f", "tree-desert-g", "tree-desert-h", "tree-desert-i", "tree-desert-j", "tree-desert-k", "tree-desert-l", "tree-desert-m", "tree-desert-n", "tree-snow-a", "tree-volcanic-a", "tree-palm-a", "tree-palm-b"
+	}
+
+	-- Rocks
+	local rocks = {}
+	local rock_prototypes = {"rock-huge", "rock-big"}
 	local tints = {
 		tan = {193,162,127},
 		white = {255,255,255},
@@ -46,8 +55,6 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 		beige = {178,164,138},
 		aubergine = {126,115,156}
 	}
-	local rock_prototypes = {"rock-huge", "rock-big"}
-	local rocks = {}
 	for _, rock in pairs(rock_prototypes) do
 		for tint, color in pairs(tints) do
 			table.insert(rocks, { name=rock.."-"..tint, tint=tint, color=color, prototype=rock })
@@ -92,6 +99,37 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 					},
 					result = "dect-alien-biomes-"..tile,
 					result_count = 10
+				}
+			})
+		end
+	end
+
+	-- Create new tree items
+	for _, tree in pairs(trees) do
+		if data.raw["tree"][tree] then
+			data:extend({
+				{
+					type = "item",
+					name = "dect-alien-biomes-"..tree,
+					icon = data.raw["tree"][tree].icon,
+					icon_size = 32,
+					subgroup = "landscaping-trees",
+					order = "a[alien-biomes-"..tree.."]",
+					stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
+					place_result = tree,
+					localised_name = data.raw["tree"][tree].localised_name
+				},
+				{
+					type = "recipe",
+					name = "dect-alien-biomes-"..tree,
+					energy_required = 2,
+					enabled = false,
+					category = "crafting",
+					ingredients = {
+						{ data.raw["tree"][tree].minable.result, data.raw["tree"][tree].minable.count * 1.5 }
+					},
+					result = "dect-alien-biomes-"..tree,
+					result_count = 1
 				}
 			})
 		end
