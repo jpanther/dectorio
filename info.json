@@ -6,6 +6,6 @@
     "contact": "",
     "homepage": "https://github.com/jpanther/Dectorio",
     "factorio_version": "0.17",
-    "dependencies": ["base >= 0.17", "? alien-biomes >= 0.4.1", "(?) Expanded_Color_Lamps < 0.1"],
+    "dependencies": ["base >= 0.17.10", "? alien-biomes >= 0.4.1", "(?) Expanded_Color_Lamps < 0.1"],
     "license": "GNU GPLv3"
 }

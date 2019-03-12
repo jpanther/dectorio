@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.6
 Date: 12. 03. 2019
+  Added:
+    - Support for placing rocks when using Alien Biomes mod
   Bugfixes:
-    - Fixes compatibility with recently updated Alien Biomes mod
+    - Fixes compatibility with version 4 of Alien Biomes mod
   Locales:
     - Added Portuguese, Brazilian translation (thanks to celaquila)
     - Added Spanish translation (thanks to notallme)
