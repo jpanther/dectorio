@@ -49,6 +49,7 @@ When you launch the game, the new mod will be enabled by default.
 
 * Adds items for placing dirt, sand, dark sand, grass, dry grass, red desert and dark red desert tiles
 * Ability to place water and green water tiles (aka. 'waterfill')
+* Landfill places as dirt rather than grass
 * Adds a Lawnmower tool that will remove decorative items from a given area, leaving a completely clear surface
 * Ability to place decorative rocks and trees
 
@@ -130,20 +131,22 @@ Feel free to get in touch with any issues or suggestions for new features you'd 
 
 ### Language Support
 
-Dectorio uses CrowdIn to translate the mod into various languages.
+Dectorio uses CrowdIn to translate the mod into various languages. Special thanks to all the translators listed below (in no particular order).
 
 Fully supported languages:
 * English
 
 Community translations:
-* Chinese Simplified (91%)
+* Chinese Simplified (91%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
 * Chinese Traditional (31%)
-* Czech (67%)
-* French (96%)
-* German (92%)
-* Korean (91%)
-* Polish (57%)
-* Russian (91%)
+* Czech (67%) - [dereksp](https://crowdin.com/profile/dereksp) and [Meritic](https://crowdin.com/profile/Meritic).
+* French (91%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi).
+* German (92%) - [seeba8](https://github.com/seeba8) and [ST-DDT](https://crowdin.com/profile/ST-DDT).
+* Korean (91%) - [Xagros](https://crowdin.com/profile/GimoXagros).
+* Polish (57%) - [Tomirad](https://github.com/Tomirad).
+* Portuguese, Brazilian (98%) - [celaquila](https://crowdin.com/profile/celaquila).
+* Russian (100%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777) and [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd).
+* Spanish (100%) - [notallme](https://crowdin.com/profile/notallme).
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
@@ -171,13 +174,3 @@ Refer to the [CHANGELOG](changelog.txt) for a detailed list of changes in each v
 
 Developed with ❤ by [James Panther](https://github.com/jpanther) in Melbourne, Australia.  
 Special thanks to [marcfj](https://github.com/marcfj) for support and play testing.
-
-#### Translators
-
-German - [seeba8](https://github.com/seeba8) and [ST-DDT](https://crowdin.com/profile/ST-DDT).  
-Polish - [Tomirad](https://github.com/Tomirad).  
-Czech - [dereksp](https://crowdin.com/profile/dereksp) and [Meritic](https://crowdin.com/profile/Meritic).  
-French - [Taniotoshi](https://crowdin.com/profile/Taniotoshi).  
-Korean - [Xagros](https://crowdin.com/profile/GimoXagros).  
-Russian - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86) and [antonus777](https://crowdin.com/profile/antonus777).  
-Chinese Simplified - [jessefjxm](https://crowdin.com/profile/jessefjxm).  

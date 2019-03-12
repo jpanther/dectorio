@@ -100,16 +100,8 @@ base_refined_concrete.decorative_removal_probability = decorative_removal_probab
 base_refined_hazard_left.decorative_removal_probability = decorative_removal_probability
 base_refined_hazard_right.decorative_removal_probability = decorative_removal_probability
 
--- Add landfill tile
-local landfill = table.deepcopy(data.raw.tile["dirt-5"])
-landfill.name = "dect-landfill"
-landfill.autoplace = nil
-landfill.ageing = 0
-landfill.localised_name = { "item-name.landfill" }
-data:extend({
-  landfill
-})
-data.raw.item.landfill.place_as_tile.result = "dect-landfill"
+-- Make Landfill appear as dirt rather than grass
+data.raw.tile["landfill"].variants = data.raw.tile["dirt-5"].variants
 
 if DECT.ENABLED["landscaping"] then
 

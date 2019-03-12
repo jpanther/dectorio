@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.6
+Date: 12. 03. 2019
+  Added:
+    - Support for placing rocks and trees when using Alien Biomes mod
+  Removed:
+    - Removed custom Landfill tile as 0.17.10 adds this to the base game, existing tiles will be migrated
+  Bugfixes:
+    - Fixes compatibility with version 4 of Alien Biomes mod
+  Locales:
+    - Added Portuguese, Brazilian translation (thanks to celaquila)
+    - Added Spanish translation (thanks to notallme)
+    - Updated Russian translation (thanks to schmarotzerltd)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.5
 Date: 08. 03. 2019
   Bugfixes:
