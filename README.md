@@ -49,6 +49,7 @@ When you launch the game, the new mod will be enabled by default.
 
 * Adds items for placing dirt, sand, dark sand, grass, dry grass, red desert and dark red desert tiles
 * Ability to place water and green water tiles (aka. 'waterfill')
+* Landfill places as dirt rather than grass
 * Adds a Lawnmower tool that will remove decorative items from a given area, leaving a completely clear surface
 * Ability to place decorative rocks and trees
 
