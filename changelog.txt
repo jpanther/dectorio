@@ -1,8 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.7
+Date: 14. 03. 2019
+  Bugfixes:
+    - Fixed a migration issue when loading old saves with the Alien Biomes mod present
+---------------------------------------------------------------------------------------------------
 Version: 0.9.6
 Date: 12. 03. 2019
   Added:
     - Support for placing rocks and trees when using Alien Biomes mod
+    - Base Landfill will place as dirt rather than grass
   Removed:
     - Removed custom Landfill tile as 0.17.10 adds this to the base game, existing tiles will be migrated
   Bugfixes:
