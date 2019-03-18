@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.8
+Date: 19. 03. 2019
+  Added:
+    - Lawnmower can now be used to remove corpses by invoking alternate selection mode (by default, by holding down SHIFT key when selecting an area)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.7
 Date: 14. 03. 2019
   Bugfixes:
