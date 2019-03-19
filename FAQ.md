@@ -60,6 +60,8 @@ The Lawnmower is a tool that is used while being held in your hand. Simply pick 
 
 ![Lawnmower](https://img.pantherx.net/dectorio/faq/lawnmower.png)
 
+The Lawnmower can also be used to remove corpses from the ground (such as dead biters, spawners or left over parts of destroyed buildings) by holding down SHIFT (by default) when clicking and dragging over an area on the game surface.
+
 ## What's the point of the extra signals like the star or arrows?
 
 These are simply additional signals that you can use when making circuit network conditions. For instance, if you had a circuit network that was calculating the battery level of your accumulators, you might find it easier to follow your logic if you assign this a 'battery' signal, rather than using an arbitrary letter or number. They don't offer any other additional functionality.
