@@ -39,6 +39,7 @@ When you launch the game, the new mod will be enabled by default.
   ![Concrete and Wooden floorboards](https://img.pantherx.net/dectorio/concrete-wood.png)
 
 * Adds painted concrete tiles - Hazard (black/yellow), Danger (red/yellow), Emergency (white/red), Caution (orange/white), Radiation hazard (yellow/pink), Defect (blue/white), Operations (black/white) and Safety (white/green)
+* Painted concrete walking and vehicle speeds can be reduced in the mod settings to allow concrete to be used as a safety barrier around hazards^ (by default, this option is off)
 
   ![Painted concrete](https://img.pantherx.net/dectorio/painted-concrete.png)
 
