@@ -138,16 +138,16 @@ Fully supported languages:
 * English
 
 Community translations:
-* Chinese Simplified (91%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
-* Chinese Traditional (31%)
-* Czech (67%) - [dereksp](https://crowdin.com/profile/dereksp) and [Meritic](https://crowdin.com/profile/Meritic).
-* French (91%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi).
-* German (92%) - [seeba8](https://github.com/seeba8) and [ST-DDT](https://crowdin.com/profile/ST-DDT).
-* Korean (91%) - [Xagros](https://crowdin.com/profile/GimoXagros).
-* Polish (57%) - [Tomirad](https://github.com/Tomirad).
-* Portuguese, Brazilian (98%) - [celaquila](https://crowdin.com/profile/celaquila).
-* Russian (100%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777) and [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd).
-* Spanish (100%) - [notallme](https://crowdin.com/profile/notallme).
+* Chinese Simplified (87%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
+* Chinese Traditional (29%)
+* Czech (64%) - [dereksp](https://crowdin.com/profile/dereksp) and [Meritic](https://crowdin.com/profile/Meritic).
+* French (87%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi).
+* German (94%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT) and [LastDawn](https://crowdin.com/profile/LastDawn).
+* Korean (87%) - [Xagros](https://crowdin.com/profile/GimoXagros).
+* Polish (54%) - [Tomirad](https://github.com/Tomirad).
+* Portuguese, Brazilian (100%) - [celaquila](https://crowdin.com/profile/celaquila).
+* Russian (94%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777) and [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd).
+* Spanish (96%) - [notallme](https://crowdin.com/profile/notallme).
 
 If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
 
