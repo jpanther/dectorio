@@ -133,8 +133,8 @@ if DECT.ENABLED["wood-floor"] then
 				{ filename = "__Dectorio__/sound/walking/wood-03.ogg", volume = 0.95 },
 				{ filename = "__Dectorio__/sound/walking/wood-04.ogg", volume = 0.95 }
 			},
-			map_color={r=139, g=69, b=19},
-			ageing=0,
+			map_color = {r=139, g=69, b=19},
+			pollution_absorption_per_second = 0,
 			vehicle_friction_modifier = base_stone_path.vehicle_friction_modifier
 		}
 	})
@@ -157,8 +157,8 @@ if DECT.ENABLED["concrete"] then
 			decorative_removal_probability = decorative_removal_probability,
 			variants = tile_variants_material("concrete", "grid"),
 			walking_sound = base_concrete.walking_sound,
-			map_color={r=130, g=130, b=130},
-			ageing = 0,
+			map_color = {r=130, g=130, b=130},
+			pollution_absorption_per_second = 0,
 			vehicle_friction_modifier = base_concrete.vehicle_friction_modifier
 		}
 	})
@@ -186,7 +186,7 @@ if DECT.ENABLED["gravel"] then
 				variants = tile_variants(variant.name, "gravel"),
 				walking_sound = base_dirt.walking_sound,
 				map_color = variant.color,
-				ageing = 0,
+				pollution_absorption_per_second = 0,
 				vehicle_friction_modifier = dirt_vehicle_speed_modifier
 			}
 		})
@@ -223,7 +223,7 @@ if DECT.ENABLED["painted-concrete"] then
 					variants = tile_variants_material("concrete", variant.name.."-"..direction.this),
  					walking_sound = base_concrete.walking_sound,
 					map_color = variant.color,
-					ageing = 0,
+					pollution_absorption_per_second = 0,
 					vehicle_friction_modifier = base_concrete.vehicle_friction_modifier * set_modifier
 				}
 			})
@@ -245,7 +245,7 @@ if DECT.ENABLED["painted-concrete"] then
 					variants = tile_variants_material("refined-concrete", variant.name.."-"..direction.this),
 					walking_sound = base_refined_concrete.walking_sound,
 					map_color = variant.color,
-					ageing = 0,
+					pollution_absorption_per_second = 0,
 					vehicle_friction_modifier = base_refined_concrete.vehicle_friction_modifier * set_modifier
 				}
 			})
