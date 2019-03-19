@@ -353,6 +353,17 @@ local function on_selected_area(event)
 	surface.destroy_decoratives({area=event.area})
 end
 
+-- If the Lawnmower is used to alt-select an area
+local function on_alt_selected_area(event)
+  if event.item ~= "dect-lawnmower" then return end
+  local surface = game.players[event.player_index].surface
+	game.play_sound({path="dect-lawnmower",	position=event.area.left_top})
+	local corpses = surface.find_entities_filtered{area=event.area, type="corpse"}
+	for _, corpse in pairs(corpses) do
+		corpse.destroy()
+	end
+end
+
 -- Kill off any ophaned signs when a player dies/leaves/joins while still selecting an icon
 local function on_player_state_changed(event)
 	local player = game.players[event.player_index]
@@ -375,7 +386,7 @@ script.on_event(defines.events.on_robot_pre_mined, on_mined_entity)
 script.on_event(defines.events.on_entity_died, on_mined_entity)
 script.on_event(defines.events.on_gui_click, on_gui_click)
 script.on_event(defines.events.on_player_selected_area, on_selected_area)
-script.on_event(defines.events.on_player_alt_selected_area, on_selected_area)
+script.on_event(defines.events.on_player_alt_selected_area, on_alt_selected_area)
 script.on_event(defines.events.on_pre_player_left_game, on_player_state_changed)
 script.on_event(defines.events.on_pre_player_died, on_player_state_changed)
 script.on_event(defines.events.on_player_joined_game, on_player_state_changed)
