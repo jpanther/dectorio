@@ -198,6 +198,8 @@ end
 
 if DECT.ENABLED["painted-concrete"] then
 
+	local set_modifier = DECT.CONFIG.SETTINGS["painted_concrete_speed_modifier"]
+
 	local directions = {
 		{this="left", next="right"},
 		{this="right", next="left"}
@@ -215,14 +217,14 @@ if DECT.ENABLED["painted-concrete"] then
 					minable = { hardness = 0.2, mining_time = 0.5, result = "dect-paint-"..variant.name },
 					mined_sound = base_concrete.mined_sound,
 					collision_mask = { "ground-tile" },
-					walking_speed_modifier = base_concrete.walking_speed_modifier,
+					walking_speed_modifier = base_concrete.walking_speed_modifier * set_modifier,
 					layer = tile_layer.paint,
 					decorative_removal_probability = decorative_removal_probability,
 					variants = tile_variants_material("concrete", variant.name.."-"..direction.this),
  					walking_sound = base_concrete.walking_sound,
 					map_color = variant.color,
 					ageing = 0,
-					vehicle_friction_modifier = base_concrete.vehicle_friction_modifier
+					vehicle_friction_modifier = base_concrete.vehicle_friction_modifier * set_modifier
 				}
 			})
 
@@ -237,18 +239,28 @@ if DECT.ENABLED["painted-concrete"] then
 					minable = { hardness = 0.2, mining_time = 0.5, result = "dect-paint-refined-"..variant.name },
 					mined_sound = base_refined_concrete.mined_sound,
 					collision_mask = { "ground-tile" },
-					walking_speed_modifier = base_refined_concrete.walking_speed_modifier,
+					walking_speed_modifier = base_refined_concrete.walking_speed_modifier * set_modifier,
 					layer = tile_layer.refined_paint,
 					decorative_removal_probability = decorative_removal_probability,
 					variants = tile_variants_material("refined-concrete", variant.name.."-"..direction.this),
 					walking_sound = base_refined_concrete.walking_sound,
 					map_color = variant.color,
 					ageing = 0,
-					vehicle_friction_modifier = base_refined_concrete.vehicle_friction_modifier
+					vehicle_friction_modifier = base_refined_concrete.vehicle_friction_modifier * set_modifier
 				}
 			})
 		end
 	end
+
+	-- Adjust walking speeds on base hazard tiles
+	base_hazard_left.walking_speed_modifier = base_concrete.walking_speed_modifier * set_modifier
+	base_hazard_left.vehicle_friction_modifier = base_concrete.vehicle_friction_modifier * set_modifier
+	base_hazard_right.walking_speed_modifier = base_concrete.walking_speed_modifier * set_modifier
+	base_hazard_right.vehicle_friction_modifier = base_concrete.vehicle_friction_modifier * set_modifier
+	base_refined_hazard_left.walking_speed_modifier = base_refined_concrete.walking_speed_modifier * set_modifier
+	base_refined_hazard_left.vehicle_friction_modifier = base_refined_concrete.vehicle_friction_modifier * set_modifier
+	base_refined_hazard_right.walking_speed_modifier = base_refined_concrete.walking_speed_modifier * set_modifier
+	base_refined_hazard_right.vehicle_friction_modifier = base_refined_concrete.vehicle_friction_modifier * set_modifier
 
 	-- Move all the base concretes up a layer so it sits atop stone path
 	base_concrete.layer = tile_layer.concrete

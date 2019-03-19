@@ -87,6 +87,15 @@ data:extend({
 	},
 	{
 		type = "double-setting",
+		name = "dectorio-painted-concrete-speed-modifier",
+		setting_type = "startup",
+		default_value = 1,
+		minimum_value = 0.1,
+		maximum_value = 1,
+		order = "c-c"
+	},
+	{
+		type = "double-setting",
 		name = "dectorio-decorative-removal-probability",
 		setting_type = "startup",
 		default_value = 1,

@@ -111,6 +111,7 @@ DECT.ITEM_GROUP = DECT.ENABLED["item-group"] and "dectorio" or "logistics"
 DECT.CONFIG.SETTINGS = {
 	["decorative_removal_probability"] = settings.startup["dectorio-decorative-removal-probability"].value,
 	["vanilla_hazard_concrete"] = settings.startup["dectorio-vanilla-hazard-concrete-style"].value,
+	["painted_concrete_speed_modifier"] = settings.startup["dectorio-painted-concrete-speed-modifier"].value,
 	["landscaping_blueprintable"] = settings.startup["dectorio-landscaping-blueprintable"].value,
 	["flooring_stack_size"] = settings.startup["dectorio-flooring-stack-size"].value,
 	["landscaping_stack_size"] = settings.startup["dectorio-landscaping-stack-size"].value,
