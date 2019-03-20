@@ -1,3 +1,5 @@
 files:
-  - source: /locale/en/*.cfg
-    translation: /locale/%two_letters_code%/%file_name%.cfg
+  - source: /locale/en/
+    translation: /locale/%two_letters_code%/dectorio.cfg
+    type: ini
+    dest: /dectorio.ini
