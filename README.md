@@ -1,7 +1,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/jpanther/Dectorio.svg)](https://github.com/jpanther/Dectorio/issues) [![CrowdIn](https://d322cqt584bo4o.cloudfront.net/dectorio/localized.svg)](https://crowdin.com/project/dectorio) [![GitHub license](https://img.shields.io/github/license/jpanther/Dectorio.svg)](https://github.com/jpanther/Dectorio/blob/develop/LICENSE)
 
-⚠️ **Found a bug or want a new feature?** Report it on [GitHub](https://git.io/DectorioIssues).
-🌏 **Can you help translate Dectorio?** Visit [CrowdIn](https://crowdin.com/project/dectorio) to get started.
+⚠️ **Found a bug or want a new feature?** Report it on [GitHub](https://git.io/DectorioIssues).  
+🌏 **Can you help translate Dectorio?** Visit [CrowdIn](https://crowdin.com/project/dectorio) to get started.  
 ⁉️ **Have a different question?** Visit the [FAQ](https://mods.factorio.com/mod/Dectorio/faq) for detailed information about common queries.
 
 # Dectorio
