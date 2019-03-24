@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.9
-Date: 22. 03. 2019
+Date: 25. 03. 2019
   Changed:
     - Added support for new pollution model introduced in 0.17.12
   Locales:
