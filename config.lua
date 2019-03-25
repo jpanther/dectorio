@@ -139,7 +139,7 @@ DECT.CONFIG.BASE_WATER_TILES = {"water", "deepwater", "water-green", "deepwater-
 DECT.CONFIG.BASE_TREES = {"tree-01", "tree-02", "tree-03", "tree-04", "tree-05", "tree-06", "tree-07", "tree-08", "tree-09", "dead-dry-hairy-tree", "dead-grey-trunk", "dead-tree-desert", "dry-hairy-tree", "dry-tree"}
 DECT.CONFIG.BASE_ROCKS = {"rock-huge", "rock-big", "sand-rock-big"}
 DECT.CONFIG.SIGN_CATEGORIES = {"item", "fluid", "tool", "ammo", "armor", "capsule", "gun", "module"}
-DECT.CONFIG.SIGN_BLACKLIST = {"barrel", "loader", "simple%-entity", "player%-port", "computer", "coin", "small%-plane", "railgun", "vehicle%-machine%-gun", "tank%-machine%-gun", "factory%-1%-", "factory%-2%-", "factory%-3%-", "signpost", "dect%-signal%-", "infinity%-chest", "infinity%-pipe", "heat%-interface", "pollution", "escape%-pod%-power", "dummy%-steel%-axe", "atlas", "dect%-sign", "dect%-base"}
+DECT.CONFIG.SIGN_BLACKLIST = {"barrel", "loader", "simple%-entity", "player%-port", "computer", "coin", "small%-plane", "railgun", "vehicle%-machine%-gun", "tank%-machine%-gun", "signpost", "dect%-signal%-", "infinity%-chest", "infinity%-pipe", "heat%-interface", "pollution", "escape%-pod%-power", "dummy%-steel%-axe", "atlas", "dect%-sign", "dect%-base"}
 
 DECT.INCOMPATIBLE = {}
 DECT.INCOMPATIBLE.MODS = {
