@@ -1,25 +1,18 @@
-# Dectorio
 [![GitHub issues](https://img.shields.io/github/issues/jpanther/Dectorio.svg)](https://github.com/jpanther/Dectorio/issues) [![CrowdIn](https://d322cqt584bo4o.cloudfront.net/dectorio/localized.svg)](https://crowdin.com/project/dectorio) [![GitHub license](https://img.shields.io/github/license/jpanther/Dectorio.svg)](https://github.com/jpanther/Dectorio/blob/develop/LICENSE)
 
-A simple mod that adds decorative elements to beautify your factory. New technology research is required to unlock the various items before they can be crafted and some default recipes are adjusted to better reflect how these items should be made.
+⚠️ **Found a bug or want a new feature?** Report it on [GitHub](https://git.io/DectorioIssues).  
+🌏 **Can you help translate Dectorio?** Visit [CrowdIn](https://crowdin.com/project/dectorio) to get started.  
+⁉️ **Have a different question?** Visit the [FAQ](https://mods.factorio.com/mod/Dectorio/faq) for detailed information about common queries.
 
-Inspiration for the mod came from a lot of other mods on the Factorio mod portal, although all the assets in Dectorio have been custom made for this mod and are either modified versions of base game assets or created from scratch. If you'd like to use any of these in your own mod, please observe the GNU GPLv3 license.
+# Dectorio
+
+Dectorio is a large mod that adds decorative elements to beautify your factory. New technology research is required to unlock the various items before they can be crafted and some default recipes are adjusted to better reflect how these items should be made.
+
+Inspiration for the mod came from a lot of other mods on the portal, although all the assets in Dectorio have been custom made for this mod and are either modified versions of base game assets or created from scratch. If you'd like to use any of these in your own mod, please observe the GNU GPLv3 license.
 
 Requires Factorio version 0.15 or later.
 
-## How to install
-
-Download the latest stable release from the [Factorio mod portal](https://mods.factorio.com/mod/Dectorio) or at <https://github.com/jpanther/Dectorio/releases/latest> and copy the entire zip file to your Factorio mods directory:
-
-* Windows: `%appdata%\Factorio\mods`
-* Mac: `~/Library/Application Support/factorio/mods/`
-* Linux: `~/.factorio/mods`
-
-> **Note:** If playing with Factorio 0.15, please download v0.7.6, or for Factorio 0.16, please download v0.8.11 as these are the last stable versions supported on these base game releases. v0.9.0 and later are only supported on Factorio 0.17.
-
-When you launch the game, the new mod will be enabled by default.
-
-## Current Features
+## Features
 
 ### Decorative items
 
@@ -98,41 +91,17 @@ Check out the [Mod Spotlight video by Xterminator](https://www.youtube.com/watch
 
 🇩🇪 German players may be interested in this [Mod Monday video by SeeNo](https://www.youtube.com/watch?v=0SzAF997sOk).
 
-## Frequently Asked Questions
-
-Have a question that isn't covered here? Visit the [Dectorio FAQ](FAQ.md) to see if it's already been answered. If you still have a query, read below for details on how to raise an issue on GitHub.
-
 ## Development
 
-### Contributing
+### Bugs & Suggestions
 
-Feel free to get in touch with any issues or suggestions for new features you'd like to see. I also welcome pull requests to fix bugs or implement new features. The best way to make contact is via [GitHub Issues](https://github.com/jpanther/Dectorio/issues).
+Feel free to get in touch with any issues or suggestions for new features you'd like to see. You can get in contact via the GitHub issues page at <https://git.io/DectorioIssues>. I'm also occasionally online on the Factorio Discord or Forums.
 
-#### **Did you find a bug?**
+### Community Translations
 
-* **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/jpanther/Dectorio/issues).
-  > **Note:** If you find a **Closed** issue that seems like it is the same thing that you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
+Dectorio uses CrowdIn to allow the community to translate the mod from English into various languages. If you are able to translate the mod into another language, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort. Requests for new languages are welcome!
 
-* If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/jpanther/Dectorio/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample** or a **test case** demonstrating the expected behaviour that is not occurring.
-
-#### **Can you write a patch that fixes a bug or do you want to implement a new feature?**
-
-* Fork the `develop` branch.
-  > **Note:** The `master` branch is reserved for releases and is always in a 'production-ready' state. The `develop` branch is where the latest changes are developed and tested ahead of the next release.
-
-* Create a new branch in your fork that describes the issue or new feature (i.e. `bugfix-nastybug` or `feature-mynewfeature`)
-
-* Make the changes required to fix the bug or implement the new feature.
-
-* Pull the upstream `develop` branch and merge it into your fork regularly to stay up to date with changes.
-
-* When you're ready to submit your changes, and there are no conflicts with the upstream branch, push your fork and open a new GitHub pull request to the `develop` branch with your patch.
-
-* Ensure the PR description clearly describes what the patch does. If it fixes a reported bug or feature request, include the relevant issue number.
-
-### Language Support
-
-Dectorio uses CrowdIn to translate the mod into various languages. Special thanks to all the translators listed below (in no particular order).
+Special thanks to the translators below (in no particular order).
 
 Fully supported languages:
 * English
@@ -142,14 +111,12 @@ Community translations:
 * Chinese Traditional (29%)
 * Czech (64%) - [dereksp](https://crowdin.com/profile/dereksp) and [Meritic](https://crowdin.com/profile/Meritic).
 * French (87%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi).
-* German (94%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT) and [LastDawn](https://crowdin.com/profile/LastDawn).
+* German (100%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn) and [lpzockerx](https://crowdin.com/profile/lpzockerx).
 * Korean (87%) - [Xagros](https://crowdin.com/profile/GimoXagros).
 * Polish (54%) - [Tomirad](https://github.com/Tomirad).
 * Portuguese, Brazilian (100%) - [celaquila](https://crowdin.com/profile/celaquila).
 * Russian (94%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777) and [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd).
-* Spanish (96%) - [notallme](https://crowdin.com/profile/notallme).
-
-If you are able to translate the mod into any of the above languages, or you know an additional language that you'd like to add a new translation for, please visit the [Dectorio project on CrowdIn](https://crowdin.com/project/dectorio) to help with the translation effort.
+* Spanish (100%) - [notallme](https://crowdin.com/profile/notallme).
 
 ### Mod Compatibility
 
@@ -157,7 +124,7 @@ If you are able to translate the mod into any of the above languages, or you kno
 
 Limited testing has been completed with other mods. Warnings will be shown in-game to highlight any known issues. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
 
-It is not recommended to use other coloured signal mods at the same time as Dectorio. This can cause coloured signals to be overwritten multiple times and lead to game-breaking compatibility issues with other mods. If you would like more colours, you can add these in the Dectorio config.lua file (instructions are in the file).
+It is not recommended to use other coloured signal mods at the same time as Dectorio. This can cause coloured signals to be overwritten multiple times and lead to game-breaking compatibility issues with other mods. If you would like more colours, you can add these in the Dectorio config.lua file (instructions are in the file). For full details, visit the [FAQ](https://mods.factorio.com/mod/Dectorio/faq).
 
 Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mod/alien-biomes).
 
@@ -166,12 +133,3 @@ Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.f
 Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mod/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mod/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mod/color-coding), [Naked Rails](https://mods.factorio.com/mod/naked-rails), [Reinforced Walls](https://mods.factorio.com/mod/Reinforced-Walls).
 
 Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mod/Expanded_Color_Lamps).
-
-### Changelog
-
-Refer to the [CHANGELOG](changelog.txt) for a detailed list of changes in each version. The changelog is also available in-game from the _Mods_ screen.
-
-### Credits
-
-Developed with ❤ by [James Panther](https://github.com/jpanther) in Melbourne, Australia.  
-Special thanks to [marcfj](https://github.com/marcfj) for support and play testing.

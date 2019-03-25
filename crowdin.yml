@@ -1,0 +1,5 @@
+files:
+  - source: /locale/en/
+    translation: /locale/%two_letters_code%/dectorio.cfg
+    type: ini
+    dest: /dectorio.ini
