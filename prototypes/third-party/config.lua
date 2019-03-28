@@ -35,3 +35,10 @@ if mods["Yuoki"] or mods["yi_railway"] then
 		table.insert(DECT.CONFIG.SIGN_BLACKLIST, item)
 	end
 end
+
+-- ARBORIUM
+-- ---------------------------------
+if mods["Arborium"] then
+	-- Disable tree crafting (as Arborium handles this)
+	DECT.CONFIG.BASE_TREES = {}
+end
