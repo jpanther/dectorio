@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.10
+Date: 29. 03. 2019
+  Added:
+    - Detection of Arborium mod so that tree crafting is handled using its mechanics, not Dectorio's
+  Changed:
+    - Added Thaumaturgic Machinations to list of incompatible mods
+---------------------------------------------------------------------------------------------------
 Version: 0.9.9
 Date: 25. 03. 2019
   Changed:
