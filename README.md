@@ -132,4 +132,4 @@ Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.f
 
 Other decorative mods worth checking out (all compatible with Dectorio): [Asphalt Roads](https://mods.factorio.com/mod/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mod/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mod/color-coding), [Naked Rails](https://mods.factorio.com/mod/naked-rails), [Reinforced Walls](https://mods.factorio.com/mod/Reinforced-Walls).
 
-Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Expanded Color Lamps](https://mods.factorio.com/mod/Expanded_Color_Lamps).
+Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Thaumaturgic-Machinations](https://mods.factorio.com/mod/Thaumaturgic-Machinations) and [Expanded Color Lamps](https://mods.factorio.com/mod/Expanded_Color_Lamps).

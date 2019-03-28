@@ -148,6 +148,11 @@ DECT.INCOMPATIBLE.MODS = {
 		component = "signals",
 		reason = "signals"
 	},
+	["Thaumaturgic-Machinations"] = {
+		name = "Thaumaturgic-Machinations",
+		component = "landscaping",
+		reason = "item"
+	},
 	-- ["PickerTweaks"] = {
 	-- 	name = "PickerTweaks",
 	-- 	component = "signals",
