@@ -103,10 +103,6 @@ Dectorio uses CrowdIn to allow the community to translate the mod from English i
 
 Special thanks to the translators below (in no particular order).
 
-Fully supported languages:
-* English
-
-Community translations:
 * Chinese Simplified (87%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
 * Chinese Traditional (29%)
 * Czech (64%) - [dereksp](https://crowdin.com/profile/dereksp) and [Meritic](https://crowdin.com/profile/Meritic).
