@@ -136,7 +136,7 @@ DECT.CONFIG.GRAVEL_VARIANTS = {
 -- When changing these tables, the migration scripts need to be adjusted to compensate!
 DECT.CONFIG.BASE_TILES = {"dry-dirt", "dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7", "sand-1", "sand-2", "sand-3", "grass-1", "grass-2", "grass-3", "grass-4", "red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3"}
 DECT.CONFIG.BASE_WATER_TILES = {"water", "deepwater", "water-green", "deepwater-green"}
-DECT.CONFIG.BASE_TREES = {"tree-01", "tree-02", "tree-03", "tree-04", "tree-05", "tree-06", "tree-07", "tree-08", "tree-09", "dead-dry-hairy-tree", "dead-grey-trunk", "dead-tree-desert", "dry-hairy-tree", "dry-tree"}
+DECT.CONFIG.BASE_TREES = {"tree-01", "tree-02", "tree-03", "tree-04", "tree-05", "tree-06", "tree-07", "tree-08", "tree-09", "dead-dry-hairy-tree", "dead-grey-trunk", "dead-tree-desert", "dry-hairy-tree", "dry-tree", "tree-02-red", "tree-08-red", "tree-09-red", "tree-06-brown", "tree-08-brown", "tree-09-brown"}
 DECT.CONFIG.BASE_ROCKS = {"rock-huge", "rock-big", "sand-rock-big"}
 DECT.CONFIG.SIGN_CATEGORIES = {"item", "fluid", "tool", "ammo", "armor", "capsule", "gun", "module"}
 DECT.CONFIG.SIGN_BLACKLIST = {"barrel", "loader", "simple%-entity", "player%-port", "computer", "coin", "small%-plane", "railgun", "vehicle%-machine%-gun", "tank%-machine%-gun", "signpost", "dect%-signal%-", "infinity%-chest", "infinity%-pipe", "heat%-interface", "pollution", "escape%-pod%-power", "dummy%-steel%-axe", "atlas", "dect%-sign", "dect%-base"}
