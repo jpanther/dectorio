@@ -103,19 +103,15 @@ Dectorio uses CrowdIn to allow the community to translate the mod from English i
 
 Special thanks to the translators below (in no particular order).
 
-Fully supported languages:
-* English
-
-Community translations:
 * Chinese Simplified (87%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
 * Chinese Traditional (29%)
-* Czech (64%) - [dereksp](https://crowdin.com/profile/dereksp) and [Meritic](https://crowdin.com/profile/Meritic).
+* Czech (70%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
 * French (87%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi).
 * German (100%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn) and [lpzockerx](https://crowdin.com/profile/lpzockerx).
 * Korean (87%) - [Xagros](https://crowdin.com/profile/GimoXagros).
 * Polish (54%) - [Tomirad](https://github.com/Tomirad).
 * Portuguese, Brazilian (100%) - [celaquila](https://crowdin.com/profile/celaquila).
-* Russian (94%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777) and [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd).
+* Russian (100%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
 * Spanish (100%) - [notallme](https://crowdin.com/profile/notallme).
 
 ### Mod Compatibility
