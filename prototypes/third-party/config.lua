@@ -42,3 +42,10 @@ if mods["Arborium"] then
 	-- Disable tree crafting (as Arborium handles this)
 	DECT.CONFIG.BASE_TREES = {}
 end
+
+-- KS POWER
+-- ---------------------------------
+if mods["KS_Power"] then
+	-- Add signal support for Diesel fuel fluid
+	table.insert(DECT.CONFIG.SIGNALS, {type="fluid", name="diesel-fuel", color={r=0.70,g=0.70,b=0.00,a=0.68}})
+end

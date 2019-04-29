@@ -45,6 +45,7 @@ DECT.CONFIG.SIGNALS = {
 	{type="item", name="copper-ore", color={r=0.91,g=0.58,b=0.13,a=0.86}},              -- Carrot Orange
 	{type="item", name="copper-plate", color={r=0.92,g=0.59,b=0.46,a=0.86}},            -- Dark Salmon
 	{type="item", name="uranium-ore", color={r=0.69,g=0.96,b=0.18,a=0.86}},             -- Green Yellow
+	{type="item", name="sulfur", color={r=0.98,g=0.93, b=0.13,a=0.86}},                 -- Lemon
 	{type="item", name="automation-science-pack", color={r=0.71,g=0.05,b=0.09,a=1.00}}, -- Cornell Red
 	{type="item", name="logistic-science-pack", color={r=0.18,g=0.60,b=0.11,a=1.00}},   -- Forest Green
 	{type="item", name="chemical-science-pack", color={r=0.15,g=0.65,b=0.75,a=1.00}},   -- Blue Green
