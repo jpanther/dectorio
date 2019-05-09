@@ -104,11 +104,11 @@ Dectorio uses CrowdIn to allow the community to translate the mod from English i
 Special thanks to the translators below (in no particular order).
 
 * Chinese Simplified (87%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
-* Chinese Traditional (29%)
+* Chinese Traditional (37%) - [k98a](https://crowdin.com/profile/k98a).
 * Czech (70%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
-* French (87%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi).
+* French (97%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi) and [daikyraraga](https://crowdin.com/profile/daikyraraga).
 * German (100%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn) and [lpzockerx](https://crowdin.com/profile/lpzockerx).
-* Korean (87%) - [Xagros](https://crowdin.com/profile/GimoXagros).
+* Korean (100%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
 * Polish (54%) - [Tomirad](https://github.com/Tomirad).
 * Portuguese, Brazilian (100%) - [celaquila](https://crowdin.com/profile/celaquila).
 * Russian (100%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
@@ -124,7 +124,7 @@ It is not recommended to use other coloured signal mods at the same time as Dect
 
 Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mod/alien-biomes).
 
-Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mod/Concreep), [Fully Automated Rail Layer (FARL)](https://mods.factorio.com/mod/FARL), [Pavement Drive Assist](https://mods.factorio.com/mod/PavementDriveAssist).
+Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mod/Concreep), [Fully Automated Rail Layer (FARL)](https://mods.factorio.com/mod/FARL), [Pavement Drive Assist](https://mods.factorio.com/mod/PavementDriveAssist), [Text Plates](https://mods.factorio.com/mod/textplates).
 
 Other decorative mods worth checking out (all compatible with Dectorio): [Arborium](https://mods.factorio.com/mod/Arborium), [Asphalt Roads](https://mods.factorio.com/mod/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mod/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mod/color-coding), [Naked Rails](https://mods.factorio.com/mod/naked-rails), [Reinforced Walls](https://mods.factorio.com/mod/Reinforced-Walls).
 

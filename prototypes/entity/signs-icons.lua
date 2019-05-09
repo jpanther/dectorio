@@ -4,14 +4,19 @@ if DECT.ENABLED["signs"] then
 
 	local categories = DECT.CONFIG.SIGN_CATEGORIES
 	local blacklist = DECT.CONFIG.SIGN_BLACKLIST
+	local whitelist = DECT.CONFIG.SIGN_WHITELIST
 
 	for _, cat in pairs(categories) do
 		if data.raw[cat] then
 			for _, obj in pairs(data.raw[cat]) do
 				local blacklisted = false
-				for _, blacklisted_name in pairs(blacklist) do
-					if obj.name:find(blacklisted_name) then
-						blacklisted = true
+				for _, blacklisted_name_pattern in pairs(blacklist) do
+					if obj.name:find(blacklisted_name_pattern) then
+						for _, whitelisted_name in pairs(whitelist) do
+							if obj.name ~= whitelisted_name then
+								blacklisted = true
+							end
+						end
 					end
 				end
 				if not blacklisted then

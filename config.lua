@@ -141,6 +141,7 @@ DECT.CONFIG.BASE_TREES = {"tree-01", "tree-02", "tree-03", "tree-04", "tree-05",
 DECT.CONFIG.BASE_ROCKS = {"rock-huge", "rock-big", "sand-rock-big"}
 DECT.CONFIG.SIGN_CATEGORIES = {"item", "fluid", "tool", "ammo", "armor", "capsule", "gun", "module"}
 DECT.CONFIG.SIGN_BLACKLIST = {"barrel", "loader", "simple%-entity", "player%-port", "computer", "coin", "small%-plane", "railgun", "vehicle%-machine%-gun", "tank%-machine%-gun", "signpost", "dect%-signal%-", "infinity%-chest", "infinity%-pipe", "heat%-interface", "pollution", "escape%-pod%-power", "dummy%-steel%-axe", "atlas", "dect%-sign", "dect%-base"}
+DECT.CONFIG.SIGN_WHITELIST = {"empty-barrel"}
 
 DECT.INCOMPATIBLE = {}
 DECT.INCOMPATIBLE.MODS = {
