@@ -5,6 +5,10 @@ Date: 09. 05. 2019
     - Ability to select Empty barrel icon when placing signs
   Bugfixes:
     - Adjusted sign GUI constraints to avoid it being drawn inside a scroll pane at certain resolutions
+  Locales:
+    - Updated French translation (thanks to daikyraraga)
+    - Updated Chinese Traditional translation (thanks to k98a)
+    - Updated Korean translation (thanks to GimoXagros)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 29. 04. 2019
