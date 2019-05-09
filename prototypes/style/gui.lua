@@ -2,6 +2,14 @@
 
 default_gui = data.raw["gui-style"]["default"]
 
+default_gui["dect-icon-frame"] = {
+	type = "frame_style",
+	parent = "frame",
+	minimal_width = 288,
+	minimal_height = 288,
+	maximal_height = 512,
+}
+
 default_gui["dect-icon-table"] = {
 	type = "table_style",
 	cell_spacing = 2,

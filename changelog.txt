@@ -3,6 +3,8 @@ Version: 0.9.12
 Date: 09. 05. 2019
   Added:
     - Ability to select Empty barrel icon when placing signs
+  Bugfixes:
+    - Adjusted sign GUI constraints to avoid it being drawn inside a scroll pane at certain resolutions
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.11
 Date: 29. 04. 2019

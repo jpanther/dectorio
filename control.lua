@@ -240,8 +240,8 @@ local function create_sign_gui(player)
 	if global.sign_gui[player.index] ~= nil then
 		destroy_sign_gui(player)
 	end
-	global.sign_gui[player.index] = player.gui.left.add({type="frame", name="dect-gui-sign", caption={"dect-gui.sign-title"}, direction="vertical"})
-	local gui_scroll = global.sign_gui[player.index].add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto", horizontal_scroll_policy="never"})
+	global.sign_gui[player.index] = player.gui.left.add({type="frame", name="dect-gui-sign", caption={"dect-gui.sign-title"}, direction="vertical", style="dect-icon-frame"})
+	local gui_scroll = global.sign_gui[player.index].add({type="scroll-pane", name="dect-gui-scroll", vertical_scroll_policy="auto-and-reserve-space", horizontal_scroll_policy="never"})
 	local gui_table = gui_scroll.add({type="table", name="dect-icons-table", column_count=8, style="dect-icon-table"})
 	for _, icon in pairs(global.icons) do
 		local match = false
