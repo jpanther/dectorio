@@ -3,6 +3,8 @@ Version: 0.9.13
 Date: 31. 05. 2019
   Added:
     - New Stone wall graphics including HR version (thanks to kirazy)
+  Locales:
+    - Updated Polish translation (thanks to Requelfade)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.12
 Date: 09. 05. 2019
