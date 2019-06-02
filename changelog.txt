@@ -3,6 +3,8 @@ Version: 0.9.14
 Date: 03. 06. 2019
   Changed:
     - Adjusted Grid concrete textures to improve overall look (thanks to kirazy)
+  Locales:
+    - Updated Russian translation (thanks to 1avek1)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.13
 Date: 31. 05. 2019
