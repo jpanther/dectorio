@@ -10,11 +10,21 @@ if DECT.ENABLED["signals"] then
 		end
 	end
 
+	-- Quick sanity check to filter out any items that might have been removed by other mods
+	local mapped_colors = {}
+	for _, signal in pairs(colors) do
+		if signal.type == "virtual" then
+			table.insert(mapped_colors, {type=signal.type, name=signal.name, color=signal.color})
+		elseif data.raw[signal.type][signal.name] then
+			table.insert(mapped_colors, {type=signal.type, name=signal.name, color=signal.color})
+		end
+	end
+
 	local lamp = data.raw.lamp["small-lamp"]
-	lamp.signal_to_color_mapping = colors
+	lamp.signal_to_color_mapping = mapped_colors
 
 	local lamp_glow = data.raw.lamp["dect-small-lamp-glow"]
-	lamp_glow.signal_to_color_mapping = colors
+	lamp_glow.signal_to_color_mapping = mapped_colors
 
 	-- Reorder some of the base game signals to improve the signal layout
 	data:extend({
