@@ -49,11 +49,13 @@ if DECT.ENABLED["signals"] then
 	end
 
 	-- Update the lamps
-	local lamp = data.raw.lamp["small-lamp"]
-	lamp.signal_to_color_mapping = colors
-
-	local lamp_glow = data.raw.lamp["dect-small-lamp-glow"]
-	lamp_glow.signal_to_color_mapping = colors
+	-- !! Moved to final-fixes !!
+	--
+	-- local lamp = data.raw.lamp["small-lamp"]
+	-- lamp.signal_to_color_mapping = colors
+	--
+	-- local lamp_glow = data.raw.lamp["dect-small-lamp-glow"]
+	-- lamp_glow.signal_to_color_mapping = colors
 
 
 	-- Icon signals

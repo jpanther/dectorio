@@ -1,11 +1,17 @@
 {
     "name": "Dectorio",
-    "version": "0.9.14",
+    "version": "0.9.15",
     "title": "Dectorio",
     "author": "PantherX",
     "contact": "",
     "homepage": "https://github.com/jpanther/Dectorio",
     "factorio_version": "0.17",
-    "dependencies": ["base >= 0.17.12", "? alien-biomes >= 0.4.1", "(?) Expanded_Color_Lamps < 0.1", "(?) Thaumaturgic-Machinations < 0.1", "(?) dectorio-stone-wall < 0.17.1"],
+    "dependencies": [
+      "base >= 0.17.59",
+      "? alien-biomes >= 0.4.1",
+      "(?) dectorio-stone-wall < 0.17.1",
+      "!Expanded_Color_Lamps",
+      "!Thaumaturgic-Machinations"
+    ],
     "license": "GNU GPLv3"
 }
