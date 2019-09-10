@@ -75,6 +75,26 @@ if DECT.ENABLED["landscaping"] then
 	local base_trees = DECT.CONFIG.BASE_TREES
 	local base_rocks = DECT.CONFIG.BASE_ROCKS
 
+	-- calculate the cost of the entity based upon what it gives when mined
+	local function entity_ingredients(name, type)
+		local entity = data.raw[type][name]
+		local ingredients = {}
+		if entity.minable then
+			if entity.minable.results then
+				for _, result in pairs(entity.minable.results) do
+					if result.amount_max then
+						table.insert(ingredients, {result.name, result.amount_max * 1.1})
+					else
+						table.insert(ingredients, {result.name, result.amount * 1.5})
+					end
+				end
+			elseif entity.minable.result then
+				table.insert(ingredients, {entity.minable.result, entity.minable.count * 1.5})
+			end
+		end
+		return ingredients
+	end
+
 	-- Create new landscaping recipes for base trees
 	for _, tree in pairs(base_trees) do
 		data:extend({
@@ -84,9 +104,7 @@ if DECT.ENABLED["landscaping"] then
 				energy_required = 2,
 				enabled = false,
 				category = "crafting",
-				ingredients = {
-					{ data.raw["tree"][tree].minable.result, data.raw["tree"][tree].minable.count * 1.5 }
-				},
+				ingredients = entity_ingredients(tree, "tree"),
 				result = "dect-base-"..tree,
 				result_count = 1
 			}
@@ -95,11 +113,6 @@ if DECT.ENABLED["landscaping"] then
 
 	-- Create new landscaping recipes for base rock decoratives
 	for _, rock in pairs(base_rocks) do
-		local base_rock_loot = data.raw["simple-entity"][rock].loot
-		local rock_ingredients = {}
-		for i, ingredient in pairs(base_rock_loot) do
-			table.insert(rock_ingredients, {base_rock_loot[i].item, base_rock_loot[i].count_max})
-		end
 		data:extend({
 			{
 				type = "recipe",
@@ -107,7 +120,7 @@ if DECT.ENABLED["landscaping"] then
 				energy_required = 2,
 				enabled = false,
 				category = "crafting",
-				ingredients = rock_ingredients,
+				ingredients = entity_ingredients(rock, "simple-entity"),
 				result = "dect-base-"..rock,
 				result_count = 1
 			}

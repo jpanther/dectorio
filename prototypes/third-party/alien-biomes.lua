@@ -107,6 +107,26 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 		end
 	end
 
+	-- calculate the cost of the entity based upon what it gives when mined
+	local function entity_ingredients(name, type)
+		local entity = data.raw[type][name]
+		local ingredients = {}
+		if entity.minable then
+			if entity.minable.results then
+				for _, result in pairs(entity.minable.results) do
+					if result.amount_max then
+						table.insert(ingredients, {result.name, result.amount_max * 1.1})
+					else
+						table.insert(ingredients, {result.name, result.amount * 1.5})
+					end
+				end
+			elseif entity.minable.result then
+				table.insert(ingredients, {entity.minable.result, entity.minable.count * 1.5})
+			end
+		end
+		return ingredients
+	end
+
 	-- Create new tree items
 	for _, tree in pairs(trees) do
 		if data.raw["tree"][tree] then
@@ -128,9 +148,7 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 					energy_required = 2,
 					enabled = false,
 					category = "crafting",
-					ingredients = {
-						{ data.raw["tree"][tree].minable.result, data.raw["tree"][tree].minable.count * 1.5 }
-					},
+					ingredients = entity_ingredients(tree, "tree"),
 					result = "dect-alien-biomes-"..tree,
 					result_count = 1
 				}
@@ -161,9 +179,7 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 					energy_required = 2,
 					enabled = false,
 					category = "crafting",
-					ingredients = {
-						{"stone", 30}
-					},
+					ingredients = entity_ingredients(rock.name, "simple-entity"),
 					result = "dect-alien-biomes-"..rock.name,
 					result_count = 1
 				}

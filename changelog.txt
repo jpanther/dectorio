@@ -4,8 +4,11 @@ Date: 08. 08. 2019
   Added:
     - Signal color support for Angel's Refining and Angel's Smelting modded items
     - Support for built in mod incompatibility listing
+  Bugfixes:
+    - Fixed an oversight when determining the minable result of trees and rocks that caused an incompatibility with Industrial Revolution mod
   Changed:
     - Sign icon selection GUI is now draggable
+    - Balancing - Crafting rock and tree recipes now require all items that are returned when mining to avoid potential to get these items for free by placing and mining entities repeatedly
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.14
 Date: 03. 06. 2019
