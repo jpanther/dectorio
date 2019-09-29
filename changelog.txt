@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.16
-Date: 18. 09. 2019
+Date: 30. 09. 2019
+  Removed:
+    - Landfill no longer appears as dirt and instead uses the new vanilla Landfill textures
   Locales:
     - Fixes an issue with the Polish translation that was preventing the game from launching
 ---------------------------------------------------------------------------------------------------
