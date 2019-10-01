@@ -12,6 +12,7 @@ Date: 01. 10. 2019
     - Fixes tile layering issues with Painted concrete when playing with the Industrial Revolution mod
   Locales:
     - Fixes an issue with the Polish translation that was preventing the game from launching
+    - Updated Korean translation (thanks to GimoXagros)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.15
 Date: 10. 09. 2019
