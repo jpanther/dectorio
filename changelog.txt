@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.16
 Date: 01. 10. 2019
+  Added:
+    - High resolution icons for crafting tab and most items
+    - Support for high resolution icons in signs
   Changed:
     - Split Landfill and Earthworks into seperate technologies so that they have better progression in the Industrial Revolution tech tree overhaul
   Removed:

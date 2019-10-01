@@ -17,7 +17,7 @@ if DECT.ENABLED["decoratives"] then
 			type = "item",
 			name = "dect-traffic-bollard",
 			icon = "__Dectorio__/graphics/icons/traffic-bollard.png",
-			icon_size = 32,
+			icon_size = 64,
 			subgroup = "decoratives",
 			order = "a[traffic-bollard]",
 			place_result = "dect-traffic-bollard",
