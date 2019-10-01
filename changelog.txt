@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.16
+Date: 01. 10. 2019
+  Added:
+    - High resolution icons for crafting tab and most items
+    - Support for high resolution icons in signs
+  Changed:
+    - Split Landfill and Earthworks into seperate technologies so that they have better progression in the Industrial Revolution tech tree overhaul
+  Removed:
+    - Landfill no longer appears as dirt and instead uses the new vanilla Landfill textures
+  Bugfixes:
+    - Fixes tile layering issues with Painted concrete when playing with the Industrial Revolution mod
+  Locales:
+    - Fixes an issue with the Polish translation that was preventing the game from launching
+---------------------------------------------------------------------------------------------------
 Version: 0.9.15
 Date: 10. 09. 2019
   Added:

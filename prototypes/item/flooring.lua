@@ -43,7 +43,7 @@ if DECT.ENABLED["painted-concrete"] then
 				type = "item",
 				name = "dect-paint-"..variant.name,
 				icon = "__Dectorio__/graphics/icons/paint-"..variant.name..".png",
-				icon_size = 32,
+				icon_size = 64,
 				subgroup = "flooring-painted",
 				order = "00[b-".._.."-paint-"..variant.name.."]",
 				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
@@ -73,7 +73,7 @@ if DECT.ENABLED["painted-concrete"] then
 				type = "item",
 				name = "dect-paint-refined-"..variant.name,
 				icon = "__Dectorio__/graphics/icons/paint-"..variant.name.."-refined.png",
-				icon_size = 32,
+				icon_size = 64,
 				subgroup = "flooring-painted-refined",
 				order = "00[b-".._.."-paint-refined-"..variant.name.."]",
 				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
@@ -98,7 +98,9 @@ if DECT.ENABLED["painted-concrete"] then
 
 	if not DECT.CONFIG.SETTINGS["vanilla_hazard_concrete"] then
 		base_hazard_item.icon = "__Dectorio__/graphics/icons/paint-hazard.png"
+		base_hazard_item.icon_size = 64
 		base_refined_hazard_item.icon = "__Dectorio__/graphics/icons/paint-hazard-refined.png"
+		base_refined_hazard_item.icon_size = 64
 	end
 
 else
@@ -122,7 +124,7 @@ if DECT.ENABLED["wood-floor"] then
 			type = "item",
 			name = "dect-wood-floor",
 			icon = "__Dectorio__/graphics/icons/wood-floor.png",
-			icon_size = 32,
+			icon_size = 64,
 			fuel_category = "chemical",
 			fuel_value = "2MJ",
 			subgroup = "flooring-basic",
@@ -145,7 +147,7 @@ if DECT.ENABLED["concrete"] then
 			type = "item",
 			name = "dect-concrete-grid",
 			icon = "__Dectorio__/graphics/icons/concrete-grid.png",
-			icon_size = 32,
+			icon_size = 64,
 			subgroup = "flooring-basic",
 			order = "00[f-concrete-grid]",
 			stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
@@ -170,7 +172,7 @@ if DECT.ENABLED["gravel"] then
 				icons = {
 					{ icon = "__Dectorio__/graphics/icons/gravel.png", tint = variant.color },
 				},
-				icon_size = 32,
+				icon_size = 64,
 				subgroup = "flooring-basic",
 				order = "00[g-gravel-"..variant.name.."]",
 				stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],

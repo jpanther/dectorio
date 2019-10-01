@@ -75,14 +75,33 @@ end
 
 if DECT.ENABLED["waterfill"] then
 
+	-- Add waterfill items to Earthworks technology
 	local water_tiles = DECT.CONFIG.BASE_WATER_TILES
-	local base_landfill = data.raw["technology"]["landfill"]
-
-	-- Add waterfill items to Landfill technology
+	local earthworks_effects = {}
 	for _, tile in pairs(water_tiles) do
 		if data.raw["tile"][tile] then
-			table.insert(base_landfill.effects, {type = "unlock-recipe", recipe = "dect-base-"..tile})
+			table.insert(earthworks_effects, {type = "unlock-recipe", recipe = "dect-base-"..tile})
 		end
 	end
+
+	data:extend({
+		{
+			type = "technology",
+			name = "dect-earthworks",
+			icon = "__Dectorio__/graphics/technology/landscaping.png",
+			icon_size = 128,
+			prerequisites = {"landfill", "explosives"},
+			unit = {
+				count = 200,
+				ingredients = {
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1},
+				},
+				time = 15
+			},
+			effects = earthworks_effects,
+			order = "b-d-a"
+		}
+	})
 
 end

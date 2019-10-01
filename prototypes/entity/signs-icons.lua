@@ -10,6 +10,8 @@ if DECT.ENABLED["signs"] then
 		if data.raw[cat] then
 			for _, obj in pairs(data.raw[cat]) do
 				local blacklisted = false
+				local sprite_scale = 0.7
+				local sprite_shift = {-0.02, -0.14}
 				for _, blacklisted_name_pattern in pairs(blacklist) do
 					if obj.name:find(blacklisted_name_pattern) then
 						for _, whitelisted_name in pairs(whitelist) do
@@ -22,14 +24,22 @@ if DECT.ENABLED["signs"] then
 				if not blacklisted then
 					local sprite = {}
 					if obj.icons == nil and obj.icon ~= nil then
-						if obj.icon_size == 32 then
+						if obj.icon_size == 32 or obj.icon_size == 64 then
 							sprite.file = obj.icon
 							sprite.tint = nil
+							if obj.icon_size == 64 then
+								sprite_scale = 0.4
+								sprite_shift = {-0.0, -0.1}
+							end
 						end
 					else
-						if obj.icon_size == 32 then
+						if obj.icon_size == 32 or obj.icon_size == 64 then
 							sprite.file = obj.icons[1].icon
 							sprite.tint = obj.icons[1].tint
+							if obj.icon_size == 64 then
+								sprite_scale = 0.4
+								sprite_shift = {-0.0, -0.1}
+							end
 						end
 					end
 					if sprite.file then
@@ -43,17 +53,17 @@ if DECT.ENABLED["signs"] then
 									tint = sprite.tint
 								}
 							},
-							icon_size = 32,
+							icon_size = obj.icon_size,
 							flags = {"placeable-off-grid", "not-on-map"},
 							selectable_in_game = false,
 							render_layer = "higher-object-above",
 							picture = {
 								filename = sprite.file,
 								priority = "extra-high",
-								width = 32,
-								height = 32,
-								scale = 0.7,
-								shift = {-0.02, -0.14},
+								width = obj.icon_size,
+								height = obj.icon_size,
+								scale = sprite_scale,
+								shift = sprite_shift,
 								tint = sprite.tint
 							}
 						}

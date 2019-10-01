@@ -43,7 +43,6 @@ Requires Factorio version 0.15 or later.
 
 * Adds items for placing dirt, sand, dark sand, grass, dry grass, red desert and dark red desert tiles
 * Ability to place water and green water tiles (aka. 'waterfill')
-* Landfill places as dirt rather than grass
 * Adds a Lawnmower tool that will remove decorative items from a given area, leaving a completely clear surface
 * Ability to place decorative rocks and trees
 
@@ -108,7 +107,7 @@ Special thanks to the translators below (in no particular order).
 * Czech (70%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
 * French (96%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi) and [daikyraraga](https://crowdin.com/profile/daikyraraga).
 * German (100%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn), [lpzockerx](https://crowdin.com/profile/lpzockerx) and [Leridon](https://crowdin.com/profile/Leridon).
-* Korean (99%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
+* Korean (100%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
 * Polish (100%) - [Tomirad](https://github.com/Tomirad), [Requelfade](https://crowdin.com/profile/Requelfade), [no_desired_username](https://crowdin.com/profile/no_desired_username) and [tomplus](https://crowdin.com/profile/tomplus).
 * Portuguese, Brazilian (99%) - [celaquila](https://crowdin.com/profile/celaquila).
 * Russian (100%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
@@ -122,10 +121,10 @@ Limited testing has been completed with other mods. Warnings will be shown in-ga
 
 It is not recommended to use other coloured signal mods at the same time as Dectorio. This can cause coloured signals to be overwritten multiple times and lead to game-breaking compatibility issues with other mods. If you would like more colours, you can add these in the Dectorio config.lua file (instructions are in the file). For full details, visit the [FAQ](https://mods.factorio.com/mod/Dectorio/faq).
 
-Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mod/alien-biomes).
+Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mod/alien-biomes) and [Industrial Revolution](https://mods.factorio.com/mod/IndustrialRevolution).
 
-Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mod/Concreep), [Fully Automated Rail Layer (FARL)](https://mods.factorio.com/mod/FARL), [Pavement Drive Assist](https://mods.factorio.com/mod/PavementDriveAssist), [Text Plates](https://mods.factorio.com/mod/textplates).
+Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mod/Concreep), [Fully Automated Rail Layer (FARL)](https://mods.factorio.com/mod/FARL), [Pavement Drive Assist](https://mods.factorio.com/mod/PavementDriveAssist), [Text Plates](https://mods.factorio.com/mod/textplates) and [Industrial Revolution](https://mods.factorio.com/mod/IndustrialRevolution).
 
 Other decorative mods worth checking out (all compatible with Dectorio): [Arborium](https://mods.factorio.com/mod/Arborium), [Asphalt Roads](https://mods.factorio.com/mod/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mod/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mod/color-coding), [Naked Rails](https://mods.factorio.com/mod/naked-rails), [Reinforced Walls](https://mods.factorio.com/mod/Reinforced-Walls).
 
-Mods with known compatibility issues with Dectorio (either don't install these, or edit your mod settings and disable the conflicting components in Dectorio): [Thaumaturgic Machinations](https://mods.factorio.com/mod/Thaumaturgic-Machinations) and [Expanded Color Lamps](https://mods.factorio.com/mod/Expanded_Color_Lamps).
+Mods with known compatibility issues with Dectorio (don't install these): [Thaumaturgic Machinations](https://mods.factorio.com/mod/Thaumaturgic-Machinations) and [Expanded Color Lamps](https://mods.factorio.com/mod/Expanded_Color_Lamps).
