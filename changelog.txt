@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.16
-Date: 30. 09. 2019
+Date: 01. 10. 2019
+  Changed:
+    - Split Landfill and Earthworks into seperate technologies so that they have better progression in the Industrial Revolution tech tree overhaul
   Removed:
     - Landfill no longer appears as dirt and instead uses the new vanilla Landfill textures
   Locales:
