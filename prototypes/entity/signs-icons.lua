@@ -24,22 +24,32 @@ if DECT.ENABLED["signs"] then
 				if not blacklisted then
 					local sprite = {}
 					if obj.icons == nil and obj.icon ~= nil then
-						if obj.icon_size == 32 or obj.icon_size == 64 then
+						if obj.icon_size == 32 then
 							sprite.file = obj.icon
 							sprite.tint = nil
-							if obj.icon_size == 64 then
+							sprite.icon_size = 32
+							else
+								sprite.file = obj.icon
+								sprite.tint = nil
 								sprite_scale = 0.4
 								sprite_shift = {-0.0, -0.1}
-							end
+								sprite.icon_size = 64
 						end
 					else
-						if obj.icon_size == 32 or obj.icon_size == 64 then
+						if obj.icon_size == 32 then
 							sprite.file = obj.icons[1].icon
 							sprite.tint = obj.icons[1].tint
-							if obj.icon_size == 64 then
+							sprite.icon_size = 32
+						elseif obj.icon_size == 64 then
+								sprite.file = obj.icons[1].icon
+								sprite.tint = obj.icons[1].tint
 								sprite_scale = 0.4
 								sprite_shift = {-0.0, -0.1}
-							end
+								sprite.icon_size = obj.icons[1].width or obj.icons[1].icon_size or obj.icon_size or 32
+						else
+							sprite.file = obj.icons[1].icon
+							sprite.tint = obj.icons[1].tint
+							sprite.icon_size = 32
 						end
 					end
 					if sprite.file then
@@ -53,15 +63,15 @@ if DECT.ENABLED["signs"] then
 									tint = sprite.tint
 								}
 							},
-							icon_size = obj.icon_size,
+							icon_size = sprite.icon_size,
 							flags = {"placeable-off-grid", "not-on-map"},
 							selectable_in_game = false,
 							render_layer = "higher-object-above",
 							picture = {
 								filename = sprite.file,
 								priority = "extra-high",
-								width = obj.icon_size,
-								height = obj.icon_size,
+								width = sprite.icon_size,
+								height = sprite.icon_size,
 								scale = sprite_scale,
 								shift = sprite_shift,
 								tint = sprite.tint
