@@ -3,6 +3,7 @@ Version: 0.10.0
 Date: 22. 01. 2020
   Added:
     - Support for Factorio 0.18
+    - Signal color support for Realistic Ores mod
     - Basic handling of icon conflicts with Maintenance Madness mod
   Removed:
     - Support for Factorio 0.17 (use Dectorio version 0.9.16 instead)
