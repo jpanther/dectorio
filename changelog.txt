@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.10.0
+Date: 22. 01. 2020
+  Added:
+    - Support for Factorio 0.18
+    - Signal color support for Realistic Ores mod
+    - Basic handling of icon conflicts with Maintenance Madness mod
+  Removed:
+    - Support for Factorio 0.17 (use Dectorio version 0.9.16 instead)
+  Locales:
+    - Added Hungarian translation (thanks to mmnetworkteam)
+    - Updated Spanish translation (thanks to notallme)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.16
 Date: 01. 10. 2019
   Added:
@@ -12,6 +24,7 @@ Date: 01. 10. 2019
     - Fixes tile layering issues with Painted concrete when playing with the Industrial Revolution mod
   Locales:
     - Fixes an issue with the Polish translation that was preventing the game from launching
+    - Updated Korean translation (thanks to GimoXagros)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.15
 Date: 10. 09. 2019

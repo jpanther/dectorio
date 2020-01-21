@@ -40,6 +40,8 @@ if DECT.ENABLED["walls"] then
 	-- Change base stone wall
 	local base_stone_wall = data.raw["item"]["stone-wall"]
 	base_stone_wall.icon = "__Dectorio__/graphics/icons/stone-brick-wall.png"
+	base_stone_wall.icon_size = 32
+	base_stone_wall.icon_mipmaps = 1
 	base_stone_wall.stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"]
 	base_stone_wall.order = "a[b-stone-wall]"
 

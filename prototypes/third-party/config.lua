@@ -328,3 +328,41 @@ if mods["angelssmelting"] then
 		table.insert(DECT.CONFIG.SIGNALS, item)
 	end
 end
+
+-- MAINTENANCE MADNESS
+-- ---------------------------------
+if mods["MaintenanceMadness"] then
+	-- Causes compatibility issues
+	log("Maintenance Madness detected, blacklisting sign icons.")
+	local mm_blacklist = {"mm%-faulty%-", "mm%-scrapped%-", "mm%-recycle%-", "mm%-recondition%-"}
+	for _, item in pairs(mm_blacklist) do
+		table.insert(DECT.CONFIG.SIGN_BLACKLIST, item)
+	end
+end
+
+-- REALISTIC ORES
+-- ---------------------------------
+if mods["RealisticOres"] then
+-- Switch out iron, copper and uranium ore colors
+	log("Realistic Ores detected, updating signal colors.")
+	local function removeIndexByName(tbl, name)
+			local index = nil
+			for i, v in ipairs (tbl) do 
+					if (v.name == name) then
+						index = i 
+					end
+			end
+			if index == nil then
+				log("Index not found for item named '"..name.."'")
+			else
+				log("Removing item named '"..name.."' at index "..index)
+				table.remove(tbl, index)
+			end
+	end
+	removeIndexByName(DECT.CONFIG.SIGNALS, "iron-ore")
+	table.insert(DECT.CONFIG.SIGNALS, {type="item", name="iron-ore", color={r=0.61,g=0.32,b=0.25,a=0.68}})
+	removeIndexByName(DECT.CONFIG.SIGNALS, "copper-ore")
+	table.insert(DECT.CONFIG.SIGNALS, {type="item", name="copper-ore", color={r=0.36,g=0.61,b=0.53,a=0.68}})
+	removeIndexByName(DECT.CONFIG.SIGNALS, "uranium-ore")
+	table.insert(DECT.CONFIG.SIGNALS, {type="item", name="uranium-ore", color={r=0.72,g=0.76,b=0.20,a=0.68}})
+end
