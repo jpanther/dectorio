@@ -328,3 +328,14 @@ if mods["angelssmelting"] then
 		table.insert(DECT.CONFIG.SIGNALS, item)
 	end
 end
+
+-- MAINTENANCE MADNESS
+-- ---------------------------------
+if mods["MaintenanceMadness"] then
+	-- Causes compatibility issues
+	log("Maintenance Madness detected, blacklisting sign icons.")
+	local mm_blacklist = {"mm%-faulty%-", "mm%-scrapped%-", "mm%-recycle%-", "mm%-recondition%-"}
+	for _, item in pairs(mm_blacklist) do
+		table.insert(DECT.CONFIG.SIGN_BLACKLIST, item)
+	end
+end
