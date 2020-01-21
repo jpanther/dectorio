@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.10.0
+Date: 22. 01. 2020
+  Added:
+    - Support for Factorio 0.18
+  Removed:
+    - Support for Factorio 0.17 (use Dectorio version 0.9.16 instead)
+  Locales:
+    - Added Hungarian translation (thanks to mmnetworkteam)
+    - Updated Spanish translation (thanks to notallme)
+---------------------------------------------------------------------------------------------------
 Version: 0.9.16
 Date: 01. 10. 2019
   Added:

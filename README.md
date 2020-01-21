@@ -27,7 +27,7 @@ Requires Factorio version 0.15 or later.
   ![Gravel styles](https://img.pantherx.net/dectorio/gravel.png)
 
 * Adds wooden floorboard tiles with sound effects
-* Adds grid-based concrete that reflects the classic Factorio 0.15 style concrete
+* Adds grid-based concrete that offers a hi-res take on the classic Factorio 0.15 style concrete
 
   ![Concrete and Wooden floorboards](https://img.pantherx.net/dectorio/concrete-wood.png)
 
@@ -107,15 +107,16 @@ Special thanks to the translators below (in no particular order).
 * Czech (70%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
 * French (96%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi) and [daikyraraga](https://crowdin.com/profile/daikyraraga).
 * German (100%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn), [lpzockerx](https://crowdin.com/profile/lpzockerx) and [Leridon](https://crowdin.com/profile/Leridon).
+* Hungarian (100%) - [mmnetworkteam](https://crowdin.com/profile/mmnetworkteam).
 * Korean (100%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
 * Polish (100%) - [Tomirad](https://github.com/Tomirad), [Requelfade](https://crowdin.com/profile/Requelfade), [no_desired_username](https://crowdin.com/profile/no_desired_username) and [tomplus](https://crowdin.com/profile/tomplus).
 * Portuguese, Brazilian (99%) - [celaquila](https://crowdin.com/profile/celaquila).
 * Russian (100%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
-* Spanish (99%) - [notallme](https://crowdin.com/profile/notallme).
+* Spanish (100%) - [notallme](https://crowdin.com/profile/notallme).
 
 ### Mod Compatibility
 
-**Note:** If playing with Factorio 0.15, please download v0.7.6, or for Factorio 0.16, please download v0.8.11 as these are the last stable versions supported on these base game releases. v0.9.0 and later are only supported on Factorio 0.17.
+**Note:** If playing with Factorio 0.15, please download v0.7.6; for Factorio 0.16, please download v0.8.11; or for Factorio 0.17, please download v0.9.16, as these are the last stable versions supported on these base game releases. v0.10.0 and later are only supported on Factorio 0.18.
 
 Limited testing has been completed with other mods. Warnings will be shown in-game to highlight any known issues. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
 
