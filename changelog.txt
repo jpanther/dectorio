@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.1
 Date: 24. 01. 2020
+  Changed:
+    - Split the 'Enable Floorings' mod setting into two, enabling toggling of wooden and concrete tiles individually
   Bugfixes:
     - Updated icon size logic to better support newer variations of icon specification in 0.18
 ---------------------------------------------------------------------------------------------------
