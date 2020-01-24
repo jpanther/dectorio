@@ -1,7 +1,6 @@
 -- entity/sign-icons
 
 if DECT.ENABLED["signs"] then
-
 	local categories = DECT.CONFIG.SIGN_CATEGORIES
 	local blacklist = DECT.CONFIG.SIGN_BLACKLIST
 	local whitelist = DECT.CONFIG.SIGN_WHITELIST
@@ -23,29 +22,32 @@ if DECT.ENABLED["signs"] then
 				end
 				if not blacklisted then
 					local sprite = {}
+
 					if obj.icons == nil and obj.icon ~= nil then
-						if obj.icon_size == 32 or obj.icon_size == 64 then
-							sprite.file = obj.icon
-							sprite.tint = nil
-							if obj.icon_size == 64 then
-								sprite_scale = 0.4
-								sprite_shift = {-0.0, -0.1}
-							end
-						end
+						sprite.file = obj.icon
+						sprite.tint = nil
+						sprite.icon_size = obj.icon_size
 					else
-						if obj.icon_size == 32 or obj.icon_size == 64 then
-							sprite.file = obj.icons[1].icon
-							sprite.tint = obj.icons[1].tint
-							if obj.icon_size == 64 then
-								sprite_scale = 0.4
-								sprite_shift = {-0.0, -0.1}
-							end
+						sprite.file = obj.icons[1].icon
+						sprite.tint = obj.icons[1].tint
+						if obj.icons[1].icon_size ~= nil then
+							sprite.icon_size = obj.icons[1].icon_size
+						elseif obj.icon_size ~= nil and obj.icons[1].icon_size == nil then
+							sprite.icon_size = obj.icon_size
+						else
+							sprite.file = nil
 						end
 					end
+
+					if sprite.icon_size == 64 then
+						sprite_scale = 0.4
+						sprite_shift = {-0.0, -0.1}
+					end
+
 					if sprite.file then
 						new_icon = {
 							type = "simple-entity",
-							name = "dect-icon-"..obj.name,
+							name = "dect-icon-" .. obj.name,
 							order = cat,
 							icons = {
 								{
@@ -53,15 +55,15 @@ if DECT.ENABLED["signs"] then
 									tint = sprite.tint
 								}
 							},
-							icon_size = obj.icon_size,
+							icon_size = sprite.icon_size,
 							flags = {"placeable-off-grid", "not-on-map"},
 							selectable_in_game = false,
 							render_layer = "higher-object-above",
 							picture = {
 								filename = sprite.file,
 								priority = "extra-high",
-								width = obj.icon_size,
-								height = obj.icon_size,
+								width = sprite.icon_size,
+								height = sprite.icon_size,
 								scale = sprite_scale,
 								shift = sprite_shift,
 								tint = sprite.tint
@@ -73,5 +75,4 @@ if DECT.ENABLED["signs"] then
 			end
 		end
 	end
-
 end
