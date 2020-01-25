@@ -111,7 +111,7 @@ Special thanks to the translators below (in no particular order).
 * Korean (92%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
 * Polish (95%) - [Tomirad](https://github.com/Tomirad), [Requelfade](https://crowdin.com/profile/Requelfade), [no_desired_username](https://crowdin.com/profile/no_desired_username) and [tomplus](https://crowdin.com/profile/tomplus).
 * Portuguese, Brazilian (92%) - [celaquila](https://crowdin.com/profile/celaquila).
-* Russian (95%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
+* Russian (100%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
 * Spanish (92%) - [notallme](https://crowdin.com/profile/notallme).
 
 ### Mod Compatibility
