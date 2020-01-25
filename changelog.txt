@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.10.2
+Date: 25. 01. 2020
+  Bugfixes:
+    - Fixed save game migration issue related to new flooring settings
+  Locales:
+    - Updated Polish translation (thanks to tomplus)
+    - Updated Russian translation (thanks to 1avek1)
+---------------------------------------------------------------------------------------------------
 Version: 0.10.1
 Date: 24. 01. 2020
   Changed:
