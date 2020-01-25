@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.10.2
+Date: 25. 01. 2020
+  Added:
+    - New Stone and Concrete gates along with corresponding Basic and Advanced gates technologies
+  Changed:
+    - Balancing - Increased research cost of Advanced walls technology
+  Bugfixes:
+    - Fixed save game migration issue related to new flooring settings
+  Locales:
+    - Updated Polish translation (thanks to tomplus)
+    - Updated Russian translation (thanks to 1avek1)
+---------------------------------------------------------------------------------------------------
 Version: 0.10.1
 Date: 24. 01. 2020
   Changed:
