@@ -48,7 +48,7 @@ if DECT.ENABLED["walls"] then
 			{
 				type = "recipe",
 				name = "dect-concrete-gate",
-				enabled = true,
+				enabled = false,
 				ingredients = {
 					{"dect-concrete-wall", 1},
 					{"steel-plate", 2},
