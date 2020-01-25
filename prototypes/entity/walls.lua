@@ -1310,8 +1310,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-vertical.png",
 							line_length = 8,
-							width = 38,
-							height = 62,
+							width = 39,
+							height = 60,
 							frame_count = 16,
 							shift = util.by_pixel(0, -14),
 							hr_version = {
@@ -1350,8 +1350,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-horizontal.png",
 							line_length = 8,
-							width = 34,
-							height = 48,
+							width = 33, 
+							height = 45,
 							frame_count = 16,
 							shift = util.by_pixel(0, -4),
 							hr_version = {
@@ -1390,8 +1390,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-rail-horizontal-left.png",
 							line_length = 8,
-							width = 34,
-							height = 40,
+							width = 33,
+							height = 37,
 							frame_count = 16,
 							shift = util.by_pixel(0, -8),
 							hr_version = {
@@ -1430,8 +1430,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-rail-horizontal-right.png",
 							line_length = 8,
-							width = 34,
-							height = 40,
+							width = 33,
+							height = 37,
 							frame_count = 16,
 							shift = util.by_pixel(0, -8),
 							hr_version = {
@@ -1470,8 +1470,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-rail-vertical-left.png",
 							line_length = 8,
-							width = 22,
-							height = 62,
+							width = 21,
+							height = 59,
 							frame_count = 16,
 							shift = util.by_pixel(0, -14),
 							hr_version = {
@@ -1510,8 +1510,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-rail-vertical-right.png",
 							line_length = 8,
-							width = 22,
-							height = 62,
+							width = 21,
+							height = 59,
 							frame_count = 16,
 							shift = util.by_pixel(0, -14),
 							hr_version = {
@@ -1584,8 +1584,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-wall-patch.png",
 							line_length = 8,
-							width = 34,
-							height = 48,
+							width = 35,
+							height = 47,
 							frame_count = 16,
 							shift = util.by_pixel(0, 12),
 							hr_version = {
