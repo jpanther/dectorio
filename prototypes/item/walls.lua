@@ -6,8 +6,9 @@ if DECT.ENABLED["walls"] then
 			{
 				type = "item",
 				name = "dect-concrete-wall",
-				icon = "__Dectorio__/graphics/icons/concrete-wall.png",
-				icon_size = 32,
+				icon = "__base__/graphics/icons/wall.png",
+				icon_size = 64,
+				icon_mipmaps = 4,
 				subgroup = "defensive-structure",
 				order = "a[d-concrete-wall]",
 				stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"],
@@ -18,6 +19,7 @@ if DECT.ENABLED["walls"] then
 				name = "dect-chain-wall",
 				icon = "__Dectorio__/graphics/icons/chain-wall.png",
 				icon_size = 32,
+				icon_mipmaps = 1,
 				subgroup = "defensive-structure",
 				order = "a[c-chain-wall]",
 				stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"],
@@ -28,6 +30,7 @@ if DECT.ENABLED["walls"] then
 				name = "dect-wood-wall",
 				icon = "__Dectorio__/graphics/icons/wood-wall.png",
 				icon_size = 32,
+				icon_mipmaps = 1,
 				fuel_category = "chemical",
 				fuel_value = "12MJ",
 				subgroup = "defensive-structure",
@@ -52,7 +55,7 @@ if DECT.ENABLED["walls"] then
 	-- Change base stone wall
 	local base_stone_wall = data.raw["item"]["stone-wall"]
 	base_stone_wall.icon = "__Dectorio__/graphics/icons/stone-brick-wall.png"
-	base_stone_wall.icon_size = 32
+	base_stone_wall.icon_size = 64
 	base_stone_wall.icon_mipmaps = 1
 	base_stone_wall.stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"]
 	base_stone_wall.order = "a[b-stone-wall]"

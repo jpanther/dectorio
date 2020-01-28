@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.10.3
+Date: 28. 01. 2020
+  Added:
+    - New recipe for upgrading Stone gates to Concrete gates
+    - Additional high resolution icons
+  Bugfixes:
+    - Fixed sprite size issue when playing with Normal resolution sprites (thanks to spandelk)
+  Locales:
+    - Updated Polish translation (thanks to tomplus)
+    - Updated Czech translation (thanks to Treij)
+---------------------------------------------------------------------------------------------------
 Version: 0.10.2
 Date: 25. 01. 2020
   Added:

@@ -57,6 +57,7 @@ release:
 	git push
 	git checkout master
 	git merge --no-ff develop
+	git push
 	git tag -f v$(PACKAGE_VERSION)
 	git push --tags
 	git checkout develop

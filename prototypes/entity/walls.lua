@@ -10,8 +10,9 @@ if DECT.ENABLED["walls"] then
 			{
 				type = "wall",
 				name = "stone-wall",
-				icon = "__base__/graphics/icons/wall.png",
-				icon_size = 32,
+				icon = "__Dectorio__/graphics/icons/stone-brick-wall.png",
+				icon_size = 64,
+				icon_mipmaps = 1,
 				flags = {"placeable-neutral", "player-creation"},
 				collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
 				selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -500,8 +501,9 @@ if DECT.ENABLED["walls"] then
 			{
 				type = "wall",
 				name = "dect-concrete-wall",
-				icon = "__Dectorio__/graphics/icons/concrete-wall.png",
-				icon_size = 32,
+				icon = "__base__/graphics/icons/wall.png",
+				icon_size = 64,
+				icon_mipmaps = 4,
 				flags = {"placeable-neutral", "player-creation"},
 				collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
 				selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -565,6 +567,7 @@ if DECT.ENABLED["walls"] then
 				name = "dect-chain-wall",
 				icon = "__Dectorio__/graphics/icons/chain-wall.png",
 				icon_size = 32,
+				icon_mipmaps = 1,
 				flags = {"placeable-neutral", "player-creation"},
 				collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
 				selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -951,6 +954,7 @@ if DECT.ENABLED["walls"] then
 				name = "dect-wood-wall",
 				icon = "__Dectorio__/graphics/icons/wood-wall.png",
 				icon_size = 32,
+				icon_mipmaps = 1,
 				flags = {"placeable-neutral", "player-creation"},
 				collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
 				selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -1310,8 +1314,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-vertical.png",
 							line_length = 8,
-							width = 38,
-							height = 62,
+							width = 39,
+							height = 60,
 							frame_count = 16,
 							shift = util.by_pixel(0, -14),
 							hr_version = {
@@ -1350,8 +1354,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-horizontal.png",
 							line_length = 8,
-							width = 34,
-							height = 48,
+							width = 33,
+							height = 45,
 							frame_count = 16,
 							shift = util.by_pixel(0, -4),
 							hr_version = {
@@ -1390,8 +1394,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-rail-horizontal-left.png",
 							line_length = 8,
-							width = 34,
-							height = 40,
+							width = 33,
+							height = 37,
 							frame_count = 16,
 							shift = util.by_pixel(0, -8),
 							hr_version = {
@@ -1430,8 +1434,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-rail-horizontal-right.png",
 							line_length = 8,
-							width = 34,
-							height = 40,
+							width = 33,
+							height = 37,
 							frame_count = 16,
 							shift = util.by_pixel(0, -8),
 							hr_version = {
@@ -1470,8 +1474,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-rail-vertical-left.png",
 							line_length = 8,
-							width = 22,
-							height = 62,
+							width = 21,
+							height = 59,
 							frame_count = 16,
 							shift = util.by_pixel(0, -14),
 							hr_version = {
@@ -1510,8 +1514,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-rail-vertical-right.png",
 							line_length = 8,
-							width = 22,
-							height = 62,
+							width = 21,
+							height = 59,
 							frame_count = 16,
 							shift = util.by_pixel(0, -14),
 							hr_version = {
@@ -1584,8 +1588,8 @@ if DECT.ENABLED["walls"] then
 						{
 							filename = "__Dectorio__/graphics/entity/stone-gate/gate-wall-patch.png",
 							line_length = 8,
-							width = 34,
-							height = 48,
+							width = 35,
+							height = 47,
 							frame_count = 16,
 							shift = util.by_pixel(0, 12),
 							hr_version = {
