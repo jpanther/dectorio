@@ -2,6 +2,8 @@
 Version: 0.10.4
 Date: 28. 01. 2020
   Bugfixes:
+    - Fixed signal icons not being drawn at the correct scale
+    - Fixed some items were not showing any icon when using Creative Mod mod
     - Minor compatibility fixes to support version 0.5 of Alien Biomes mod
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.3
