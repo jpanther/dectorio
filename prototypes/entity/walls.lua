@@ -3,6 +3,7 @@
 if DECT.ENABLED["walls"] then
 	-- Make a copy of the base stone wall before clearing it out
 	local base_stone_wall = data.raw["wall"]["stone-wall"]
+	local sounds = require("__base__.prototypes.entity.demo-sounds")
 	data.raw["wall"]["stone-wall"] = nil
 
 	data:extend(
@@ -1623,7 +1624,7 @@ if DECT.ENABLED["walls"] then
 						}
 					}
 				},
-				vehicle_impact_sound = generic_impact_sound(),
+				vehicle_impact_sound = sounds.generic_impact,
 				open_sound = base_gate.open_sound,
 				close_sound = base_gate.close_sound
 			},
@@ -1656,7 +1657,7 @@ if DECT.ENABLED["walls"] then
 				vertical_rail_base = base_gate.vertical_rail_base,
 				horizontal_rail_base = base_gate.horizontal_rail_base,
 				wall_patch = base_gate.wall_patch,
-				vehicle_impact_sound = generic_impact_sound(),
+				vehicle_impact_sound = sounds.generic_impact,
 				open_sound = base_gate.open_sound,
 				close_sound = base_gate.close_sound
 			}

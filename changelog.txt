@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.4
 Date: 28. 01. 2020
+  Added:
+    - Support for Factorio 0.18.2
   Bugfixes:
     - Fixed signal icons not being drawn at the correct scale
     - Fixed some items were not showing any icon when using Creative Mod mod
