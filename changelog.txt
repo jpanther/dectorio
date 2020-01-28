@@ -1,10 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.4
 Date: 28. 01. 2020
-  Bugfixes:
-    - Fixed signal icons not being drawn at the correct scale
-    - Fixed some items were not showing any icon when using Creative Mod mod
-    - Minor compatibility fixes to support version 0.5 of Alien Biomes mod
+  Added:
+    - Support for Factorio 0.18.2
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.3
 Date: 28. 01. 2020
@@ -151,7 +149,7 @@ Date: 12. 03. 2019
   Removed:
     - Removed custom Landfill tile as 0.17.10 adds this to the base game, existing tiles will be migrated
   Bugfixes:
-    - Fixes compatibility with version 0.4 of Alien Biomes mod
+    - Fixes compatibility with version 4 of Alien Biomes mod
   Locales:
     - Added Portuguese, Brazilian translation (thanks to celaquila)
     - Added Spanish translation (thanks to notallme)
