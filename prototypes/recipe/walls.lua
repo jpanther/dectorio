@@ -19,7 +19,8 @@ if DECT.ENABLED["walls"] then
 				name = "dect-concrete-wall-from-stone-wall",
 				localised_name = {"recipe-name.dect-concrete-wall-from-stone-wall"},
 				icon = "__Dectorio__/graphics/icons/concrete-wall-from-stone-wall.png",
-				icon_size = 32,
+				icon_size = 64,
+				icon_mipmaps = 1,
 				energy_required = 1,
 				enabled = false,
 				ingredients = {
@@ -53,6 +54,22 @@ if DECT.ENABLED["walls"] then
 					{"dect-concrete-wall", 1},
 					{"steel-plate", 2},
 					{"electronic-circuit", 2}
+				},
+				result = "dect-concrete-gate"
+			},
+			{
+				type = "recipe",
+				name = "dect-concrete-gate-from-stone-gate",
+				localised_name = {"recipe-name.dect-concrete-gate-from-stone-gate"},
+				icon = "__Dectorio__/graphics/icons/concrete-gate-from-stone-gate.png",
+				icon_size = 64,
+				icon_mipmaps = 1,
+				energy_required = 1,
+				enabled = false,
+				ingredients = {
+					{"gate", 1},
+					{"concrete", 2},
+					{"electronic-circuit", 1}
 				},
 				result = "dect-concrete-gate"
 			}

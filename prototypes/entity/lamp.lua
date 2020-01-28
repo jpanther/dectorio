@@ -4,7 +4,7 @@
 local lamp = util.table.deepcopy(data.raw["lamp"]["small-lamp"])
 lamp.name = "dect-small-lamp-glow"
 lamp.icon = "__Dectorio__/graphics/icons/small-lamp-glow.png"
-lamp.icon_size = 32
+lamp.icon_size = 64
 lamp.icon_mipmaps = 1
 lamp.minable.result = "dect-small-lamp-glow"
 lamp.glow_size = 25
