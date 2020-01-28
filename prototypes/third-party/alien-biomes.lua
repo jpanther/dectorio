@@ -135,7 +135,8 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 					type = "item",
 					name = "dect-alien-biomes-"..tree,
 					icon = data.raw["tree"][tree].icon,
-					icon_size = 32,
+					icon_size = 64,
+					icon_mipmaps = 4,
 					subgroup = "landscaping-trees",
 					order = "a[alien-biomes-"..tree.."]",
 					stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
@@ -166,7 +167,8 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 					icons = {
 						{ icon = data.raw["simple-entity"][rock.name].icon, tint = rock.color }
 					},
-					icon_size = 32,
+					icon_size = 64,
+					icon_mipmaps = 4,
 					subgroup = "landscaping-rocks",
 					order = "a[alien-biomes-"..rock.name.."]",
 					stack_size = DECT.CONFIG.SETTINGS["landscaping_stack_size"],
