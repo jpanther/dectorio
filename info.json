@@ -1,14 +1,14 @@
 {
   "name": "Dectorio",
-  "version": "0.10.3",
+  "version": "0.10.4",
   "title": "Dectorio",
   "author": "PantherX",
   "contact": "",
   "homepage": "https://github.com/jpanther/Dectorio",
   "factorio_version": "0.18",
   "dependencies": [
-    "base >= 0.18.0",
-    "? alien-biomes >= 0.4.1",
+    "base >= 0.18.2",
+    "? alien-biomes >= 0.5.1",
     "!Expanded_Color_Lamps",
     "!Thaumaturgic-Machinations"
   ],
