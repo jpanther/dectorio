@@ -1,6 +1,9 @@
 -- entity/signs
 
 if DECT.ENABLED["signs"] then
+	-- Pull in the base entity sounds
+	local sounds = require("__base__.prototypes.entity.demo-sounds")
+
 	data:extend(
 		{
 			{
@@ -52,7 +55,7 @@ if DECT.ENABLED["signs"] then
 				drawing_box = {{-0.5, -1.6}, {0.5, 0.5}},
 				repair_sound = {filename = "__base__/sound/manual-repair-simple.ogg"},
 				mined_sound = {filename = "__base__/sound/deconstruct-bricks.ogg"},
-				vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 1.0},
+				vehicle_impact_sound = sounds.generic_impact,
 				pictures = {
 					{
 						filename = "__Dectorio__/graphics/entity/sign-steel/sign-steel.png",

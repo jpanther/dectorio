@@ -1,8 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.4
-Date: 28. 01. 2020
+Date: 29. 01. 2020
   Added:
-    - Support for Factorio 0.18.2
+    - Support for Factorio 0.18.2 audio changes (thanks to AlienXAXS)
+  Changed:
+    - Adjusted the vehicle impact sounds of some entities and added more audio variation to match the wider variety now available in the base game
   Bugfixes:
     - Fixed signal icons not being drawn at the correct scale
     - Fixed some items were not showing any icon when using Creative Mod mod
