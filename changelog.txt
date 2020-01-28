@@ -9,6 +9,9 @@ Date: 29. 01. 2020
     - Fixed signal icons not being drawn at the correct scale
     - Fixed some items were not showing any icon when using Creative Mod mod
     - Minor compatibility fixes to support version 0.5 of Alien Biomes mod
+  Locales:
+    - Updated Polish translation (thanks to tomplus)
+    - Updated Czech translation (thanks to Treij)
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.3
 Date: 28. 01. 2020
