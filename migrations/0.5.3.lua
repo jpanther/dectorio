@@ -1,5 +1,4 @@
 for index, force in pairs(game.forces) do
-
 	force.reset_recipes()
 	force.reset_technologies()
 
@@ -15,9 +14,9 @@ for index, force in pairs(game.forces) do
 			rec["dect-base-grass-dry"].enabled = true
 			rec["dect-base-red-desert"].enabled = true
 			rec["dect-base-red-desert-dark"].enabled = true
-		end		
+		end
 	end
-	if settings.startup["dectorio-flooring"].value then
+	if settings.startup["dectorio-wood"].value then
 		if tech["dect-wood-floor"].researched then
 			rec["dect-wood-floor"].enabled = true
 		end
@@ -38,5 +37,4 @@ for index, force in pairs(game.forces) do
 			rec["dect-concrete-wall"].enabled = true
 		end
 	end
-	
 end
