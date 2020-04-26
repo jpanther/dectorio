@@ -1,6 +1,6 @@
 {
   "name": "Dectorio",
-  "version": "0.10.5",
+  "version": "0.10.6",
   "title": "Dectorio",
   "author": "PantherX",
   "contact": "",
@@ -9,6 +9,7 @@
   "dependencies": [
     "base >= 0.18.2",
     "? alien-biomes >= 0.5.1",
+    "(?) FactorioExtended-Plus-Weaponry >= 0.4.0",
     "!Expanded_Color_Lamps",
     "!Thaumaturgic-Machinations"
   ],

@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.10.6
+Date: 26. 04. 2020
+  Bugfixes:
+    - Fixed gate conflict with FactorioExtended Plus-Weaponry mod
+  Locales:
+    - Updated Hungarian translation (thanks to mmnetworkteam)
+---------------------------------------------------------------------------------------------------
 Version: 0.10.5
 Date: 29. 01. 2020
   Bugfixes:
