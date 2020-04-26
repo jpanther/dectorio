@@ -140,7 +140,7 @@ data:extend(
 		},
 		{
 			type = "string-setting",
-			name = "dectorio-waterfill-mode",
+			name = "dectorio-waterfill-tiles",
 			setting_type = "startup",
 			default_value = "all",
 			allowed_values = {"all", "shallow", "deep"},
