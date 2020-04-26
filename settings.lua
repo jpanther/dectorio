@@ -137,6 +137,14 @@ data:extend(
 			minimum_value = 100,
 			maximum_value = 5000,
 			order = "d-d"
+		},
+		{
+			type = "string-setting",
+			name = "dectorio-waterfill-tiles",
+			setting_type = "startup",
+			default_value = "all",
+			allowed_values = {"all", "shallow", "deep"},
+			order = "d-e"
 		}
 	}
 )
