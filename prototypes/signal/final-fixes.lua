@@ -20,11 +20,10 @@ if DECT.ENABLED["signals"] then
 		end
 	end
 
-	local lamp = data.raw.lamp["small-lamp"]
-	lamp.signal_to_color_mapping = mapped_colors
-
-	local lamp_glow = data.raw.lamp["dect-small-lamp-glow"]
-	lamp_glow.signal_to_color_mapping = mapped_colors
+	-- Map colors to lamp entities
+	for _, lamp in pairs(data.raw.lamp) do
+		lamp.signal_to_color_mapping = mapped_colors
+	end
 
 	-- Reorder some of the base game signals to improve the signal layout
 	data:extend({
