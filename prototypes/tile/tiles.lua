@@ -21,7 +21,7 @@ local tile_layer = {
 	refined_paint = 66,
 	-- 67 transition layer
 	grid = 68,
-	wood = 69,
+	wood = 69
 }
 
 -- Return tile variants array for given set and variant
@@ -29,41 +29,41 @@ local function tile_variants(set, variant)
 	return {
 		main = {
 			{
-				picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."1.png",
+				picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "1.png",
 				count = 16,
 				size = 1
 			},
 			{
-				picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."2.png",
+				picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "2.png",
 				count = 4,
 				size = 2,
-				probability = 0.39,
+				probability = 0.39
 			},
 			{
-				picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."4.png",
+				picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "4.png",
 				count = 4,
 				size = 4,
-				probability = 1,
-			},
+				probability = 1
+			}
 		},
 		inner_corner = {
-			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."-inner-corner.png",
+			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-inner-corner.png",
 			count = 8
 		},
 		outer_corner = {
-			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."-outer-corner.png",
+			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-outer-corner.png",
 			count = 1
 		},
 		side = {
-			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."-side.png",
+			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-side.png",
 			count = 8
 		},
 		u_transition = {
-			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."-u.png",
+			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-u.png",
 			count = 8
 		},
 		o_transition = {
-			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set.."-o.png",
+			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-o.png",
 			count = 1
 		}
 	}
@@ -79,10 +79,10 @@ local function tile_variants_material(set, variant)
 		u_transition_mask = base_concrete.variants.u_transition_mask,
 		o_transition_mask = base_concrete.variants.o_transition_mask,
 		material_background = {
-			picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/"..set..".png",
+			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. ".png",
 			count = 8,
 			hr_version = {
-				picture = "__Dectorio__/graphics/terrain/"..set.."/"..variant.."/hr-"..set..".png",
+				picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/hr-" .. set .. ".png",
 				count = 8,
 				scale = 0.5
 			}
@@ -101,92 +101,91 @@ base_refined_hazard_left.decorative_removal_probability = decorative_removal_pro
 base_refined_hazard_right.decorative_removal_probability = decorative_removal_probability
 
 if DECT.ENABLED["landscaping"] then
-
 	-- Make tiles unblueprintable
 	local base_tiles = DECT.CONFIG.BASE_TILES
 	for _, tile in pairs(base_tiles) do
 		data.raw["tile"][tile].can_be_part_of_blueprint = DECT.CONFIG.SETTINGS["landscaping_blueprintable"]
 	end
-
 end
 
 if DECT.ENABLED["wood-floor"] then
-
-	data:extend({
+	data:extend(
 		{
-			type = "tile",
-			name = "dect-wood-floor",
-			needs_correction = false,
-			minable = {hardness = 0.2, mining_time = 0.5, result = "dect-wood-floor"},
-			mined_sound = { filename = "__Dectorio__/sound/deconstruct-wood.ogg" },
-			collision_mask = { "ground-tile" },
-			walking_speed_modifier = 1.2,
-			layer = tile_layer.wood,
-			decorative_removal_probability = decorative_removal_probability,
-			variants = tile_variants("wood", "boards"),
-			walking_sound = {
-				{ filename = "__Dectorio__/sound/walking/wood-01.ogg", volume = 0.95 },
-				{ filename = "__Dectorio__/sound/walking/wood-02.ogg", volume = 0.95 },
-				{ filename = "__Dectorio__/sound/walking/wood-03.ogg", volume = 0.95 },
-				{ filename = "__Dectorio__/sound/walking/wood-04.ogg", volume = 0.95 }
-			},
-			map_color = {r=139, g=69, b=19},
-			pollution_absorption_per_second = 0,
-			vehicle_friction_modifier = base_stone_path.vehicle_friction_modifier
+			{
+				type = "tile",
+				name = "dect-wood-floor",
+				needs_correction = false,
+				minable = {hardness = 0.2, mining_time = 0.5, result = "dect-wood-floor"},
+				mined_sound = {filename = "__Dectorio__/sound/deconstruct-wood.ogg"},
+				collision_mask = {"ground-tile"},
+				walking_speed_modifier = 1.2,
+				layer = tile_layer.wood,
+				decorative_removal_probability = decorative_removal_probability,
+				variants = tile_variants("wood", "boards"),
+				walking_sound = {
+					{filename = "__Dectorio__/sound/walking/wood-01.ogg", volume = 0.95},
+					{filename = "__Dectorio__/sound/walking/wood-02.ogg", volume = 0.95},
+					{filename = "__Dectorio__/sound/walking/wood-03.ogg", volume = 0.95},
+					{filename = "__Dectorio__/sound/walking/wood-04.ogg", volume = 0.95}
+				},
+				map_color = {r = 139, g = 69, b = 19},
+				pollution_absorption_per_second = 0,
+				vehicle_friction_modifier = base_stone_path.vehicle_friction_modifier
+			}
 		}
-	})
-
+	)
 end
 
 if DECT.ENABLED["concrete"] then
-
-	data:extend({
+	data:extend(
 		{
-			type = "tile",
-			name = "dect-concrete-grid",
-			needs_correction = false,
-			transition_merges_with_tile = "concrete",
-			minable = { hardness = 0.2, mining_time = 0.5, result = "dect-concrete-grid" },
-			mined_sound = base_concrete.mined_sound,
-			collision_mask = { "ground-tile" },
-			walking_speed_modifier = base_concrete.walking_speed_modifier,
-			layer = tile_layer.grid,
-			decorative_removal_probability = decorative_removal_probability,
-			variants = tile_variants_material("concrete", "grid"),
-			walking_sound = base_concrete.walking_sound,
-			map_color = {r=130, g=130, b=130},
-			pollution_absorption_per_second = 0,
-			vehicle_friction_modifier = base_concrete.vehicle_friction_modifier
+			{
+				type = "tile",
+				name = "dect-concrete-grid",
+				needs_correction = false,
+				transition_merges_with_tile = "concrete",
+				minable = {hardness = 0.2, mining_time = 0.5, result = "dect-concrete-grid"},
+				mined_sound = base_concrete.mined_sound,
+				collision_mask = {"ground-tile"},
+				walking_speed_modifier = base_concrete.walking_speed_modifier,
+				layer = tile_layer.grid,
+				decorative_removal_probability = decorative_removal_probability,
+				variants = tile_variants_material("concrete", "grid"),
+				walking_sound = base_concrete.walking_sound,
+				map_color = {r = 130, g = 130, b = 130},
+				pollution_absorption_per_second = 0,
+				vehicle_friction_modifier = base_concrete.vehicle_friction_modifier
+			}
 		}
-	})
+	)
 
-	-- Correct the offset so that concrete border is drawn on top of painted concrete
-	--base_concrete.transition_overlay_layer_offset = tile_layer.paint - tile_layer.concrete + 1
-	--base_refined_concrete.transition_overlay_layer_offset = tile_layer.refined_paint - tile_layer.refined + 1
-
+-- Correct the offset so that concrete border is drawn on top of painted concrete
+--base_concrete.transition_overlay_layer_offset = tile_layer.paint - tile_layer.concrete + 1
+--base_refined_concrete.transition_overlay_layer_offset = tile_layer.refined_paint - tile_layer.refined + 1
 end
 
 if DECT.ENABLED["gravel"] then
-
 	for _, variant in pairs(DECT.CONFIG.GRAVEL_VARIANTS) do
-	data:extend({
+		data:extend(
 			{
-				type = "tile",
-				name = "dect-"..variant.name.."-gravel",
-				needs_correction = false,
-				minable = { hardness = 0.2, mining_time = 0.5, result = variant.name },
-				mined_sound = { filename = "__core__/sound/axe-mining-ore-3.ogg" },
-				collision_mask = { "ground-tile" },
-				walking_speed_modifier = 1.1,
-				layer = tile_layer.gravel,
-				decorative_removal_probability = decorative_removal_probability,
-				variants = tile_variants(variant.name, "gravel"),
-				walking_sound = base_dirt.walking_sound,
-				map_color = variant.color,
-				pollution_absorption_per_second = 0,
-				vehicle_friction_modifier = dirt_vehicle_speed_modifier
+				{
+					type = "tile",
+					name = "dect-" .. variant.name .. "-gravel",
+					needs_correction = false,
+					minable = {hardness = 0.2, mining_time = 0.5, result = variant.name},
+					mined_sound = {filename = "__core__/sound/axe-mining-ore-3.ogg"},
+					collision_mask = {"ground-tile"},
+					walking_speed_modifier = 1.1,
+					layer = tile_layer.gravel,
+					decorative_removal_probability = decorative_removal_probability,
+					variants = tile_variants(variant.name, "gravel"),
+					walking_sound = base_dirt.walking_sound,
+					map_color = variant.color,
+					pollution_absorption_per_second = 0,
+					vehicle_friction_modifier = dirt_vehicle_speed_modifier
+				}
 			}
-		})
+		)
 	end
 
 	-- Move stone path up a layer so it sits atop gravel
@@ -194,59 +193,72 @@ if DECT.ENABLED["gravel"] then
 end
 
 if DECT.ENABLED["painted-concrete"] then
-
 	local set_modifier = DECT.CONFIG.SETTINGS["painted_concrete_speed_modifier"]
 
 	local directions = {
-		{this="left", next="right"},
-		{this="right", next="left"}
+		{this = "left", next = "right"},
+		{this = "right", next = "left"}
 	}
 	for _, variant in pairs(DECT.CONFIG.PAINT_VARIANTS) do
 		for _, direction in pairs(directions) do
 			-- Normal variant
-			data:extend({
+			data:extend(
 				{
-					type = "tile",
-					name = "dect-paint-"..variant.name.."-"..direction.this,
-					needs_correction = false,
-					next_direction = "dect-paint-"..variant.name.."-"..direction.next,
-					transition_merges_with_tile = "concrete",
-					minable = { hardness = 0.2, mining_time = 0.5, result = "dect-paint-"..variant.name },
-					mined_sound = base_concrete.mined_sound,
-					collision_mask = { "ground-tile" },
-					walking_speed_modifier = base_concrete.walking_speed_modifier * set_modifier,
-					layer = tile_layer.paint,
-					decorative_removal_probability = decorative_removal_probability,
-					variants = tile_variants_material("concrete", variant.name.."-"..direction.this),
- 					walking_sound = base_concrete.walking_sound,
-					map_color = variant.color,
-					pollution_absorption_per_second = 0,
-					vehicle_friction_modifier = base_concrete.vehicle_friction_modifier * set_modifier
+					{
+						type = "tile",
+						name = "dect-paint-" .. variant.name .. "-" .. direction.this,
+						needs_correction = false,
+						next_direction = "dect-paint-" .. variant.name .. "-" .. direction.next,
+						transition_merges_with_tile = "concrete",
+						minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-" .. variant.name},
+						mined_sound = base_concrete.mined_sound,
+						collision_mask = {"ground-tile"},
+						walking_speed_modifier = base_concrete.walking_speed_modifier * set_modifier,
+						layer = tile_layer.paint,
+						decorative_removal_probability = decorative_removal_probability,
+						variants = tile_variants_material("concrete", variant.name .. "-" .. direction.this),
+						walking_sound = base_concrete.walking_sound,
+						map_color = variant.color,
+						pollution_absorption_per_second = 0,
+						vehicle_friction_modifier = base_concrete.vehicle_friction_modifier * set_modifier
+					}
 				}
-			})
+			)
 
 			-- Refined variant
-			data:extend({
+			data:extend(
 				{
-					type = "tile",
-					name = "dect-paint-refined-"..variant.name.."-"..direction.this,
-					needs_correction = false,
-					next_direction = "dect-paint-refined-"..variant.name.."-"..direction.next,
-					transition_merges_with_tile = "refined-concrete",
-					minable = { hardness = 0.2, mining_time = 0.5, result = "dect-paint-refined-"..variant.name },
-					mined_sound = base_refined_concrete.mined_sound,
-					collision_mask = { "ground-tile" },
-					walking_speed_modifier = base_refined_concrete.walking_speed_modifier * set_modifier,
-					layer = tile_layer.refined_paint,
-					decorative_removal_probability = decorative_removal_probability,
-					variants = tile_variants_material("refined-concrete", variant.name.."-"..direction.this),
-					walking_sound = base_refined_concrete.walking_sound,
-					map_color = variant.color,
-					pollution_absorption_per_second = 0,
-					vehicle_friction_modifier = base_refined_concrete.vehicle_friction_modifier * set_modifier
+					{
+						type = "tile",
+						name = "dect-paint-refined-" .. variant.name .. "-" .. direction.this,
+						needs_correction = false,
+						next_direction = "dect-paint-refined-" .. variant.name .. "-" .. direction.next,
+						transition_merges_with_tile = "refined-concrete",
+						minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-refined-" .. variant.name},
+						mined_sound = base_refined_concrete.mined_sound,
+						collision_mask = {"ground-tile"},
+						walking_speed_modifier = base_refined_concrete.walking_speed_modifier * set_modifier,
+						layer = tile_layer.refined_paint,
+						decorative_removal_probability = decorative_removal_probability,
+						variants = tile_variants_material("refined-concrete", variant.name .. "-" .. direction.this),
+						walking_sound = base_refined_concrete.walking_sound,
+						map_color = variant.color,
+						pollution_absorption_per_second = 0,
+						vehicle_friction_modifier = base_refined_concrete.vehicle_friction_modifier * set_modifier
+					}
 				}
-			})
+			)
 		end
+	end
+
+	-- Make base colored refined concrete minable and adjust some properties to align them with others
+	for _, color in pairs(DECT.CONFIG.BASE_COLORS) do
+		local concrete = data.raw.tile[color.name .. "-refined-concrete"]
+		concrete.minable = {hardness = 0.2, mining_time = 0.5, result = "dect-" .. color.name .. "-refined-concrete"}
+		concrete.walking_speed_modifier = base_refined_concrete.walking_speed_modifier * set_modifier
+		concrete.layer = tile_layer.refined_paint
+		concrete.decorative_removal_probability = decorative_removal_probability
+		concrete.vehicle_friction_modifier = base_refined_concrete.vehicle_friction_modifier * set_modifier
 	end
 
 	-- Adjust walking speeds on base hazard tiles
@@ -274,5 +286,4 @@ if DECT.ENABLED["painted-concrete"] then
 		base_refined_hazard_left.variants = tile_variants_material("refined-concrete", "hazard-left")
 		base_refined_hazard_right.variants = tile_variants_material("refined-concrete", "hazard-right")
 	end
-
 end

@@ -2,7 +2,10 @@
 Version: 0.10.6
 Date: 26. 04. 2020
   Added:
+    - Coloured concrete variants from the scenario editor are now placable/minable
     - New mod setting to specify which water tiles are available when waterfill is enabled
+  Changed:
+    - Signal colour changes are now applied to all lamp entities so that the colors can be used on lamps added by other mods
   Bugfixes:
     - Fixed gate conflict with FactorioExtended Plus-Weaponry mod
   Locales:

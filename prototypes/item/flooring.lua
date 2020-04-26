@@ -97,6 +97,43 @@ if DECT.ENABLED["painted-concrete"] then
 		)
 	end
 
+	-- Make items for base colored refined concrete
+	data:extend(
+		{
+			{
+				type = "item-subgroup",
+				name = "flooring-painted-refined-base",
+				group = DECT.ITEM_GROUP,
+				order = "i-e"
+			}
+		}
+	)
+
+	for _, color in pairs(DECT.CONFIG.BASE_COLORS) do
+		data:extend(
+			{
+				{
+					type = "item",
+					name = "dect-" .. color.name .. "-refined-concrete",
+					localised_name = {"", {"color." .. color.name}, " ", {"tile-name.refined-concrete"}},
+					icons = {
+						{icon = "__base__/graphics/icons/refined-concrete.png", tint = color.tint}
+					},
+					icon_size = 64,
+					icon_mipmaps = 1,
+					subgroup = "flooring-painted-refined-base",
+					order = "00[" .. color.name .. "-refined-concrete]",
+					stack_size = DECT.CONFIG.SETTINGS["flooring_stack_size"],
+					place_as_tile = {
+						result = color.name .. "-refined-concrete",
+						condition_size = 1,
+						condition = {"water-tile"}
+					}
+				}
+			}
+		)
+	end
+
 	-- Move base hazard concrete item under painted concrete
 	local base_hazard_item = data.raw["item"]["hazard-concrete"]
 	base_hazard_item.subgroup = "flooring-painted"
