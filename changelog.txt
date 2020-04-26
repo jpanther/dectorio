@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.6
 Date: 26. 04. 2020
+  Added:
+    - New mod setting to specify which water tiles are available when waterfill is enabled
   Bugfixes:
     - Fixed gate conflict with FactorioExtended Plus-Weaponry mod
   Locales:

@@ -6,8 +6,13 @@
 -- ---------------------------------
 if mods["alien-biomes"] then
 	-- Only supports blue water tiles
+	DECT.CONFIG.WATERFILL_MODES = {
+		["all"] = {"water", "deepwater"},
+		["shallow"] = {"water"},
+		["deep"] = {"deepwater"}
+	}
 	DECT.CONFIG.BASE_TILES = {}
-	DECT.CONFIG.BASE_WATER_TILES = {"water", "deepwater"}
+	DECT.CONFIG.BASE_WATER_TILES = DECT.CONFIG.WATERFILL_MODES[DECT.CONFIG.SETTINGS["waterfill_mode"]]
 	DECT.CONFIG.BASE_ROCKS = {}
 	DECT.CONFIG.BASE_TREES = {}
 	-- Remove the tile icons from signs
