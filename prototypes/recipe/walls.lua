@@ -53,7 +53,7 @@ if DECT.ENABLED["walls"] then
 				ingredients = {
 					{"dect-concrete-wall", 1},
 					{"steel-plate", 2},
-					{"electronic-circuit", 2}
+					{"advanced-circuit", 2}
 				},
 				result = "dect-concrete-gate"
 			},
@@ -69,7 +69,7 @@ if DECT.ENABLED["walls"] then
 				ingredients = {
 					{"gate", 1},
 					{"concrete", 2},
-					{"electronic-circuit", 1}
+					{"advanced-circuit", 1}
 				},
 				result = "dect-concrete-gate"
 			}
@@ -80,6 +80,6 @@ if DECT.ENABLED["walls"] then
 	data.raw["recipe"]["gate"].ingredients = {
 		{"stone-wall", 1},
 		{"iron-plate", 2},
-		{"electronic-circuit", 1}
+		{"electronic-circuit", 2}
 	}
 end

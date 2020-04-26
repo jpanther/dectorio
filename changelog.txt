@@ -6,6 +6,7 @@ Date: 26. 04. 2020
     - New mod setting to specify which water tiles are available when waterfill is enabled
   Changed:
     - Signal colour changes are now applied to all lamp entities so that the colors can be used on lamps added by other mods
+    - Balancing - Tweaked gate recipes to provide better technology progression. Stone gate now requires twice as many circuits but is still cheaper than vanilla (as it doesn't require steel) allowing it to be built early in Angels/Bobs games. Concrete gate now requires advanced circuits instead of electronic circuits.
   Bugfixes:
     - Fixed gate conflict with FactorioExtended Plus-Weaponry mod
   Locales:
