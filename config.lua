@@ -99,6 +99,7 @@ DECT.ENABLED = {
 	["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
 	["signs"] = settings.startup["dectorio-signs"].value,
 	["decoratives"] = settings.startup["dectorio-decoratives"].value,
+	["lawnmower"] = settings.startup["dectorio-lawnmower"].value,
 	["item-group"] = settings.startup["dectorio-item-group"].value
 }
 

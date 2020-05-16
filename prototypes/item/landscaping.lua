@@ -38,7 +38,7 @@ if DECT.ENABLED["landscaping"] then
 	end
 end
 
-if DECT.ENABLED["waterfill"] or DECT.ENABLED["landscaping"] then
+if DECT.ENABLED["waterfill"] or DECT.ENABLED["landscaping"] or DECT.ENABLED["lawnmower"] then
 	-- Add subgroup for base water
 	data:extend(
 		{
@@ -149,7 +149,9 @@ if DECT.ENABLED["landscaping"] then
 			}
 		)
 	end
+end
 
+if DECT.ENABLED["lawnmower"] then
 	-- Add Lawnmower item
 	data:extend(
 		{
