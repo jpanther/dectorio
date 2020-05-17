@@ -25,6 +25,13 @@ data:extend(
 		},
 		{
 			type = "bool-setting",
+			name = "dectorio-lawnmower",
+			setting_type = "startup",
+			default_value = true,
+			order = "a-ca"
+		},
+		{
+			type = "bool-setting",
 			name = "dectorio-wood",
 			setting_type = "startup",
 			default_value = true,
