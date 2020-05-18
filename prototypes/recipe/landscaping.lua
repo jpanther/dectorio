@@ -24,6 +24,10 @@ if DECT.ENABLED["landscaping"] then
 		end
 	end
 
+end
+
+if DECT.ENABLED["lawnmower"] then
+
 	-- Create Lawnmower recipe
 	data:extend({
 		{

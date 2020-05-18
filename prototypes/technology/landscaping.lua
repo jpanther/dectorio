@@ -39,13 +39,31 @@ if DECT.ENABLED["landscaping"] then
 			},
 			effects = landscaping_effects,
 			order = "a"
-		},
+		}
+	})
+
+	-- Move base landfill tech underneath landscaping
+	local base_landfill = data.raw["technology"]["landfill"]
+	if not base_landfill.prerequisites then
+		base_landfill.prerequisites = {}
+	end
+	table.insert(base_landfill.prerequisites, "dect-landscaping")
+
+end
+
+if DECT.ENABLED["lawnmower"] then
+	if DECT.ENABLED["landscaping"] then
+		lawnmower_prereq = {"dect-landscaping", "engine"}
+	else
+		lawnmower_prereq = {"engine"}
+	end
+	data:extend({
 		{
 			type = "technology",
 			name = "dect-lawnmower",
 			icon = "__Dectorio__/graphics/technology/lawnmower.png",
 			icon_size = 128,
-			prerequisites = {"dect-landscaping", "engine"},
+			prerequisites = lawnmower_prereq,
 			unit = {
 				count = 30,
 				ingredients = {
@@ -63,14 +81,6 @@ if DECT.ENABLED["landscaping"] then
 			order = "b-d-a"
 		}
 	})
-
-	-- Move base landfill tech underneath landscaping
-	local base_landfill = data.raw["technology"]["landfill"]
-	if not base_landfill.prerequisites then
-		base_landfill.prerequisites = {}
-	end
-	table.insert(base_landfill.prerequisites, "dect-landscaping")
-
 end
 
 if DECT.ENABLED["waterfill"] then

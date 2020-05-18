@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.10.7
+Date: 18. 05. 2020
+  Added:
+    - New setting to toggle Lawnmower functionality independently of Landscaping (thanks to andreasferber)
+  Locales:
+    - Updated German translation (thanks to andreasferber and Meisterfuchs)
+    - Updated Russian translation (thanks to 1avek1)
+    - Updated Hungarian translation (thanks to mmnetworkteam)
+    - Updated Polish translation (thanks to tomplus)
+---------------------------------------------------------------------------------------------------
 Version: 0.10.6
 Date: 26. 04. 2020
   Added:
