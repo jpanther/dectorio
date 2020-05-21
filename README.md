@@ -105,9 +105,9 @@ Special thanks to the translators below (in no particular order).
 * Chinese Simplified (76%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
 * Chinese Traditional (32%) - [k98a](https://crowdin.com/profile/k98a).
 * Czech (79%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
-* French (85%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi) and [daikyraraga](https://crowdin.com/profile/daikyraraga).
+* French (100%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi) and [daikyraraga](https://crowdin.com/profile/daikyraraga).
 * German (100%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn), [lpzockerx](https://crowdin.com/profile/lpzockerx), [Leridon](https://crowdin.com/profile/Leridon) and [Meisterfuchs](https://crowdin.com/profile/Meisterfuchs).
-* Hungarian (98%) - [mmnetworkteam](https://crowdin.com/profile/mmnetworkteam).
+* Hungarian (100%) - [mmnetworkteam](https://crowdin.com/profile/mmnetworkteam).
 * Korean (88%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
 * Polish (100%) - [Tomirad](https://github.com/Tomirad), [Requelfade](https://crowdin.com/profile/Requelfade), [no_desired_username](https://crowdin.com/profile/no_desired_username) and [tomplus](https://crowdin.com/profile/tomplus).
 * Portuguese, Brazilian (88%) - [celaquila](https://crowdin.com/profile/celaquila).

@@ -88,7 +88,7 @@ if DECT.ENABLED["landscaping"] then
 				for _, result in pairs(entity.minable.results) do
 					if result.amount_max then
 						table.insert(ingredients, {result.name, result.amount_max * 1.1})
-					else
+					elseif result.amount then
 						table.insert(ingredients, {result.name, result.amount * 1.5})
 					end
 				end

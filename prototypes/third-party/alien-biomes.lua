@@ -38,8 +38,8 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 		"tree-wetland-a", "tree-wetland-b", "tree-wetland-c", "tree-wetland-d", "tree-wetland-e", "tree-wetland-f", "tree-wetland-g", "tree-wetland-h", "tree-wetland-i", "tree-wetland-j", "tree-wetland-k", "tree-wetland-l", "tree-wetland-m", "tree-wetland-n", "tree-wetland-o", "tree-grassland-a", "tree-grassland-b", "tree-grassland-c", "tree-grassland-d", "tree-grassland-e", "tree-grassland-f", "tree-grassland-g", "tree-grassland-h", "tree-grassland-i", "tree-grassland-j", "tree-grassland-k", "tree-grassland-l", "tree-grassland-m", "tree-grassland-n", "tree-grassland-o", "tree-grassland-p", "tree-grassland-q", "tree-dryland-a", "tree-dryland-b", "tree-dryland-c", "tree-dryland-d", "tree-dryland-e", "tree-dryland-f", "tree-dryland-g", "tree-dryland-h", "tree-dryland-i", "tree-dryland-j", "tree-dryland-k", "tree-dryland-l", "tree-dryland-m", "tree-dryland-n", "tree-dryland-o", "tree-desert-a", "tree-desert-b", "tree-desert-c", "tree-desert-d", "tree-desert-e", "tree-desert-f", "tree-desert-g", "tree-desert-h", "tree-desert-i", "tree-desert-j", "tree-desert-k", "tree-desert-l", "tree-desert-m", "tree-desert-n", "tree-snow-a", "tree-volcanic-a", "tree-palm-a", "tree-palm-b"
 	}
 
-	-- Don't allow tree crafting when Arborium is installed (as it handles tree crafting)
-	if mods["Arborium"] then trees = {} end
+	-- Don't allow tree crafting when Arborium or Arborium Renewed is installed (as they handle tree crafting)
+	if mods["Arborium"] or mods["Arborium_Renewed"] then trees = {} end
 
 	-- Rocks
 	local rocks = {}
@@ -116,7 +116,7 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 				for _, result in pairs(entity.minable.results) do
 					if result.amount_max then
 						table.insert(ingredients, {result.name, result.amount_max * 1.1})
-					else
+					elseif result.amount then
 						table.insert(ingredients, {result.name, result.amount * 1.5})
 					end
 				end

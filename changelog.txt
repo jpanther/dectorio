@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.10.8
+Date: 21. 05. 2020
+  Bugfixes:
+    - Extended existing Arborium support to cover Arborium Renewed mod which was causing conflicts with certain mod packs
+  Locales:
+    - Updated French translation (thanks to daikyraraga)
+    - Updated Hungarian translation (thanks to mmnetworkteam)
+---------------------------------------------------------------------------------------------------
 Version: 0.10.7
 Date: 18. 05. 2020
   Added:
