@@ -41,9 +41,9 @@ if mods["Yuoki"] or mods["yi_railway"] then
 	end
 end
 
--- ARBORIUM
+-- ARBORIUM and ARBORIUM RENEWED
 -- ---------------------------------
-if mods["Arborium"] then
+if mods["Arborium"] or mods["Arborium_Renewed"] then
 	-- Disable tree crafting (as Arborium handles this)
 	DECT.CONFIG.BASE_TREES = {}
 end
