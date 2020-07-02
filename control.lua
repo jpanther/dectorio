@@ -360,7 +360,9 @@ local function on_alt_selected_area(event)
 	game.play_sound({path="dect-lawnmower",	position=event.area.left_top})
 	local corpses = surface.find_entities_filtered{area=event.area, type="corpse"}
 	for _, corpse in pairs(corpses) do
-		corpse.destroy()
+		if not (corpse.name == "transport-caution-corpse") and not (corpse.name == "invisible-transport-caution-corpse") then
+			corpse.destroy()
+		end
 	end
 end
 
