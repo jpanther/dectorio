@@ -3,7 +3,7 @@ Version: 0.10.9
 Date: 02. 07. 2020
   Bugfixes:
     - Fixed a conflict with H2O mod that occurred if H2O was loaded after Dectorio at runtime
-    - Fixed an issue when using Transport Drones mod where the Lawnmower would remove corpses that are required for the depots to function
+    - Fixed an issue when using Transport Drones mod where the Lawnmower would remove corpses that are required for the transport depots to function
   Locales:
     - Updated Portuguese, Brazilian translation (thanks to Unknow0059)
 ---------------------------------------------------------------------------------------------------
