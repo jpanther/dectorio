@@ -116,13 +116,13 @@ Special thanks to the translators below (in no particular order).
 
 ### Mod Compatibility
 
-**Note:** If playing with Factorio 0.15, please download v0.7.6; for Factorio 0.16, please download v0.8.11; or for Factorio 0.17, please download v0.9.16, as these are the last stable versions supported on these base game releases. v0.10.0 and later are only supported on Factorio 0.18.
+**Note:** If playing with Factorio 0.15, please download v0.7.6; for Factorio 0.16, please download v0.8.11; for Factorio 0.17, please download v0.9.16; for Factorio 0.18 please download v0.10.9, as these are the last stable versions supported on these base game releases. v0.11.0 and later are only supported on Factorio 1.0.
 
 Limited testing has been completed with other mods. Warnings will be shown in-game to highlight any known issues. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
 
 It is not recommended to use other coloured signal mods at the same time as Dectorio. This can cause coloured signals to be overwritten multiple times and lead to game-breaking compatibility issues with other mods. If you would like more colours, you can add these in the Dectorio config.lua file (instructions are in the file). For full details, visit the [FAQ](https://mods.factorio.com/mod/Dectorio/faq).
 
-Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mod/alien-biomes) and [Industrial Revolution](https://mods.factorio.com/mod/IndustrialRevolution).
+Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mod/alien-biomes).
 
 Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mod/Concreep), [Fully Automated Rail Layer (FARL)](https://mods.factorio.com/mod/FARL), [Pavement Drive Assist](https://mods.factorio.com/mod/PavementDriveAssist), [Text Plates](https://mods.factorio.com/mod/textplates) and [Industrial Revolution](https://mods.factorio.com/mod/IndustrialRevolution).
 

@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.0
+Date: 02. 11. 2020
+  Added:
+    - Support for Factorio 1.0
+  Removed:
+    - Support for Factorio 0.18 (use Dectorio version 0.10.9 instead)
+    - Support for Industrial Revolution 1.x mod
+    - Dependencies for third party mods that are no longer being actively maintained
+---------------------------------------------------------------------------------------------------
 Version: 0.10.9
 Date: 02. 07. 2020
   Bugfixes:
