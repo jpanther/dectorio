@@ -56,12 +56,6 @@ Requires Factorio version 0.15 or later.
 
   ![Walls](https://img.pantherx.net/dectorio/walls.png)
 
-### Signs
-
-* Adds placable wooden and steel signs with configurable icons
-
-  ![Signs](https://img.pantherx.net/dectorio/signs.png)
-
 ### Signals & Lamps
 
 * Adds a new Glowing lamp that will glow bright colours over a large radius when passed a coloured signal from the circuit network

@@ -22,7 +22,7 @@ If you remove the mod, any new items that Dectorio adds to the game will simply 
 
 ## Does the mod work in multiplayer games?
 
-Yes, it _usually_ does and is regularly tested in multiplayer games. However, there are sometimes issues that arise when there are large mod packs on your server as there can be compatibility problems between individual mods. These are most often caused by the signs feature in Dectorio so sometimes toggling this off in the mod settings can workaround any errors. If you have an issue with a multiplayer save, [report an issue on GitHub](https://github.com/jpanther/Dectorio/issues) so I can investigate.
+Yes, it _usually_ does and is regularly tested in multiplayer games. However, there are sometimes issues that arise when there are large mod packs on your server as there can be compatibility problems between individual mods. If you have an issue with a multiplayer save, [report an issue on GitHub](https://github.com/jpanther/Dectorio/issues) so I can investigate.
 
 ## What changed in the latest update?
 
@@ -65,6 +65,12 @@ The Lawnmower can also be used to remove corpses from the ground (such as dead b
 ## What's the point of the extra signals like the star or arrows?
 
 These are simply additional signals that you can use when making circuit network conditions. For instance, if you had a circuit network that was calculating the battery level of your accumulators, you might find it easier to follow your logic if you assign this a 'battery' signal, rather than using an arbitrary letter or number. They don't offer any other additional functionality.
+
+## What happened to the signs?
+
+Dectorio used to support placing signs however this feature caused a lot of compatibility issues with other mods and was time consuming to maintain. There are now also a number of other mods that provide similar functionality and as a result, signs have now been deprecated. Check out [Industrial Display Plates](https://mods.factorio.com/mod/IndustrialDisplayPlates) or [Text Plates](https://mods.factorio.com/mod/textplates) for high-quality replacements.
+
+Existing saves will still load normally and any existing signs will work however no new signs can be crafted or placed. To remove sign support completely, disable the compatibility setting in your mod settings.
 
 ## I have a sign that's stuck on the map and it cannot be mined. How do I remove it?
 
@@ -112,11 +118,11 @@ While I can't possibly test every combination of mods available, usually Dectori
 
 That's a pity, but that's the nature of modding. If you have a valid concern about something Dectorio is changing that seems contrary to the way something should work, feel free to [raise a new issue on GitHub](https://github.com/jpanther/Dectorio/issues) outlining your concern. If it is something that makes sense to change, I'll definitely look to adjust the mod in a future update. However, please note that Dectorio is designed to make it easy to decorate your factory, and the technology and recipe choices try to be somewhat realistic. The mod settings allow you to toggle individual changes on and off so you can customise it to your own play style. If you still don't like that, then simply don't use the mod! Requests that just whinge about things you don't agree with, without being constructive, will be ignored.
 
-## How do I play with Dectorio on Factorio 0.17.x, 0.16.x or 0.15.x?
+## How do I play with Dectorio on Factorio 0.18.x 0.17.x, 0.16.x or 0.15.x?
 
-The latest versions of Dectorio are designed to work with Factorio 0.18 and later. Due to the way the base game changes with each major release, there's no way to make the latest versions of Dectorio compatible with older versions of Factorio. However, old stable versions of Dectorio are kept available on the mod portal for each major Factorio release.
+The latest versions of Dectorio are designed to work with Factorio 1.0 and later. Due to the way the base game changes with each major release, there's no way to make the latest versions of Dectorio compatible with older versions of Factorio. However, old stable versions of Dectorio are kept available on the mod portal for each major Factorio release.
 
-For Factorio 0.17.x download Dectorio v0.9.16; for Factorio 0.16.x download Dectorio v0.8.11; and for Factorio 0.15.x download Dectorio v0.7.6.
+For Factorio 0.18.x download Dectorio v0.10.9; Factorio 0.17.x download Dectorio v0.9.16; for Factorio 0.16.x download Dectorio v0.8.11; and for Factorio 0.15.x download Dectorio v0.7.6.
 
 Note that these old versions of Dectorio will not be updated with new features, but they will occasionally have bugfixes if it's appropriate. You'll need to upgrade your Factorio version to take advantage of the latest changes.
 

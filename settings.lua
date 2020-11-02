@@ -67,17 +67,10 @@ data:extend(
 		},
 		{
 			type = "bool-setting",
-			name = "dectorio-signs",
-			setting_type = "startup",
-			default_value = true,
-			order = "a-i"
-		},
-		{
-			type = "bool-setting",
 			name = "dectorio-signals",
 			setting_type = "startup",
 			default_value = true,
-			order = "a-j"
+			order = "a-i"
 		},
 		{
 			type = "bool-setting",
@@ -159,6 +152,13 @@ data:extend(
 			default_value = "all",
 			allowed_values = {"all", "shallow", "deep"},
 			order = "d-e"
+		},
+		{
+			type = "bool-setting",
+			name = "dectorio-signs",
+			setting_type = "startup",
+			default_value = false,
+			order = "z-a"
 		}
 	}
 )

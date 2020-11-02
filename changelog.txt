@@ -5,6 +5,8 @@ Date: 02. 11. 2020
     - Support for Factorio 1.0
     - New mod setting to toggle whether decoratives are automatically removed when new entities are built
     - Grid concrete recipe now matches concrete recipe when AAI Industry mod is present
+  Changed:
+    - Signs can no longer be crafted as sign support will be removed in a future release (use Industrial Display Plates or Text Plates as a replacement). Disable the sign compatibility mod setting to remove sign support from existing saves.
   Removed:
     - Support for Factorio 0.18 (use Dectorio version 0.10.9 instead)
     - Support for Industrial Revolution 1.x mod
