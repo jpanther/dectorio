@@ -101,13 +101,20 @@ data:extend(
 			order = "c-b"
 		},
 		{
+			type = "bool-setting",
+			name = "dectorio-remove-decoratives-near-entity",
+			setting_type = "startup",
+			default_value = true,
+			order = "c-c"
+		},
+		{
 			type = "double-setting",
 			name = "dectorio-painted-concrete-speed-modifier",
 			setting_type = "startup",
 			default_value = 1,
 			minimum_value = 0.1,
 			maximum_value = 1,
-			order = "c-c"
+			order = "c-d"
 		},
 		{
 			type = "double-setting",
