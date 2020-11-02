@@ -9,6 +9,7 @@
   "dependencies": [
     "base >= 1.0",
     "? alien-biomes >= 0.5.1",
+    "(?) aai-industry >= 0.4.20",
     "(?) FactorioExtended-Plus-Weaponry >= 0.4.0",
     "(?) H2O >= 0.3.2",
     "!Thaumaturgic-Machinations"
