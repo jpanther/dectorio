@@ -9,7 +9,7 @@ if DECT.ENABLED["signs"] then
 			{
 				type = "simple-entity",
 				name = "dect-sign-wood",
-				icon = "__Dectorio__/graphics/icons/sign-wood.png",
+				icon = "__core__/graphics/icons/alerts/warning-icon.png",
 				icon_size = 64,
 				icon_mipmaps = 1,
 				flags = {"placeable-neutral"},
@@ -43,7 +43,7 @@ if DECT.ENABLED["signs"] then
 			{
 				type = "simple-entity",
 				name = "dect-sign-steel",
-				icon = "__Dectorio__/graphics/icons/sign-steel.png",
+				icon = "__core__/graphics/icons/alerts/warning-icon.png",
 				icon_size = 64,
 				icon_mipmaps = 1,
 				flags = {"placeable-neutral"},
