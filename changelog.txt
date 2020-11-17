@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.0
-Date: 02. 11. 2020
+Date: 17. 11. 2020
   Added:
     - Support for Factorio 1.0
     - New mod setting to toggle whether decoratives are automatically removed when new entities are built
@@ -11,6 +11,9 @@ Date: 02. 11. 2020
     - Support for Factorio 0.18 (use Dectorio version 0.10.9 instead)
     - Support for Industrial Revolution 1.x mod
     - Dependencies for third party mods that are no longer being actively maintained
+  Locales:
+    - Updated Hungarian translation (thanks to mmnetworkteam)
+    - Updated Russian translation (thanks to 1avek1)
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.9
 Date: 02. 07. 2020
