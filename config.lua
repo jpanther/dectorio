@@ -111,6 +111,7 @@ DECT.CONFIG.SETTINGS = {
 	["vanilla_hazard_concrete"] = settings.startup["dectorio-vanilla-hazard-concrete-style"].value,
 	["painted_concrete_speed_modifier"] = settings.startup["dectorio-painted-concrete-speed-modifier"].value,
 	["landscaping_blueprintable"] = settings.startup["dectorio-landscaping-blueprintable"].value,
+	["remove_decoratives_near_entity"] = settings.startup["dectorio-remove-decoratives-near-entity"].value,
 	["flooring_stack_size"] = settings.startup["dectorio-flooring-stack-size"].value,
 	["landscaping_stack_size"] = settings.startup["dectorio-landscaping-stack-size"].value,
 	["walls_stack_size"] = settings.startup["dectorio-walls-stack-size"].value,

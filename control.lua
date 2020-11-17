@@ -302,8 +302,10 @@ end
 
 -- Clear any decorations around a given entity
 local function destroy_decoratives_near_entity(entity)
-	if entity.type ~= "entity-ghost" and entity.type ~= "tile-ghost" then
-		entity.surface.destroy_decoratives({area=entity.bounding_box})
+	if DECT.CONFIG.SETTINGS["remove_decoratives_near_entity"] then
+		if entity.type ~= "entity-ghost" and entity.type ~= "tile-ghost" then
+			entity.surface.destroy_decoratives({area=entity.bounding_box})
+		end
 	end
 end
 

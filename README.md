@@ -56,12 +56,6 @@ Requires Factorio version 0.15 or later.
 
   ![Walls](https://img.pantherx.net/dectorio/walls.png)
 
-### Signs
-
-* Adds placable wooden and steel signs with configurable icons
-
-  ![Signs](https://img.pantherx.net/dectorio/signs.png)
-
 ### Signals & Lamps
 
 * Adds a new Glowing lamp that will glow bright colours over a large radius when passed a coloured signal from the circuit network
@@ -102,27 +96,27 @@ Dectorio uses CrowdIn to allow the community to translate the mod from English i
 
 Special thanks to the translators below (in no particular order).
 
-* Chinese Simplified (76%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
-* Chinese Traditional (32%) - [k98a](https://crowdin.com/profile/k98a).
-* Czech (79%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
-* French (100%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi) and [daikyraraga](https://crowdin.com/profile/daikyraraga).
-* German (100%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn), [lpzockerx](https://crowdin.com/profile/lpzockerx), [Leridon](https://crowdin.com/profile/Leridon) and [Meisterfuchs](https://crowdin.com/profile/Meisterfuchs).
+* Chinese Simplified (74%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
+* Chinese Traditional (31%) - [k98a](https://crowdin.com/profile/k98a).
+* Czech (76%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
+* French (96%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi) and [daikyraraga](https://crowdin.com/profile/daikyraraga).
+* German (96%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn), [lpzockerx](https://crowdin.com/profile/lpzockerx), [Leridon](https://crowdin.com/profile/Leridon) and [Meisterfuchs](https://crowdin.com/profile/Meisterfuchs).
 * Hungarian (100%) - [mmnetworkteam](https://crowdin.com/profile/mmnetworkteam).
-* Korean (88%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
-* Polish (100%) - [Tomirad](https://github.com/Tomirad), [Requelfade](https://crowdin.com/profile/Requelfade), [no_desired_username](https://crowdin.com/profile/no_desired_username) and [tomplus](https://crowdin.com/profile/tomplus).
-* Portuguese, Brazilian (100%) - [celaquila](https://crowdin.com/profile/celaquila) and [Unknow0059](https://crowdin.com/profile/Unknow0059).
+* Korean (85%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
+* Polish (96%) - [Tomirad](https://github.com/Tomirad), [Requelfade](https://crowdin.com/profile/Requelfade), [no_desired_username](https://crowdin.com/profile/no_desired_username) and [tomplus](https://crowdin.com/profile/tomplus).
+* Portuguese, Brazilian (96%) - [celaquila](https://crowdin.com/profile/celaquila) and [Unknow0059](https://crowdin.com/profile/Unknow0059).
 * Russian (100%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
-* Spanish (90%) - [notallme](https://crowdin.com/profile/notallme).
+* Spanish (87%) - [notallme](https://crowdin.com/profile/notallme).
 
 ### Mod Compatibility
 
-**Note:** If playing with Factorio 0.15, please download v0.7.6; for Factorio 0.16, please download v0.8.11; or for Factorio 0.17, please download v0.9.16, as these are the last stable versions supported on these base game releases. v0.10.0 and later are only supported on Factorio 0.18.
+**Note:** If playing with Factorio 0.15, please download v0.7.6; for Factorio 0.16, please download v0.8.11; for Factorio 0.17, please download v0.9.16; for Factorio 0.18 please download v0.10.9, as these are the last stable versions supported on these base game releases. v0.11.0 and later are only supported on Factorio 1.0.
 
 Limited testing has been completed with other mods. Warnings will be shown in-game to highlight any known issues. If you come across a specific compatibility issue, please let me know and I'll see what I can do to fix it.
 
 It is not recommended to use other coloured signal mods at the same time as Dectorio. This can cause coloured signals to be overwritten multiple times and lead to game-breaking compatibility issues with other mods. If you would like more colours, you can add these in the Dectorio config.lua file (instructions are in the file). For full details, visit the [FAQ](https://mods.factorio.com/mod/Dectorio/faq).
 
-Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mod/alien-biomes) and [Industrial Revolution](https://mods.factorio.com/mod/IndustrialRevolution).
+Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mod/alien-biomes).
 
 Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mod/Concreep), [Fully Automated Rail Layer (FARL)](https://mods.factorio.com/mod/FARL), [Pavement Drive Assist](https://mods.factorio.com/mod/PavementDriveAssist), [Text Plates](https://mods.factorio.com/mod/textplates) and [Industrial Revolution](https://mods.factorio.com/mod/IndustrialRevolution).
 

@@ -67,17 +67,10 @@ data:extend(
 		},
 		{
 			type = "bool-setting",
-			name = "dectorio-signs",
-			setting_type = "startup",
-			default_value = true,
-			order = "a-i"
-		},
-		{
-			type = "bool-setting",
 			name = "dectorio-signals",
 			setting_type = "startup",
 			default_value = true,
-			order = "a-j"
+			order = "a-i"
 		},
 		{
 			type = "bool-setting",
@@ -101,13 +94,20 @@ data:extend(
 			order = "c-b"
 		},
 		{
+			type = "bool-setting",
+			name = "dectorio-remove-decoratives-near-entity",
+			setting_type = "startup",
+			default_value = true,
+			order = "c-c"
+		},
+		{
 			type = "double-setting",
 			name = "dectorio-painted-concrete-speed-modifier",
 			setting_type = "startup",
 			default_value = 1,
 			minimum_value = 0.1,
 			maximum_value = 1,
-			order = "c-c"
+			order = "c-d"
 		},
 		{
 			type = "double-setting",
@@ -152,6 +152,13 @@ data:extend(
 			default_value = "all",
 			allowed_values = {"all", "shallow", "deep"},
 			order = "d-e"
+		},
+		{
+			type = "bool-setting",
+			name = "dectorio-signs",
+			setting_type = "startup",
+			default_value = false,
+			order = "z-a"
 		}
 	}
 )
