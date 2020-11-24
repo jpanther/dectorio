@@ -118,11 +118,15 @@ While I can't possibly test every combination of mods available, usually Dectori
 
 That's a pity, but that's the nature of modding. If you have a valid concern about something Dectorio is changing that seems contrary to the way something should work, feel free to [raise a new issue on GitHub](https://github.com/jpanther/Dectorio/issues) outlining your concern. If it is something that makes sense to change, I'll definitely look to adjust the mod in a future update. However, please note that Dectorio is designed to make it easy to decorate your factory, and the technology and recipe choices try to be somewhat realistic. The mod settings allow you to toggle individual changes on and off so you can customise it to your own play style. If you still don't like that, then simply don't use the mod! Requests that just whinge about things you don't agree with, without being constructive, will be ignored.
 
-## How do I play with Dectorio on Factorio 0.18.x 0.17.x, 0.16.x or 0.15.x?
+## How do I play with Dectorio on Factorio 1.0.x, 0.18.x, 0.17.x, 0.16.x or 0.15.x?
 
 The latest versions of Dectorio are designed to work with Factorio 1.0 and later. Due to the way the base game changes with each major release, there's no way to make the latest versions of Dectorio compatible with older versions of Factorio. However, old stable versions of Dectorio are kept available on the mod portal for each major Factorio release.
 
-For Factorio 0.18.x download Dectorio v0.10.9; Factorio 0.17.x download Dectorio v0.9.16; for Factorio 0.16.x download Dectorio v0.8.11; and for Factorio 0.15.x download Dectorio v0.7.6.
+- Factorio 1.0.x: Dectorio v0.11.1
+- Factorio 0.18.x: Dectorio v0.10.9
+- Factorio 0.17.x: Dectorio v0.9.16
+- Factorio 0.16.x: Dectorio v0.8.11
+- Factorio 0.15.x: Dectorio v0.7.6
 
 Note that these old versions of Dectorio will not be updated with new features, but they will occasionally have bugfixes if it's appropriate. You'll need to upgrade your Factorio version to take advantage of the latest changes.
 

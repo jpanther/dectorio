@@ -6,7 +6,7 @@ for index, force in pairs(game.forces) do
 	local rec = force.recipes
 
 	if settings.startup["dectorio-walls"].value then
-		if tech["dect-advanced-gates"].researched then
+		if tech["dect-advanced-gate"].researched then
 			rec["dect-concrete-gate-from-stone-gate"].enabled = true
 		end
 	end

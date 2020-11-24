@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.0
+Date: 24. 11. 2020
+  Added:
+    - Support for Factorio 1.1
+  Changed:
+    - Re-ordered signal colours to maintain vanilla priority order (thanks to dbiser99)
+    - Technology names now use their singular form
+    - Adjusted technology icons
+    - Stack sizes for flooring, landscaping and wall items now reflect vanilla stack sizes as these cause unintended balance issues in larger modpacks. The stack sizes can still be configured in mod settings.
+  Removed:
+    - Support for Factorio 1.0 (use Dectorio version 0.11.1 instead)
+    - Signs (use Industrial Display Plates or Text Plates as a replacement)
+  Locales:
+    - Updated German translation (thanks to adoa)
+---------------------------------------------------------------------------------------------------
 Version: 0.11.1
 Date: 24. 11. 2020
   Locales:

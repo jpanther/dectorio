@@ -26,7 +26,6 @@ DECT = require("config")
 require("prototypes.third-party.config")
 
 require("prototypes.entity.lamp")
-require("prototypes.entity.signs")
 require("prototypes.entity.walls")
 require("prototypes.entity.decoratives")
 

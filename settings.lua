@@ -122,7 +122,7 @@ data:extend(
 			type = "int-setting",
 			name = "dectorio-flooring-stack-size",
 			setting_type = "startup",
-			default_value = 500,
+			default_value = 100,
 			minimum_value = 100,
 			maximum_value = 5000,
 			order = "d-b"
@@ -131,7 +131,7 @@ data:extend(
 			type = "int-setting",
 			name = "dectorio-landscaping-stack-size",
 			setting_type = "startup",
-			default_value = 500,
+			default_value = 100,
 			minimum_value = 100,
 			maximum_value = 5000,
 			order = "d-c"
@@ -140,7 +140,7 @@ data:extend(
 			type = "int-setting",
 			name = "dectorio-walls-stack-size",
 			setting_type = "startup",
-			default_value = 200,
+			default_value = 100,
 			minimum_value = 100,
 			maximum_value = 5000,
 			order = "d-d"
@@ -152,13 +152,6 @@ data:extend(
 			default_value = "all",
 			allowed_values = {"all", "shallow", "deep"},
 			order = "d-e"
-		},
-		{
-			type = "bool-setting",
-			name = "dectorio-signs",
-			setting_type = "startup",
-			default_value = false,
-			order = "z-a"
 		}
 	}
 )

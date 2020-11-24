@@ -2,19 +2,20 @@
 
 if DECT.ENABLED["walls"] then
 	-- Change stone wall tech to basic walls
-	local base_stone_walls = data.raw["technology"]["stone-walls"]
-	base_stone_walls.icon = "__Dectorio__/graphics/technology/basic-walls.png"
-	base_stone_walls.icon_size = 128
-	table.insert(base_stone_walls.effects, {type = "unlock-recipe", recipe = "dect-wood-wall"})
+	local base_stone_wall = data.raw["technology"]["stone-wall"]
+	base_stone_wall.icon = "__Dectorio__/graphics/technology/basic-wall.png"
+	base_stone_wall.icon_size = 128
+	table.insert(base_stone_wall.effects, {type = "unlock-recipe", recipe = "dect-wood-wall"})
 
 	data:extend(
 		{
 			{
 				type = "technology",
-				name = "dect-advanced-walls",
-				icon = "__Dectorio__/graphics/technology/advanced-walls.png",
-				icon_size = 128,
-				prerequisites = {"military-2", "concrete", "stone-walls"},
+				name = "dect-advanced-wall",
+				icon = "__base__/graphics/technology/stone-wall.png",
+				icon_size = 256,
+				icon_mipmaps = 4,
+				prerequisites = {"military-2", "concrete", "stone-wall"},
 				unit = {
 					count = 150,
 					ingredients = {
@@ -42,10 +43,11 @@ if DECT.ENABLED["walls"] then
 			},
 			{
 				type = "technology",
-				name = "dect-advanced-gates",
-				icon = "__base__/graphics/technology/gates.png",
-				icon_size = 128,
-				prerequisites = {"gates", "dect-advanced-walls"},
+				name = "dect-advanced-gate",
+				icon = "__base__/graphics/technology/gate.png",
+				icon_size = 256,
+				icon_mipmaps = 4,
+				prerequisites = {"gate", "dect-advanced-wall"},
 				unit = {
 					count = 150,
 					ingredients = {

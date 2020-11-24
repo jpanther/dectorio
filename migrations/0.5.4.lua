@@ -1,5 +1,4 @@
 for index, force in pairs(game.forces) do
-
 	force.reset_recipes()
 	force.reset_technologies()
 
@@ -7,9 +6,8 @@ for index, force in pairs(game.forces) do
 	local rec = force.recipes
 
 	if settings.startup["dectorio-walls"].value then
-		if tech["dect-advanced-walls"].researched then
+		if tech["dect-advanced-wall"].researched then
 			rec["dect-chain-wall"].enabled = true
 		end
 	end
-		
 end
