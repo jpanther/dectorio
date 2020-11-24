@@ -11,8 +11,6 @@ Date: 24. 11. 2020
     - Signs (use Industrial Display Plates or Text Plates as a replacement)
   Locales:
     - Updated German translation (thanks to adoa)
-    - Updated Portuguese, Brazilian translation
-    - Updated French translation
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.1
 Date: 24. 11. 2020
