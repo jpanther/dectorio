@@ -3,6 +3,8 @@ Version: 0.12.1
 Date: 25. 11. 2020
   Bugfixes:
     - Fixed an issue when loading previous saves
+  Removed:
+    - Obsolete migrations from Factorio 0.17 and earlier
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.0
 Date: 24. 11. 2020
