@@ -96,16 +96,16 @@ Dectorio uses CrowdIn to allow the community to translate the mod from English i
 
 Special thanks to the translators below (in no particular order).
 
-* Chinese Simplified (75%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
-* Chinese Traditional (31%) - [k98a](https://crowdin.com/profile/k98a).
-* Czech (77%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
-* French (99%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi) and [daikyraraga](https://crowdin.com/profile/daikyraraga).
-* German (100%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn), [lpzockerx](https://crowdin.com/profile/lpzockerx), [Leridon](https://crowdin.com/profile/Leridon), [Meisterfuchs](https://crowdin.com/profile/Meisterfuchs) and [adoa](https://crowdin.com/profile/adoa).
-* Hungarian (97%) - [mmnetworkteam](https://crowdin.com/profile/mmnetworkteam).
+* Chinese Simplified (68%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
+* Chinese Traditional (29%) - [k98a](https://crowdin.com/profile/k98a).
+* Czech (71%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
+* French (98%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi) and [daikyraraga](https://crowdin.com/profile/daikyraraga).
+* German (98%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn), [lpzockerx](https://crowdin.com/profile/lpzockerx), [Leridon](https://crowdin.com/profile/Leridon), [Meisterfuchs](https://crowdin.com/profile/Meisterfuchs) and [adoa](https://crowdin.com/profile/adoa).
+* Hungarian (96%) - [mmnetworkteam](https://crowdin.com/profile/mmnetworkteam).
 * Korean (84%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
-* Polish (97%) - [Tomirad](https://github.com/Tomirad), [Requelfade](https://crowdin.com/profile/Requelfade), [no_desired_username](https://crowdin.com/profile/no_desired_username) and [tomplus](https://crowdin.com/profile/tomplus).
-* Portuguese, Brazilian (99%) - [celaquila](https://crowdin.com/profile/celaquila) and [Unknow0059](https://crowdin.com/profile/Unknow0059).
-* Russian (97%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
+* Polish (95%) - [Tomirad](https://github.com/Tomirad), [Requelfade](https://crowdin.com/profile/Requelfade), [no_desired_username](https://crowdin.com/profile/no_desired_username) and [tomplus](https://crowdin.com/profile/tomplus).
+* Portuguese, Brazilian (98%) - [celaquila](https://crowdin.com/profile/celaquila) and [Unknow0059](https://crowdin.com/profile/Unknow0059).
+* Russian (96%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
 * Spanish (86%) - [notallme](https://crowdin.com/profile/notallme).
 
 ### Mod Compatibility
