@@ -55,9 +55,6 @@ local function on_configuration_changed(data)
 			force.reset_technologies()
 		end
 
-		-- Re-initialise command handlers
-		init_commands()
-
 		-- Notify version change
 		local oldver = data.mod_changes["Dectorio"].old_version
 		local newver = data.mod_changes["Dectorio"].new_version
