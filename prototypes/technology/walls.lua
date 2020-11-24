@@ -12,8 +12,9 @@ if DECT.ENABLED["walls"] then
 			{
 				type = "technology",
 				name = "dect-advanced-wall",
-				icon = "__Dectorio__/graphics/technology/advanced-wall.png",
-				icon_size = 128,
+				icon = "__base__/graphics/technology/stone-wall.png",
+				icon_size = 256,
+				icon_mipmaps = 4,
 				prerequisites = {"military-2", "concrete", "stone-wall"},
 				unit = {
 					count = 150,
@@ -44,7 +45,8 @@ if DECT.ENABLED["walls"] then
 				type = "technology",
 				name = "dect-advanced-gate",
 				icon = "__base__/graphics/technology/gate.png",
-				icon_size = 128,
+				icon_size = 256,
+				icon_mipmaps = 4,
 				prerequisites = {"gate", "dect-advanced-wall"},
 				unit = {
 					count = 150,
