@@ -50,15 +50,6 @@ if DECT.ENABLED["signals"] then
 		black.icons[1].tint = {r = 0.16, g = 0.16, b = 0.16, a = 0.70}
 	end
 
-	-- Update the lamps
-	-- !! Moved to final-fixes !!
-	--
-	-- local lamp = data.raw.lamp["small-lamp"]
-	-- lamp.signal_to_color_mapping = colors
-	--
-	-- local lamp_glow = data.raw.lamp["dect-small-lamp-glow"]
-	-- lamp_glow.signal_to_color_mapping = colors
-
 	-- Icon signals
 	-- ----------
 

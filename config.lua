@@ -97,7 +97,6 @@ DECT.ENABLED = {
 	["concrete"] = settings.startup["dectorio-concrete"].value,
 	["gravel"] = settings.startup["dectorio-gravel"].value,
 	["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
-	["signs"] = settings.startup["dectorio-signs"].value,
 	["decoratives"] = settings.startup["dectorio-decoratives"].value,
 	["lawnmower"] = settings.startup["dectorio-lawnmower"].value,
 	["item-group"] = settings.startup["dectorio-item-group"].value
@@ -198,32 +197,6 @@ DECT.CONFIG.BASE_COLORS = {
 	{name = "cyan", tint = {r = 0.335, g = 0.918, b = 0.866}},
 	{name = "acid", tint = {r = 0.708, g = 0.996, b = 0.134}}
 }
-DECT.CONFIG.SIGN_CATEGORIES = {"item", "fluid", "tool", "ammo", "armor", "capsule", "gun", "module"}
-DECT.CONFIG.SIGN_BLACKLIST = {
-	"barrel",
-	"loader",
-	"simple%-entity",
-	"player%-port",
-	"computer",
-	"coin",
-	"small%-plane",
-	"railgun",
-	"vehicle%-machine%-gun",
-	"tank%-machine%-gun",
-	"signpost",
-	"dect%-signal%-",
-	"infinity%-chest",
-	"infinity%-pipe",
-	"heat%-interface",
-	"pollution",
-	"escape%-pod%-power",
-	"dummy%-steel%-axe",
-	"atlas",
-	"crash%-site",
-	"dect%-sign",
-	"dect%-base"
-}
-DECT.CONFIG.SIGN_WHITELIST = {"empty-barrel"}
 
 DECT.INCOMPATIBLE = {}
 DECT.INCOMPATIBLE.MODS = {

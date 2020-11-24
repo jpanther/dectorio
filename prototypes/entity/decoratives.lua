@@ -2,7 +2,7 @@
 
 if DECT.ENABLED["decoratives"] then
 	-- Pull in the base entity sounds
-	local sounds = require("__base__.prototypes.entity.demo-sounds")
+	local sounds = require("__base__.prototypes.entity.sounds")
 
 	data:extend(
 		{

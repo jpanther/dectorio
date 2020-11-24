@@ -1,13 +1,13 @@
 {
   "name": "Dectorio",
-  "version": "0.11.1",
+  "version": "0.12.0",
   "title": "Dectorio",
   "author": "PantherX",
   "contact": "",
   "homepage": "https://github.com/jpanther/Dectorio",
-  "factorio_version": "1.0",
+  "factorio_version": "1.1",
   "dependencies": [
-    "base >= 1.0",
+    "base >= 1.1",
     "? alien-biomes >= 0.5.1",
     "(?) aai-industry >= 0.4.20",
     "(?) FactorioExtended-Plus-Weaponry >= 0.4.0",

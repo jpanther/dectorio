@@ -30,10 +30,10 @@ for index, force in pairs(game.forces) do
 		end
 	end
 	if settings.startup["dectorio-walls"].value then
-		if tech["stone-walls"].researched then
+		if tech["stone-wall"].researched then
 			rec["stone-wall"].enabled = true
 		end
-		if tech["dect-advanced-walls"].researched then
+		if tech["dect-advanced-wall"].researched then
 			rec["dect-concrete-wall"].enabled = true
 		end
 	end
