@@ -5,6 +5,8 @@ Date: 25. 11. 2020
     - Fixed an issue when loading previous saves
   Removed:
     - Obsolete migrations from Factorio 0.17 and earlier
+  Locales:
+    - Updated Russian translation (thanks to 1avek1)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.0
 Date: 24. 11. 2020
