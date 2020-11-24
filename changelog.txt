@@ -8,6 +8,10 @@ Date: 24. 11. 2020
   Removed:
     - Support for Factorio 1.0 (use Dectorio version 0.11.1 instead)
     - Signs (use Industrial Display Plates or Text Plates as a replacement)
+  Locales:
+    - Updated German translation (thanks to adoa)
+    - Updated Portuguese, Brazilian translation
+    - Updated French translation
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.1
 Date: 24. 11. 2020
