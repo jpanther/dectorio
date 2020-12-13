@@ -101,11 +101,12 @@ Special thanks to the translators below (in no particular order).
 * Czech (71%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
 * French (98%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi) and [daikyraraga](https://crowdin.com/profile/daikyraraga).
 * German (98%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn), [lpzockerx](https://crowdin.com/profile/lpzockerx), [Leridon](https://crowdin.com/profile/Leridon), [Meisterfuchs](https://crowdin.com/profile/Meisterfuchs) and [adoa](https://crowdin.com/profile/adoa).
-* Hungarian (96%) - [mmnetworkteam](https://crowdin.com/profile/mmnetworkteam).
-* Korean (84%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
+* Hungarian (100%) - [mmnetworkteam](https://crowdin.com/profile/mmnetworkteam).
+* Italian (60%) - [diego.crosera](https://crowdin.com/profile/diego.crosera).
+* Korean (100%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
 * Polish (95%) - [Tomirad](https://github.com/Tomirad), [Requelfade](https://crowdin.com/profile/Requelfade), [no_desired_username](https://crowdin.com/profile/no_desired_username) and [tomplus](https://crowdin.com/profile/tomplus).
 * Portuguese, Brazilian (98%) - [celaquila](https://crowdin.com/profile/celaquila) and [Unknow0059](https://crowdin.com/profile/Unknow0059).
-* Russian (96%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
+* Russian (100%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
 * Spanish (86%) - [notallme](https://crowdin.com/profile/notallme).
 
 ### Mod Compatibility
@@ -118,7 +119,7 @@ It is not recommended to use other coloured signal mods at the same time as Dect
 
 Dectorio includes specific support for [Alien Biomes](https://mods.factorio.com/mod/alien-biomes).
 
-Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mod/Concreep), [Fully Automated Rail Layer (FARL)](https://mods.factorio.com/mod/FARL), [Pavement Drive Assist](https://mods.factorio.com/mod/PavementDriveAssist), [Text Plates](https://mods.factorio.com/mod/textplates) and [Industrial Revolution](https://mods.factorio.com/mod/IndustrialRevolution).
+Other mods with additional Dectorio support (thanks!): [Concreep](https://mods.factorio.com/mod/Concreep), [Fully Automated Rail Layer (FARL)](https://mods.factorio.com/mod/FARL), [Pavement Drive Assist](https://mods.factorio.com/mod/PavementDriveAssist), [Text Plates](https://mods.factorio.com/mod/textplates) and [Space Exploration](https://mods.factorio.com/mod/space-exploration).
 
 Other decorative mods worth checking out (all compatible with Dectorio): [Arborium](https://mods.factorio.com/mod/Arborium), [Asphalt Roads](https://mods.factorio.com/mod/AsphaltRoads), [Beautiful Bridge Railway](https://mods.factorio.com/mod/beautiful_bridge_railway), [Color Coding](https://mods.factorio.com/mod/color-coding), [Naked Rails](https://mods.factorio.com/mod/naked-rails), [Reinforced Walls](https://mods.factorio.com/mod/Reinforced-Walls).
 
