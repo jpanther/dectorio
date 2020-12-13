@@ -134,7 +134,7 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 				{
 					type = "item",
 					name = "dect-alien-biomes-"..tree,
-					icon = data.raw["tree"][tree].icon,
+					icons = data.raw["tree"][tree].icons,
 					icon_size = 64,
 					icon_mipmaps = 4,
 					subgroup = "landscaping-trees",

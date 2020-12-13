@@ -1,6 +1,6 @@
 {
   "name": "Dectorio",
-  "version": "0.12.1",
+  "version": "0.12.2",
   "title": "Dectorio",
   "author": "PantherX",
   "contact": "",
@@ -8,7 +8,7 @@
   "factorio_version": "1.1",
   "dependencies": [
     "base >= 1.1",
-    "? alien-biomes >= 0.6.1",
+    "? alien-biomes >= 0.6.2",
     "(?) aai-industry >= 0.4.20",
     "(?) FactorioExtended-Plus-Weaponry >= 0.4.0",
     "(?) H2O >= 0.3.2",
