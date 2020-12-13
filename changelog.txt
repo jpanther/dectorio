@@ -3,6 +3,11 @@ Version: 0.12.2
 Date: 14. 12. 2020
   Bugfixes:
     - Fixed tree item icons when using Alien Biomes mod version 0.6.2
+  Locales:
+    - Added Italian translation (thanks to diego.crosera)
+    - Updated Korean translation (thanks to GimoXagros)
+    - Updated German translation (thanks to adoa)
+    - Updated Hungarian translation (thanks to mmnetworkteam)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.1
 Date: 25. 11. 2020
