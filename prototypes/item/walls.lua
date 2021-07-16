@@ -32,7 +32,7 @@ if DECT.ENABLED["walls"] then
 				icon_size = 32,
 				icon_mipmaps = 1,
 				fuel_category = "chemical",
-				fuel_value = "12MJ",
+				fuel_value = "6MJ",
 				subgroup = "defensive-structure",
 				order = "a[a-wood-wall]",
 				stack_size = DECT.CONFIG.SETTINGS["walls_stack_size"],
