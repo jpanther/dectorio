@@ -3,6 +3,10 @@ Version: 0.12.2
 Date: 16. 07. 2021
   Changed:
     - Balancing - Fixed fuel value of Wooden barricade being too overpowered
+  Locales:
+    - Updated Italian translation (thanks to diego.crosera and andrea.gomarasca)
+    - Updated Polish translation (thanks to no_desired_username)
+    - Updated Spanish translation (thanks to AgnotSeeker)
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.2
 Date: 14. 12. 2020
