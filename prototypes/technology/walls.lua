@@ -5,7 +5,6 @@ if DECT.ENABLED["walls"] then
 	local base_stone_wall = data.raw["technology"]["stone-wall"]
 	base_stone_wall.icon = "__Dectorio__/graphics/technology/basic-wall.png"
 	base_stone_wall.icon_size = 128
-	table.insert(base_stone_wall.effects, {type = "unlock-recipe", recipe = "dect-wood-wall"})
 
 	data:extend(
 		{
