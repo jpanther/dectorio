@@ -1,10 +1,11 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.12.2
-Date: 16. 07. 2021
+Version: 0.12.3
+Date: 08. 09. 2021
   Changed:
     - Balancing - Fixed fuel value of Wooden barricade being too overpowered
   Bugfixes:
     - Fixed lamp signal colours not working for science packs
+    - Increased search radius for lamps to stop glowing lamp flicker when it comes in range
   Locales:
     - Updated Italian translation (thanks to diego.crosera and andrea.gomarasca)
     - Updated Polish translation (thanks to no_desired_username)

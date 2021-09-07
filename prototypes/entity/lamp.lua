@@ -13,3 +13,9 @@ lamp.glow_render_mode = "multiplicative"
 lamp.light_when_colored.size = 0
 lamp.light_when_colored.intensity = 0
 data:extend({lamp})
+
+-- Increase light search radius
+local limit = lamp.glow_size
+if data.raw["utility-constants"]["default"]["light_renderer_search_distance_limit"] and data.raw["utility-constants"]["default"]["light_renderer_search_distance_limit"] < limit then
+	data.raw["utility-constants"]["default"]["light_renderer_search_distance_limit"] = limit
+end
