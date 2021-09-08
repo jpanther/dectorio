@@ -1,6 +1,6 @@
 {
   "name": "Dectorio",
-  "version": "0.12.3",
+  "version": "0.12.4",
   "title": "Dectorio",
   "author": "PantherX",
   "contact": "",
@@ -12,7 +12,7 @@
     "(?) aai-industry >= 0.4.20",
     "(?) FactorioExtended-Plus-Weaponry >= 0.4.0",
     "(?) H2O >= 0.3.2",
-    "!Thaumaturgic-Machinations"
+    "! Thaumaturgic-Machinations"
   ],
   "license": "GNU GPLv3"
 }
