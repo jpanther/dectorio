@@ -56,7 +56,7 @@ release:
 	git commit --all --allow-empty -m "Preparing Release v$(PACKAGE_VERSION)"
 	git push
 	git checkout master
-	git merge --no-ff develop
+	git merge --no-ff develop -m "Release v$(PACKAGE_VERSION)"
 	git push
 	git tag -f v$(PACKAGE_VERSION)
 	git push --tags
