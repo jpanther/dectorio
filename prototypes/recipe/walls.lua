@@ -42,7 +42,7 @@ if DECT.ENABLED["walls"] then
 			{
 				type = "recipe",
 				name = "dect-wood-wall",
-				enabled = false,
+				enabled = true,
 				ingredients = {{"wood", 3}},
 				result = "dect-wood-wall"
 			},

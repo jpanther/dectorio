@@ -29,7 +29,8 @@ if DECT.ENABLED["landscaping"] then
 			type = "technology",
 			name = "dect-landscaping",
 			icon = "__Dectorio__/graphics/technology/landscaping.png",
-			icon_size = 128,
+			icon_size = 256,
+			icon_mipmaps = 1,
 			unit = {
 				count = 15,
 				ingredients = {
@@ -62,7 +63,8 @@ if DECT.ENABLED["lawnmower"] then
 			type = "technology",
 			name = "dect-lawnmower",
 			icon = "__Dectorio__/graphics/technology/lawnmower.png",
-			icon_size = 128,
+			icon_size = 256,
+			icon_mipmaps = 1,
 			prerequisites = lawnmower_prereq,
 			unit = {
 				count = 30,
@@ -99,7 +101,8 @@ if DECT.ENABLED["waterfill"] then
 			type = "technology",
 			name = "dect-earthworks",
 			icon = "__Dectorio__/graphics/technology/landscaping.png",
-			icon_size = 128,
+			icon_size = 256,
+			icon_mipmaps = 1,
 			prerequisites = {"landfill", "explosives"},
 			unit = {
 				count = 200,

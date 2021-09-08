@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.3
+Date: 08. 09. 2021
+  Added:
+    - Higher resolution technology and signal icons
+    - New Painted concrete and refined concrete icons
+    - Glowing lamps are now fast replacable with normal Lamps
+  Changed:
+    - Balancing - Wooden barricade no longer requires research to unlock
+    - Balancing - Fixed fuel value of Wooden barricade being too overpowered
+  Bugfixes:
+    - Fixed lamp signal colours not working for science packs
+    - Increased search radius for lamps to stop glowing lamp flicker when it comes in range
+    - Add missing icon_mipmaps parameter to technology icons
+  Locales:
+    - Updated Italian translation (thanks to diego.crosera and andrea.gomarasca)
+    - Updated Polish translation (thanks to no_desired_username)
+    - Updated Spanish translation (thanks to AgnotSeeker)
+---------------------------------------------------------------------------------------------------
 Version: 0.12.2
 Date: 14. 12. 2020
   Bugfixes:

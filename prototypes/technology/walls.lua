@@ -4,8 +4,8 @@ if DECT.ENABLED["walls"] then
 	-- Change stone wall tech to basic walls
 	local base_stone_wall = data.raw["technology"]["stone-wall"]
 	base_stone_wall.icon = "__Dectorio__/graphics/technology/basic-wall.png"
-	base_stone_wall.icon_size = 128
-	table.insert(base_stone_wall.effects, {type = "unlock-recipe", recipe = "dect-wood-wall"})
+	base_stone_wall.icon_size = 256
+	base_stone_wall.icon_mipmaps = 1
 
 	data:extend(
 		{
