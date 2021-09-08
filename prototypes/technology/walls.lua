@@ -5,6 +5,7 @@ if DECT.ENABLED["walls"] then
 	local base_stone_wall = data.raw["technology"]["stone-wall"]
 	base_stone_wall.icon = "__Dectorio__/graphics/technology/basic-wall.png"
 	base_stone_wall.icon_size = 128
+	base_stone_wall.icon_mipmaps = 1
 
 	data:extend(
 		{

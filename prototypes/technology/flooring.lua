@@ -55,6 +55,7 @@ if DECT.ENABLED["painted-concrete"] then
 				name = "dect-concrete-paint",
 				icon = "__Dectorio__/graphics/technology/concrete-paint.png",
 				icon_size = 128,
+				icon_mipmaps = 1,
 				prerequisites = {"concrete"},
 				unit = {
 					count = 150,

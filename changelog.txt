@@ -7,6 +7,7 @@ Date: 08. 09. 2021
   Bugfixes:
     - Fixed lamp signal colours not working for science packs
     - Increased search radius for lamps to stop glowing lamp flicker when it comes in range
+    - Add missing icon_mipmaps parameter to technology icons
   Locales:
     - Updated Italian translation (thanks to diego.crosera and andrea.gomarasca)
     - Updated Polish translation (thanks to no_desired_username)
