@@ -2,8 +2,9 @@
 -- COPYRIGHT & LICENSE  --
 --------------------------
 
--- Dectorio, a Factorio mod
--- Copyright (c) 2017-2020 James "PantherX" Panther
+-- Dectorio, a mod for Factorio
+-- https://github.com/jpanther/dectorio
+-- Copyright (c) 2017-2021 James "PantherX" Panther
 
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by

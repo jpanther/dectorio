@@ -2,6 +2,22 @@
 
 -- Configuration overrides for supporting various third-party mods
 
+-- Function to remove items from config
+local function removeIndexByName(tbl, name)
+	local index = nil
+	for i, v in ipairs(tbl) do
+		if (v.name == name) then
+			index = i
+		end
+	end
+	if index == nil then
+		log("Index not found for item named '" .. name .. "'")
+	else
+		log("Removing item named '" .. name .. "' at index " .. index)
+		table.remove(tbl, index)
+	end
+end
+
 -- ALIEN BIOMES
 -- ---------------------------------
 if mods["alien-biomes"] then
@@ -318,20 +334,6 @@ end
 if mods["RealisticOres"] then
 	-- Switch out iron, copper and uranium ore colors
 	log("Realistic Ores detected, updating signal colors.")
-	local function removeIndexByName(tbl, name)
-		local index = nil
-		for i, v in ipairs(tbl) do
-			if (v.name == name) then
-				index = i
-			end
-		end
-		if index == nil then
-			log("Index not found for item named '" .. name .. "'")
-		else
-			log("Removing item named '" .. name .. "' at index " .. index)
-			table.remove(tbl, index)
-		end
-	end
 	removeIndexByName(DECT.CONFIG.SIGNALS, "iron-ore")
 	table.insert(DECT.CONFIG.SIGNALS, {type = "item", name = "iron-ore", color = {r = 0.61, g = 0.32, b = 0.25, a = 0.68}})
 	removeIndexByName(DECT.CONFIG.SIGNALS, "copper-ore")
@@ -344,4 +346,12 @@ if mods["RealisticOres"] then
 		DECT.CONFIG.SIGNALS,
 		{type = "item", name = "uranium-ore", color = {r = 0.72, g = 0.76, b = 0.20, a = 0.68}}
 	)
+end
+
+-- SPACE EXPLORATION
+-- ---------------------------------
+if mods["space-exploration"] then
+	-- Remove space science pack
+	log("Space Exploration detected, updating signal colors.")
+	removeIndexByName(DECT.CONFIG.SIGNALS, "space-science-pack")
 end
