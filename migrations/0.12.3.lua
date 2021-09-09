@@ -3,5 +3,8 @@ for index, force in pairs(game.forces) do
 	force.reset_technologies()
 
 	local rec = force.recipes
-	rec["dect-wood-wall"].enabled = true
+	
+	if settings.startup["dectorio-walls"].value then
+		rec["dect-wood-wall"].enabled = true
+	end
 end
