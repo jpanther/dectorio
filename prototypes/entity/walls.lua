@@ -1,9 +1,9 @@
 -- entity/walls
 
-if DECT.ENABLED["walls"] then
-	-- Pull in the base entity sounds
-	local sounds = require("__base__.prototypes.entity.sounds")
+-- Pull in the base entity sounds
+local sounds = require("__base__.prototypes.entity.sounds")
 
+if DECT.ENABLED["walls"] then
 	-- Make a copy of the base stone wall before clearing it out
 	local base_stone_wall = data.raw["wall"]["stone-wall"]
 	data.raw["wall"]["stone-wall"] = nil

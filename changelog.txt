@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.6
+Date: 23. 06. 2022
+  Bugfixes:
+    - Fixed mod contents mismatch error on multiplayer games where decoratives or walls are disabled (thanks to robot256)
+  Locales:
+    - Added Ukranian translation (thanks to Met_en_Bouldry)
+    - Added Japanese translation (thanks to noribento)
+    - Updated French translation (thanks to eric.rossignol40)
+---------------------------------------------------------------------------------------------------
 Version: 0.12.5
 Date: 09. 09. 2021
   Bugfixes:
