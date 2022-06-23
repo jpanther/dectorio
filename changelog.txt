@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.6
+Date: 23. 06. 2022
+  Bugfixes:
+    - Fixed mod contents mismatch error on multiplayer games where decoratives or walls are disabled (thanks to robot256)
+---------------------------------------------------------------------------------------------------
 Version: 0.12.5
 Date: 09. 09. 2021
   Bugfixes:
