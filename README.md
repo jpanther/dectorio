@@ -16,69 +16,69 @@ Requires Factorio version 0.15 or later.
 
 ### Decorative items
 
-* Adds traffic bollards for decorating roadways or protecting your factory from vehicular collisions
+- Adds traffic bollards for decorating roadways or protecting your factory from vehicular collisions
 
   ![Traffic bollard](https://img.pantherx.net/dectorio/traffic-bollard.png)
 
 ### Flooring styles
 
-* Adds basic gravel paths (crafted from raw stone, coal, iron and copper)
+- Adds basic gravel paths (crafted from raw stone, coal, iron and copper)
 
   ![Gravel styles](https://img.pantherx.net/dectorio/gravel.png)
 
-* Adds wooden floorboard tiles with sound effects
-* Adds grid-based concrete that offers a hi-res take on the classic Factorio 0.15 style concrete
+- Adds wooden floorboard tiles with sound effects
+- Adds grid-based concrete that offers a hi-res take on the classic Factorio 0.15 style concrete
 
   ![Concrete and Wooden floorboards](https://img.pantherx.net/dectorio/concrete-wood.png)
 
-* Adds painted concrete tiles - Hazard (black/yellow), Danger (red/yellow), Emergency (white/red), Caution (orange/white), Radiation hazard (yellow/pink), Defect (blue/white), Operations (black/white) and Safety (white/green)
-* Painted concrete walking and vehicle speeds can be reduced in the mod settings to allow concrete to be used as a safety barrier around hazards^ (by default, this option is off)
+- Adds painted concrete tiles - Hazard (black/yellow), Danger (red/yellow), Emergency (white/red), Caution (orange/white), Radiation hazard (yellow/pink), Defect (blue/white), Operations (black/white) and Safety (white/green)
+- Painted concrete walking and vehicle speeds can be reduced in the mod settings to allow concrete to be used as a safety barrier around hazards^ (by default, this option is off)
 
   ![Painted concrete](https://img.pantherx.net/dectorio/painted-concrete.png)
 
-* Painted Hazard concrete replaces default Hazard concrete^
-* Increased flooring item stack sizes^
+- Painted Hazard concrete replaces default Hazard concrete^
+- Increased flooring item stack sizes^
 
 ### Landscaping
 
-* Adds items for placing dirt, sand, dark sand, grass, dry grass, red desert and dark red desert tiles
-* Ability to place water and green water tiles (aka. 'waterfill')
-* Adds a Lawnmower tool that will remove decorative items from a given area, leaving a completely clear surface
-* Ability to place decorative rocks and trees
+- Adds items for placing dirt, sand, dark sand, grass, dry grass, red desert and dark red desert tiles
+- Ability to place water and green water tiles (aka. 'waterfill')
+- Adds a Lawnmower tool that will remove decorative items from a given area, leaving a completely clear surface
+- Ability to place decorative rocks and trees
 
   ![Landscaping items](https://img.pantherx.net/dectorio/landscaping.png)
 
 ### Walls
 
-* Adds items for wooden barricade, stone wall, chain-link fence and concrete walls
-* Walls have varied resistances and strengths to allow for better progression
-* Increased wall item stack sizes^
+- Adds items for wooden barricade, stone wall, chain-link fence and concrete walls
+- Walls have varied resistances and strengths to allow for better progression
+- Increased wall item stack sizes^
 
   ![Walls](https://img.pantherx.net/dectorio/walls.png)
 
 ### Signals & Lamps
 
-* Adds a new Glowing lamp that will glow bright colours over a large radius when passed a coloured signal from the circuit network
+- Adds a new Glowing lamp that will glow bright colours over a large radius when passed a coloured signal from the circuit network
 
   ![Glowing lamp](https://img.pantherx.net/dectorio/glowing-lamp.png)
 
-* Adds 11 new signal colours - Purple, Orange, Tangerine, Aqua, Maroon, Brown, Olive, Emerald, Teal, Navy and Violet
-* Adds signal colours for raw resources, smelted items, fluids, science packs, inserters, belts, splitters and circuits
+- Adds 11 new signal colours - Purple, Orange, Tangerine, Aqua, Maroon, Brown, Olive, Emerald, Teal, Navy and Violet
+- Adds signal colours for raw resources, smelted items, fluids, science packs, inserters, belts, splitters and circuits
 
   ![New signal colours](https://img.pantherx.net/dectorio/signal-colours.png)
 
-* Adds 28 new icon based signals for making it easier to understand your circuit network logic
-* New signal icons for base game signal colours that better represent the actual signal colour
+- Adds 28 new icon based signals for making it easier to understand your circuit network logic
+- New signal icons for base game signal colours that better represent the actual signal colour
 
   ![Signal selection](https://img.pantherx.net/dectorio/signals.png)
 
 ### General
 
-* Includes settings for enabling or disabling each of the above features (Options > Mods > Startup). Ideally these should only be changed before starting a new game. Changes on existing games will require content to be migrated and some items may be lost if you disable components you've already used on an existing save. Always make a backup first!
+- Includes settings for enabling or disabling each of the above features (Options > Mods > Startup). Ideally these should only be changed before starting a new game. Changes on existing games will require content to be migrated and some items may be lost if you disable components you've already used on an existing save. Always make a backup first!
 
   ![Mod settings](https://img.pantherx.net/dectorio/settings.png)
 
-* Items above marked ^ can be further customised in the mod settings dialog
+- Items above marked ^ can be further customised in the mod settings dialog
 
 Check out the [Mod Spotlight video by Xterminator](https://www.youtube.com/watch?v=4OOs8o0dnug) to see the mod in action (note that this features an older version of Dectorio without some of the features mentioned above).
 
@@ -96,18 +96,20 @@ Dectorio uses CrowdIn to allow the community to translate the mod from English i
 
 Special thanks to the translators below (in no particular order).
 
-* Chinese Simplified (68%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
-* Chinese Traditional (29%) - [k98a](https://crowdin.com/profile/k98a).
-* Czech (71%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
-* French (98%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi) and [daikyraraga](https://crowdin.com/profile/daikyraraga).
-* German (100%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn), [lpzockerx](https://crowdin.com/profile/lpzockerx), [Leridon](https://crowdin.com/profile/Leridon), [Meisterfuchs](https://crowdin.com/profile/Meisterfuchs) and [adoa](https://crowdin.com/profile/adoa).
-* Hungarian (100%) - [mmnetworkteam](https://crowdin.com/profile/mmnetworkteam).
-* Italian (100%) - [diego.crosera](https://crowdin.com/profile/diego.crosera) and [andrea.gomarasca](https://crowdin.com/profile/andrea.gomarasca).
-* Korean (100%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
-* Polish (100%) - [Tomirad](https://github.com/Tomirad), [Requelfade](https://crowdin.com/profile/Requelfade), [no_desired_username](https://crowdin.com/profile/no_desired_username) and [tomplus](https://crowdin.com/profile/tomplus).
-* Portuguese, Brazilian (98%) - [celaquila](https://crowdin.com/profile/celaquila) and [Unknow0059](https://crowdin.com/profile/Unknow0059).
-* Russian (100%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
-* Spanish (100%) - [notallme](https://crowdin.com/profile/notallme) and [AgnotSeeker](https://crowdin.com/profile/agnotseeker).
+- Chinese Simplified (68%) - [jessefjxm](https://crowdin.com/profile/jessefjxm).
+- Chinese Traditional (29%) - [k98a](https://crowdin.com/profile/k98a).
+- Czech (71%) - [dereksp](https://crowdin.com/profile/dereksp), [Meritic](https://crowdin.com/profile/Meritic) and [Treij](https://crowdin.com/profile/Treij).
+- French (100%) - [Taniotoshi](https://crowdin.com/profile/Taniotoshi), [daikyraraga](https://crowdin.com/profile/daikyraraga) and [eric.rossignol40](https://crowdin.com/profile/eric.rossignol40).
+- German (100%) - [seeba8](https://github.com/seeba8), [ST-DDT](https://crowdin.com/profile/ST-DDT), [LastDawn](https://crowdin.com/profile/LastDawn), [lpzockerx](https://crowdin.com/profile/lpzockerx), [Leridon](https://crowdin.com/profile/Leridon), [Meisterfuchs](https://crowdin.com/profile/Meisterfuchs) and [adoa](https://crowdin.com/profile/adoa).
+- Hungarian (100%) - [mmnetworkteam](https://crowdin.com/profile/mmnetworkteam).
+- Italian (100%) - [diego.crosera](https://crowdin.com/profile/diego.crosera) and [andrea.gomarasca](https://crowdin.com/profile/andrea.gomarasca).
+- Japanese (9%) - [noribento](https://crowdin.com/profile/noribento).
+- Korean (100%) - [GimoXagros](https://crowdin.com/profile/GimoXagros).
+- Polish (100%) - [Tomirad](https://github.com/Tomirad), [Requelfade](https://crowdin.com/profile/Requelfade), [no_desired_username](https://crowdin.com/profile/no_desired_username) and [tomplus](https://crowdin.com/profile/tomplus).
+- Portuguese, Brazilian (98%) - [celaquila](https://crowdin.com/profile/celaquila) and [Unknow0059](https://crowdin.com/profile/Unknow0059).
+- Russian (100%) - [nastyslave](https://crowdin.com/profile/nastyslave), [diraria](https://crowdin.com/profile/diraria), [scheugen86](https://crowdin.com/profile/scheugen86), [antonus777](https://crowdin.com/profile/antonus777), [schmarotzerltd](https://crowdin.com/profile/schmarotzerltd) and [1avek1](https://crowdin.com/profile/1avek1).
+- Spanish (100%) - [notallme](https://crowdin.com/profile/notallme) and [AgnotSeeker](https://crowdin.com/profile/agnotseeker).
+- Ukranian (100%) - [met_en_bouldry](https://crowdin.com/profile/met_en_bouldry).
 
 ### Mod Compatibility
 
