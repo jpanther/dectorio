@@ -146,12 +146,25 @@ data:extend(
 			order = "d-d"
 		},
 		{
-			type = "string-setting",
-			name = "dectorio-waterfill-tiles",
+			type = "bool-setting",
+			name = "dectorio-waterfill-shallow",
 			setting_type = "startup",
-			default_value = "all",
-			allowed_values = {"all", "shallow", "deep"},
-			order = "d-e"
-		}
+			default_value = true,
+			order = "e-a"
+		},
+		{
+			type = "bool-setting",
+			name = "dectorio-waterfill-normal",
+			setting_type = "startup",
+			default_value = true,
+			order = "e-b"
+		},
+		{
+			type = "bool-setting",
+			name = "dectorio-waterfill-deep",
+			setting_type = "startup",
+			default_value = true,
+			order = "e-c"
+		},
 	}
 )

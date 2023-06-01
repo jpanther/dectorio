@@ -23,12 +23,19 @@ end
 if mods["alien-biomes"] then
 	-- Only supports blue water tiles
 	DECT.CONFIG.WATERFILL_TILES = {
-		["all"] = {"water", "deepwater"},
-		["shallow"] = {"water"},
+		["shallow"] = {"water-shallow"},
+		["normal"] = {"water"},
 		["deep"] = {"deepwater"}
 	}
 	DECT.CONFIG.BASE_TILES = {}
-	DECT.CONFIG.BASE_WATER_TILES = DECT.CONFIG.WATERFILL_TILES[DECT.CONFIG.SETTINGS["waterfill_tiles"]]
+	DECT.CONFIG.BASE_WATER_TILES = {}
+	for water_kind, water_tiles in pairs(DECT.CONFIG.WATERFILL_TILES) do
+		if DECT.ENABLED["waterfill-" .. water_kind] then
+			for _, water_tile in pairs(water_tiles) do
+				table.insert(DECT.CONFIG.BASE_WATER_TILES, water_tile)
+			end
+		end
+	end
 	DECT.CONFIG.BASE_ROCKS = {}
 	DECT.CONFIG.BASE_TREES = {}
 end
