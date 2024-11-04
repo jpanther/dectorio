@@ -8,10 +8,12 @@ if DECT.ENABLED["decoratives"] then
 			name = "dect-traffic-bollard",
 			enabled = false,
 			ingredients = {
-				{"plastic-bar", 2},
-				{"iron-plate", 1},
+				{type = "item", name = "plastic-bar", amount = 2},
+				{type = "item", name = "iron-plate", amount = 1},
 			},
-			result = "dect-traffic-bollard"
+			results = {
+				{type = "item", name = "dect-traffic-bollard", amount = 1},
+			}
 		}
 	})
 

@@ -55,7 +55,7 @@ if DECT.ENABLED["painted-concrete"] then
 					place_as_tile = {
 						result = "dect-paint-" .. variant.name .. "-left",
 						condition_size = 1,
-						condition = {"water-tile"}
+						condition = {layers = {water_tile = true}}
 					}
 				}
 			}
@@ -90,7 +90,7 @@ if DECT.ENABLED["painted-concrete"] then
 					place_as_tile = {
 						result = "dect-paint-refined-" .. variant.name .. "-left",
 						condition_size = 1,
-						condition = {"water-tile"}
+						condition = {layers = {water_tile = true}}
 					}
 				}
 			}
@@ -127,7 +127,7 @@ if DECT.ENABLED["painted-concrete"] then
 					place_as_tile = {
 						result = color.name .. "-refined-concrete",
 						condition_size = 1,
-						condition = {"water-tile"}
+						condition = {layers = {water_tile = true}}
 					}
 				}
 			}
@@ -181,7 +181,7 @@ if DECT.ENABLED["wood-floor"] then
 				place_as_tile = {
 					result = "dect-wood-floor",
 					condition_size = 1,
-					condition = {"water-tile"}
+					condition = {layers = {water_tile = true}}
 				}
 			}
 		}
@@ -203,7 +203,7 @@ if DECT.ENABLED["concrete"] then
 				place_as_tile = {
 					result = "dect-concrete-grid",
 					condition_size = 1,
-					condition = {"water-tile"}
+					condition = {layers = {water_tile = true}}
 				}
 			}
 		}
@@ -229,7 +229,7 @@ if DECT.ENABLED["gravel"] then
 					place_as_tile = {
 						result = "dect-" .. variant.name .. "-gravel",
 						condition_size = 2,
-						condition = {"water-tile"}
+						condition = {layers = {water_tile = true}}
 					}
 				}
 			}

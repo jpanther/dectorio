@@ -12,10 +12,11 @@ if DECT.ENABLED["painted-concrete"] then
 					enabled = false,
 					category = "crafting",
 					ingredients = {
-						{"concrete", 10}
+						{type = "item", name = "concrete", amount = 10}
 					},
-					result = "dect-paint-" .. variant.name,
-					result_count = 10
+					results = {
+						{type = "item", name = "dect-paint-" .. variant.name, amount = 10},
+					}
 				},
 				{
 					type = "recipe",
@@ -24,10 +25,11 @@ if DECT.ENABLED["painted-concrete"] then
 					enabled = false,
 					category = "crafting",
 					ingredients = {
-						{"refined-concrete", 10}
+						{type = "item", name = "refined-concrete", amount = 10}
 					},
-					result = "dect-paint-refined-" .. variant.name,
-					result_count = 10
+					results = {
+						{type = "item", name = "dect-paint-refined-" .. variant.name, amount = 10},
+					}
 				}
 			}
 		)
@@ -44,10 +46,11 @@ if DECT.ENABLED["painted-concrete"] then
 					enabled = false,
 					category = "crafting",
 					ingredients = {
-						{"refined-concrete", 10}
+						{type = "item", name = "refined-concrete", amount = 10}
 					},
-					result = "dect-" .. color.name .. "-refined-concrete",
-					result_count = 10
+					results = {
+						{type = "item", name = "dect-" .. color.name .. "-refined-concrete", amount = 10},
+					}
 				}
 			}
 		)
@@ -66,10 +69,11 @@ if DECT.ENABLED["gravel"] then
 					enabled = true,
 					category = "crafting",
 					ingredients = {
-						{variant.name, 1}
+						{type = "item", name = variant.name, amount = 1}
 					},
-					result = "dect-" .. variant.name .. "-gravel",
-					result_count = 1
+					results = {
+						{type = "item", name = "dect-" .. variant.name .. "-gravel", amount = 1},
+					}
 				}
 			}
 		)
@@ -88,10 +92,11 @@ if DECT.ENABLED["wood-floor"] then
 				enabled = false,
 				category = "crafting",
 				ingredients = {
-					{"wood", 10}
+					{type = "item", name = "wood", amount = 10}
 				},
-				result = "dect-wood-floor",
-				result_count = 10
+				results = {
+					{type = "item", name = "dect-wood-floor", amount = 10},
+				}
 			}
 		}
 	)
@@ -109,12 +114,13 @@ if DECT.ENABLED["concrete"] then
 				enabled = false,
 				category = "crafting-with-fluid",
 				ingredients = {
-					{"stone-brick", 5},
-					{"iron-ore", 1},
+					{type = "item", name = "stone-brick", amount = 5},
+					{type = "item", name = "iron-ore", amount = 1},
 					{type = "fluid", name = "water", amount = 100}
 				},
-				result = "dect-concrete-grid",
-				result_count = 10
+				results = {
+					{type = "item", name = "dect-concrete-grid", amount = 10},
+				}
 			}
 		}
 	)

@@ -9,10 +9,12 @@ if DECT.ENABLED["walls"] then
 				name = "dect-concrete-wall",
 				enabled = false,
 				ingredients = {
-					{"concrete", 5},
-					{"iron-stick", 2}
+					{type = "item", name = "concrete", amount = 5},
+					{type = "item", name = "iron-stick", amount = 2}
 				},
-				result = "dect-concrete-wall"
+				results = {
+					{type = "item", name = "dect-concrete-wall", amount = 1},
+				}
 			},
 			{
 				type = "recipe",
@@ -24,38 +26,46 @@ if DECT.ENABLED["walls"] then
 				energy_required = 1,
 				enabled = false,
 				ingredients = {
-					{"stone-wall", 1},
-					{"concrete", 2}
+					{type = "item", name = "stone-wall", amount = 1},
+					{type = "item", name = "concrete", amount = 2}
 				},
-				result = "dect-concrete-wall"
+				results = {
+					{type = "item", name = "dect-concrete-wall", amount = 1},
+				}
 			},
 			{
 				type = "recipe",
 				name = "dect-chain-wall",
 				enabled = false,
 				ingredients = {
-					{"iron-stick", 2},
-					{"steel-plate", 2}
+					{type = "item", name = "iron-stick", amount = 2},
+					{type = "item", name = "steel-plate", amount = 2}
 				},
-				result = "dect-chain-wall"
+				results = {
+					{type = "item", name = "dect-chain-wall", amount = 1},
+				}
 			},
 			{
 				type = "recipe",
 				name = "dect-wood-wall",
 				enabled = true,
-				ingredients = {{"wood", 3}},
-				result = "dect-wood-wall"
+				ingredients = {{type = "item", name = "wood", amount = 3}},
+				results = {
+					{type = "item", name = "dect-wood-wall", amount = 1},
+				}
 			},
 			{
 				type = "recipe",
 				name = "dect-concrete-gate",
 				enabled = false,
 				ingredients = {
-					{"dect-concrete-wall", 1},
-					{"steel-plate", 2},
-					{"advanced-circuit", 2}
+					{type = "item", name = "dect-concrete-wall", amount = 1},
+					{type = "item", name = "steel-plate", amount = 2},
+					{type = "item", name = "advanced-circuit", amount = 2}
 				},
-				result = "dect-concrete-gate"
+				results = {
+					{type = "item", name = "dect-concrete-gate", amount = 1},
+				}
 			},
 			{
 				type = "recipe",
@@ -67,19 +77,21 @@ if DECT.ENABLED["walls"] then
 				energy_required = 1,
 				enabled = false,
 				ingredients = {
-					{"gate", 1},
-					{"concrete", 2},
-					{"advanced-circuit", 1}
+					{type = "item", name = "gate", amount = 1},
+					{type = "item", name = "concrete", amount = 2},
+					{type = "item", name = "advanced-circuit", amount = 1}
 				},
-				result = "dect-concrete-gate"
+				results = {
+					{type = "item", name = "dect-concrete-gate", amount = 1},
+				}
 			}
 		}
 	)
 
 	-- Change base gates to simpler recipe
 	data.raw["recipe"]["gate"].ingredients = {
-		{"stone-wall", 1},
-		{"iron-plate", 2},
-		{"electronic-circuit", 2}
+		{type = "item", name = "stone-wall", amount = 1},
+		{type = "item", name = "iron-plate", amount = 2},
+		{type = "item", name = "electronic-circuit", amount = 2}
 	}
 end

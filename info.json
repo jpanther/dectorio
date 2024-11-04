@@ -1,18 +1,15 @@
 {
   "name": "Dectorio",
-  "version": "0.12.6",
+  "version": "0.13.0",
   "title": "Dectorio",
   "author": "PantherX",
   "contact": "",
   "homepage": "https://github.com/jpanther/Dectorio",
-  "factorio_version": "1.1",
+  "factorio_version": "2.0",
   "dependencies": [
-    "base >= 1.1",
-    "? alien-biomes >= 0.6.2",
-    "(?) aai-industry >= 0.4.20",
-    "(?) FactorioExtended-Plus-Weaponry >= 0.4.0",
-    "(?) H2O >= 0.3.2",
-    "! Thaumaturgic-Machinations"
+    "base >= 2.0",
+    "? alien-biomes >= 0.7.1",
+    "(?) aai-industry >= 0.6.4"
   ],
   "license": "GNU GPLv3"
 }

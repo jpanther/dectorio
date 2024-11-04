@@ -15,10 +15,11 @@ if DECT.ENABLED["landscaping"] then
 					enabled = false,
 					category = "crafting",
 					ingredients = {
-						{"stone", 2}
+						{type = "item", name = "stone", amount = 2}
 					},
-					result = "dect-base-"..tile,
-					result_count = 10
+					results = {
+						{type = "item", name = "dect-base-"..tile, amount = 10},
+					}
 				}
 			})
 		end
@@ -36,12 +37,13 @@ if DECT.ENABLED["lawnmower"] then
 			energy_required = 3,
 			enabled = false,
 			ingredients = {
-				{"steel-plate", 2},
-				{"iron-gear-wheel", 6},
-				{"engine-unit", 1}
+				{type = "item", name = "steel-plate", amount = 2},
+				{type = "item", name = "iron-gear-wheel", amount = 6},
+				{type = "item", name = "engine-unit", amount = 1}
 			},
-			result = "dect-lawnmower",
-			result_count = 1
+			results = {
+				{type = "item", name = "dect-lawnmower", amount = 1},
+			}
 		}
 	})
 
@@ -62,11 +64,12 @@ if DECT.ENABLED["waterfill"] then
 					enabled = false,
 					category = "crafting-with-fluid",
 					ingredients = {
-						{"explosives", 5},
-						{type="fluid", name="water", amount=100}
+						{type = "item", name = "explosives", amount = 5},
+						{type = "fluid", name = "water", amount = 100}
 					},
-					result = "dect-base-"..tile,
-					result_count = 1
+					results = {
+						{type = "item", name = "dect-base-"..tile, amount = 1},
+					}
 				}
 			})
 		end
@@ -87,13 +90,13 @@ if DECT.ENABLED["landscaping"] then
 			if entity.minable.results then
 				for _, result in pairs(entity.minable.results) do
 					if result.amount_max then
-						table.insert(ingredients, {result.name, result.amount_max * 1.1})
+						table.insert(ingredients, {type = "item", name = result.name, amount = result.amount_max * 1.1})
 					elseif result.amount then
-						table.insert(ingredients, {result.name, result.amount * 1.5})
+						table.insert(ingredients, {type = "item", name = result.name, amount = result.amount * 1.5})
 					end
 				end
 			elseif entity.minable.result then
-				table.insert(ingredients, {entity.minable.result, entity.minable.count * 1.5})
+				table.insert(ingredients, {type = "item", name = entity.minable.result, amount = entity.minable.count * 1.5})
 			end
 		end
 		return ingredients
@@ -109,8 +112,9 @@ if DECT.ENABLED["landscaping"] then
 				enabled = false,
 				category = "crafting",
 				ingredients = entity_ingredients(tree, "tree"),
-				result = "dect-base-"..tree,
-				result_count = 1
+				results = {
+					{type = "item", name = "dect-base-"..tree, amount = 1},
+				}
 			}
 		})
 	end
@@ -125,8 +129,9 @@ if DECT.ENABLED["landscaping"] then
 				enabled = false,
 				category = "crafting",
 				ingredients = entity_ingredients(rock, "simple-entity"),
-				result = "dect-base-"..rock,
-				result_count = 1
+				results = {
+					{type = "item", name = "dect-base-"..rock, amount = 1},
+				}
 			}
 		})
 	end

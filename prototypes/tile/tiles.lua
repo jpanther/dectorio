@@ -46,26 +46,32 @@ local function tile_variants(set, variant)
 				probability = 1
 			}
 		},
-		inner_corner = {
-			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-inner-corner.png",
-			count = 8
-		},
-		outer_corner = {
-			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-outer-corner.png",
-			count = 1
-		},
-		side = {
-			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-side.png",
-			count = 8
-		},
-		u_transition = {
-			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-u.png",
-			count = 8
-		},
-		o_transition = {
-			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-o.png",
-			count = 1
-		}
+		transition =
+			{
+				overlay_layout =
+					{
+					inner_corner = {
+						spritesheet = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-inner-corner.png",
+						count = 8
+					},
+					outer_corner = {
+						spritesheet = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-outer-corner.png",
+						count = 1
+					},
+					side = {
+						spritesheet = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-side.png",
+						count = 8
+					},
+					u_transition = {
+						spritesheet = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-u.png",
+						count = 8
+					},
+					o_transition = {
+						spritesheet = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. "-o.png",
+						count = 1
+					}
+				}
+			}
 	}
 end
 
@@ -73,11 +79,16 @@ end
 local function tile_variants_material(set, variant)
 	return {
 		main = base_concrete.variants.main,
-		inner_corner_mask = base_concrete.variants.inner_corner_mask,
-		outer_corner_mask = base_concrete.variants.outer_corner_mask,
-		side_mask = base_concrete.variants.side_mask,
-		u_transition_mask = base_concrete.variants.u_transition_mask,
-		o_transition_mask = base_concrete.variants.o_transition_mask,
+		transition = {
+			overlay_layout =
+				{
+					inner_corner = base_concrete.variants.transition.overlay_layout.inner_corner,
+					outer_corner = base_concrete.variants.transition.overlay_layout.outer_corner,
+					side = base_concrete.variants.transition.overlay_layout.side,
+					u_transition = base_concrete.variants.transition.overlay_layout.u_transition,
+					o_transition = base_concrete.variants.transition.overlay_layout.o_transition,
+				}
+		},
 		material_background = {
 			picture = "__Dectorio__/graphics/terrain/" .. set .. "/" .. variant .. "/" .. set .. ".png",
 			count = 8,
@@ -117,7 +128,7 @@ if DECT.ENABLED["wood-floor"] then
 				needs_correction = false,
 				minable = {hardness = 0.2, mining_time = 0.5, result = "dect-wood-floor"},
 				mined_sound = {filename = "__Dectorio__/sound/deconstruct-wood.ogg"},
-				collision_mask = {"ground-tile"},
+				collision_mask = {layers = {ground_tile = true}},
 				walking_speed_modifier = 1.2,
 				layer = tile_layer.wood,
 				decorative_removal_probability = decorative_removal_probability,
@@ -129,7 +140,6 @@ if DECT.ENABLED["wood-floor"] then
 					{filename = "__Dectorio__/sound/walking/wood-04.ogg", volume = 0.95}
 				},
 				map_color = {r = 139, g = 69, b = 19},
-				pollution_absorption_per_second = 0,
 				vehicle_friction_modifier = base_stone_path.vehicle_friction_modifier
 			}
 		}
@@ -146,14 +156,13 @@ if DECT.ENABLED["concrete"] then
 				transition_merges_with_tile = "concrete",
 				minable = {hardness = 0.2, mining_time = 0.5, result = "dect-concrete-grid"},
 				mined_sound = base_concrete.mined_sound,
-				collision_mask = {"ground-tile"},
+				collision_mask = {layers = {ground_tile = true}},
 				walking_speed_modifier = base_concrete.walking_speed_modifier,
 				layer = tile_layer.grid,
 				decorative_removal_probability = decorative_removal_probability,
 				variants = tile_variants_material("concrete", "grid"),
 				walking_sound = base_concrete.walking_sound,
 				map_color = {r = 130, g = 130, b = 130},
-				pollution_absorption_per_second = 0,
 				vehicle_friction_modifier = base_concrete.vehicle_friction_modifier
 			}
 		}
@@ -174,14 +183,13 @@ if DECT.ENABLED["gravel"] then
 					needs_correction = false,
 					minable = {hardness = 0.2, mining_time = 0.5, result = variant.name},
 					mined_sound = {filename = "__core__/sound/axe-mining-ore-3.ogg"},
-					collision_mask = {"ground-tile"},
+					collision_mask = {layers = {ground_tile = true}},
 					walking_speed_modifier = 1.1,
 					layer = tile_layer.gravel,
 					decorative_removal_probability = decorative_removal_probability,
 					variants = tile_variants(variant.name, "gravel"),
 					walking_sound = base_dirt.walking_sound,
 					map_color = variant.color,
-					pollution_absorption_per_second = 0,
 					vehicle_friction_modifier = dirt_vehicle_speed_modifier
 				}
 			}
@@ -212,14 +220,13 @@ if DECT.ENABLED["painted-concrete"] then
 						transition_merges_with_tile = "concrete",
 						minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-" .. variant.name},
 						mined_sound = base_concrete.mined_sound,
-						collision_mask = {"ground-tile"},
+						collision_mask = {layers = {ground_tile = true}},
 						walking_speed_modifier = base_concrete.walking_speed_modifier * set_modifier,
 						layer = tile_layer.paint,
 						decorative_removal_probability = decorative_removal_probability,
 						variants = tile_variants_material("concrete", variant.name .. "-" .. direction.this),
 						walking_sound = base_concrete.walking_sound,
 						map_color = variant.color,
-						pollution_absorption_per_second = 0,
 						vehicle_friction_modifier = base_concrete.vehicle_friction_modifier * set_modifier
 					}
 				}
@@ -236,14 +243,13 @@ if DECT.ENABLED["painted-concrete"] then
 						transition_merges_with_tile = "refined-concrete",
 						minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-refined-" .. variant.name},
 						mined_sound = base_refined_concrete.mined_sound,
-						collision_mask = {"ground-tile"},
+						collision_mask = {layers = {ground_tile = true}},
 						walking_speed_modifier = base_refined_concrete.walking_speed_modifier * set_modifier,
 						layer = tile_layer.refined_paint,
 						decorative_removal_probability = decorative_removal_probability,
 						variants = tile_variants_material("refined-concrete", variant.name .. "-" .. direction.this),
 						walking_sound = base_refined_concrete.walking_sound,
 						map_color = variant.color,
-						pollution_absorption_per_second = 0,
 						vehicle_friction_modifier = base_refined_concrete.vehicle_friction_modifier * set_modifier
 					}
 				}

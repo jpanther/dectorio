@@ -80,7 +80,7 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 					place_as_tile = {
 						result = tile,
 						condition_size = 1,
-						condition = { "water-tile" }
+						condition = {layers = {water_tile = true}}
 					}
 				}
 			})
@@ -98,10 +98,11 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 					enabled = false,
 					category = "crafting",
 					ingredients = {
-						{"stone", 2}
+						{type = "item", name = "stone", amount = 2}
 					},
-					result = "dect-alien-biomes-"..tile,
-					result_count = 10
+					results = {
+						{type = "item", name = "dect-alien-biomes-"..tile, amount = 10}
+					}
 				}
 			})
 		end
@@ -115,13 +116,13 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 			if entity.minable.results then
 				for _, result in pairs(entity.minable.results) do
 					if result.amount_max then
-						table.insert(ingredients, {result.name, result.amount_max * 1.1})
+						table.insert(ingredients, {type = "item", name = result.name, amount = result.amount_max * 1.1})
 					elseif result.amount then
-						table.insert(ingredients, {result.name, result.amount * 1.5})
+						table.insert(ingredients, {type = "item", name = result.name, amount = result.amount * 1.5})
 					end
 				end
 			elseif entity.minable.result then
-				table.insert(ingredients, {entity.minable.result, entity.minable.count * 1.5})
+				table.insert(ingredients, {type = "item", name = entity.minable.result, amount = entity.minable.count * 1.5})
 			end
 		end
 		return ingredients
@@ -150,8 +151,9 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 					enabled = false,
 					category = "crafting",
 					ingredients = entity_ingredients(tree, "tree"),
-					result = "dect-alien-biomes-"..tree,
-					result_count = 1
+					results = {
+						{type = "item", name = "dect-alien-biomes-"..tree, amount = 1}
+					}
 				}
 			})
 		end
@@ -182,8 +184,9 @@ if DECT.ENABLED["landscaping"] and mods["alien-biomes"] then
 					enabled = false,
 					category = "crafting",
 					ingredients = entity_ingredients(rock.name, "simple-entity"),
-					result = "dect-alien-biomes-"..rock.name,
-					result_count = 1
+					results = {
+						{type = "item", name = "dect-alien-biomes-"..rock.name, amount = 1}
+					}
 				}
 			})
 		end

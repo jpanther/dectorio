@@ -183,7 +183,7 @@ DECT.CONFIG.BASE_TREES = {
 	"tree-08-brown",
 	"tree-09-brown"
 }
-DECT.CONFIG.BASE_ROCKS = {"rock-huge", "rock-big", "sand-rock-big"}
+DECT.CONFIG.BASE_ROCKS = {"huge-rock", "big-rock", "big-sand-rock"}
 DECT.CONFIG.BASE_COLORS = {
 	{name = "red", tint = {r = 1.000, g = 0.266, b = 0.241}},
 	{name = "green", tint = {r = 0.173, g = 0.824, b = 0.250}},
