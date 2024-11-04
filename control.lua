@@ -160,7 +160,7 @@ end
 
 -- When a new entity is built
 local function on_built_entity(event)
-	destroy_decoratives_near_entity(event.created_entity)
+	destroy_decoratives_near_entity(event.entity)
 end
 
 -- If the Lawnmower is used to select an area
