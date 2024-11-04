@@ -29,7 +29,7 @@ if DECT.ENABLED["landscaping"] then
 					place_as_tile = {
 						result = tile,
 						condition_size = 1,
-						condition = {"water-tile"}
+						condition = {layers = {water_tile = true}}
 					},
 					localised_name = {"tile-name." .. tile}
 				}
@@ -69,7 +69,7 @@ if DECT.ENABLED["waterfill"] then
 					place_as_tile = {
 						result = tile,
 						condition_size = 1,
-						condition = {"water-tile"}
+						condition = {layers = {water_tile = true}}
 					},
 					localised_name = {"tile-name." .. tile}
 				}
@@ -78,7 +78,7 @@ if DECT.ENABLED["waterfill"] then
 
 		-- If this is deep water, then it can only be placed in water
 		if string.find(tile, "deep") then
-			data.raw["item"]["dect-base-" .. tile].place_as_tile.condition = {"ground-tile"}
+			data.raw["item"]["dect-base-" .. tile].place_as_tile.condition = {layers = {ground_tile = true}}
 		end
 	end
 end
@@ -165,12 +165,18 @@ if DECT.ENABLED["lawnmower"] then
 				stackable = false,
 				subgroup = "landscaping-earthworks",
 				order = "d[lawnmower]",
-				selection_color = {r = 0.10, g = 0.46, b = 0.13, a = 0.33},
-				alt_selection_color = {r = 0.72, g = 0.69, b = 0.17, a = 0.33},
-				selection_mode = {"any-entity"},
-				alt_selection_mode = {"nothing"},
-				selection_cursor_box_type = "not-allowed",
-				alt_selection_cursor_box_type = "entity",
+				select =
+					{
+						border_color = {r = 0.10, g = 0.46, b = 0.13, a = 0.33},
+						mode = {"any-entity"},
+						cursor_box_type = "not-allowed",
+					},
+				alt_select =
+					{
+						border_color = {r = 0.72, g = 0.69, b = 0.17, a = 0.33},
+						mode = {"nothing"},
+						cursor_box_type = "entity",
+					},
 				can_be_mod_opened = false,
 				show_in_library = false
 			},

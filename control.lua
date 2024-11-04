@@ -4,7 +4,7 @@
 
 -- Dectorio, a mod for Factorio
 -- https://github.com/jpanther/dectorio
--- Copyright (c) 2017-2021 James "PantherX" Panther
+-- Copyright (c) 2017-2024 James "PantherX" Panther
 
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -65,7 +65,7 @@ local function on_configuration_changed(data)
 	-- Check for incompatible mods and notify
 	if data.mod_changes ~= nil then
 		local mod_incompatibility = false
-		for mod, version in pairs(game.active_mods) do
+		for mod, version in pairs(script.active_mods) do
 			if DECT.INCOMPATIBLE.MODS[mod] then
 				if DECT.ENABLED[DECT.INCOMPATIBLE.MODS[mod].component] then
 					mod_incompatibility = true
@@ -73,7 +73,7 @@ local function on_configuration_changed(data)
 			end
 		end
 		if mod_incompatibility == true then
-			for mod, version in pairs(game.active_mods) do
+			for mod, version in pairs(script.active_mods) do
 				if DECT.INCOMPATIBLE.MODS[mod] then
 					incompatible = DECT.INCOMPATIBLE.MODS[mod]
 					if DECT.ENABLED[incompatible.component] and not incompatible.setting then
@@ -109,13 +109,13 @@ local function on_configuration_changed(data)
 			for _, force in pairs(game.forces) do
 				local tech = force.technologies
 				local rec = force.recipes
-				if tech["dect-landscaping"].researched and game.active_mods["alien-biomes"] then
-					for _, tile in pairs(game.tile_prototypes) do
+				if tech["dect-landscaping"].researched and script.active_mods["alien-biomes"] then
+					for _, tile in pairs(prototypes.tile) do
 						if rec["dect-alien-biomes-" .. tile.name] then
 							rec["dect-alien-biomes-" .. tile.name].enabled = true
 						end
 					end
-					for _, entity in pairs(game.entity_prototypes) do
+					for _, entity in pairs(prototypes.entity) do
 						if rec["dect-alien-biomes-" .. entity.name] then
 							rec["dect-alien-biomes-" .. entity.name].enabled = true
 						end

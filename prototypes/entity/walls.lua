@@ -496,8 +496,8 @@ if DECT.ENABLED["walls"] then
 				wall_diode_green_light = base_stone_wall.wall_diode_green_light,
 				wall_diode_red = base_stone_wall.wall_diode_red,
 				wall_diode_red_light = base_stone_wall.wall_diode_red_light,
-				circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
-				circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
+				-- circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
+				-- circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
 				circuit_wire_max_distance = default_circuit_wire_max_distance,
 				default_output_signal = {type = "virtual", name = "signal-green"} or {type = "virtual", name = "signal-G"}
 			},
@@ -560,8 +560,8 @@ if DECT.ENABLED["walls"] then
 				wall_diode_green_light = base_stone_wall.wall_diode_green_light,
 				wall_diode_red = base_stone_wall.wall_diode_red,
 				wall_diode_red_light = base_stone_wall.wall_diode_red_light,
-				circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
-				circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
+				-- circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
+				-- circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
 				circuit_wire_max_distance = default_circuit_wire_max_distance,
 				default_output_signal = {type = "virtual", name = "signal-green"} or {type = "virtual", name = "signal-G"}
 			},
@@ -947,8 +947,8 @@ if DECT.ENABLED["walls"] then
 				wall_diode_green_light = base_stone_wall.wall_diode_green_light,
 				wall_diode_red = base_stone_wall.wall_diode_red,
 				wall_diode_red_light = base_stone_wall.wall_diode_red_light,
-				circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
-				circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
+				-- circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
+				-- circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
 				circuit_wire_max_distance = default_circuit_wire_max_distance,
 				default_output_signal = {type = "virtual", name = "signal-green"} or {type = "virtual", name = "signal-G"}
 			},
@@ -1277,8 +1277,8 @@ if DECT.ENABLED["walls"] then
 				wall_diode_green_light = base_stone_wall.wall_diode_green_light,
 				wall_diode_red = base_stone_wall.wall_diode_red,
 				wall_diode_red_light = base_stone_wall.wall_diode_red_light,
-				circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
-				circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
+				-- circuit_wire_connection_point = circuit_connector_definitions["gate"].points,
+				-- circuit_connector_sprites = circuit_connector_definitions["gate"].sprites,
 				circuit_wire_max_distance = default_circuit_wire_max_distance,
 				default_output_signal = {type = "virtual", name = "signal-green"} or {type = "virtual", name = "signal-G"}
 			}

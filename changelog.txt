@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.13.0
+Date: 04. 11. 2024
+  Added:
+    - Support for Factorio: Space Age!
+  Bugfixes:
+    - Fixed a recipe migration issue (thanks to kawazoe)
+    - Fixed an issue where the Gates technology was not displaying correct strings
+  Locales:
+    - Updated Chinese Simplified translation
+    - Updated Japanese translation
+    - Updated Portuguese, Brazilian translation
+---------------------------------------------------------------------------------------------------
 Version: 0.12.6
 Date: 23. 06. 2022
   Bugfixes:
