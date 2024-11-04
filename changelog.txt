@@ -5,6 +5,8 @@ Date: 05. 11. 2024
     - Increased mining speed of flooring tiles to better replicate base game speed
   Bugfixes:
     - Fixed a crash when placing entities if destroy decoratives setting was enabled
+  Locales:
+    - Updated Chinese Simplified translation
 ---------------------------------------------------------------------------------------------------
 Version: 0.13.0
 Date: 04. 11. 2024
