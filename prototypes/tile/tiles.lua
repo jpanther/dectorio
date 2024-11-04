@@ -126,7 +126,7 @@ if DECT.ENABLED["wood-floor"] then
 				type = "tile",
 				name = "dect-wood-floor",
 				needs_correction = false,
-				minable = {hardness = 0.2, mining_time = 0.5, result = "dect-wood-floor"},
+				minable = {mining_time = 0.1, result = "dect-wood-floor"},
 				mined_sound = {filename = "__Dectorio__/sound/deconstruct-wood.ogg"},
 				collision_mask = {layers = {ground_tile = true}},
 				walking_speed_modifier = 1.2,
@@ -154,7 +154,7 @@ if DECT.ENABLED["concrete"] then
 				name = "dect-concrete-grid",
 				needs_correction = false,
 				transition_merges_with_tile = "concrete",
-				minable = {hardness = 0.2, mining_time = 0.5, result = "dect-concrete-grid"},
+				minable = {mining_time = 0.1, result = "dect-concrete-grid"},
 				mined_sound = base_concrete.mined_sound,
 				collision_mask = {layers = {ground_tile = true}},
 				walking_speed_modifier = base_concrete.walking_speed_modifier,
@@ -181,7 +181,7 @@ if DECT.ENABLED["gravel"] then
 					type = "tile",
 					name = "dect-" .. variant.name .. "-gravel",
 					needs_correction = false,
-					minable = {hardness = 0.2, mining_time = 0.5, result = variant.name},
+					minable = {mining_time = 0.1, result = variant.name},
 					mined_sound = {filename = "__core__/sound/axe-mining-ore-3.ogg"},
 					collision_mask = {layers = {ground_tile = true}},
 					walking_speed_modifier = 1.1,
@@ -218,7 +218,7 @@ if DECT.ENABLED["painted-concrete"] then
 						needs_correction = false,
 						next_direction = "dect-paint-" .. variant.name .. "-" .. direction.next,
 						transition_merges_with_tile = "concrete",
-						minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-" .. variant.name},
+						minable = {mining_time = 0.1, result = "dect-paint-" .. variant.name},
 						mined_sound = base_concrete.mined_sound,
 						collision_mask = {layers = {ground_tile = true}},
 						walking_speed_modifier = base_concrete.walking_speed_modifier * set_modifier,
@@ -241,7 +241,7 @@ if DECT.ENABLED["painted-concrete"] then
 						needs_correction = false,
 						next_direction = "dect-paint-refined-" .. variant.name .. "-" .. direction.next,
 						transition_merges_with_tile = "refined-concrete",
-						minable = {hardness = 0.2, mining_time = 0.5, result = "dect-paint-refined-" .. variant.name},
+						minable = {mining_time = 0.1, result = "dect-paint-refined-" .. variant.name},
 						mined_sound = base_refined_concrete.mined_sound,
 						collision_mask = {layers = {ground_tile = true}},
 						walking_speed_modifier = base_refined_concrete.walking_speed_modifier * set_modifier,
@@ -260,7 +260,7 @@ if DECT.ENABLED["painted-concrete"] then
 	-- Make base colored refined concrete minable and adjust some properties to align them with others
 	for _, color in pairs(DECT.CONFIG.BASE_COLORS) do
 		local concrete = data.raw.tile[color.name .. "-refined-concrete"]
-		concrete.minable = {hardness = 0.2, mining_time = 0.5, result = "dect-" .. color.name .. "-refined-concrete"}
+		concrete.minable = {mining_time = 0.1, result = "dect-" .. color.name .. "-refined-concrete"}
 		concrete.walking_speed_modifier = base_refined_concrete.walking_speed_modifier * set_modifier
 		concrete.layer = tile_layer.refined_paint
 		concrete.decorative_removal_probability = decorative_removal_probability
