@@ -99,7 +99,10 @@ DECT.ENABLED = {
 	["painted-concrete"] = settings.startup["dectorio-painted-concrete"].value,
 	["decoratives"] = settings.startup["dectorio-decoratives"].value,
 	["lawnmower"] = settings.startup["dectorio-lawnmower"].value,
-	["item-group"] = settings.startup["dectorio-item-group"].value
+	["item-group"] = settings.startup["dectorio-item-group"].value,
+	["waterfill-shallow"] = settings.startup["dectorio-waterfill-shallow"].value,
+	["waterfill-normal"] = settings.startup["dectorio-waterfill-normal"].value,
+	["waterfill-deep"] = settings.startup["dectorio-waterfill-deep"].value,
 }
 
 -- The subgroups for all items in the mod
@@ -114,7 +117,6 @@ DECT.CONFIG.SETTINGS = {
 	["flooring_stack_size"] = settings.startup["dectorio-flooring-stack-size"].value,
 	["landscaping_stack_size"] = settings.startup["dectorio-landscaping-stack-size"].value,
 	["walls_stack_size"] = settings.startup["dectorio-walls-stack-size"].value,
-	["waterfill_tiles"] = settings.startup["dectorio-waterfill-tiles"].value
 }
 
 DECT.CONFIG.PAINT_VARIANTS = {
@@ -133,8 +135,8 @@ DECT.CONFIG.GRAVEL_VARIANTS = {
 	{name = "coal", color = {r = 0.33, g = 0.33, b = 0.33}}
 }
 DECT.CONFIG.WATERFILL_TILES = {
-	["all"] = {"water", "deepwater", "water-green", "deepwater-green"},
-	["shallow"] = {"water", "water-green"},
+	["shallow"] = {"water-shallow", "water-mud"},
+	["normal"] = {"water", "water-green"},
 	["deep"] = {"deepwater", "deepwater-green"}
 }
 
@@ -160,7 +162,14 @@ DECT.CONFIG.BASE_TILES = {
 	"red-desert-2",
 	"red-desert-3"
 }
-DECT.CONFIG.BASE_WATER_TILES = DECT.CONFIG.WATERFILL_TILES[DECT.CONFIG.SETTINGS["waterfill_tiles"]]
+DECT.CONFIG.BASE_WATER_TILES = {}
+for water_kind, water_tiles in pairs(DECT.CONFIG.WATERFILL_TILES) do
+	if DECT.ENABLED["waterfill-" .. water_kind] then
+		for _, water_tile in pairs(water_tiles) do
+			table.insert(DECT.CONFIG.BASE_WATER_TILES, water_tile)
+		end
+	end
+end
 DECT.CONFIG.BASE_TREES = {
 	"tree-01",
 	"tree-02",
