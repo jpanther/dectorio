@@ -173,7 +173,7 @@ if DECT.ENABLED["wood-floor"] then
 				icon = "__Dectorio__/graphics/icons/wood-floor.png",
 				icon_size = 64,
 				icon_mipmaps = 1,
-				fuel_category = "chemical",
+				fuel_categories = "chemical",
 				fuel_value = "2MJ",
 				subgroup = "flooring-basic",
 				order = "00[a-wood-floor]",
