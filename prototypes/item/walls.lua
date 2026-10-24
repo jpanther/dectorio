@@ -31,7 +31,7 @@ if DECT.ENABLED["walls"] then
 				icon = "__Dectorio__/graphics/icons/wood-wall.png",
 				icon_size = 32,
 				icon_mipmaps = 1,
-				fuel_category = "chemical",
+				fuel_categories = "chemical",
 				fuel_value = "6MJ",
 				subgroup = "defensive-structure",
 				order = "a[a-wood-wall]",
